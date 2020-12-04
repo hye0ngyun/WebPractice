@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var price1 = 3000;
+        var price2 = 6000;
+        var price3 = 3000;
+        result = price1 + price2 + price3;
+        result = result > 10000 ? result-10000+"원 초과" : "돈 관리 잘 했어요!"
+        document.write(result, "<br>")
+
+        var v1 = 1200;
+        var v2 = 1300;
+        var v3 = 1000;
+        var v4 = prompt("4분기 판매량을 입력하세요.", "0")
+
+        var vAvg = (v1 + v2 + v3) / 3
+        var result = v4 >= vAvg ? "판매량이 평균 이상힙니다." : "판매량이 평균 미달입니다.";
+        document.write(result, "<br>")
+    </script>
+</body>
+</html>
