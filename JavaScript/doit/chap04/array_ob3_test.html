@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr_1 = ['교대', '방배', '강남'];
+        var arr_2 = ['미금', '정자', '수서'];
+        
+        arr_1.splice(2, 1, '서초', '역삼');
+        console.log(arr_1);
+
+        var data1 = arr_2.pop();
+        var data2 = arr_2.shift();
+
+        arr_2.push(data2);
+        console.log(arr_2);
+
+        arr_2.unshift(data1);
+        console.log(arr_2);
+    </script>
+</body>
+</html>
