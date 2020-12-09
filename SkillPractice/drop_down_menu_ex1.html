@@ -37,14 +37,15 @@
             border-left: 1px solid rgba(0, 0, 0, 0).15;
         }
         #sub-menu{
+            display: flex;
             position:absolute;
-            background: #314d7e;
+            /*background: #314d7e;*/
             opacity: 0;
             visibility: hidden;
             transition: all 0.15s ease-in;
         }
-        #sub-menu > li > a{
-            color: rgba(255, 255, 255, 0.6);
+        #sub-menu > .sub-menues > li > a{
+            color: rgba(0, 0, 0, 0.6);
             text-decoration: none;
         }
 
@@ -53,8 +54,12 @@
             opacity: 1;
             visibility: visible;
         }
-        #sub-menu > li > a:hover{
+        #sub-menu > .sub-menues > li > a:hover{
             text-decoration: underline;
+        }
+        .sub-text{
+            width: 70px;
+            background-image: url("https://fakeimg.pl/350x200/960a96/000?text=11111");
         }
     </style>
 </head>
@@ -64,10 +69,13 @@
         <li><a href="#">MENU1</a></li>
         <li><a href="#">MENU2</a>
             <ul id = "sub-menu">
-                <li><a href="#">submenu</a></li>
-                <li><a href="#">submenu</a></li>
-                <li><a href="#">submenu</a></li>
-                <li><a href="#">submenu</a></li>
+                <div class="sub-text">Our Solutions and upcoming products</div>
+                <div class="sub-menues">
+                    <li><a href="#">submenu</a></li>
+                    <li><a href="#">submenu</a></li>
+                    <li><a href="#">submenu</a></li>
+                    <li><a href="#">submenu</a></li>
+                </div>
             </ul>
         </li>
         <li><a href="#">MENU3</a></li>
