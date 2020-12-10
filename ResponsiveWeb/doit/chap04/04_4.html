@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>플렉스 아이템의 배치 방향 설정하기</title>
+    <title>플렉스 아이템의 배치 방향과 여러 줄 배치를 한 번에 설정하기</title>
     <style>
         #wrap{
             display: flex;
-            flex-direction: row;
+            /* flex-direction: row; flex-wrap: wrap; 를 한번에 설정하기*/
+            flex-flow: row wrap-reverse;
             width: 90%;
             height: 500px;
             margin: 0 auto;
             border: 4px solid #000;
         }
-
         #wrap div{
-            width: 33.33%;
+            width: 100%;
         }
         #wrap div:first-child{
             background-color: #eb4a24;
