@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    #wrapper{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    body{
+        width: 90%;
+        margin: 10px auto;
+    }
+    a{
+        text-decoration: none;
+        color: gray;
+    }
+    header {
+        height: 100px;
+        color: black;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    #main-banner{
+        width: 100%;
+    }
+    footer{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(54, 199, 41);
+        color: white;
+        height: 200px;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    #site-map{
+        align-self: flex-start;
+    }
+    #main-menu,
+    #sub-menu{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    #main-menu > li{
+        float: left;
+        background: white;
+    }
+    #main-menu > li > a{
+        font-size: 1.3rem;
+        font-weight: bold;
+        color:rgba(0, 0, 0, 0.7);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        display: block;
+        padding: 12px 36px;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+    
+    .sub-menu{
+        position:absolute;
+        background:white;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease-out;
+        display: flex;
+    }
+    .sub-menu > li > a{
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        
+    }
+    #main-menu > li:hover
+    .sub-menu{
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        z-index: 101;
+        display: flex;
+    }
+    .sub-menu > .sub-menues > li > a:hover{
+        text-decoration: underline;
+    }
+    .sub-text{
+        background-image: url("http://placehold.it/300x200");
+        border-radius: 0px 0px 0px 20px;
+        padding: 20px;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .sub-menues{
+        padding: 20px;
+        background-color: white;
+    }
+    .sub-menues > li{
+        padding-top: 7px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    .sub-menu{
+        border-radius: 0px 0px 0px 20px;
+        box-shadow: 1px 1px 10px 3px gray;
+    }
+    #site-map span{
+        color: gray;
+        padding: 0 7px;
+        float: right;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+        font-size: 1rem;
+    }
+    #site-map a{
+        text-decoration: none;
+        color: gray;
+    }
+    section{
+        width: 100%;
+    }
+    #intro{
+        display: flex;
+        flex-flow: row wrap;
+        background-image: url("http://placehold.it/150x100");
+        background-size: 100% 400px;
+        background-repeat: no-repeat;
+    }
+    #intro .intro-text1{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 40px 100px;
+    }
+    #intro .intro-text1-wrap{
+        color: white;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    #intro .intro-text2-wrap{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #intro .intro-text2{
+        background-color:  rgb(54, 199, 41);
+        padding: 10px;
+        width: 50%;
+        height: 100px;
+        border-radius: 0px 0px 0px 30px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+    #intro .intro-text3{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #intro .intro-text3-wrap{
+        background-color: #fff;
+        box-shadow: 5px 2px 20px rgba(0, 0, 0, 0.4);
+        padding: 80px;
+    }
+    #intro .intro-text3-wrap div:first-child{
+        color: rgb(54, 199, 41);
+        font-size: 1.4rem;
+    }
+    #intro .intro-text3-wrap div:nth-child(2){
+        color:  rgba(0, 0, 0, 0.5);
+        font-size: 1.2rem;
+    }
+
+</style>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo"><a href="index.html"><img src="http://placehold.it/150x100" alt="logo"></a></div>
+            <div id="menu-wrapper">
+                <ul id="main-menu">
+                    <li><a href="#">Solutions</a>
+                        <ul class = "sub-menu">
+                            <div class="sub-text"><p>Our Solutions<br>and upcoming<br> products</p></div>
+                            <div class="sub-menues">
+                                <li><a href="#">Cardea SOLO</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">About us</a>
+                        <ul class = "sub-menu">
+                            <div class="sub-text"><p>Our brand,<br>people,<br>news<br>and insights<br>from out team</p></div>
+                            <div class="sub-menues">
+                                <li><a href="#">i.Signal</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Press Release</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Partners</a>
+                        <ul class = "sub-menu">
+                            <div class="sub-text"><p>How we<br>engage and<br>work with<br>out partners</p></div>
+                            <div class="sub-menues">
+                                <li><a href="#">Partnetship</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li><a href="#">Careers</a>
+                        <ul class = "sub-menu">
+                            <div class="sub-text"><p>Our value,<br>culture and<br>invitation to<br>rockstar team</p></div>
+                            <div class="sub-menues">
+                                <li><a href="#">Right Fit</a></li>
+                                <li><a href="#">Job Opportunities</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="site-map">
+                <span><a href="#">Company</a></span>
+                <span><a href="#">HCP</a></span>
+                <span><a href="#">Contact Us</a></span>
+            </div>
+        </header>
+        <section>
+            <article>
+                <!-- insert bgimg -->
+                <div id="intro">
+                    <div class="intro-text1">
+                        <div class="intro-text1-wrap">
+                            Cardea SOLO<sup>TM</sup><br>
+                            Enables Truely Uninterrupted<br>
+                            ECG Monitoring
+                        </div>
+                    </div>
+                    <div class="intro-text2-wrap">
+                        <div class="intro-text2">
+                            <p>
+                                Cardea SOLO<sup>TM</sup>&nbspEnables Truely<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUninterrupted ECG Monitoring
+                            </p>
+                        </div>
+                    </div>
+                    <div class="intro-text3">
+                        <div class="intro-text3-wrap">
+                            <div>
+                                Revolutionary Wearable ECG All-Inclusive System
+                            </div>
+                            <div>
+                                <br>FDA-Cleared Cardea SOLO<sup>TM</sup> is an all-inclusive ambulatory cardiac monitoring<br>
+                                system that combines wearable patch technology with automated and editable<br>
+                                ECG data analysis software.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="main-section">
+                    <!-- slide 영역 -->
+                    <div>
+
+                    </div>
+                    <div>
+                        <div>
+                            Developed for clinicians, ECG Technicans, and patients in mind.<br>
+                            Here is Cardea SOLOTM for you to experience.
+                        </div>
+                        <div>
+                            <!-- video 영역 -->
+                            <div>
+
+                            </div>
+                            <!-- text영역 -->
+                            <div>
+                                <div>
+                                    Explainer video
+                                </div>
+                                <div>
+                                    Offering a full package with skin prep materials, application template, and removal pad is a powerful yet flexible tool to collect better ECG quality data and minimize skin irritation of patients. Even raw material like hydrogel was used as premium quality to optimize the best wearing experience as well as high adhesion.
+                                </div>
+                                <div>
+                                    Request a Product Demo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="outro">
+
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p>
+                Efficiently reduce the number of hospital visits by half, from 4 to 2, and shorten<br>
+                the diagnostic process by more than 2 months to only 7 days with the revolutionary<br>
+                Cardea SOLO<sup>TM</sup>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

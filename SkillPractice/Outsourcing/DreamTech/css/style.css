@@ -135,3 +135,197 @@
   -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
   transition: all 0.3s cubic-bezier(1, .01, .32, 1);
 }
+
+/* felxbox */
+#wrapper{
+  display: flex;
+  flex-flow: row wrap;
+}
+body{
+  width: 90%;
+  margin: 10px auto;
+}
+a{
+  text-decoration: none;
+  color: gray;
+}
+header {
+  height: 100px;
+  color: black;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#main-banner{
+  width: 100%;
+}
+footer{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(54, 199, 41);
+  color: white;
+  height: 200px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+#main-menu{
+  display: flex;
+};
+
+#site-map{
+  align-self: flex-start;
+}
+#main-menu,
+#sub-menu{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#main-menu > li{
+  float: left;
+  background: white;
+}
+#main-menu > li > a{
+  font-size: 1.3rem;
+  font-weight: bold;
+  color:rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: block;
+  padding: 12px 36px;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.sub-menu{
+  position:absolute;
+  background:white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out;
+  display: flex;
+}
+.sub-menu > li > a{
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  
+}
+#main-menu > li:hover
+.sub-menu{
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  z-index: 101;
+  display: flex;
+}
+.sub-menu > .sub-menues > li > a:hover{
+  text-decoration: underline;
+}
+.sub-text{
+  background-image: url("http://placehold.it/300x200");
+  border-radius: 0px 0px 0px 20px;
+  padding: 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+.sub-menues{
+  padding: 20px;
+  background-color: white;
+}
+.sub-menues > li{
+  padding-top: 7px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.sub-menu{
+  border-radius: 0px 0px 0px 20px;
+  box-shadow: 1px 1px 10px 3px gray;
+}
+#site-map span{
+  color: gray;
+  padding: 0 7px;
+  float: right;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+#site-map a{
+  text-decoration: none;
+  color: gray;
+}
+
+/**/
+
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#chk{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+.content{
+    padding: 0 20px;
+}
+.content img{
+    width:  100%;
+    max-width: 700px;
+    margin: 20px 0;
+}
+
+@media screen and (max-width:1024px){
+  .show-menu-btn, .hide-menu-btn{
+      display: block;
+  }
+  #main-menu{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #333;
+      right: -100%;
+      top: 0;
+      text-align: center;
+      padding: 80px 0;
+      line-height: normal;
+      transition: 0.7s;
+      z-index: 102;
+  }
+  #main-menu a{
+      display: block;
+      padding: 20px;
+  }
+  .hide-menu-btn{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+  }
+  #chk:checked ~ #main-menu{
+      right: 0;
+  }
+  header{
+      height: 100px;
+      color: black;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+  }
+  #main-menu{
+    display: flex;
+    flex-flow: column;
+  }
+  .sub-text{
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+  }
+}
