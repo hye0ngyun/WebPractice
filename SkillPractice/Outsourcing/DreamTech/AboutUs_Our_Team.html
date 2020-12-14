@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us-Our Team</title>
+    <title>About Our Team</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <style>
+        article .article-ourteam{
+            height: 500px;
+            width: 100%;
+            height: fit-content;
+            padding: 50px 0px;
+        }
+
+        article .article-ourteam:nth-child(2n+1){
+            background: #e5eeee;
+        }
+        article .article-ourteam:first-child{
+            background-image: url("http://placehold.it/300x200");
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            justify-content: flex-end;
+        }
+        article .article-ourteam-intro{
+            width: 400px;
+            margin: 10%;
+        }
+        article .article-ourteam-intro h1{
+            color:  rgb(54, 199, 41);
+        }
+        article .article-ourteam h2{
+            padding-top: 20px;
+            color:  rgb(54, 199, 41);
+        }
+        article .article-ourteam-imgwrap{
+            display: flex;
+            flex-flow: row wrap;
+            width: 600px;
+        }
+        article .article-ourteam:nth-child(2){
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+        article .article-ourteam-imgwrap img{
+            width: 25%;
+        }
+        article .article-ourteam h2{
+            text-align: center;
+        }
+        article .article-ourteam-outro{
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+        }
+        article .article-ourteam-outro div{
+            width: 300px;
+            background: #fff;
+            margin-top: 30px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 5px;
+        }
+        article .article-ourteam-outro div h1{
+            text-align: center;
+            margin-top: 20px;
+            color: rgb(54, 199, 41);
+        
+        }
+        article .article-ourteam-outro div ul{
+            margin-top: 20px;
+        }
+        article .article-ourteam-outro div ul li{
+            list-style: disc;
+            margin-left: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="wrapper">
@@ -29,7 +99,7 @@
                         <ul class = "sub-menu">
                             <div class="sub-text"><p>Our brand,<br>people,<br>news<br>and insights<br>from out team</p></div>
                             <div class="sub-menues">
-                                <li><a href="AboutUs_iSigNal.html">i.Signal</a></li>
+                                <li><a href="AboutUs_iSigNal.html">i.SigNal</a></li>
                                 <li><a href="AboutUs_Our_Team.html">Our Team</a></li>
                                 <li><a href="#">Press Release</a></li>
                                 <li><a href="#">Blog</a></li>
@@ -66,14 +136,78 @@
         </header>
         <section>
             <article>
+                <div class="article-ourteam">
+                    <div class="article-ourteam-intro">
+                        <h1>What is Lorem Ipsum?</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+                </div>
+                <div class="article-ourteam">
+                    <h2>Our team is made up of healthcare industry expert from the multi national medical device and pharmaceutial companies</h2>
+                    <div class="article-ourteam-imgwrap">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
+                        <img src="http://placehold.it/150x100">
 
+                    </div>
+                </div>
+                <div class="article-ourteam">
+                    <h2>Our combined experiences are not only limited to but also include...</h2>
+                    <div class="article-ourteam-outro">
+                        <div class="spec-cont">
+                            <h1>By Speciality</h1>
+                            <ul>
+                                <li>1.1</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="prod-cont">
+                            <h1>By Product</h1>
+                            <ul>
+                                <li>2.1</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="unit-cont">
+                            <h1>By Unit</h1>
+                            <ul>
+                                <li>3.1</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </article>
         </section>
         <footer>
             <p>
                 Efficiently reduce the number of hospital visits by half, from 4 to 2, and shorten<br>
                 the diagnostic process by more than 2 months to only 7 days with the revolutionary<br>
-                Cardea SOLO TM
+                Cardea SOLO<sup>TM</sup>
             </p>
         </footer>
     </div>
