@@ -64,7 +64,115 @@
     font-size: 1.2rem;
     }
     */
-
+        article .article-cardea div:nth-child(n){
+            height: fit-content;
+            padding-bottom: 50px;
+        }
+        article .article-cardea-intro{
+            display: flex;
+            flex-flow: column;
+            background-image: url("https://placehold.it/300x300");
+            background-repeat: no-repeat;
+            background-size: 100% 400px;
+        }
+        .article-cardea-intro h1{
+            width: 300px;
+        }
+        .article-cardea-intro .side-text{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .article-cardea-intro h2{
+            width: 300px;
+        }
+        .article-cardea-intro .main-text{
+            width: 80%;
+            align-self: center;
+        }
+        .article-cardea-intro .slider-box{
+            height: 500px;
+        }
+        .article-cardea-middle{
+            display: flex;
+            flex-flow: column;
+        }
+        .article-cardea-middle .video-box{
+            display: flex;
+            flex-flow: row wrap;
+            align-self: flex-end;
+            margin-left: 10%;
+            background: rgb(54, 199, 41);
+            padding: 30px;
+        }
+        .article-cardea-middle video{
+            margin: 0 20px;
+        }
+        .article-cardea-middle .video-exp{
+            width: 300px;
+        }
+        .article-cardea-middle h2{
+            text-align: center;
+        }
+        .article-cardea-middle .img-text-box{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .article-cardea-middle .img-box{
+            display: flex;
+            flex-flow: wrap;
+            width: 50%;
+        }
+        .img-box .big-img{
+            width: 100%;
+        }
+        .article-cardea-middle .text-box{
+            width: 50%;
+        }
+        .article-cardea-outro{
+            display: flex;
+            flex-flow: column;
+            height: 500px;
+        }
+        .article-cardea-outro .side-text{
+            align-self: flex-start;
+        }
+        .article-cardea-outro .main-box{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        
+        .article-cardea-outro .main-box div:first-child{
+            transform: translateY(100px);
+            width: 25%;
+        }
+        .article-cardea-outro .main-box div:nth-child(2){
+            transform: translateY(50px);
+            width: 25%;
+        }
+        .article-cardea-outro .main-box div:nth-child(3){
+            transform: translateY(100px);
+            width: 25%;
+        }
+        .article-cardea-outro .main-box div:nth-child(4){
+            transform: translateY(50px);
+            width: 25%;
+        }
+        
+        @media screen and (max-width:800px){
+            .article-cardea-outro .main-box div:nth-child(n){
+                transform: translateY(0px);
+                width: auto;
+                padding-right: 20px;
+            }
+            .article-cardea-middle .img-box{
+                display: flex;
+                flex-flow: wrap;
+                width: auto;
+            }
+            .article-cardea-middle .text-box{
+                width: auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -126,7 +234,6 @@
         </header>
         <section>
             <article>
-                
                 <!-- insert bgimg >
                 <div id="intro">
                     <div class="intro-text1">
@@ -212,12 +319,15 @@
                         <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
                         <div class="video-box">
                             <video src="" style="background: #333;"></video>
-                            <h3>Explainer video</h3>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
-                            <a href="">Request a Product Demo</a>
+                            <div class="video-exp">
+                                <h3>Explainer video</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </p>
+                                <a href="">Request a Product Demo</a>
+                            </div>
                         </div>
+                        <h2>Innovative Wearable ECG Technology, Cardea SOLO<sup>TM</sup></h2>
                         <div class="img-text-box">
                             <div class="img-box">
                                 <img src="https://placehold.it/300x200" alt="" class="big-img">
