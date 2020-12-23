@@ -1,0 +1,22 @@
+div{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    background: red;
+}
+.container{
+    background: yellow;
+    left: 20px;
+    top: 20px;
+    position: relative;
+}
+.box{
+    background: blue;
+    left: 20px;
+    top: 20px;
+    position: sticky;
+}
+/* relative는 원래 존재해야 할 위치에서부터 위치 */
+/* absolute는 컨테이너 내에서 위치*/
+/* fixed는 컨테이너를 벗어나 윈도우에서부터 위치 */
+/* sticky는 원래 존재해야 할 위치에 있다가 스크롤되면 입력된 값만큼 화면에 붙어다님 */
