@@ -178,30 +178,27 @@ const add = function(a, b) {
 
 const calcurate = function(command, a, b){
     switch(command){
-        case add:
+        case 'add':
             return a + b
             break;
-        case subtract:
+        case 'subtract':
             return a - b
             break;
-        case divide:
+        case 'divide':
             return a / b
             break;
-        case multiply:
+        case 'multiply':
             return a * b
             break;
-        case remainder:
+        case 'remainder':
             return a % b
             break;
         default:
             break;
     }
 }
-console.log(calcurate(add, 5, 13));
-
-//console.log(calcurate(subtract, 5, 13));
-/*
-console.log(calcurate(divide, 5, 13));
-console.log(calcurate(multiply, 5, 13));
-console.log(calcurate(remainder, 5, 13));
-*/
+console.log(calcurate(add, 13, 5));
+console.log(calcurate('subtract', 13, 5));
+console.log(calcurate('divide', 13, 5));
+console.log(calcurate('multiply', 13, 5));
+console.log(calcurate('remainder', 13, 5));
