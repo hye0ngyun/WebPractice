@@ -194,10 +194,11 @@ const calcurate = function(command, a, b){
             return a % b
             break;
         default:
+            throw Error('unknown command');
             break;
     }
 }
-console.log(calcurate(add, 13, 5));
+console.log(calcurate('add', 13, 5));
 console.log(calcurate('subtract', 13, 5));
 console.log(calcurate('divide', 13, 5));
 console.log(calcurate('multiply', 13, 5));
