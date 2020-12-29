@@ -182,7 +182,57 @@
         .article-cardea-outro .side-text h2:nth-child(2){
             align-self: flex-end;
         }
-        @media screen and (max-width:800px){
+        .article-cardea-intro .slider-box .btn-left{
+            border: 1px solid red;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            top: 50px;
+
+        }
+        .article-cardea-intro .slider-box .btn-right{
+            border: 1px solid red;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+            top: 50px;
+
+        }
+        .article-cardea-intro .slider-box .btn-left:hover{
+            border: 1px solid  rgb(54, 199, 41);
+            background: rgb(54, 199, 41);
+        }
+        .article-cardea-intro .slider-box .btn-right:hover{
+            border: 1px solid  rgb(54, 199, 41);
+            background: rgb(54, 199, 41);
+            
+        }
+        .article-cardea-intro .slider-box .arrow{
+            position: relative;
+            bottom: 7px;
+            padding: 5px;
+            font-size: 30px;
+            color: rgb(54, 199, 41);
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+        .article-cardea-intro .slider-box .arrow:hover{
+            color: white;
+        }
+        .slide{
+            background:rgb(54, 199, 41);
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            transition: .5s;
+        }
+        .showing{
+            width: 200px;
+            height: 200px;
+        }
+        @media screen and (max-width:1024px){
             .article-cardea-outro .main-box div:nth-child(n){
                 transform: translateY(0px);
                 width: auto;
@@ -297,7 +347,15 @@
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
                         <div class="slider-box">
-
+                            <div class="btn-left">
+                                <div class="arrow" onclick="testfnc()"><span><</span></div>
+                            </div>
+                            <div class="slide">1</div>
+                            <div class="slide">2</div>
+                            <div class="slide">3</div>
+                            <div class="btn-right">
+                                <div class="arrow" onclick="testfnc()"><span>></span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="article-cardea-middle">
@@ -315,12 +373,12 @@
                         <h2>Innovative Wearable ECG Technology,<br>Cardea SOLO<sup>TM</sup></h2>
                         <div class="img-text-box">
                             <div class="img-box">
-                                <img src="https://placehold.it/300x200" alt="" id="big-img">
+                                <img src="http://placehold.it/300x200" alt="" id="big-img">
                                 <div class="small-img-box">
-                                    <img src="https://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(1)">
-                                    <img src="https://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(2)">
-                                    <img src="https://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(3)">
-                                    <img src="https://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(4)">
+                                    <img src="http://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(1)">
+                                    <img src="http://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(2)">
+                                    <img src="http://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(3)">
+                                    <img src="http://placehold.it/150x100" alt="" class="small-img" onclick="changeImg(4)">
                                 </div>
                             </div>
                             <div class="text-box">
@@ -349,22 +407,22 @@
                         </div>
                         <div class="main-box">
                             <div class="patient-cont">
-                                <img src="https://placehold.it/150x100" alt="">
+                                <img src="http://placehold.it/150x100" alt="">
                                 <h4>Paitient Application</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                             <div class="daily-cont">
-                                <img src="https://placehold.it/150x100" alt="">
+                                <img src="http://placehold.it/150x100" alt="">
                                 <h4>Daily Routine</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                             <div class="demand-cont">
-                                <img src="https://placehold.it/150x100" alt="">
+                                <img src="http://placehold.it/150x100" alt="">
                                 <h4>On Demand Data</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
                             <div class="clinial-cont">
-                                <img src="https://placehold.it/150x100" alt="">
+                                <img src="http://placehold.it/150x100" alt="">
                                 <h4>Clinial Decision making</h4>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </div>
@@ -381,5 +439,14 @@
             </p>
         </footer>
     </div>
+    <script>
+        const array = [document.querySelector(`.slide:nth-child(${2})`), document.querySelector(`.slide:nth-child(${3})`), document.querySelector(`.slide:nth-child(${4})`)]
+        array[1].classList.add('showing');
+        const testfnc = function(){
+            let cureentSlide = array[2];
+            console.log(cureentSlide);
+            cureentSlide.classList.add('showing');
+        }
+    </script>
 </body>
 </html>
