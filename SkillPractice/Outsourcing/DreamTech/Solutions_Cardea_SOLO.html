@@ -7,6 +7,50 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <style>
+        #slider-div div{
+        border: 1px solid red;
+        }
+        .slick-arrow{
+        /*background: ;*/
+        }
+        .slick-slide, .slick-slide > div{
+        background-color: #fff;
+        height: fit-content;
+        border-radius: 10px;
+        }
+        .slick-center, .slick-center > div{
+        background-color: #fff;
+        border-radius: 10px;
+        border-bottom: 3px solid greenyellow;
+        }
+        
+        .slider .slick-list {
+        margin:0 -20px;
+        padding:-10px;
+        }
+
+        .slick-slide {
+        margin:0 20px;
+        margin-top: 20px;
+        padding:10px;
+        }
+        .slider .slick-center{
+        padding: 10px;
+        }
+        .slick-center{
+        margin-top: 0px;
+        }
+        .slick-current > div:first-child{
+            padding: 20px;
+        }
+    </style>
     <style>
         article .article-cardea-intro, article .article-cardea-middle{
             height: fit-content;
@@ -60,7 +104,7 @@
             color: gray;
         }
         .article-cardea-intro .slider-box{
-            height: 300px;
+            height: 600px;
         }
         .article-cardea-middle{
             display: flex;
@@ -347,6 +391,47 @@
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
                         <div class="slider-box">
+                            <div style="padding:100px 100px; background-color: skyblue;">
+                                <div id="slider-div">
+                                  <div>
+                                    1
+                                    <img src="http://placehold.it/100x100" alt="">
+                                    <h2>1111111111111</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                                  </div>
+                                  <div>
+                                    2
+                                    <img src="http://placehold.it/100x100" alt="">
+                                    <h2>2222222222222222</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                                  </div>
+                                  <div>
+                                    3
+                                    <img src="http://placehold.it/100x100" alt="">
+                                    <h2>3333333333333333</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                                  </div>
+                                  <div>
+                                    4
+                                    <img src="http://placehold.it/100x100" alt="">
+                                    <h2>444444444444</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                                  </div>
+                                  <div>
+                                    5
+                                    <img src="http://placehold.it/100x100" alt="">
+                                    <h2>5555555555</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                                  </div>
+                                  <div>
+                                    6
+                                    <img src="http://placehold.it/100x100" alt="">
+                                    <h2>6666666666666</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                                  </div>
+                                </div>
+                            </div>
+                            <!--
                             <div class="btn-left">
                                 <div class="arrow" onclick="testfnc()"><span><</span></div>
                             </div>
@@ -356,6 +441,7 @@
                             <div class="btn-right">
                                 <div class="arrow" onclick="testfnc()"><span>></span></div>
                             </div>
+                            -->
                         </div>
                     </div>
                     <div class="article-cardea-middle">
@@ -448,5 +534,45 @@
             cureentSlide.classList.add('showing');
         }
     </script>
+    <script>
+        $(function(){
+            $('#slider-div').slick({
+                slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li 
+                infinite : true, 	//무한 반복 옵션	 
+                slidesToShow : 3,		// 한 화면에 보여질 컨텐츠 개수
+                slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
+                speed : 100,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+                arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
+                dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
+                autoplay : true,			// 자동 스크롤 사용 여부
+                autoplaySpeed : 10000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+                pauseOnHover : true,		// 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
+                vertical : false,		// 세로 방향 슬라이드 옵션
+                prevArrow : "<button type='button' class='slick-prev'>Previous</button>",		// 이전 화살표 모양 설정
+                nextArrow : "<button type='button' class='slick-next'>Next</button>",		// 다음 화살표 모양 설정
+                dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
+                draggable : true, 	//드래그 가능 여부 
+                centerMode: true,
+                centerPadding: '0px',
+                responsive: [ // 반응형 웹 구현 옵션
+                    {  
+                        breakpoint: 1024, //화면 사이즈 960px
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow:3 
+                        } 
+                    },
+                    { 
+                        breakpoint: 768, //화면 사이즈 768px
+                        settings: {	
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow:1
+                        } 
+                    }
+                ]
+            });
+          })
+  
+      </script>
 </body>
 </html>
