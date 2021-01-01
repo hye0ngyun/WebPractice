@@ -1,10 +1,11 @@
-/*GLOBALS*/
+/* @GLOBALS */
 * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* prev slide css
 #slider-wrap {
   width: 100%;
   height: 400px;
@@ -47,7 +48,7 @@
   height: 100%;
 }
 
-/*btns*/
+/* @btns */
 .slider-btns {
   position: absolute;
   width: 50px;
@@ -92,7 +93,7 @@
   left: 0px;
 }
 
-/*bar*/
+/* @bar */
 #slider-pagination-wrap {
   min-width: 20px;
   margin-top: 350px;
@@ -128,15 +129,16 @@
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 0px;
 }
 
-/*ANIMATION*/
+/* @ANIMATION */
 #slider-wrap ul,
 #slider-pagination-wrap ul li {
   -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
   -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
   transition: all 0.3s cubic-bezier(1, .01, .32, 1);
 }
+*/
 
-/* felxbox */
+/* @flexxbox */
 #wrapper{
   display: flex;
   flex-flow: row wrap;
@@ -259,7 +261,7 @@ footer{
   color: gray;
 }
 
-/*responsive menu bar*/
+/* @responsive menu bar */
 .show-menu-btn,.hide-menu-btn{
   transition: 0.4s;
   font-size: 30px;
@@ -335,4 +337,533 @@ footer{
 }
   section{
   width: 100%;
+  }
+
+/* @iSignal */
+article .article-signal{
+  height: 500px;
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 50px;
+}
+
+article .article-signal:nth-child(2n+1){
+  background: #d8e6e6;
+}
+article .article-signal:first-child{
+  background-image: url("http://placehold.it/300x200");
+  background-repeat: no-repeat;
+  background-size: 100% 400px;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.article-signal-intro{
+  display: flex;
+  flex-flow: row wrap;
+  width: 40%;
+  height: fit-content;
+  padding: 50px;
+  margin: 50px;
+  margin-right: 100px;
+  background-color: rgb(54, 199, 41);
+  color: #fff;
+}
+@media screen and (max-width: 1024px){
+  .article-signal-intro{
+      width: 100%;
+      padding: 10px;
+      margin: 30px;
+  }
+}
+
+article .article-signal-intro a{
+  margin-top: 10px;
+  border: 7px solid #fff;
+  background-color: #fff;
+  border-radius: 20px;
+  color:  rgb(54, 199, 41);
+  cursor: pointer;
+  height: 20px;
+}
+article .article-signal:nth-child(n+2){
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+article .article-signal-circle{
+  background-color: rgb(54, 199, 41);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+article .article-signal-line{
+  background-color: rgb(54, 199, 41);
+  width: 1px;
+  height: 150px;
+}
+article .article-signal h2{
+  color: gray;
+  text-align: center;
+  margin: 15px 0;
+}
+article .article-signal h3{
+  color: rgb(54, 199, 41);
+  margin: 20px 0;
+}
+article .article-signal p{
+  color: gray;
+}
+article .article-signal-intro h3{
+  color: #fff;
+}
+article .article-signal .article-signal-p{
+  padding: 0 7%;
+}
+article .article-signal-intro p{
+  color: white;
+}
+
+/* @Our team */
+article .article-ourteam{
+  height: 500px;
+  width: 100%;
+  height: fit-content;
+  padding: 50px 0px;
+}
+
+article .article-ourteam:nth-child(2n+1){
+  background: #e5eeee;
+}
+article .article-ourteam:first-child{
+  background-image: url("http://placehold.it/300x200");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: flex-end;
+}
+article .article-ourteam-intro{
+  width: 400px;
+  margin: 10%;
+}
+article .article-ourteam-intro h1{
+  color:  rgb(54, 199, 41);
+}
+article .article-ourteam h2{
+  padding-top: 20px;
+  color:  rgb(54, 199, 41);
+}
+article .article-ourteam-imgwrap{
+  display: flex;
+  flex-flow: row wrap;
+  width: 600px;
+}
+article .article-ourteam:nth-child(2){
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+article .article-ourteam-imgwrap img{
+  width: 25%;
+}
+article .article-ourteam h2{
+  text-align: center;
+}
+article .article-ourteam-outro{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+article .article-ourteam-outro div{
+  width: 300px;
+  background: #fff;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 5px;
+}
+article .article-ourteam-outro div h1{
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(54, 199, 41);
+
+}
+article .article-ourteam-outro div ul{
+  margin-top: 20px;
+}
+article .article-ourteam-outro div ul li{
+  list-style: disc;
+  margin-left: 50px;
+}
+
+/* @partnership */
+article .article-partnership-intro{
+  display: flex;
+  justify-content: flex-end;
+}
+article .article-partnership-intro div{
+  width: 800px;
+  background: rgb(54, 199, 41);
+  color: white;
+  padding: 50px;
+  justify-self: flex-end;
+}
+article .article-partnership-intro a{
+  margin-top: 10px;
+  border: 7px solid #fff;
+  background-color: #fff;
+  border-radius: 20px;
+  color:  rgb(54, 199, 41);
+  cursor: pointer;
+  height: 20px;
+}
+article .article-partnership .article-partnership-intro p{
+  padding: 20px 0;
+}
+article .article-partnership-outro{
+  display: flex;
+  flex-flow: column;
+  padding: 7%;
+  background: rgb(238, 238, 238);
+}
+article .article-partnership-outro h2{
+  color:  rgb(54, 199, 41);
+  text-align: left;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+article .article-partnership-expwrap{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+article .article-partnership-expwrap div{
+  width: 300px;
+  margin: 20px 20px;
+}
+article .article-partnership-expwrap div h1{
+  color: rgb(54, 199, 41);
+  border-left: 3px solid rgb(54, 199, 41);
+  padding: 0px 20px;
+  padding-bottom: 20px;
+}
+
+/* @Cardea SOLO */
+/* slider */
+.slick-slide, .slick-slide > div{
+  background-color: #fff;
+  height: fit-content;
+  border-radius: 10px;
+  }
+  .slick-center, .slick-center > div{
+  background-color: #fff;
+  border-radius: 10px;
+  
+  }
+  
+  .slider .slick-list {
+  margin:0 -20px;
+  padding:-10px;
+  }
+
+  .slick-slide {
+  margin:0 20px;
+  margin-top: 20px;
+  padding:10px;
+  }
+  .slider .slick-center{
+  padding: 10px;
+  }
+  .slick-center{
+  margin-top: 0px;
+  border-bottom: 4px solid rgb(54, 199, 41);
+  }
+  .slick-current > div:first-child{
+      padding: 20px;
+  }
+  .slider-wrap{
+      background: grey;
+      padding: 50px;
+  }
+
+  /* article */
+  article .article-cardea-intro, article .article-cardea-middle{
+      height: fit-content;
+      padding-bottom: 50px;
+  }
+  
+  article .article-cardea-intro{
+      display: flex;
+      flex-flow: column;
+      background-image: url("https://placehold.it/300x300");
+      background-repeat: no-repeat;
+      background-size: 100% 400px;
+  }
+  .article-cardea-intro .head-text{
+      width: 450px;
+      color: white;
+      margin: 30px;
+  }
+  .article-cardea-intro .head-text h1{
+      font-size: 30px;
+  }
+  .article-cardea-intro .side-text{
+      display: flex;
+      flex-flow: column;
+      align-self: flex-end;
+      background: rgb(54, 199, 41);
+      color: white;
+      padding: 30px;
+      border-radius: 0 0 0 30px;
+      width: 470px;
+  }
+  .article-cardea-intro h2:first-child{
+      align-self: flex-start;
+      margin-right: 20px;
+  }
+  .article-cardea-intro h2:nth-child(2){
+      align-self: flex-end;
+  }
+  .article-cardea-intro .main-text{
+      width: 80%;
+      align-self: center;
+      background: #fff;
+      padding: 30px;
+      box-shadow: rgba(0, 0, 0, 0.3) 1px 3px 30px;
+  }
+  .article-cardea-intro .main-text h3{
+      color: rgb(54, 199, 41);
+      margin-bottom: 20px;
+  }
+  .article-cardea-intro .main-text p{
+      color: gray;
+  }
+  .article-cardea-intro .slider-box{
+      height: 600px;
+      margin-top: 100px;
+  }
+  .article-cardea-middle{
+      display: flex;
+      flex-flow: column;
+  }
+  .article-cardea-middle h2:first-child{
+      color: rgb(54, 199, 41);
+      text-align: center;
+      margin-bottom: 20px;
+  }
+  .article-cardea-middle .video-box{
+      display: flex;
+      flex-flow: row wrap;
+      align-self: flex-end;
+      background: rgb(54, 199, 41);
+      width: 80%;
+      padding: 50px;
+  }
+  .article-cardea-middle video{
+      margin: 0 70px;
+  }
+  .article-cardea-middle .video-exp{
+      width: 300px;
+      color: white;
+  }
+  .article-cardea-middle .video-box a{
+      color: rgb(54, 199, 41);
+      border-radius: 30px;
+      border: 4px solid white;
+      background-color: white;
+  }
+  .article-cardea-middle .video-exp h3, .article-cardea-middle .video-exp p, .article-cardea-middle .video-exp a{
+      margin: 10px 0;
+  }
+  .article-cardea-middle h2{
+      color: gray;
+      padding: 10px;
+      margin: 20px 0;
+  }
+  .article-cardea-middle .img-text-box{
+      display: flex;
+      flex-flow: row wrap;
+  }
+  .article-cardea-middle .img-box{
+      display: flex;
+      flex-flow: wrap;
+      width: 50%;
+      justify-content: center;
+  }
+  .img-box #big-img{
+      width: 100%;
+  }
+  .img-box .small-img-box{
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      margin: 2px;
+  }
+  .img-box .small-img-box .small-img{
+      margin: 2px;
+  }
+  .article-cardea-middle .text-box{
+      width: 50%;
+  }
+  .article-cardea-outro{
+      display: flex;
+      flex-flow: column;
+      height: 500px;
+  }
+  .article-cardea-outro .side-text{
+      align-self: flex-start;
+  }
+  .article-cardea-outro .main-box{
+      display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .article-cardea-outro .main-box div:first-child{
+      transform: translateY(100px);
+      width: 25%;
+  }
+  .article-cardea-outro .main-box div:nth-child(2){
+      transform: translateY(50px);
+      width: 25%;
+  }
+  .article-cardea-outro .main-box div:nth-child(3){
+      transform: translateY(100px);
+      width: 25%;
+  }
+  .article-cardea-outro .main-box div:nth-child(4){
+      transform: translateY(50px);
+      width: 25%;
+  }
+  .article-cardea-middle .img-text-box .text-box h3{
+      margin-top: 30px;
+      color: indigo;
+  }
+  .article-cardea-middle .img-text-box .text-box h4{
+      margin-top: 30px;
+      color: indigo;
+  }
+  .article-cardea-middle .img-text-box .text-box ul{
+      padding-left: 20px;
+  }
+  .article-cardea-middle .img-text-box .text-box ul li{
+      list-style: disc;
+  }
+  .article-cardea-outro .side-text{
+      background-color: rgb(54, 199, 41);
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 0px 0 30px 0px;
+      display: flex;
+      flex-flow: column;
+  }
+  .article-cardea-outro .side-text h2{
+      color: white;
+  }
+  .article-cardea-outro .side-text h2:nth-child(2){
+      align-self: flex-end;
+  }
+  .article-cardea-intro .slider-box .btn-left{
+      border: 1px solid red;
+      border-radius: 50%;
+      position: relative;
+      display: inline-block;
+      top: 50px;
+
+  }
+  .article-cardea-intro .slider-box .btn-right{
+      border: 1px solid red;
+      border-radius: 50%;
+      position: relative;
+      display: inline-block;
+      top: 50px;
+
+  }
+  .article-cardea-intro .slider-box .btn-left:hover{
+      border: 1px solid  rgb(54, 199, 41);
+      background: rgb(54, 199, 41);
+  }
+  .article-cardea-intro .slider-box .btn-right:hover{
+      border: 1px solid  rgb(54, 199, 41);
+      background: rgb(54, 199, 41);
+      
+  }
+  .article-cardea-intro .slider-box .arrow{
+      position: relative;
+      bottom: 7px;
+      padding: 5px;
+      font-size: 30px;
+      color: rgb(54, 199, 41);
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+  }
+  .article-cardea-intro .slider-box .arrow:hover{
+      color: white;
+  }
+  @media screen and (max-width:1024px){
+      .article-cardea-outro .main-box div:nth-child(n){
+          transform: translateY(0px);
+          width: auto;
+          padding-right: 20px;
+      }
+      .article-cardea-middle .img-box{
+          display: flex;
+          flex-flow: wrap;
+          width: auto;
+      }
+      .article-cardea-middle .text-box{
+          width: auto;
+      }
+      .article-cardea-middle .video-exp{
+          width: auto;
+      }
+      .article-cardea-middle .video-box video{
+          width: auto;
+          padding: auto;
+          margin: auto;
+      }
+      .article-cardea-intro .head-text{
+          width: auto;
+          color: white;
+      }
+      .article-cardea-intro .side-text{
+          width: auto;
+      }
+      article .article-cardea-outro{
+      height: fit-content;
+      padding-bottom: 50px;
+      }
+      .article-cardea-middle .video-box{
+          width: auto;
+          margin: auto;
+          padding: 20px;
+      }
+  }
+
+/* index */
+/* index banner slide */
+.main-slider-box .slider-wrap{
+  padding: 50px 0;
+}
+.main-slider-box .slick-slide{
+  margin: 0;
+  width: 200px;
+  height: 100%;
+}
+.main-slider-box .slide{
+  margin: 0;
+  width: 200px;
+  height: 100%;
+}
+.main-slider-box #slider-div div{
+  border: 1px solid red;
+}
+.main-slider-box .slick-slide, .main-slider-box .slick-slide > div{
+  background-color: #fff;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 0px;
+  }
+  .main-slider-box .slick-center, .main-slider-box .slick-center > div{
+  background-color: #fff;
+  border-radius: 0px;
   }
