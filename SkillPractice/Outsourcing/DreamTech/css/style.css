@@ -206,7 +206,7 @@ footer{
 
 .sub-menu{
   position:absolute;
-  background:white;
+  background: rgba(67, 68, 136, 0.418);
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-out;
@@ -230,11 +230,13 @@ footer{
   transition: 1s;
 }
 .sub-text{
-  background-image: url("http://placehold.it/300x200");
+  /*background-image: url("http://placehold.it/300x200");*/
+  background: rgba(67, 68, 136, 0.418);
   border-radius: 0px 0px 0px 20px;
   padding: 20px;
   color: white;
   font-size: 1.5rem;
+  height: 150px;
 }
 .sub-menues{
   padding: 20px;
