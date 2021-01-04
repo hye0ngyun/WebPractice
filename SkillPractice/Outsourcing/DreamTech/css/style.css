@@ -841,7 +841,7 @@ article .article-partnership-expwrap div h1{
       }
   }
 
-/* index */
+/* @index */
 /* index banner slide */
 .main-slider-box .slider-wrap{
   padding: 50px 0;
@@ -869,3 +869,179 @@ article .article-partnership-expwrap div h1{
   background-color: #fff;
   border-radius: 0px;
   }
+
+/* @blog */
+.article-blog{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.article-blog:nth-child(2){
+  background: #93a0a03b;
+}
+.article-blog-art{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.article-blog .article-blog-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article-blog .article-blog-header .logo{
+  margin-top: 30px;
+}
+.article-blog .article-blog-header .article-blog-year{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.article-blog .article-blog-header .article-blog-year a{
+  background: white;
+  border-radius: 20px;
+  padding: 5px 3%;
+  margin: 0 20px;
+  justify-content: center;
+  border: 1px solid rgba(0.3, 0.3, 0.3, 0.3);
+  font-weight: bold;
+}
+.article-blog .article-blog-header .article-blog-year a:hover{
+  background: rgb(0, 0, 179);
+  color: white;
+}
+.article-blog-art .article-blog-artes{
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+  margin: 3%;
+  padding: 3%;
+  flex-basis: 250px;
+  border-radius: 30px;
+}
+.article-blog h1{
+  color: rgb(0, 0, 179);
+  font-size: 2rem;
+  margin: 3% 0 0 0;
+}
+.article-blog-art .article-blog-artes h4{
+  color: rgb(54, 199, 41);
+  margin-bottom: 20px;
+}
+.article-blog-art .article-blog-artes h2{
+  color: rgb(0, 0, 179);
+}
+.article-blog-art .article-blog-artes h5{
+  color: rgba(128, 128, 128, 0.5);
+  margin-bottom: 20px;
+}
+.article-blog-art .article-blog-artes p{
+  color: rgba(65, 65, 65, 0.678);
+  margin-bottom: 30px;
+}
+.article-blog-art .article-blog-artes a{
+  align-self: center;
+  background: white;
+  color: rgb(54, 199, 41);
+  font-weight: bold;
+  padding: 4% 10%;
+  border-radius: 30px;
+  border: 0.1px solid rgba(0.3, 0.3, 0.1, 0.1);
+  box-shadow: rgba(0.3, 0.3, 0.1, 0.1) 5px 5px 5px;
+}
+.article-blog .article-blog-Load{
+  background: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+  box-shadow: rgba(0.3, 0.3, 0.1, 0.1) 5px 5px 5px;
+  margin: 5%;
+}
+
+/* @press release */
+.article-press{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.article-press:nth-child(2){
+  background: #93a0a03b;
+}
+.article-press-art{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.article-press .article-press-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article-press .article-press-header .logo{
+  margin-top: 30px;
+}
+.article-press .article-press-header .article-press-year{
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+.article-press .article-press-header .article-press-year a{
+  background: white;
+  border-radius: 20px;
+  padding: 5px 3%;
+  margin: 0 20px;
+  justify-content: center;
+  border: 1px solid rgba(0.3, 0.3, 0.3, 0.3);
+  font-weight: bold;
+}
+.article-press .article-press-header .article-press-year a:hover{
+  background: rgb(0, 0, 179);
+  color: white;
+}
+.article-press-art .article-press-artes{
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+  margin: 3%;
+  padding: 3%;
+  flex-basis: 250px;
+  border-radius: 30px;
+}
+.article-press h1{
+  color: rgb(0, 0, 179);
+  font-size: 2rem;
+  margin: 3% 0 0 0;
+}
+.article-press-art .article-press-artes h4{
+  color: rgb(54, 199, 41);
+  margin-bottom: 20px;
+}
+.article-press-art .article-press-artes h2{
+  color: rgb(0, 0, 179);
+}
+.article-press-art .article-press-artes h5{
+  color: rgba(128, 128, 128, 0.5);
+  margin-bottom: 20px;
+}
+.article-press-art .article-press-artes p{
+  color: rgba(65, 65, 65, 0.678);
+  margin-bottom: 30px;
+}
+.article-press-art .article-press-artes a{
+  align-self: center;
+  background: white;
+  color: rgb(54, 199, 41);
+  font-weight: bold;
+  padding: 4% 10%;
+  border-radius: 30px;
+  border: 0.1px solid rgba(0.3, 0.3, 0.1, 0.1);
+  box-shadow: rgba(0.3, 0.3, 0.1, 0.1) 5px 5px 5px;
+}
+.article-press .article-press-Load{
+  background: white;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: bold;
+  box-shadow: rgba(0.3, 0.3, 0.1, 0.1) 5px 5px 5px;
+  margin: 5%;
+}
