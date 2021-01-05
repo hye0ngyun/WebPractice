@@ -50,6 +50,185 @@
             position: relative;
             left: ;
         } */
+        .main-slider-box .slick-prev {
+            left: 5px;
+            z-index: 1;
+        }
+        .main-slider-box .slick-next {
+            right: 10px;
+        }
+        .main-slider-box .slick-next:before {
+            content: '>';
+            font-size: 2.5rem;
+            color: #313131;
+            /* height: 200px; */
+        }
+        .main-slider-box .slick-prev:before {
+            content: '<';
+            font-size: 2.5rem;
+            color: #313131;
+            /* height: 200px; */
+        }
+        .main-slider-box .slick-slide, .main-slider-box .slick-slide > div {
+            background-color: #fff;
+            padding: 0;
+            border-radius: 0px;
+            height: 500px;
+        }
+        .main-slider-box .slider-wrap {
+            background: white;
+            padding: 5px;
+        }
+        .slider-wrap{
+            background:rgb(243, 244, 248);
+            padding: 50px;
+        }
+        .main-slider-box .slide-1, .main-slider-box .slide-2, .main-slider-box .slide-3, .main-slider-box .slide-4{
+            background: rgb(240, 240, 240);
+            height: 500px;
+        }
+        /* slider common a tag */
+        .main-slider-box a{
+            display: inline-block;
+            margin-top: 50px;
+            background-color: rgb(0, 181, 64);
+            border-radius: 20px;
+            padding: 2% 5%;
+            color:  white;
+            cursor: pointer;
+            height: 20px;
+        }
+        /* slide1 */
+        .main-slider-box .slide-1 .flex-wrap{
+            display: flex;
+            justify-content: flex-end;
+            border: 1px solid red;
+            height: 500px;
+        }
+        .main-slider-box .slide-1 .flex-wrap div{
+            padding: 15px;
+            padding-right: 10%;
+            border: 1px solid red;
+        }
+        .main-slider-box .slide-1 .flex-wrap .flex-content-wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-slider-box .slide-1 h2{
+            color: rgb(121, 137, 137);
+        }
+        .main-slider-box .slide-1 h3{
+            color: rgb(64, 63, 69);
+        }
+        .main-slider-box .slide-1 h1{
+            color: rgb(64, 63, 69);
+        }
+        /* slide1 */
+        .main-slider-box .slide-1 .flex-wrap{
+            display: flex;
+            justify-content: flex-start;
+            border: 1px solid red;
+            height: 500px;
+        }
+        .main-slider-box .slide-1 .flex-wrap div{
+            padding: 15px;
+            border: 1px solid red;
+            flex-basis: 50%;
+        }
+        .main-slider-box .slide-1 .flex-wrap .flex-content-wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-slider-box .slide-1 h2{
+            color: rgb(121, 137, 137);
+        }
+        .main-slider-box .slide-1 h3{
+            color: rgb(64, 63, 69);
+        }
+        .main-slider-box .slide-1 h1{
+            color: rgb(64, 63, 69);
+        }
+        /* slide2 */
+        .main-slider-box .slide-2 .flex-wrap{
+            display: flex;
+            justify-content: flex-start;
+            border: 1px solid red;
+            height: 500px;
+        }
+        .main-slider-box .slide-2 .flex-wrap div{
+            padding: 15px;
+            border: 1px solid red;
+            flex-basis: 50%;
+        }
+        .main-slider-box .slide-2 .flex-wrap .flex-content-wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-slider-box .slide-2 h2{
+            color: rgb(121, 137, 137);
+        }
+        .main-slider-box .slide-2 h3{
+            color: rgb(64, 63, 69);
+        }
+        .main-slider-box .slide-2 h1{
+            color: rgb(64, 63, 69);
+        }
+        /* slide1 */
+        .main-slider-box .slide-3 .flex-wrap{
+            display: flex;
+            justify-content: flex-end;
+            border: 1px solid red;
+            height: 500px;
+        }
+        .main-slider-box .slide-3 .flex-wrap div{
+            padding: 15px;
+            border: 1px solid red;
+            flex-basis: 50%;
+        }
+        .main-slider-box .slide-3 .flex-wrap .flex-content-wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-slider-box .slide-3 h2{
+            color: rgb(121, 137, 137);
+        }
+        .main-slider-box .slide-3 h3{
+            color: rgb(64, 63, 69);
+        }
+        .main-slider-box .slide-3 h1{
+            color: rgb(64, 63, 69);
+        }
+        /* slide4 */
+        .main-slider-box .slide-4 .flex-wrap{
+            display: flex;
+            justify-content: flex-start;
+            border: 1px solid red;
+            height: 500px;
+        }
+        .main-slider-box .slide-4 .flex-wrap div{
+            padding: 15px;
+            border: 1px solid red;
+            flex-basis: 50%;
+        }
+        .main-slider-box .slide-4 .flex-wrap .flex-content-wrap{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-slider-box .slide-4 h2{
+            color: rgb(121, 137, 137);
+        }
+        .main-slider-box .slide-4 h3{
+            color: rgb(64, 63, 69);
+        }
+        .main-slider-box .slide-4 h1{
+            color: rgb(64, 63, 69);
+        }
+
     </style>
 </head>
 <body>
@@ -72,7 +251,7 @@
                     </li>
                     <li><a href="#">About us</a>
                         <ul class = "sub-menu">
-                            <div class="sub-text"><p>Our brand,<br>people,<br>news<br>and insights<br>from out team</p></div>
+                            <div class="sub-text"><p>Our brand,<br>people,<br>news<br>and insights<br>from our team</p></div>
                             <div class="sub-menues">
                                 <li><a href="AboutUs_iSigNal.html">i.Signal</a></li>
                                 <li><a href="AboutUs_Our_Team.html">Our Team</a></li>
@@ -83,7 +262,7 @@
                     </li>
                     <li><a href="#">Partners</a>
                         <ul class = "sub-menu">
-                            <div class="sub-text"><p>How we<br>engage and<br>work with<br>out partners</p></div>
+                            <div class="sub-text"><p>How we<br>engage and<br>work with<br>our partners</p></div>
                             <div class="sub-menues">
                                 <li><a href="Partners_Partnership.html">Partnetship</a></li>
                             </div>
@@ -166,29 +345,48 @@
         <div class="main-slider-box">
             <div class="slider-wrap">
                 <div id="slider-div">
-                    <div>
-                        1
-                        <img src="http://placehold.it/100x100" alt="">
-                        <h2>1111111111111</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                    <div class="slide-1">
+                        <div class="flex-wrap">
+                            <div class="flex-content-wrap">
+                                <div>
+                                    <h1>Dedicated to Innovation Committed to Care</h1>
+                                    <a href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        2
-                        <img src="http://placehold.it/100x100" alt="">
-                        <h2>2222222222222222</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                    <div class="slide-2">
+                        <div class="flex-wrap">
+                            <div class="flex-content-wrap">
+                                <div>
+                                    <h1>Truly Cares Every Hearybeat</h1>
+                                    <a href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        3
-                        <img src="http://placehold.it/100x100" alt="">
-                        <h2>3333333333333333</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                    <div class="slide-3">
+                        <div class="flex-wrap">
+                            <div class="flex-content-wrap">
+                                <div>
+                                    <h2>Cardea SOLO<sup>TM</sup></h2>
+                                    <h3>Cardiac Arrhythmia Diagnostic Solution</h3>
+                                    <h1>All In Your Hands</h1>
+                                    <a href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        4
-                        <img src="http://placehold.it/100x100" alt="">
-                        <h2>444444444444</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illo! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, saepe? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, reiciendis.</p>
+                    <div class="slide-4">
+                        <div class="flex-wrap">
+                            <div class="flex-content-wrap">
+                                <div>
+                                    <h1>Ready to Join Our Team?</h1>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque similique sint repudiandae hic, sapiente odit reprehenderit veniam consequatur velit corporis architecto rerum dicta quisquam error quidem quos, asperiores ex voluptatem!</p>
+                                    <a href="#">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
