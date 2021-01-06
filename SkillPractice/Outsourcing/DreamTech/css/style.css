@@ -584,7 +584,7 @@ article .article-partnership-expwrap div h1{
       padding: 20px;
   }
   .slider-wrap{
-      background:rgb(243, 244, 248);
+      background:rgb(225, 225, 225);
       padding: 50px;
   }
 
@@ -597,9 +597,11 @@ article .article-partnership-expwrap div h1{
   article .article-cardea-intro{
       display: flex;
       flex-flow: column;
+      background: rgb(243, 244, 248);
       background-image: url("https://placehold.it/300x300");
       background-repeat: no-repeat;
       background-size: 100% 400px;
+      
   }
   .article-cardea-intro .head-text{
       width: 450px;
@@ -809,6 +811,14 @@ article .article-partnership-expwrap div h1{
   }
   .article-cardea-intro .slider-box .arrow:hover{
       color: white;
+  }
+  .article-cardea-outro .main-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .article-cardea-outro .main-box{
+      height: fit-content;
   }
   @media screen and (max-width:1024px){
       .article-cardea-outro .main-box div:nth-child(n){
