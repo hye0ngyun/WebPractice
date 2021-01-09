@@ -148,7 +148,7 @@ body{
 }
 body{
   width: 100%;
-  margin: 10px auto;
+  /* margin: 10px auto; */
 }
 a{
   text-decoration: none;
@@ -390,11 +390,12 @@ article .article-signal:first-child{
 .article-signal-intro{
   display: flex;
   flex-flow: row wrap;
-  width: 40%;
+  width: 30%;
   height: fit-content;
-  padding: 50px;
-  margin: 50px;
-  margin-right: 100px;
+  padding: 5%;
+  /* margin: 50px;
+  margin-right: 100px; */
+  margin-top: 10%;
   background-color: rgb(11, 6, 86);
   color: #fff;
 }
@@ -1288,7 +1289,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-end;
   height: 500px;
-  background-image: url(./src/main-banner1.jpg);
+  background-image: url(../src/main-banner1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1339,7 +1340,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-start;
   height: 500px;
-  background-image: url(./src/main-banner2.jpg);
+  background-image: url(../src/main-banner2.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1366,7 +1367,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-end;
   height: 500px;
-  background-image: url(./src/main-banner3.jpg);
+  background-image: url(../src/main-banner3.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }

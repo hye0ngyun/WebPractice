@@ -7,8 +7,36 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <style>
-
+        .article-signal .signal-video-wrap video{
+            width: 100%;
+            flex: 1 0 auto;
+            height: 500px;
+        }
+        .signal-video-wrap{
+            width: 60%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        .signal-video-wrap button{
+            height: fit-content;
+            position: absolute;
+            bottom: 25%;
+            border-radius: 20px;
+            padding: 5px 15px;
+            color: rgb(11, 6, 86);
+        }
     </style>
+    <script>
+        var myVideo = document.getElementById("video1"); 
+
+        function playPause() { 
+        if (myVideo.paused) 
+        myVideo.play(); 
+        else 
+        myVideo.pause(); 
+        }
+    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -71,7 +99,28 @@
         </header>
         <section>
             <article>
+                
                 <div class="article-signal">
+                    <div class="signal-video-wrap">
+                        <!-- <video  id="signal-video" >
+                            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                        </video> -->
+                        <video id="video1">
+                            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                        </video>
+                        <button onclick="playPause()">Click for Video</button>
+                    </div>
+    <script>
+        var myVideo = document.getElementById("video1"); 
+
+        function playPause() { 
+        if (myVideo.paused) 
+        myVideo.play(); 
+        else 
+        myVideo.pause(); 
+        }
+    </script>
                     <div class="article-signal-intro">
                         <h3>What is Lorem Ipsum?</h3>
                         <p>
@@ -84,7 +133,7 @@
                     <div class="article-signal-circle"></div>
                     <div class="article-signal-line"></div>
                     <div class="article-signal-circle"></div>
-                    <h2>Why<br>iSigNal</h2>
+                    <h2>Why<br>i.SigNal</h2>
                     <h3>Delivering Innovation</h3>
                     <p class="article-signal-p">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -94,7 +143,7 @@
                     <div class="article-signal-circle"></div>
                     <div class="article-signal-line"></div>
                     <div class="article-signal-circle"></div>
-                    <h2>Why<br>iSigNal</h2>
+                    <h2>Why<br>i.SigNal</h2>
                     <h3>Delivering Innovation</h3>
                     <p class="article-signal-p">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -104,7 +153,7 @@
                     <div class="article-signal-circle"></div>
                     <div class="article-signal-line"></div>
                     <div class="article-signal-circle"></div>
-                    <h2>Why<br>iSigNal</h2>
+                    <h2>Why<br>i.SigNal</h2>
                     <h3>Delivering Innovation</h3>
                     <p class="article-signal-p">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -114,7 +163,7 @@
                     <div class="article-signal-circle"></div>
                     <div class="article-signal-line"></div>
                     <div class="article-signal-circle"></div>
-                    <h2>Why<br>iSigNal</h2>
+                    <h2>Why<br>i.SigNal</h2>
                     <h3>Delivering Innovation</h3>
                     <p class="article-signal-p">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -124,7 +173,7 @@
                     <div class="article-signal-circle"></div>
                     <div class="article-signal-line"></div>
                     <div class="article-signal-circle"></div>
-                    <h2>Why<br>iSigNal</h2>
+                    <h2>Why<br>i.SigNal</h2>
                     <h3>Delivering Innovation</h3>
                     <p class="article-signal-p">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
