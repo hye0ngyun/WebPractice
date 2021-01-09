@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <style>
+        .article-jobop-sub2{
+        background: rgb(235, 235, 245);
+        padding: 7%;
+        }
+        .article-jobop-sub2 .flex-wrap{
+
+        background: white;
+        padding: 50px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        box-shadow: rgba(1, 1, 1, 0.3) 1px 1px 20px;
+        }
+        .article-jobop-sub2 .flex-wrap .sub2-cont{
+        width: 100%;
+        padding-right: 10%;
+        }
+        .article-jobop-sub2 .flex-wrap .button-flex-wrap{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .article-jobop-sub2 .flex-wrap button{
+            padding: 10px 20px;
+            background: rgb(11, 6, 86);
+            border-radius: 30px;
+            color: white;
+            margin: 30px;
+            font-size: 1.3rem;
+        }
+        .sub2-cont h2, .sub2-cont p{
+        margin: 30px 0;
+        }
+        .sub2-cont h2, .sub2-cont ul li::marker{
+        color: rgb(11, 6, 86);
+        }
+        .sub2-cont ul li{
+        list-style-type: disc;
+        margin-left: 20px;
+        margin: 10px 20px;
+        
+        }
+        @media (max-width: 1024px){
+        .article-jobop-sub2 .flex-wrap .sub2-cont{
+            padding: 0;
+        }
+        .article-jobop-sub2 .flex-wrap{
+            padding: 20px;
+        }
+        }
+        .sub2-cont .cont-intro{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sub2-cont .cont-intro label{
+            color: rgb(119, 137, 137);
+        }
+        .sub2-cont .cont-intro h1{
+            font-size: 2rem;
+            color: rgb(11, 6, 86);
+            margin-bottom: 70px;
+        }
+        .sub2-cont .red{
+            color: red;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .sub2-cont .cont-flex{
+            display: flex;
+            height: 50px;
+            color: rgb(119, 137, 137);
+            margin: 40px 0;
+            font-size: 1.1rem;
+        }
+        .sub2-cont .cont-flex label{
+            flex-basis: 250px;
+            justify-content: flex-end;
+            display: flex;
+            margin-right: 30px;
+        }
+        .sub2-cont .cont-flex input{
+            flex: 1 0 auto;
+        }
+        .sub2-cont .cont-flex2{
+            display: flex;
+            color: rgb(119, 137, 137);
+            justify-content: flex-end;
+            flex-flow: wrap;
+            margin: 30px 0;
+            font-size: 1.1rem;
+        }
+        .sub2-cont .cont-flex2 label{
+            
+            justify-content: flex-end;
+            display: flex;
+            margin: 10px 30px 10px 10%;
+        }
+        .sub2-cont .cont-flex2 .labelmargin{
+            flex:1 0 auto;
+        }
+        .sub2-cont .cont-flex2 input{
+            width: 100%;
+            margin-left: 10%;
+            height: 50px;
+        }
+        hr{
+            margin: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo"><a href="index.html"><img src="http://placehold.it/150x100" alt="logo"></a></div>
+            <div id="menu-wrapper">
+                <input type="checkbox" id="chk">
+                <label for="chk" class="show-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul id="main-menu">
+                    <div class="main-menues">
+                        <li><a href="#">Solutions</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>Our Solutions<br>and upcoming<br> products</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="Solutions_Cardea_SOLO.html">Cardea SOLO</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">About us</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>Our brand,<br>people,<br>news<br>and insights<br>from our team</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="AboutUs_iSigNal.html">i.Signal</a></li>
+                                    <li><a href="AboutUs_Our_Team.html">Our Team</a></li>
+                                    <li><a href="AboutUs_PressRelease.html">Press Release</a></li>
+                                    <li><a href="AboutUs_Blog.html">Blog</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">Partners</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>How we<br>engage and<br>work with<br>our partners</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="Partners_Partnership.html">Partnetship</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">Careers</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>Our value,<br>culture and<br>invitation to<br>rockstar team</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="Careers_Rightfit.html">Right Fit</a></li>
+                                    <li><a href="Careers_JobOpportunities.html">Job Opportunities</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </div>
+                    <label for="chk" class="hide-menu-btn">
+                        <i class="fas fa-times"></i>
+                    </label> 
+                    <div id="site-map">
+                        <a href="ContactUs.html">Contact Us</a>
+                        <a href="SignUp.html">HCP</a>
+                        <a href="http://www.idreamtech.co.kr">Company</a>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <article>
+                <div class="article-jobop">
+                    <div class="article-jobop-intro">
+                        <h1>Ready to Join our Team?</h1>
+                        <h4>check out our open positions.</h4>
+                        <h2 class="jobop-title">Customer Success Manager</h2>
+                    </div>
+                    <div class="article-jobop-sub2">
+                        <div class="flex-wrap">
+                            <div class="sub2-cont">
+                                <div class="cont-intro">
+                                    <h1>Apply for this Job</h1>
+                                    <label for=""><span class="red">*</span>Required</label>
+                                </div>
+                                <form action="#" method="POST">
+                                    <div class="cont-flex">
+                                        <label for="name">Name<span class="red">*</span></label>
+                                        <input type="text" id="name">
+                                    </div>
+                                    <div class="cont-flex">
+                                        <label for="email">Email<span class="red">*</span></label>
+                                        <input type="text" id="email">
+                                    </div>
+                                    <div class="cont-flex">
+                                        <label for="address">Address<span class="red">*</span></label>
+                                        <input type="text" id="address">
+                                    </div>
+                                    <div class="cont-flex">
+                                        <label for="phone">Phone<span class="red">*</span></label>
+                                        <input type="text" id="phone">
+                                    </div>
+                                    <div class="cont-flex">
+                                        <label for="resumecv">Resume/CV<span class="red">*</span></label>
+                                        <input type="text" id="resumecv">
+                                    </div>
+                                    <div class="cont-flex">
+                                        <label for="coverLetter">Cover Letter<span class="red">*</span></label>
+                                        <input type="text" id="coverLetter">
+                                    </div>
+                                    <hr>
+                                    <div class="cont-flex2">
+                                        <label for="linkedProfile">LinkedIn Profile</label><div class="labelmargin"></div>
+                                        <input type="text" id="linkedProfile">
+                                    </div>
+                                    <div class="cont-flex2">
+                                        <label for="website">Website</label><div class="labelmargin"></div>
+                                        <input type="text" id="website">
+                                    </div>
+                                    <div class="cont-flex2">
+                                        <label for="question">Desired Compensation Package?</label><div class="labelmargin"></div>
+                                        <input type="text" id="question">
+                                    </div>
+                                    <hr>
+                                    <div class="button-flex-wrap">
+                                        <button type="submit">Submit Application</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p>
+                Efficiently reduce the number of hospital visits by half, from 4 to 2, and shorten<br>
+                the diagnostic process by more than 2 months to only 7 days with the revolutionary<br>
+                Cardea SOLO<sup>TM</sup>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
