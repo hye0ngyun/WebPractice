@@ -197,6 +197,7 @@ footer{
 #main-menu .main-menues > li{
   float: left;
   background: white;
+  flex: 1 0 auto;
 }
 #main-menu .main-menues > li > a{
   font-size: 1.3rem;
@@ -227,6 +228,8 @@ footer{
 }
 #main-menu .main-menues{
   margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
 }
 #main-menu .main-menues > li:hover
 .sub-menu{
