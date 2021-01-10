@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <style>
-
+        .contact-us{
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+        .contact-us .main-content{
+            width: 60%;
+            padding: 5%;
+        }
+        .contact-us .side-information{
+            width: 20%;
+            padding: 5%;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +82,67 @@
         </header>
         <section>
             <article>
-
+                <div class="contact-us">
+                    <div class="main-content">
+                        <h1>Contact us</h1>
+                        <form action="" method="POST">
+                            <div>
+                                <label for="name">Name<span class="red">*</span></label>
+                                <input type="text" id="nmae">
+                                <select id="prefix" name="cars">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                                <select id="job" name="cars">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="email">Email<span class="red">*</span></label>
+                                <input type="text" id="Email">
+                            </div>
+                            <div>
+                                <label for="phone">Phone No<span class="red">*</span></label>
+                                <input type="text" id="phone">
+                            </div>
+                            <div>
+                                <label for="inquiry">Type of inquiry<span class="red">*</span></label>
+                                <select id="inquiry" name="cars">
+                                    <option type="checkbox" value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="fiat">Fiat</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message">How can we help you?</label>
+                                <input type="textarea">
+                            </div>
+                            <div>
+                                <label for="file">File attachment</label>
+                                <input type="file">
+                            </div>
+                            <div>
+                                <button type="submit">Send</button>
+                                <button type="reset">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="side-information">
+                        <img src="http://placehold.it/150x100" alt="">
+                        <div>If you have any inquires, please leave your message and contact information below.<br>We will get back yo you as soon as possible.<br>Thank you.</div>
+                        <span class="green">Location</span>
+                        <div>3F, Uniquest Bldg, 314 Hwangsaeul-ro,<br>Bundang, Seongnam, Gyeonggi, Korea(13591)</div>
+                        <div><span class="green">E: </span>isignal.info@dreamtech.co.kr</div>
+                        <div><span class="green">T: </span>1556-6507</div>
+                        <div><span class="green">International: </span>+82-32-620-1520</div>
+                    </div>
+                </div>
             </article>
         </section>
         <footer>

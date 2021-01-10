@@ -436,8 +436,13 @@ article .article-signal:first-child{
   .article-signal .signal-video-wrap video{
     width: 100%;
   }
+  .signal-video-wrap{
+    width: 100%;
+  }
+  .signal-video-wrap button{
+    bottom: 50px;
+  }
 }
-
 article .article-signal-intro a{
   margin-top: 10px;
   border: 7px solid #fff;
@@ -1616,6 +1621,9 @@ width: 100%;
 /* flex-basis: auto; */
 flex: 1 auto;
 }
+.article-blog-art .article-blog-artes, .article-press-art .article-press-artes{
+  flex-basis: auto;
+}
 }
 .article-jobop-outro{
   display: flex;
@@ -1694,21 +1702,20 @@ flex: 1 auto;
 
 /* @Customer apply */
 .article-jobop-sub2{
-  background: rgb(235, 235, 245);
-  padding: 7%;
+    background: rgb(235, 235, 245);
+    padding: 7%;
   }
   .article-jobop-sub2 .flex-wrap{
-
-  background: white;
-  padding: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  box-shadow: rgba(1, 1, 1, 0.3) 1px 1px 20px;
+    background: white;
+    padding: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    box-shadow: rgba(1, 1, 1, 0.3) 1px 1px 20px;
   }
   .article-jobop-sub2 .flex-wrap .sub2-cont{
-  width: 100%;
-  padding-right: 10%;
+    width: 100%;
+    padding-right: 10%;
   }
   .article-jobop-sub2 .flex-wrap .button-flex-wrap{
       display: flex;
@@ -1755,7 +1762,7 @@ flex: 1 auto;
       color: rgb(11, 6, 86);
       margin-bottom: 70px;
   }
-  .sub2-cont .red{
+  .red{
       color: red;
       font-weight: bold;
       font-size: 1.2rem;

@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <style>
-
+        .sign-up{
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+        .sign-up .main-content{
+            width: 60%;
+            padding: 5%;
+        }
+        .sign-up .side-information{
+            width: 20%;
+            padding: 5%;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +82,31 @@
         </header>
         <section>
             <article>
-
+                <div class="sign-up">
+                    <div class="main-content">
+                        <h1>Log in with your i.SigNal acount</h1>
+                        <h4>i.SigNal values and respects your privacy.<br>Please read our <a href="#">privacy notice</a> for more information</h4>
+                        <form action="" method="POST">
+                            <div>
+                                <div class="id-wrap">
+                                    <input type="email" id="id" placeholder="Registered Email Address">
+                                </div>
+                                <div class="pwd-wrap">
+                                    <input type="password" id="pwd" placeholder="Current Password">
+                                </div>
+                                <button type="submit">Log in</button>
+                                <a href="#">I have forgotten my password</a>
+                            </div>
+                            <hr>
+                            <div>
+                                <a href="#">Create Account</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="side-information">
+                        <img src="http://placehold.it/150x100" alt="">
+                    </div>
+                </div>
             </article>
         </section>
         <footer>
