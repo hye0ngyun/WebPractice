@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us-hcpRelease</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <style>
+        article .article-hcp-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        article .article-hcp-header h1{
+            color: rgb(11, 6, 86);
+            font-weight: lighter;
+            font-size: xx-large;
+        }
+        article .article-hcp:nth-child(2){
+            background: rgb(11, 6, 86);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .article-hcp-art .article-hcp-artes{
+            display: flex;
+            flex-flow: row;
+            background: #fff;
+            margin: 3%;
+            padding: 3%;
+            flex-basis: 100%;
+            border-radius: 30px;
+            box-shadow: rgba(0.6, 0.7, 0.8, 0.1) 15px 15px 10px;
+        }
+        .article-hcp h1{
+            color: rgb(11, 6, 86);
+            font-size: 2rem;
+            margin: 3% 0 0 0;
+        }
+        /* .article-hcp-art .article-hcp-artes h4{
+            color: rgb(0, 181, 64);
+            margin-bottom: 20px;
+        }
+            .article-hcp-art .article-hcp-artes h2{
+            color: rgb(11, 6, 86);
+        }
+        .article-hcp-art .article-hcp-artes h5{
+            color: rgb(202, 204, 201);
+            margin: 20px 0;
+            margin-bottom: 40px;
+        }
+        .article-hcp-art .article-hcp-artes p{
+            color: rgba(120, 136, 136, 0.678);
+            margin-bottom: 30px;
+        }
+        .article-hcp-art .article-hcp-artes a{
+            align-self: center;
+            background: white;
+            color: rgb(0, 181, 64);
+            font-weight: bold;
+            padding: 10px 40px;
+            border-radius: 30px;
+            border: 0.1px solid rgba(0.3, 0.3, 0.1, 0.1);
+            box-shadow: rgba(0.3, 0.3, 0.1, 0.1) 5px 5px 5px;
+        } */
+        .article-hcp .article-hcp-Load{
+            display: flex;
+            justify-content: center;
+            background: white;
+            border-radius: 20px;
+            padding: 10px 30px;
+            font-weight: bold;
+            box-shadow: rgba(0.3, 0.3, 0.1, 0.1) 5px 5px 5px;
+            margin: 5%;
+            width: fit-content;
+            border: 1px solid rgb(11, 6, 86);
+        }
+        .article-hcp .article-hcp-Load a{
+            color:rgb(11, 6, 86);
+        }
+        /* .article-hcp .article-hcp-Load a:hover{
+            color: rgb(0, 181, 64);
+            transition: .5s;
+        } */
+        .online{
+            background: rgb(0, 181, 64);
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: white;
+        }
+        .offline{
+            background: rgba(120, 136, 136, 1);;
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="logo"><a href="index.html"><img src="http://placehold.it/150x100" alt="logo"></a></div>
+            <div id="menu-wrapper">
+                <input type="checkbox" id="chk">
+                <label for="chk" class="show-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul id="main-menu">
+                    <div class="main-menues">
+                        <li><a href="#">Solutions</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>Our Solutions<br>and upcoming<br> products</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="Solutions_Cardea_SOLO.html">Cardea SOLO</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">About us</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>Our brand,<br>people,<br>news<br>and insights<br>from our team</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="AboutUs_iSigNal.html">i.Signal</a></li>
+                                    <li><a href="AboutUs_Our_Team.html">Our Team</a></li>
+                                    <li><a href="AboutUs_pressRelease.html">Press Release</a></li>
+                                    <li><a href="AboutUs_Blog.html">Blog</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">Partners</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>How we<br>engage and<br>work with<br>our partners</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="Partners_Partnership.html">Partnetship</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li><a href="#">Careers</a>
+                            <ul class = "sub-menu">
+                                <div class="sub-text"><p>Our value,<br>culture and<br>invitation to<br>rockstar team</p></div>
+                                <div class="sub-menues">
+                                    <li><a href="Careers_Rightfit.html">Right Fit</a></li>
+                                    <li><a href="Careers_JobOpportunities.html">Job Opportunities</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </div>
+                    <label for="chk" class="hide-menu-btn">
+                        <i class="fas fa-times"></i>
+                    </label> 
+                    <div id="site-map">
+                        <a href="ContactUs.html">Contact Us</a>
+                        <a href="SignUp.html">HCP</a>
+                        <a href="http://www.idreamtech.co.kr">Company</a>
+                    </div>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <article>
+                <div class="article-hcp">
+                    <div class="article-hcp-header">
+                        <h1>Webinars</h1>
+                    </div>
+                </div>
+                <div class="article-hcp">
+                    <h1>hcp Release</h1>
+                    <div class="article-hcp-art">
+                        <div class="article-hcp-artes">
+                            <div class="sector1">
+                                <div class="online"><em>Online</em></div>
+                                <img src="http://placehold.it/100x100" alt="">
+                            </div>
+                            <div class="sector2">
+                                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nobis autem nam saepe fuga excepturi eveniet, repellat vitae consectetur iure!</h2>
+                                <div>
+                                    <img src="./src/1.png" alt="">
+                                    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, placeat?</span>
+                                </div>
+                            </div>
+                            <div class="sector3">
+                                <video src="" width="400px" controls></video>
+                            </div>
+                        </div>
+                        <div class="article-hcp-artes">
+                            <div class="sector1">
+                                <div class="online"><em>Online</em></div>
+                                <img src="http://placehold.it/100x100" alt="">
+                            </div>
+                            <div class="sector2">
+                                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nobis autem nam saepe fuga excepturi eveniet, repellat vitae consectetur iure!</h2>
+                                <div>
+                                    <img src="./src/1.png" alt="">
+                                    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, placeat?</span>
+                                </div>
+                            </div>
+                            <div class="sector3">
+                                <video src="" width="400px" controls></video>
+                            </div>
+                        </div>
+                        <div class="article-hcp-artes">
+                            <div class="sector1">
+                                <div class="online"><em>Online</em></div>
+                                <img src="http://placehold.it/100x100" alt="">
+                            </div>
+                            <div class="sector2">
+                                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nobis autem nam saepe fuga excepturi eveniet, repellat vitae consectetur iure!</h2>
+                                <div>
+                                    <img src="./src/1.png" alt="">
+                                    <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, placeat?</span>
+                                </div>
+                            </div>
+                            <div class="sector3">
+                                <video src="" width="400px" controls></video>
+                            </div>
+                        </div>
+                </div class="article-hcp">
+                    <div class="article-hcp-Load">
+                        <a href="#">Load More<img src="./src/19.png" alt="" style="margin-left: 15px;width: 15px;"></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p>
+                Efficiently reduce the number of hospital visits by half, from 4 to 2, and shorten<br>
+                the diagnostic process by more than 2 months to only 7 days with the revolutionary<br>
+                Cardea SOLO<sup>TM</sup>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
