@@ -8,6 +8,16 @@
 body{
   overflow-x: hidden;
 }
+
+/* font */
+@font-face {
+  font-family: 'AppleSDGothicNeoB';
+  src: url('../fonts/AppleSDGothicNeoB.ttf');
+}
+body{
+  font-family: 'AppleSDGothicNeoB';
+}
+
 /* prev slide css
 #slider-wrap {
   width: 100%;
@@ -152,7 +162,7 @@ body{
 }
 a{
   text-decoration: none;
-  color: rgba(121, 137, 136, 0.6);;
+  color: rgba(121, 137, 136, 1);;
 }
 header {
   height: 100px;
@@ -266,7 +276,7 @@ footer{
 .sub-menues a{
   padding-top: 7px; 
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: normal;
 }
 .sub-menu{
   border-radius: 0px 0px 0px 20px;
@@ -376,7 +386,7 @@ article .article-signal{
   height: 500px;
   width: 100%;
   height: fit-content;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 article .article-signal:nth-child(2n+1){
@@ -475,11 +485,19 @@ article .article-signal-line{
 article .article-signal h2{
   color: gray;
   text-align: center;
-  margin: 15px 0;
+  margin: 30px 0;
+  font-weight: lighter;
+    font-size: -webkit-xxx-large;
+}
+.article-signal img{
+  width: 70px;
+  height: 70px;
 }
 article .article-signal h3{
   color: rgb(136, 214, 66);
   margin: 20px 0;
+  font-size: xx-large;
+  font-weight: lighter;
 }
 article .article-signal p{
   color: gray;
@@ -488,8 +506,15 @@ article .article-signal-intro h3{
   color: #fff;
 }
 article .article-signal .article-signal-p{
-  padding: 0 7%;
+  padding: 0 20%;
+  text-align: center;
 }
+@media (max-width:1024px){
+  article .article-signal .article-signal-p{
+    padding: 0 7%;
+  }
+}
+
 article .article-signal-intro p{
   color: white;
 }
@@ -506,9 +531,9 @@ article .article-ourteam:nth-child(2n+1){
   background: #e5eeee;
 }
 article .article-ourteam:first-child{
-  background-image: url(../src/About-us-ourteam-intro.jpg);
+  background-image: url(../src/27.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -527,6 +552,7 @@ article .article-ourteam-imgwrap{
   display: flex;
   flex-flow: row wrap;
   width: 600px;
+  justify-content: center;
 }
 article .article-ourteam:nth-child(2){
   display: flex;
@@ -534,11 +560,21 @@ article .article-ourteam:nth-child(2){
   flex-flow: row wrap;
 }
 article .article-ourteam-imgwrap img{
-  width: 25%;
+  /* width: 25%; */
+  width: 600px;
+  height: 400px;
+}
+@media screen and (max-width:1024px){
+  article .article-ourteam-imgwrap img{
+    /* width: 25%; */
+    width: 400px;
+    height: 300px;
+  }
 }
 article .article-ourteam h2{
   text-align: center;
   margin-bottom: 50px;
+  width: 100%;
 }
 article .article-ourteam-outro{
   display: flex;
@@ -573,10 +609,13 @@ article .article-ourteam-outro div ul li::marker{
 article .article-partnership-intro{
   display: flex;
   justify-content: flex-end;
-  background-image: url(../src/Partners-pratnership.jpg);
+  background-image: url(../src/26.png);
   background-size: 90% 80%;
   background-repeat: no-repeat;
   margin: 5% 0;
+}
+article .article-partnership:nth-child(2){
+  background-image: url(../src/21.png);
 }
 article .article-partnership-intro div {
   width: 80%;
@@ -699,7 +738,7 @@ article .article-partnership-expwrap div p{
       display: flex;
       flex-flow: column;
       background: rgb(243, 244, 248);
-      background-image: url(../src/Cardea-solo-intro.jpg);
+      background-image: url(../src/29.png);
       background-repeat: no-repeat;
       background-size: 100% 300px;
       
@@ -774,6 +813,8 @@ article .article-partnership-expwrap div p{
       flex-flow: row wrap;
       align-self: flex-end;
       background: rgb(61, 195, 106);
+      background-image: url(../src/30.png);
+      background-size: 100% 100%;
       width: 80%;
       padding: 50px;
   }
@@ -828,6 +869,8 @@ article .article-partnership-expwrap div p{
   .img-box .small-img-box .small-img{
       margin: 3px;
       border-radius: 20px;
+      width: 150px;
+      height: 150px;
   }
   .article-cardea-middle .text-box{
       width: 40%;
@@ -1242,7 +1285,7 @@ article .article-partnership-expwrap div p{
 .article-rightfit-intro{
   display: flex;
   /* justify-content: flex-end; */
-  background-image: url(../src/Right-fit-intro.jpg);
+  background-image: url(../src/32.png);
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: 50px;
@@ -1344,7 +1387,8 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-end;
   height: 500px;
-  background-image: url(../src/main-banner1.jpg);
+  /* background-image: url(../src/main-banner1.jpg); */
+  background: rgb(242, 242, 242);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1356,6 +1400,13 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.main-slider-box .slide-1 .flex-wrap .flex-content-wrap2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 5%; */
+  flex-basis: 60%;
 }
 .main-slider-box .slide-1 h2{
   color: rgb(121, 137, 137);
@@ -1395,7 +1446,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-start;
   height: 500px;
-  background-image: url(../src/main-banner2.jpg);
+  background-image: url(../src/24.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1417,14 +1468,19 @@ article .article-partnership-expwrap div p{
 .main-slider-box .slide-2 h1{
   color: rgb(64, 63, 69);
 }
-/* slide1 */
+/* slide3 */
 .main-slider-box .slide-3 .flex-wrap{
   display: flex;
   justify-content: flex-end;
   height: 500px;
-  background-image: url(../src/main-banner3.jpg);
-  background-size: 100% 100%;
+  background-image: url(../src/35.png);
+  background-size: 50% 100%;
   background-repeat: no-repeat;
+}
+@media (max-width:1024px){
+  .main-slider-box .slide-3 .flex-wrap{
+    background-size: 100% 100%;
+  }
 }
 .main-slider-box .slide-3 .flex-wrap div{
   padding: 15px;
@@ -1449,7 +1505,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-start;
   height: 500px;
-  background-image: url(./src/main-banner4.jpg);
+  background-image: url(../src/25.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1461,6 +1517,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.5);
 }
 .main-slider-box .slide-4 h2{
   color: rgb(121, 137, 137);
@@ -1632,9 +1689,9 @@ flex: 1 auto;
 }
 .article-jobop-outro a{
   border: 1px solid rgb(11, 7, 83);
-  border-radius: 20px;
+  border-radius: 30px;
   color: rgb(11, 7, 83);
-  padding: 10px 20px;
+  padding: 10px 50px;
   font-weight: bold;
 }
 /* customer */
@@ -1807,4 +1864,7 @@ flex: 1 auto;
   }
   hr{
       margin: 50px 0;
+  }
+  a{
+    font-weight: normal;
   }
