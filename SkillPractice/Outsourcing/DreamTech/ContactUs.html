@@ -20,9 +20,80 @@
             padding: 5%;
             background-image: url(./src/34.png);
             background-repeat: no-repeat;
-            background-size: 100% 100%
+            background-size: 100% 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
         }
 
+        .contact-us .side-information img{
+            margin: 20px 0;
+            width: fit-content;
+        }
+        .contact-us .side-information .mar1{
+            margin: 40px 0;
+        }
+        .contact-us .side-information .mar2{
+            margin: 20px 0 40px 0;
+        }
+        .contact-us .side-information .green{
+            color: rgb(0, 181, 64);
+        }
+
+        .contact-us .main-content h1{
+            font-size: xx-large;
+            font-weight: lighter;
+            color: rgb(11, 6, 86);
+            margin-bottom: 40px;
+        }
+        .contact-us .main-content .cont-main{
+            display: flex;
+            height: 50px;
+            color: rgb(119, 137, 137);
+            margin: 20px 0;
+            font-size: 1.1rem;
+            flex-wrap: wrap;
+        }
+        .contact-us .main-content .cont-main input[type=text]{
+            border-radius: 10px;
+            /* border: 1px solid red; */
+        }
+        .contact-us .main-content .cont-main :nth-child(n){
+            margin: 0 20px 0 0;
+        }
+        .contact-us .main-content .cont-main label{
+            flex-basis: 150px;
+            justify-content: flex-start;
+            display: flex;
+            margin-right: 30px;
+        }
+        option .red{
+            color: red;
+        }
+        .contact-us .main-content .cont-main select{
+            border-radius: 10px;
+            flex-basis: 100px;
+            color: rgb(119, 137, 137);
+            font-size: 1rem;
+            border: 3px solid grey;
+        }
+        .contact-us .main-content .cont-main select:nth-child(2){
+            flex-basis: 300px;
+        }
+        @media (max-width: 544px){
+            .contact-us .main-content .cont-main:nth-child(4){
+                height: 100px;
+            }
+        }
+        @media (max-width: 680px){
+            .contact-us .main-content .cont-main:first-child{
+                height: 100px;
+            }
+        }
+        @media (max-width: 800px){
+            
+        }
         @media (max-width:1024px){
             .contact-us .main-content{
                 width: 100%;
@@ -30,6 +101,69 @@
             .contact-us .side-information{
                 width: 100%;
             }
+        }
+        textarea{
+            resize: none;
+            border: 1px solid grey;
+            border-radius: 10px;
+            flex: 0 1 auto;
+            flex-basis: 680px;
+        }
+        .textarea-wrap{
+            display: flex;
+        }
+        .ta-label label{
+            color: rgb(119, 137, 137);
+            font-size: 1.1rem;
+            margin: 10px 0;
+            display: inline-block;
+        }
+        .contact-us .cont-main .file-wrap{
+            border: 3px solid grey;
+            border-radius: 10px;
+            flex: 0 1 auto;
+            flex-basis: 510px;
+            
+        }
+        .contact-us .cont-main input[type="file"]{
+            color: white;
+            border: 3px solid grey;
+            border-radius: 10px;
+            opacity: 0;
+            
+        }
+        .contact-us .main-content .cont-main label{
+            display: flex;
+            align-items: center;
+        }
+        .contact-us .main-content .btns{
+            display: flex;
+            /*
+            justify-content: flex-end;
+            margin: 0 auto; */
+            /* margin-left: 500px; */
+        }
+        .contact-us .main-content .btns button:nth-child(2){
+            /* margin: 0 auto; */
+            background: rgb(11, 6, 86);
+            color: white;
+            padding: 10px 40px;
+            border: 1px solid rgb(11, 6, 86);
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        .contact-us .main-content .btns button:nth-child(3){
+            /* margin: 0 auto; */
+            background: white;
+            color: grey;
+            padding: 10px 30px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-left: 20px;
+        }
+        .contact-us .main-content .btns .mar-left{
+            flex-basis: 430px;
         }
     </style>
 </head>
@@ -98,48 +232,54 @@
                     <div class="main-content">
                         <h1>Contact us</h1>
                         <form action="" method="POST">
-                            <div>
+                            <div class="cont-main">
                                 <label for="name">Name<span class="red">*</span></label>
                                 <input type="text" id="nmae">
                                 <select id="prefix" name="cars">
-                                    <option value="volvo">Volvo</option>
+                                    <option value="prefix">Prefix*</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
                                     <option value="audi">Audi</option>
                                 </select>
                                 <select id="job" name="cars">
-                                    <option value="volvo">Volvo</option>
+                                    <option value="select">Please select*</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
                                     <option value="audi">Audi</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="cont-main">
                                 <label for="email">Email<span class="red">*</span></label>
                                 <input type="text" id="Email">
                             </div>
-                            <div>
+                            <div class="cont-main">
                                 <label for="phone">Phone No<span class="red">*</span></label>
                                 <input type="text" id="phone">
                             </div>
-                            <div>
+                            <div class="cont-main">
                                 <label for="inquiry">Type of inquiry<span class="red">*</span></label>
                                 <select id="inquiry" name="cars">
-                                    <option type="checkbox" value="volvo">Volvo</option>
+                                    <option type="checkbox" value="select">Make a selection</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
                                     <option value="audi">Audi</option>
                                 </select>
                             </div>
-                            <div>
-                                <label for="message">How can we help you?</label>
-                                <input type="textarea">
+                            <div class="ta-label">
+                                <label for="message">How can we help you?</label><br>
+                                <div class="textarea-wrap">
+                                    <textarea name="message" rows="10" cols="50"></textarea>
+                                </div>
                             </div>
-                            <div>
+                            <div class="cont-main">
                                 <label for="file">File attachment</label>
-                                <input type="file">
+                                <div class="file-wrap">
+                                    <input type="file">
+                                </div>
+                                
                             </div>
-                            <div>
+                            <div class="btns">
+                                <div class="mar-left"></div>
                                 <button type="submit">Send</button>
                                 <button type="reset">Cancel</button>
                             </div>
@@ -147,9 +287,9 @@
                     </div>
                     <div class="side-information">
                         <img src="http://placehold.it/150x100" alt="">
-                        <div>If you have any inquires, please leave your message and contact information below.<br>We will get back yo you as soon as possible.<br>Thank you.</div>
+                        <div class="mar1">If you have any inquires, please leave your message and contact information below.<br>We will get back yo you as soon as possible.<br>Thank you.</div>
                         <span class="green">Location</span>
-                        <div>3F, Uniquest Bldg, 314 Hwangsaeul-ro,<br>Bundang, Seongnam, Gyeonggi, Korea(13591)</div>
+                        <div class="mar2">3F, Uniquest Bldg, 314 Hwangsaeul-ro,<br>Bundang, Seongnam, Gyeonggi, Korea(13591)</div>
                         <div><span class="green">E: </span>isignal.info@dreamtech.co.kr</div>
                         <div><span class="green">T: </span>1556-6507</div>
                         <div><span class="green">International: </span>+82-32-620-1520</div>

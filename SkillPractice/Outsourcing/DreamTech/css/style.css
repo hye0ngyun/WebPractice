@@ -1823,6 +1823,7 @@ flex: 1 auto;
       color: red;
       font-weight: bold;
       font-size: 1.2rem;
+      font-weight: lighter;
   }
   .sub2-cont .cont-flex{
       display: flex;
