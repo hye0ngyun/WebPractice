@@ -390,6 +390,28 @@ article .article-signal:first-child{
   justify-content: flex-end;
   
 }
+/* Video */
+.article-signal .signal-video-wrap video{
+  width: 100%;
+  flex: 1 0 auto;
+  height: auto;
+}
+.signal-video-wrap{
+  width: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.signal-video-wrap button{
+  height: fit-content;
+  position: relative;
+  bottom: 100px;
+  border-radius: 20px;
+  padding: 5px 15px;
+  color: rgb(11, 6, 86);
+  cursor: pointer;
+}
+/* intro */
 .article-signal-intro{
   display: flex;
   flex-flow: row wrap;
@@ -561,6 +583,13 @@ article .article-partnership-intro div {
   position: relative;
   top: 0px;
 }
+article .article-partnership-outro a{
+  align-self: flex-end;
+  border-radius: 20px;
+  background: white;
+  padding: 5px 15px;
+  color: rgb(11, 6, 86);
+}
 article .article-partnership-intro a{
   /* margin-top: 10px;
   border: 7px solid #fff;
@@ -730,6 +759,11 @@ article .article-partnership-expwrap div p{
       text-align: center;
       margin-bottom: 20px;
   }
+  .article-cardea-middle .video-box video{
+    width: 300px;
+    height: 181px;
+    background: #313131;
+}
   .article-cardea-middle .video-box{
       display: flex;
       flex-flow: row wrap;
@@ -1657,3 +1691,113 @@ flex: 1 auto;
       padding: 20px;
   }
 }
+
+/* @Customer apply */
+.article-jobop-sub2{
+  background: rgb(235, 235, 245);
+  padding: 7%;
+  }
+  .article-jobop-sub2 .flex-wrap{
+
+  background: white;
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  box-shadow: rgba(1, 1, 1, 0.3) 1px 1px 20px;
+  }
+  .article-jobop-sub2 .flex-wrap .sub2-cont{
+  width: 100%;
+  padding-right: 10%;
+  }
+  .article-jobop-sub2 .flex-wrap .button-flex-wrap{
+      display: flex;
+      justify-content: flex-end;
+  }
+  .article-jobop-sub2 .flex-wrap button{
+      padding: 10px 20px;
+      background: rgb(11, 6, 86);
+      border-radius: 30px;
+      color: white;
+      margin: 30px;
+      font-size: 1.3rem;
+      cursor: pointer;
+  }
+  .sub2-cont h2, .sub2-cont p{
+  margin: 30px 0;
+  }
+  .sub2-cont h2, .sub2-cont ul li::marker{
+  color: rgb(11, 6, 86);
+  }
+  .sub2-cont ul li{
+  list-style-type: disc;
+  margin-left: 20px;
+  margin: 10px 20px;
+  
+  }
+  @media (max-width: 1024px){
+  .article-jobop-sub2 .flex-wrap .sub2-cont{
+      padding: 0;
+  }
+  .article-jobop-sub2 .flex-wrap{
+      padding: 20px;
+  }
+  }
+  .sub2-cont .cont-intro{
+      display: flex;
+      justify-content: space-between;
+  }
+  .sub2-cont .cont-intro label{
+      color: rgb(119, 137, 137);
+  }
+  .sub2-cont .cont-intro h1{
+      font-size: 2rem;
+      color: rgb(11, 6, 86);
+      margin-bottom: 70px;
+  }
+  .sub2-cont .red{
+      color: red;
+      font-weight: bold;
+      font-size: 1.2rem;
+  }
+  .sub2-cont .cont-flex{
+      display: flex;
+      height: 50px;
+      color: rgb(119, 137, 137);
+      margin: 40px 0;
+      font-size: 1.1rem;
+  }
+  .sub2-cont .cont-flex label{
+      flex-basis: 250px;
+      justify-content: flex-end;
+      display: flex;
+      margin-right: 30px;
+  }
+  .sub2-cont .cont-flex input{
+      flex: 1 0 auto;
+  }
+  .sub2-cont .cont-flex2{
+      display: flex;
+      color: rgb(119, 137, 137);
+      justify-content: flex-end;
+      flex-flow: wrap;
+      margin: 30px 0;
+      font-size: 1.1rem;
+  }
+  .sub2-cont .cont-flex2 label{
+      
+      justify-content: flex-end;
+      display: flex;
+      margin: 10px 30px 10px 10%;
+  }
+  .sub2-cont .cont-flex2 .labelmargin{
+      flex:1 0 auto;
+  }
+  .sub2-cont .cont-flex2 input{
+      width: 100%;
+      margin-left: 10%;
+      height: 50px;
+  }
+  hr{
+      margin: 50px 0;
+  }
