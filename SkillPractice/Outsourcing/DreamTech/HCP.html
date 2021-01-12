@@ -133,9 +133,16 @@
             color: rgb(0, 181, 64);
             margin: 0 20px;
             font-size: 1.1rem;
+            display: flex;
+            align-items: flex-end;
         }
         .article-hcp .sector3 video{
             border-radius: 20px;
+        }
+        @media (max-width: 1024px) {
+            .article-hcp-art .article-hcp-artes{
+                flex-flow: wrap;
+            }
         }
     </style>
 </head>
@@ -275,9 +282,9 @@
         </section>
         <footer>
             <p>
-                Efficiently reduce the number of hospital visits by half, from 4 to 2, and shorten<br>
+                <em>Efficiently reduce the number of hospital visits by half, from 4 to 2, and shorten<br>
                 the diagnostic process by more than 2 months to only 7 days with the revolutionary<br>
-                Cardea SOLO<sup>TM</sup>
+                Cardea SOLO<sup>TM</sup>.</em>
             </p>
         </footer>
     </div>

@@ -11,11 +11,11 @@ body{
 
 /* font */
 @font-face {
-  font-family: 'AppleSDGothicNeoB';
-  src: url('../fonts/AppleSDGothicNeoB.ttf');
+  font-family: 'AppleSDGothicNeoM';
+  src: url('../fonts/AppleSDGothicNeoM.ttf');
 }
 body{
-  font-family: 'AppleSDGothicNeoB';
+  font-family: 'AppleSDGothicNeoM';
 }
 
 /* prev slide css
@@ -170,7 +170,7 @@ header {
   background: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 90%;
   margin: 0 auto;
 }
@@ -219,7 +219,7 @@ footer{
   padding: 12px 36px;
   /* text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2); */
   text-align: center;
-  font-weight: lighter;
+  /* font-weight: lighter; */
 }
 #menu-wrapper{
   width: 100%;
@@ -529,7 +529,7 @@ article .article-ourteam{
 }
 
 article .article-ourteam:nth-child(2n+1){
-  background: #e5eeee;
+  background: rgb(242, 243, 247);
 }
 article .article-ourteam:first-child{
   background-image: url(../src/27.png);
@@ -544,10 +544,15 @@ article .article-ourteam-intro{
 }
 article .article-ourteam-intro h1{
   color:  rgb(0, 181, 64);
+  font-size: xx-large;
+  font-weight: lighter;
 }
 article .article-ourteam h2{
   padding-top: 20px;
-  color:  rgb(136, 214, 66);
+  color: rgb(11, 6, 86);
+}
+article .article-ourteam:nth-child(3) h2{
+  color: rgb(136, 214, 66);
 }
 article .article-ourteam-imgwrap{
   display: flex;
@@ -593,10 +598,22 @@ article .article-ourteam-outro .cont{
 article .article-ourteam-outro .cont h1{
   text-align: center;
   color: rgb(136, 214, 66);
-
+  font-size: xx-large;
 }
 article .article-ourteam-outro .cont ul{
   margin-top: 20px;
+}
+article .article-ourteam-outro div ul li{
+  color: rgb(136, 152, 151);
+}
+article .article-ourteam-outro .flex-item:nth-child(2) .cont{
+  background: rgb(136, 214, 66);
+}
+article .article-ourteam-outro .flex-item:nth-child(2) .cont h1{
+  color: white;
+}
+article .article-ourteam-outro .flex-item:nth-child(2) ul li{
+  color: black;
 }
 article .article-ourteam-outro div ul li{
   list-style: disc;
@@ -627,6 +644,10 @@ article .article-partnership-intro div {
   margin-top: 20%;
   position: relative;
   top: 0px;
+}
+article .article-partnership-intro div h1{
+  font-size: xx-large;
+  font-weight: lighter;
 }
 article .article-partnership-outro a{
   align-self: flex-end;
@@ -668,6 +689,8 @@ article .article-partnership h2{
   text-align: left;
   background-color: rgb(225, 225, 225);
   padding: 5%;
+  font-size: xx-large;
+  font-weight: lighter;
 }
 article .article-partnership-expwrap{
   display: flex;
@@ -683,6 +706,7 @@ article .article-partnership-expwrap div h1{
   border-left: 3px solid rgb(181, 181, 181);
   padding: 0px 20px;
   padding-bottom: 20px;
+  font-weight: lighter;
 }
 article .article-partnership-expwrap div p{
   color: rgb(121, 137, 137);
@@ -726,13 +750,14 @@ article .article-partnership-expwrap div p{
   } */
   .slider-wrap{
       background:rgb(225, 225, 225);
-      padding: 50px 10%;
+      padding: 100px 10%;
   }
 
   /* article */
   article .article-cardea-intro, article .article-cardea-middle{
       height: fit-content;
-      padding-bottom: 100px;
+      /* padding-bottom: 100px; */
+
   }
   
   article .article-cardea-intro{
@@ -752,6 +777,7 @@ article .article-partnership-expwrap div p{
   }
   .article-cardea-intro .head-text h1{
       font-size: 30px;
+      font-weight: lighter;
   }
   .article-cardea-intro .side-text{
       position: relative;
@@ -776,7 +802,7 @@ article .article-partnership-expwrap div p{
   }
   .article-cardea-intro .slick-slide p{
     color: rgb(118, 137, 135);
-    height: 300px;
+    height: 250px;
   }
   .article-cardea-intro .main-text{
       width: 80%;
@@ -784,6 +810,7 @@ article .article-partnership-expwrap div p{
       background: #fff;
       padding: 4%;
       box-shadow: rgba(0, 0, 0, 0.3) 1px 3px 30px;
+      font-size: 1.3rem;
   }
   .article-cardea-intro .main-text h3{
       color: rgb(0, 181, 64);
@@ -804,6 +831,7 @@ article .article-partnership-expwrap div p{
       color: rgb(66, 200, 115);
       text-align: center;
       margin-bottom: 20px;
+      background: white;
   }
   .article-cardea-middle .video-box video{
     width: 300px;
@@ -824,7 +852,7 @@ article .article-partnership-expwrap div p{
       margin: 0 70px;
   }
   .article-cardea-middle .video-exp{
-      width: 300px;
+      /* width: 300px; */
       color: white;
   }
   .article-cardea-middle .video-box a{
@@ -836,20 +864,28 @@ article .article-partnership-expwrap div p{
       margin-top: 30px;
       font-size: 1.1rem;
   }
-  .article-cardea-middle .video-exp h3{
-    font-size: 1.5rem;
-  }
+
   .article-cardea-middle .video-exp h3, .article-cardea-middle .video-exp p, .article-cardea-middle .video-exp a{
       margin: 10px 0;
   }
+  .article-cardea-middle .video-exp h3{
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
   .article-cardea-middle h2{
-      color: gray;
+      color: white;
       padding: 10px;
-      margin: 20px 0;
+      padding: 20px 7%;
+      font-size: xx-large;
+      background: rgb(96, 96, 96);
+      
   }
   .article-cardea-middle .img-text-box{
       display: flex;
       flex-flow: row wrap;
+      padding-bottom: 200px;
+      padding-top: 50px;
+      background: rgb(242, 241, 247);
   }
   .article-cardea-middle .img-box{
       display: flex;
@@ -1320,6 +1356,7 @@ article .article-partnership-expwrap div p{
 }
 .article-rightfit-middle .text-cont h2{
   margin-bottom: 20px;
+  font-weight: lighter;
 }
 .article-rightfit-middle .text-cont p, .article-rightfit-middle .text-cont ul li{
   margin: 20px 0;
@@ -1338,6 +1375,31 @@ article .article-partnership-expwrap div p{
   justify-content: center;
   align-items: flex-end;
   filter: grayscale(60%) opacity(90%) saturate(80%);
+}
+@media (max-width: 800px){
+  .article-rightfit-outro{
+    height: 280px;
+  }
+}
+.article-rightfit-intro .text-cont{
+  flex-basis: 700px;
+  padding: 7% 3%;
+  /* margin-left: 30%; */
+}
+@media screen and (max-width:1024px){
+  .article-rightfit-intro .text-cont {
+      margin-left: 0;
+  }
+}
+.article-rightfit .article-rightfit-intro .catch-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 500px;
+}
+.article-rightfit .article-rightfit-intro .catch-text h1{
+  font-size: xx-large;
+  margin: 50px 20px;
 }
 
 /* @index design */
@@ -1380,7 +1442,7 @@ article .article-partnership-expwrap div p{
   margin-top: 50px;
   background-color: rgb(0, 181, 64);
   border-radius: 20px;
-  padding: 2% 5%;
+  padding: 12px 30px;
   color:  white;
   cursor: pointer;
   height: 20px;
@@ -1388,6 +1450,7 @@ article .article-partnership-expwrap div p{
 /* slider comman h1 tag */
 .main-slider-box h1{
   font-weight: lighter;
+  font-size: xxx-large;
 }
 /* slide1 */
 .main-slider-box .slide-1 .flex-wrap{
@@ -1456,7 +1519,7 @@ article .article-partnership-expwrap div p{
 }
 @media (max-width: 1024px){
   .main-slider-box .slide-1 .flex-wrap{
-    flex-flow: wrap-wr;
+    flex-flow: wrap-reverse;
   }
   .main-slider-box .slide-1 .flex-wrap .flex-content-wrap{
     display: flex;
@@ -1527,13 +1590,19 @@ article .article-partnership-expwrap div p{
 .main-slider-box .slide-3 h2{
   color: rgb(121, 137, 137);
   font-weight: lighter;
+  font-size: 2rem;
+}
+.main-slider-box .slide-3 h2 sup{
+  font-size: 1rem;
 }
 .main-slider-box .slide-3 h3{
   color: rgb(64, 63, 69);
+  font-weight: lighter;
 }
 .main-slider-box .slide-3 h1{
   color: rgb(64, 63, 69);
   font-size: xxx-large;
+  font-weight: bold;
 }
 /* slide4 */
 .main-slider-box .slide-4 .flex-wrap{
@@ -1567,6 +1636,12 @@ article .article-partnership-expwrap div p{
   .main-slider-box .slide-1 .flex-wrap div{
   padding: 15px;
   flex-basis: 100%;
+}
+.main-slider-box .slide-1 .flex-wrap div h1{
+  font-size: xx-large;
+}
+.main-slider-box .slide-1 .flex-wrap div a{
+  margin: 0;
 }
 .main-slider-box .slide-2 .flex-wrap div{
   padding: 15px;
@@ -1667,7 +1742,7 @@ article .article-partnership-expwrap div p{
 .article-jobop-intro h1{
   font-size: 2rem;
   margin: 1%;
-
+  font-weight: lighter;
   
 }
 .article-jobop-middle{
@@ -1682,13 +1757,20 @@ article .article-partnership-expwrap div p{
   width: 20%;
   margin: 40px 20px;
   padding: 2.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .article-jobop-middle .position-cont h2{
   color: rgb(11, 6, 86);
+  font-weight: lighter;
+  font-size: 2rem;
 }
 .article-jobop-middle .position-cont h4{
   color: rgb(121, 137, 137);
   margin: 20px 0;
+  font-weight: lighter;
+  font-size: 1.2rem;
 }
 .article-jobop-middle .position-cont a{
   margin-top: 40px;
@@ -1696,7 +1778,8 @@ article .article-partnership-expwrap div p{
   background: rgb(0, 181, 64);
   border-radius: 20px;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 25px;
+  width: fit-content;
 }
 @media (max-width: 1024px){
 .article-jobop-middle .position-cont{
@@ -1755,6 +1838,7 @@ flex: 1 auto;
   color: white;
   margin: 30px;
   font-size: 1.3rem;
+  font-weight: lighter;
 }
 .article-jobop-intro .jobop-title{
   background: white;
@@ -1774,7 +1858,12 @@ flex: 1 auto;
 .sub1-cont h2, .sub1-cont p{
   margin: 30px 0;
 }
-.sub1-cont h2, .sub1-cont ul li::marker{
+.sub1-cont h2{
+  color: rgb(11, 6, 86);
+  font-size: xx-large;
+  font-weight: lighter;
+}
+.sub1-cont ul li::marker{
   color: rgb(11, 6, 86);
 }
 .sub1-cont ul li{
@@ -1821,6 +1910,7 @@ flex: 1 auto;
       margin: 30px;
       font-size: 1.3rem;
       cursor: pointer;
+      font-weight: lighter;
   }
   .sub2-cont h2, .sub2-cont p{
   margin: 30px 0;
