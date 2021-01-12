@@ -219,6 +219,7 @@ footer{
   padding: 12px 36px;
   /* text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2); */
   text-align: center;
+  font-weight: lighter;
 }
 #menu-wrapper{
   width: 100%;
@@ -1384,6 +1385,10 @@ article .article-partnership-expwrap div p{
   cursor: pointer;
   height: 20px;
 }
+/* slider comman h1 tag */
+.main-slider-box h1{
+  font-weight: lighter;
+}
 /* slide1 */
 .main-slider-box .slide-1 .flex-wrap{
   display: flex;
@@ -1512,7 +1517,7 @@ article .article-partnership-expwrap div p{
 }
 .main-slider-box .slide-3 .flex-wrap div{
   padding: 15px;
-  flex-basis: 50%;
+  flex-basis: 60%;
 }
 .main-slider-box .slide-3 .flex-wrap .flex-content-wrap{
   display: flex;
@@ -1521,12 +1526,14 @@ article .article-partnership-expwrap div p{
 }
 .main-slider-box .slide-3 h2{
   color: rgb(121, 137, 137);
+  font-weight: lighter;
 }
 .main-slider-box .slide-3 h3{
   color: rgb(64, 63, 69);
 }
 .main-slider-box .slide-3 h1{
   color: rgb(64, 63, 69);
+  font-size: xxx-large;
 }
 /* slide4 */
 .main-slider-box .slide-4 .flex-wrap{
