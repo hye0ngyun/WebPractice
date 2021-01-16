@@ -195,7 +195,9 @@ footer{
   font-size: 1.3rem;
   text-align: center;
 }
-
+.fa-times:before{
+  color: white;
+}
 #main-menu{
   display: flex;
 };
@@ -263,27 +265,29 @@ footer{
 }
 .sub-text{
   /*background-image: url("http://placehold.it/300x200");*/
-  background: rgba(88, 95, 139, 0.63);
+  background: rgba(88, 95, 139, 0.9);
   border-radius: 0px 0px 0px 20px;
-  padding: 20px;
+  padding: 35px 0px 35px 30px;
   color: white;
-  font-size: 1.5rem;
-  height: 200px;
+  font-size: 1.2rem;
+  height: 130px;
   width: 170px;
+  font-weight: lighter;
 }
 .sub-menues{
-  padding: 35px;
+  padding: 35px 30px;
   background-color: white;
-  width: 140px;
+  width: 130px;
 }
 .sub-menues > li{
-  padding-top: 7px;
+  /* padding-top: 7px; */
   font-size: 1rem;
   font-weight: bold;
 }
 .sub-menues a{
-  padding-top: 7px; 
-  font-size: 1rem;
+  display: inline-block;
+  padding: 5px 0; 
+  font-size: 0.8rem;
   font-weight: normal;
 }
 .sub-menu{
@@ -293,6 +297,7 @@ footer{
 #site-map{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #site-map a{
   color: gray;
@@ -329,7 +334,7 @@ footer{
     margin: 20px 0;
 }
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1080px){
   .show-menu-btn, .hide-menu-btn{
       display: block;
   }
@@ -337,7 +342,7 @@ footer{
       position: fixed;
       width: 100%;
       height: 100vh;
-      background: rgb(0, 181, 64);
+      background: rgb(11, 6, 86);
       right: -100%;
       top: 0;
       text-align: center;
@@ -387,6 +392,20 @@ footer{
     justify-content: flex-end;
     margin-right: 20px;
   }
+  #main-menu .main-menues > li > a{
+    /* border: 1px solid rgb(11, 6, 86); */
+  }
+  #main-menu .main-menues > li{
+    /* flex-basis: 140px; */
+    border: 1px solid rgb(11, 6, 86);
+  }
+}
+@media (max-width: 640px){
+  
+  #main-menu .main-menues > li{
+    width: 50%;
+  }
+
 }
   section{
   width: 100%;
