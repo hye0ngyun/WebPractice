@@ -2766,7 +2766,7 @@ article .article-hcp:nth-child(2){
 
 /* creat account */
 .article-create > div:nth-child(n){
-  padding: 0 10%;
+  padding: 25px 10%;
 }
 .article-create .article-create-intro{
   display: flex;
@@ -2780,7 +2780,7 @@ article .article-hcp:nth-child(2){
   flex-direction: column;
   justify-content: center;
   background: rgb(225, 225, 225);
-  height: 200px;
+  height: fit-content;
   flex-grow: 1;
   min-height: fit-content;
   color: rgb(11, 6, 86);
@@ -2877,8 +2877,18 @@ article .article-hcp:nth-child(2){
   align-items: center;
   color: rgb(96, 95, 100);
 }
+.privacy{
+  justify-content: center;
+}
+.agree-cont-pre ol{
+  margin: 5px 0;
+}
+.agree-cont-pre ol li{
+  list-style-type: decimal;
+}
 .article-create h4{
   font-weight: lighter;
+  color: black;
 }
 .article-create-outro a{
   color: rgb(120, 160, 179);
@@ -3143,4 +3153,13 @@ article .article-hcp:nth-child(2){
 .sign-up .main-content .create-wrap img{
   margin: 0 30px 0 0px;
   filter: grayscale(100%) brightness(300%);
+}
+
+/* @Privacy Policy */
+.a ol div{
+  display: flex;
+  /* justify-content: center; */
+}
+.a ol li{
+  list-style-type: none;
 }
