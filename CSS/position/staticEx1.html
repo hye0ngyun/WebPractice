@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 50px;
+            margin: 10px 0;
+        }
+        .one{
+            background-color: cornflowerblue;
+        }
+        .two{
+            background-color: yellow;
+            left: 30px; 
+            /* position: static(default) -- cause left:30px; isn't work */
+        }
+        .three{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="one box">
+        block#1
+    </div>
+    <div class="two box">
+        block#2
+    </div>
+    <div class="three box">
+        block#3
+    </div>
+</body>
+</html>

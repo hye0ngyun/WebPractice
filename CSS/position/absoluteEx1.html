@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 50px;
+            margin: 10px 0;
+        }
+        .cont{
+            position: relative;
+            background-color: #313131;
+            border: solid 1px red;
+            margin: 10px;
+            height: 50vh;
+        }
+        .one{
+            background-color: cornflowerblue;
+        }
+        .two{
+            position: absolute;
+            /* 컨테이너의 position: static(default);인 경우 문서 전체를 컨테이너로 봄 */
+            /* 따라서 컨테이너의 position: relative;인 경우 컨테이너를 기준으로 포지션값이 적용됨 */
+            top: 30px;
+            left: 30px;
+            background-color: yellow;
+            
+        }
+        .three{
+            background-color: green;
+        }
+        .a{
+            width: 100px;
+            background-color: violet;
+        }
+        .one{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="f-cont cont">
+        <div class="one box">
+            block#1
+        </div>
+        <div class="two box">
+            block#2
+        </div>
+        <div class="three box">
+            block#3
+        </div>
+    </div>
+    <div class="s-cont cont">
+        <div class="one box">
+            block#1
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi a culpa deleniti! Necessitatibus earum mollitia, adipisci nesciunt eveniet nemo. Voluptatibus ut eos ipsum maiores placeat molestias facere? Dolorum, aliquam tempora.</p>
+        <div class="two box a">
+            block#2
+        </div>
+        <div class="three box">
+            block#3
+        </div>
+    </div>
+</body>
+</html>
