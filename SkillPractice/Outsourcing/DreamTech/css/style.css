@@ -1027,7 +1027,16 @@ article .article-partnership-expwrap div p{
       justify-content: center;
   }
   .img-box #big-img{
-      width: 100%;
+    width: 600px;
+    height: 600px;
+      align-self: center;
+      border-radius: 30px;
+  }
+  @media (max-width: 600px){
+    .img-box #big-img{
+      width: 425px;
+      height: 425px;
+    }
   }
   .img-box .small-img-box{
       display: flex;
@@ -1578,6 +1587,28 @@ article .article-partnership-expwrap div p{
   font-size: 2.5rem;
   color: #313131;
 }
+.slider-box .slick-prev{
+  right: 0px;
+}
+.slider-box .slick-next{
+  right: -6px;
+}
+.slider-box .slick-prev:before{
+  content: url(../src/l-a-1.png);
+  /* font-size: 2.5rem; */
+  /* color: #313131; */
+}
+.slider-box .slick-next:before{
+  content: url(../src/r-a-1.png);
+  /* font-size: 2.5rem; */
+  /* color: #313131; */
+}
+.slider-box .slick-prev:hover::before{
+  content: url(../src/l-a-2.png);
+}
+.slider-box .slick-next:hover::before{
+  content: url(../src/r-a-2.png);
+}
 .main-slider-box .slick-slide, .main-slider-box .slick-slide > div {
   background-color: #fff;
   padding: 0;
@@ -1774,7 +1805,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: flex-start;
   height: 500px;
-  background-image: url(../src/main-banner4.jpg);
+  /* background-image: url(../src/main-banner4.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1786,7 +1817,7 @@ article .article-partnership-expwrap div p{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(245, 245, 245, 0.8);
 }
 .main-slider-box .slide-4 h2{
   color: rgb(121, 137, 137);
@@ -1797,7 +1828,14 @@ article .article-partnership-expwrap div p{
 .main-slider-box .slide-4 h1{
   color: rgb(64, 63, 69);
 }
+#slide4-img{
+  background-image: url(../src/main-banner4.jpg);
+  background-size: cover;
+}
 @media screen and (max-width: 1024px){
+  #slide4-img{
+    display: none;
+  }
   .main-slider-box .slide-1 .flex-wrap div{
   padding: 15px;
   flex-basis: 100%;
@@ -1819,6 +1857,14 @@ article .article-partnership-expwrap div p{
 .main-slider-box .slide-4 .flex-wrap div{
   padding: 15px;
   flex-basis: 100%;
+}
+.main-slider-box .slide-4 .flex-wrap .flex-content-wrap{
+  background: rgba(245, 245, 245, 0.8);
+}
+.main-slider-box .slide-4 .flex-wrap{
+    background-image: url(../src/main-banner4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 }
 /* mainfooter */
