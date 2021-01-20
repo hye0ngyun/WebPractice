@@ -13,15 +13,21 @@
             /* grid-template-columns: 1fr 500px 1fr; */            
             /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
             /* grid-template-columns: repeat(5, 1fr 2fr 1fr); */
-            grid-template-columns: repeat(3, 1fr);
-            /* grid-template-rows: 200px 200px auto; */
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-rows: 1fr 1fr; */
             /* grid-template-rows: repeat(2, 1fr); */
-            height: 80vh;
-            row-gap: 100px;
-            column-gap: 100px;
+            /* height: 80vh; */
+            /* row-gap: 100px; */
+            /* column-gap: 100px; */
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+            grid-auto-rows: minmax(200px, auto);
+            gap: 1rem;
+            /* row-gap: 20px;
+            column-gap: 30px; */
         }
         .grid-item:first-child{
-            grid-column: 3;
+            /* grid-column: 3; */
         }
     </style>
 </head>
@@ -31,10 +37,16 @@
         <div class="grid-item">B</div>
         <div class="grid-item">C</div>
         <div class="grid-item">D</div>
-        <div class="grid-item">E</div>
+        <div class="grid-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore esse corrupti animi eveniet quidem tempora natus, quos accusamus quibusdam, optio sapiente est facilis omnis, dicta reprehenderit! Maiores deserunt repellendus dolorum dolore quisquam! Ex, quae! Dolorum aliquid, dicta quo dolor natus, quisquam reprehenderit doloremque atque rem quas fugiat. Ea iusto tempore eos saepe, culpa obcaecati, harum eius aut eligendi officia accusamus!
+        </div>
         <div class="grid-item">F</div>
         <div class="grid-item">G</div>
         <div class="grid-item">H</div>
+        <div class="grid-item">I</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">H</div>
+        <div class="grid-item">I</div>
         <div class="grid-item">I</div>
     </div>
 </body>
