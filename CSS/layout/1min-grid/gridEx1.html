@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 30px 0;
+        }
+        .one {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        }
+        .two {
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+        }
+        .three {
+        grid-column: 1;
+        grid-row: 2 / 5;
+        }
+        .four {
+        grid-column: 3;
+        grid-row: 3;
+        }
+        .five {
+        grid-column: 2;
+        grid-row: 4;
+        }
+        .six {
+        grid-column: 3;
+        grid-row: 4;
+        }
+        .item{
+            background: #123456;
+            opacity: .6;
+        }
+        .wrapper2{
+            display: grid;
+            gap: 10px;
+            grid-template-areas: 
+            "one one two"
+            "three . two"
+            ;
+            /* grid-template-columns: repeat(3, 1fr); */
+        }
+        .one2{
+            grid-area: one;
+        }
+        .two2{
+            grid-area: two;
+        }
+        .three2 {
+            grid-area: three;
+        }
+        .four2 {
+            grid-area: four;
+        }
+        .five2 {
+            grid-area: five;
+        }
+        .six2 {
+            grid-area: six;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="one item">One</div>
+        <div class="two item">Two</div>
+        <div class="three item">Three</div>
+        <div class="four item">Four</div>
+        <div class="five item">Five</div>
+        <div class="six item">Six</div>
+      </div>
+      <div class="wrapper2">
+        <div class="one2 item">One</div>
+        <div class="two2 item">Two</div>
+        <div class="three2 item">Three</div>
+        <div class="four2 item">Four</div>
+        <div class="five2 item">Five</div>
+        <div class="six2 item">Six</div>
+      </div>
+    
+
+</body>
+</html>
