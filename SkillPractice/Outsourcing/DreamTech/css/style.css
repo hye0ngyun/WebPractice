@@ -883,7 +883,7 @@ article .article-partnership-expwrap div p{
       background: rgb(243, 244, 248);
       background-image: linear-gradient(110deg, rgba(30, 30, 0, 0.5), rgba(0, 30, 30, 0.5)), url(../src/Cardea-solo-intro.jpg);
       background-repeat: no-repeat;
-      background-size: 100% 450px;
+      background-size: contain;
       background-position: top;
       
   }
@@ -975,6 +975,20 @@ article .article-partnership-expwrap div p{
       width: 80%;
       padding: 50px;
   }
+  @media (max-width:1226px){
+    .article-cardea-middle .video-box{
+      /* width: auto;
+      margin: auto;
+      padding: 20px;*/
+      background-position: right;
+    
+  }
+  .article-cardea-middle .video-box video {
+    width: auto;
+    padding: auto;
+    margin: auto;
+  }
+}
   .article-cardea-middle video{
       margin: 0 70px;
   }
@@ -1033,10 +1047,22 @@ article .article-partnership-expwrap div p{
       justify-content: center;
   }
   .img-box #big-img{
-    width: 600px;
+    width: 700px;
     height: 600px;
-      align-self: center;
+      align-self: flex-end;
       border-radius: 30px;
+  }
+  @media (max-width: 1600px){
+    .img-box #big-img{
+      width: 650px;
+      height: 600px;
+    }
+  }
+  @media (max-width: 1300px){
+    .img-box #big-img{
+      width: 500px;
+      height: 500px;
+    }
   }
   @media (max-width: 600px){
     .img-box #big-img{
@@ -1074,7 +1100,26 @@ article .article-partnership-expwrap div p{
       display: flex;
       flex-flow: column;
       background-image: url(../src/Cardea-solo-outer.png);
-      background-size: 100% 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+  @media screen and (max-width:1024px){
+    article .article-cardea-outro{
+      height: 500px;
+    }
+  }
+
+
+  @media screen and (max-width:800px){
+    article .article-cardea-outro{
+      height: 400px;
+    }
+  }
+  @media screen and (max-width:600px){
+    article .article-cardea-outro{
+      height: 300px;
+    }
   }
   .article-cardea-outro .main-box{
     height: 500px;
@@ -1124,7 +1169,7 @@ article .article-partnership-expwrap div p{
       display: flex;
       flex-flow: column;
       position: relative;
-      bottom: 65px;
+      bottom: 100px;
       height: fit-content;
   }
   .article-cardea-outro .side-text h2{
@@ -1208,7 +1253,7 @@ article .article-partnership-expwrap div p{
           width: auto;
       }
       .article-cardea-middle .video-box video{
-          width: auto;
+          width: 800px;
           padding: auto;
           margin: auto;
       }
@@ -1219,9 +1264,7 @@ article .article-partnership-expwrap div p{
       .article-cardea-intro .side-text{
           width: auto;
       }
-      article .article-cardea-outro{
-        height: 400px;
-      }
+      
       .article-cardea-middle .video-box{
           width: auto;
           margin: auto;
@@ -1236,6 +1279,11 @@ article .article-partnership-expwrap div p{
         padding-right: 0;
         font-size: 1.2rem;
       }
+  }
+  @media screen and (max-width:818px){
+    .article-cardea-middle .video-box video{
+      width: 420px;
+    }
   }
 
 /* @index */
@@ -1536,7 +1584,11 @@ article .article-partnership-expwrap div p{
   position: relative;
   top: 100px;
   font-size: 1.2rem;
+  /* text-align: end; */
+}
+.article-rightfit-middle .text-cont p{
   text-align: end;
+}
 }
 .article-rightfit-middle .text-cont a{
   font-size: 1rem;
@@ -1783,10 +1835,12 @@ article .article-partnership-expwrap div p{
   background-image: url(../src/35.png);
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: 100px;
 }
 @media (max-width:1024px){
   .main-slider-box .slide-3 .flex-wrap{
     background-size: auto;
+    background-position: center;
   }
 }
 .main-slider-box .slide-3 .flex-wrap div{
