@@ -8,7 +8,9 @@
 body{
   overflow-x: hidden;
 }
-
+sup{
+  font-size: 0.5em;
+}
 /* font */
 @font-face {
   font-family: 'AppleSDGothicNeoM';
@@ -26,7 +28,7 @@ body{
   height: 30px;
 }
 #partner-graph{
-  width: 1024px;
+  width: 1200px;
 }
 #partner-graph2{
   display: none;
@@ -312,7 +314,7 @@ footer{
 .sub-menues a{
   display: inline-block;
   padding: 5px 0; 
-  font-size: 0.8rem;
+  font-size: 1.05rem;
   font-weight: normal;
 }
 .sub-menu{
@@ -475,7 +477,7 @@ article .article-signal:first-child{
 .signal-video-wrap button{
   height: fit-content;
   position: relative;
-  bottom: 100px;
+  bottom: 5%;
   border-radius: 20px;
   padding: 5px 15px;
   color: rgb(11, 6, 86);
@@ -512,7 +514,7 @@ article .article-signal:first-child{
     width: 100%;
   }
   .signal-video-wrap button{
-    bottom: 50px;
+    bottom: 0px;
   }
 }
 article .article-signal-intro a{
@@ -595,7 +597,7 @@ article .article-ourteam:nth-child(2n+1){
 article .article-ourteam:first-child{
   background-image: url(../src/27.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: flex;
   justify-content: flex-end;
 }
@@ -717,7 +719,7 @@ article .article-ourteam-outro div ul li::marker{
 article .article-partnership-intro{
   display: flex;
   justify-content: flex-end;
-  background-image: url(../src/partners-partnership-intro.jpg);
+  background-image: url(../src/partners-partnership-intro2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 5% 0;
@@ -726,6 +728,8 @@ article .article-partnership-intro{
 article .article-partnership:nth-child(2){
   /* background-image: url(../src/21.png); */
   background: rgb(11, 6, 86);
+  position: relative;
+  top: 65px;
 }
 article .article-partnership-intro div {
   width: 80%;
@@ -736,8 +740,9 @@ article .article-partnership-intro div {
   margin-top: 20%;
   /* margin-bottom: 10%; */
   position: relative;
-  top: 110px;
+  top: 180px;
   left: 100px;
+  z-index: 1;
 }
 @media (max-width:1024px){
   article .article-partnership-intro div{
@@ -786,6 +791,7 @@ article .article-partnership-intro a{
 }
 article .article-partnership .article-partnership-intro p{
   padding: 20px 0;
+  font-size: 1.2em;
 }
 article .article-partnership-outro{
   display: flex;
@@ -798,8 +804,8 @@ article .article-partnership h2{
   color:  rgb(13, 6, 86);
   text-align: left;
   background-color: rgb(225, 225, 225);
-  padding: 5%;
-  font-size: xx-large;
+  padding: 6% 5% 0 5%;
+  font-size: 2rem;
   font-weight: lighter;
 }
 article .article-partnership-expwrap{
@@ -955,8 +961,8 @@ article .article-partnership-expwrap div p{
       background: white;
   }
   .article-cardea-middle .video-box video{
-    width: 300px;
-    height: 181px;
+    width: 500px;
+    /* height: 181px; */
     background: #313131;
 }
   .article-cardea-middle .video-box{
@@ -1063,10 +1069,7 @@ article .article-partnership-expwrap div p{
   .article-cardea-outro .side-text{
       width: 50%;
   }
-  .article-cardea-outro .side-text h2{
-    text-align: center;
-    padding-right: 20%;
-  }
+
   .article-cardea-outro{
       display: flex;
       flex-flow: column;
@@ -1127,8 +1130,15 @@ article .article-partnership-expwrap div p{
   .article-cardea-outro .side-text h2{
       color: white;
   }
+  .article-cardea-outro .side-text h2:first-child{
+    text-align: center;
+    margin-right: 15%;
+    /* padding-right: 20%; */
+  }
   .article-cardea-outro .side-text h2:nth-child(2){
-      align-self: flex-end;
+    text-align: center;
+    margin-left: 15%;
+      /* align-self: flex-end; */
   }
   .article-cardea-intro .slider-box .btn-left{
       border: 1px solid red;
@@ -1521,11 +1531,12 @@ article .article-partnership-expwrap div p{
 }
 .article-rightfit-middle .text-cont{
   flex-basis: 1000px;
-  background: linear-gradient(90deg, rgb(174, 220, 174) , rgb(184, 219,212));
+  background: linear-gradient(90deg, rgba(174, 220, 174, 0.7) , rgba(184, 219,212, .7));
   padding: 7%;
   position: relative;
   top: 100px;
   font-size: 1.2rem;
+  text-align: end;
 }
 .article-rightfit-middle .text-cont a{
   font-size: 1rem;
@@ -1548,7 +1559,7 @@ article .article-partnership-expwrap div p{
 }
 .article-rightfit-intro .text-cont{
   flex-basis: 1000px;
-  padding: 7% 3%;
+  padding: 7% 0% 7% 8%;
   /* margin-left: 30%; */
   font-size: 1.2rem;
 }
@@ -1697,7 +1708,7 @@ article .article-partnership-expwrap div p{
   flex-basis: 50%;
 }
 .main-slider-box .slide-1 .flex-wrap .flex-content-wrap2 video{
-  width: 600px;
+  width: 800px;
 }
 .main-slider-box .slide-1 h2{
   color: rgb(121, 137, 137);
@@ -1709,6 +1720,9 @@ article .article-partnership-expwrap div p{
   color: rgb(64, 63, 69);
 }
 @media (max-width: 1024px){
+  .main-slider-box .slide-1 .flex-wrap .flex-content-wrap2 video{
+    width: 600px;
+  }
   .main-slider-box .slide-1 .flex-wrap{
     flex-flow: wrap-reverse;
   }
@@ -1741,10 +1755,11 @@ article .article-partnership-expwrap div p{
   background-image: url(../src/main-banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .main-slider-box .slide-2 .flex-wrap div{
   padding: 15px;
-  flex-basis: 50%;
+  flex-basis: 80%;
 }
 .main-slider-box .slide-2 .flex-wrap .flex-content-wrap{
   display: flex;
@@ -2522,7 +2537,7 @@ textarea{
   margin-left: 20px;
 }
 .contact-us .main-content .btns .mar-left{
-  flex-basis: 430px;
+  flex-basis: 565px;
 }
 /* HCP */
 article .article-hcp-art{
@@ -2721,7 +2736,7 @@ article .article-hcp:nth-child(2){
   font-size: x-large;
 }
 .article-create-next-middle .create-next-main-cont .agree-cont:first-child h3{
-  font-size: medium;
+  font-size: 1.4rem;
 }
 .article-create-next-middle .create-next-main-cont .agree-cont .agree-cont-pre{
   margin-left: 100px;
@@ -3251,4 +3266,7 @@ tr td:nth-child(3){
         font-size: 0.6rem;
         padding: 2px 5px;
     }
+}
+.cardea-middle-fh2{
+  margin-top: 2em;
 }
