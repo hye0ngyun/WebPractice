@@ -1,0 +1,111 @@
+.header{
+    display: flex;
+    /* justify-content: space-between; */
+    /* margin: 1.5em 0; */
+    height: 80px;
+    /* width: 100%; */
+    align-items: center;
+    padding: 0 1rem;
+}
+.search-form{
+    margin-left: auto;
+    margin-right: 3rem;
+}
+.search-form{
+    /* flex-basis: 300px; */
+    width: 300px;
+    max-width: 60%;
+}
+.menu{
+    /* width: 100%; */
+}
+.primary{
+    padding: 1rem;
+}
+.secondary-a{
+    background: white;
+}
+.secondary-b{
+    color:white;
+    background: #666;
+}
+.modal{
+    display: none;
+    top: 80px;
+}
+label[for="modal-switch"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    /* background: red; */
+}
+#modal-switch:checked ~ .modal{
+    display: flex;
+}
+label[for="modal-switch"]:before{
+    content: "☎";
+    font-size: 2rem;
+}
+#modal-switch:checked ~ label[for="modal-switch"]:before{
+    color: dodgerblue;
+}
+#modal-switch,
+label[for="modal-switch"] span{
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+.footer{
+    text-align: center;
+    border-top: 1px solid lightgray;
+}
+@media (min-width: 1024px){
+    .page{
+        display: grid;
+        grid-template-columns: 300px 1fr 300px;
+        grid-template-areas: 
+            'header header header'
+            'menu menu menu'
+            'secondary-a primary secondary-b'
+            'footer footer footer'
+        ;
+    }
+    .header{
+        grid-area: header;
+    }
+    .menu{
+        grid-area: menu;
+    }
+    .secondary{
+        /* width: 20%; */
+    }
+    .secondary-a{
+        grid-area: secondary-a;
+    }
+    .secondary-b{
+        grid-area: secondary-b;
+    }
+    .primary{
+        grid-area: primary;
+    }
+    .footer{
+        grid-area: footer;
+        
+    }
+}
+@media (min-width: 1400px){
+    .primary{
+        /* width: calc(100% - 600px); */
+        /* flex: 1 1 auto; */
+    }
+    .secondary{
+        /* width: 300px; */
+    }
+}
