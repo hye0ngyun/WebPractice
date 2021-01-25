@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 500px;
+            margin: 5em auto;
+            border: 1px solid black;
+        }
+        #header{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            padding: 1em;
+        }
+        .item{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .item span:first-child{
+            padding: 0.2em 1em;
+        }
+        #title{
+            background: lightsteelblue;
+            padding: 0.2em 1em;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>공부 시작후</h1>
+            <h2 id="accent"></h2>
+        </div>
+        <div id="title">
+            시험 일정 계산
+        </div>
+        <div id="main-section">
+            <div class="item">
+                <span>정보처리기사 필기</span>
+                <span id="date-first"></span>
+            </div>
+            <div class="item">
+                <span>정보처리기사 실기</span>
+                <span id="date-second"></span>
+            </div>
+            <div class="item">
+                <span>개강날짜</span>
+                <span id="date-start"></span>
+            </div>
+        </div>
+    </div>
+    <script src="./objectEx3.js"></script>
+    <!-- <script>
+        var dayList = ['일', '월', '화', '수', '목', '금', '토'];
+        var date = new Date();
+        var accent = new Date('2021/1/25');
+        var passedTime = date.getTime() - accent.getTime();
+        var passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+        document.querySelector('#accent').innerHTML = passedDay + '일';
+
+        var first = new Date('2021/3/7');
+        passedTime = date.getTime() - first.getTime();
+        passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+        document.querySelector('#date-first').innerHTML = 'D' + passedDay + ` (${first.getFullYear()}/${first.getMonth() + 1}/${first.getDate()} ${dayList[first.getDay()]})`;
+
+        var second = new Date('2021/04/24');
+        passedTime = date.getTime() - second.getTime();
+        passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+        document.querySelector('#date-second').innerHTML = 'D' + passedDay + ` (${second.getFullYear()}/${second.getMonth() + 1}/${second.getDate()} ${dayList[second.getDay()]})`;
+
+        var start = new Date('2021/03/2');
+        passedTime = date.getTime() - start.getTime();
+        passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+        document.querySelector('#date-start').innerHTML = 'D' + passedDay + ` (${start.getFullYear()}/${start.getMonth() + 1}/${start.getDate()} ${dayList[start.getDay()]})`;
+    </script> -->
+</body>
+</html>
