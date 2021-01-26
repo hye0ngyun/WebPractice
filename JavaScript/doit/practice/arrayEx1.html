@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #layout-wrap{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(auto-fill, minmax(20%, auto));
+        }
+        #layout-wrap{
+            grid: 1 / 1 / 4 / 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="layout-wrap">
+        <h1>여행 준비물 점검 목록</h1>
+        <div id="add-wrap">
+            <input type="text">
+            <button>추가</button>
+        </div>
+        <div id="itme-wrap">
+            
+        </div>
+    </div>
+</body>
+</html>
