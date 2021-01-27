@@ -8,23 +8,36 @@
         #layout-wrap{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(auto-fill, minmax(20%, auto));
+            grid-template-rows: repeat(auto-fill, minmax(100px, auto));
         }
-        #layout-wrap{
-            grid: 1 / 1 / 4 / 2;
+        #title{
+            grid-column:1 / span 3;
+            justify-self: center;
+        }
+        #add-wrap{
+            grid-column: 2 / 3;
+        }
+        #item-wrap{
+            grid-column: 2 / 3;
+            grid-row: 3 ;
         }
     </style>
 </head>
 <body>
     <div id="layout-wrap">
-        <h1>여행 준비물 점검 목록</h1>
+        <h1 id="title">여행 준비물 점검 목록</h1>
         <div id="add-wrap">
             <input type="text">
             <button>추가</button>
         </div>
-        <div id="itme-wrap">
-            
+        <div id="item-wrap">
+            aa
         </div>
     </div>
+    <script>
+        function add(){
+            
+        }
+    </script>
 </body>
 </html>

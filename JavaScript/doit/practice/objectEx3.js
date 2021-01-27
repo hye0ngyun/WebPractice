@@ -20,3 +20,13 @@
         passedTime = date.getTime() - start.getTime();
         passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
         document.querySelector('#date-start').innerHTML = 'D' + passedDay + ` (${start.getFullYear()}/${start.getMonth() + 1}/${start.getDate()} ${dayList[start.getDay()]})`;
+        
+        var pre_enrolment = new Date('2021/02/15');
+        passedTime = date.getTime() - pre_enrolment.getTime();
+        passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+        document.querySelector('#date-pre-enrolment').innerHTML = 'D' + passedDay + ` (${pre_enrolment.getFullYear()}/${pre_enrolment.getMonth() + 1}/${pre_enrolment.getDate()} ${dayList[pre_enrolment.getDay()]} ~ ${pre_enrolment.getFullYear()}/${pre_enrolment.getMonth() + 1}/${pre_enrolment.getDate()+2} ${dayList[pre_enrolment.getDay()+2]})`;
+
+        var enrolment = new Date('2021/02/18');
+        passedTime = date.getTime() - enrolment.getTime();
+        passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
+        document.querySelector('#date-enrolment').innerHTML = 'D' + passedDay + ` (${enrolment.getFullYear()}/${enrolment.getMonth() + 1}/${enrolment.getDate()} ${dayList[enrolment.getDay()]})`;
