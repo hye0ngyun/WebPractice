@@ -25,8 +25,12 @@
         - - [ ] Understand the concepts Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict
 
 - ### Framework
-    - - [ ] Vue
-    - - [ ] React
+    - client side
+        - - [ ] Vue
+        - - [ ] React
+    
+    - server side
+        - - [ ] django
 
 ---
 > “Life isn't about finding yourself. Life is about creating yourself.”

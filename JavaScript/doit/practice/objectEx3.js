@@ -30,3 +30,6 @@
         passedTime = date.getTime() - enrolment.getTime();
         passedDay = Math.round(passedTime / (1000 * 60 * 60 * 24));
         document.querySelector('#date-enrolment').innerHTML = 'D' + passedDay + ` (${enrolment.getFullYear()}/${enrolment.getMonth() + 1}/${enrolment.getDate()} ${dayList[enrolment.getDay()]})`;
+
+        var today = new Date();
+        document.querySelector('#date-today').innerHTML = `${today.getFullYear()}/${today.getMonth()+1}/${today.getDate()} ${dayList[today.getDay()]}`
