@@ -19,6 +19,20 @@
             // data속성
             data: {
                 message: 'Hello Vue.js!'
+            },
+            // beforeCreate
+            beforeCreate: function(){
+                console.log('beforeCreated');
+            },
+            created: function(){
+                console.log('created');
+            },
+            mounted: function(){
+                console.log('mounted');
+                this.message = 'Hello vue!';
+            },
+            updated: function(){
+                console.log('updated');
             }
         });
     </script>
