@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <child-component v-bind:propsdata="message"></child-component>
+        <sibling-component v-bind:propsdata="anotherMessage"></sibling-component>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('child-component', {
+            template: '<p>{{ propsdata }}</p>',
+            props: ['propsdata']
+        });
+        let sibling = {
+            template: '<p>{{ propsdata }}</p>',
+            props: ['propsdata']
+        };
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'this is v-bind:props="message"',
+                anotherMessage: 'this is another message'
+            },
+            components: {
+                'sibling-component': sibling
+            }
+        });
+    </script>
+</body>
+</html>

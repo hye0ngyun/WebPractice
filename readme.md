@@ -27,6 +27,15 @@
 - ### Framework
     - client side
         - - [ ] Vue
+            - - [ ] Foundation
+                - - [ ] Instance
+                    - - [ ] Instance Life cycle
+                - - [ ] Component
+                    - - [ ] Understand the difference global and local component
+                - - [ ] Component communication
+                    - - [ ] Understand props and event(event bus)
+                - - [ ] Router
+                - - [ ] Vue HTTP comunication
         - - [ ] React
     
     - server side
