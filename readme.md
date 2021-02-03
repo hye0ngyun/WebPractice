@@ -10,16 +10,16 @@
         - - [ ] Accessibility (optional)
     - CSS
         - - [x] Learn the basics
-        - - [ ] Making Layouts
+        - - [x] Making Layouts
             - - [x] Float
             - - [x] Positioning
             - - [x] Display
             - - [x] Box model
             - - [x] Flexbox
-            - - [ ] Grid
+            - - [x] Grid
         - - [x] Responsive design and Media Queries
     - Javascript
-        - - [ ] Syntax and Basic Constructs
+        - - [x] Syntax and Basic Constructs
         - - [ ] Learn DOM Manipulation
         - - [ ] Learn Fetch API / Ajax (XHR)
         - - [ ] Understand the concepts Hoisting, Event Bubbling, Scope, Prototype, Shadow DOM, strict
@@ -27,11 +27,11 @@
 - ### Framework
     - client side
         - - [ ] Vue
-            - - [ ] Foundation
-                - - [ ] Instance
-                    - - [ ] Instance Life cycle
-                - - [ ] Component
-                    - - [ ] Understand the difference global and local component
+            - - [x] Foundation
+                - - [x] Instance
+                    - - [x] Instance Life cycle
+                - - [x] Component
+                    - - [x] Understand the difference global and local component
                 - - [ ] Component communication
                     - - [ ] Understand props and event(event bus)
                 - - [ ] Router
