@@ -87,7 +87,8 @@
                 display: flex;
             }
             #footer .about-us img{
-                margin-right: 10px ;
+                margin-right: 10px;
+                height: fit-content;
             }
             #footer .contact-us{
                 grid-area: contact;
@@ -186,6 +187,10 @@
                 border-radius: 5px;
                 border: 0px;
             }
+            .login-form .login-pw{
+                margin: 0 10px;
+            }
+            
             input::placeholder {
                 color: white;
                 /* font-style: italic; */
@@ -193,58 +198,155 @@
             .orange{
                 color: rgb(255, 164, 0);
             }
+            .orange-bor-bot{
+                border-bottom: 1px solid rgb(255, 164, 0);
+            }
+            .main-cont{
+                display: grid;
+                grid-template-columns: 300px 1fr 300px;
+            }
+            .main-header{
+                display: flex;
+                padding: 15px 50px;
+                background: rgb(16, 16, 16);
+                border-bottom: 1px solid black;
+            }
+            .main-header a{
+                font-size: 1.1em;
+                padding-bottom: 3px;
+            }
+            .orange-border{
+                color: rgb(255, 164, 0);
+                border-bottom: 2px solid rgb(255, 164, 0);
+            }
+            @media (max-width: 1024px){
+                .side-a, .side-b{
+                    display: none;
+                }
+                .main-cont{
+                    grid-template-columns: 1fr;
+                }
+                .main-header{
+                    padding: 15px 10px;
+                }
+            }
+            .side-b-banner{
+                display: flex;
+                background: black;
+                justify-content: space-between;
+                padding: 19px 10px;
+            }
+            .side-b-btn-wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                background: rgb(44, 44, 44);
+                padding: 10px;
+            }
+            .side-b-btn-wrap button{
+                padding: 5px 15px;
+                background: rgb(25, 25, 25);
+                border-radius: 5px;
+            }
+            .side-b-info-wrap .side-b-info-item{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                background: rgb(22, 22, 22);
+                border-top: 4px groove #313131;
+            }
+            .side-b-info-wrap .side-b-info-item button{
+                background:  black;
+            }
+            #m-unit button{
+                background: rgb(39, 39, 39);
+                border-radius: 5px;
+                /* margin: 0 3px; */
+            }
+            .side-b-user-info-wrap{
+                border: 1px solid black;
+                margin-bottom: 50px;
+            }
+            .side-b-info-item .btn-wrap input{
+                width: 70px;
+                background: black;
+            }
+            .side-b-join button{
+                width: 100%;
+                color: black;
+                font-weight: bolder;
+                font-size: 1.3em;
+                background: rgb(255, 164, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0;
+            }
+            .side-b-sport-rank-wrap .rank-header{
+                background: linear-gradient(360deg, rgb(29, 29, 29), rgb(80, 80, 80));
+                padding: 10px 30px;
+            }
+            .side-b-sport-rank-wrap .rank-info{
+                border: 1px solid black;
+            }
+            .rank-info .rank-info-label{
+                display: grid;
+                grid-template-columns: 30px 1fr 30px;
+                gap: 30px;
+                background: white;
+                padding: 10px;
+                color: black;
+            }
+            .rank-info .rank-info-cont .rank-info-team{
+                display: grid;
+                grid-template-columns: 30px 1fr 30px;
+                gap: 30px;
+                padding: 10px;
+            }
+            .rank-info .rank-info-cate{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                justify-items: center;
+                padding: 10px 0px;
+            }
+            .rank-info .rank-info-cate .sport-type-wrap{
+                display: grid;
+                font-size: 0.8em;
+            }
+            .rank-info .rank-info-cate .sport-type-wrap .fas{
+                font-size: 1.5em;
+                text-align: center;
+                margin-bottom: 5px;
+                
+            }
+            .rank-info .rank-info-cate a:hover{
+                text-decoration: none;
+                color:  rgb(255, 164, 0);
+            }
         </style>
     </head>
     <body>
     <!-- header -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="top-header">
-            <img src="http://placehold.it/100x50" alt="">
-            <div class="login-cont">
-                <div class="search-signup">
-                    <a href="">ID / PW찾기</a>
-                    <div class="border"></div>
-                    <a href="" class="orange">회원가입</a>
-                </div>
-                <div class="login-form">
-                    <form action="" method="POST">
-                        <input type="text" class="login-id" placeholder="ID">
-                        <input type="text" class="login-pw" placeholder="PW">
-                        <input type="submit" class="login-btn" value="로그인">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">logo</a>
-                <a href="" class="user"><i class="fas fa-user"></i></a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">스포츠</a></li>
-                    <li><a href="#about">게임센터</a></li>
-                    <li><a href="#contact">이용안내</a></li>
-                    <li><a href="#contact">커뮤니티</a></li>
-                    <li><a href="#contact">마켓</a></li>
-                    <li><a href="#contact">고객센터</a></li>
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
+    <script src="js/header.js"></script>
     <!-- /header -->
 
     <!-- main-section -->
     <div class="main-cont">
-        <div class="side-a">side-a</div>
-        <div class="main-article">main-article</div>
-        <div class="side-b">side-b</div>
+        <div class="side-a">
+            <iframe src="side-a.html" frameborder="0"></iframe>
+        </div>
+        <div class="main-article">
+            <div class="main-header">
+                <a href="" class="orange-border">스포츠게임</a><div class="border"></div>
+                <a href="">라이브게임</a><div class="border"></div>
+                <a href="">게임내역</a><div class="border"></div>
+                <a href="">게임결과</a>
+            </div>
+        </div>
+        <!-- side-b -->
+        <script src="js/side-b.js"></script>
+        <!-- /side-b -->
+
     </div>
     <!-- /main-section -->
     
