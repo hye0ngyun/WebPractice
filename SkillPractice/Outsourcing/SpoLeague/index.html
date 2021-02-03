@@ -18,6 +18,9 @@
         <!-- Custom styles for this template -->
         <link href="starter-template.css" rel="stylesheet">
 
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="./js/ie-emulation-modes-warning.js"></script>
@@ -89,6 +92,16 @@
             #footer .contact-us{
                 grid-area: contact;
             }
+            body{
+                background: rgb(31, 31, 31);
+            }
+            .navbar-inverse .navbar-nav>li>a{
+                font-size: 1.2em;
+            }
+            .navbar-inverse .navbar-nav>li>a:hover{
+                background: #313131;
+                transition: .5s;
+            }
             @media (max-width: 768px){
                 .top-header{
                     display: none;
@@ -99,10 +112,53 @@
                 #footer .contact-us{
                     display: none;
                 }
+                .navbar-fixed-top{
+                    position: sticky;
+                }
+                .navbar-header{
+                    background: black;
+                    padding: 0 10px;
+                    display: grid;
+                    grid-template-columns: 60px 1fr 60px;
+                    justify-content: space-between;
+                }
+                .navbar-inverse .navbar-toggle{
+                    background: #313131;
+                    grid-column: 1 / span 1;
+                }
+                .navbar-header .navbar-brand{
+                    justify-self: center;
+                }
+                .navbar-header .user{
+                    display: block;
+                    color: white;
+                    background: #313131;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    float: right;
+                    padding: 10px 10px;
+                    margin-top: 8px;
+                    margin-left: 15px;
+                    margin-bottom: 8px;
+                    /* background-color: transparent; */
+                    background-image: none;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                }
+                #footer{
+                    background: rgb(31, 31, 31);
+                    border-top: 1px solid white;
+                    margin: 0 10px;
+                }
             }
             @media (min-width: 768px){
                 .navbar>.container .navbar-brand{
                     margin-left: -15px;
+                    display: none;
+                }
+                .navbar-header .user{
                     display: none;
                 }
                 .navbar-nav>li{
@@ -117,10 +173,30 @@
                 }
                 
             }
+            .login-form .login-btn{
+                background: rgb(255, 164, 0);
+                padding: 3px 30px;
+                border-radius: 5px;
+                border: 0px;
+            }
+            .login-form .login-id, .login-form .login-pw{
+                background: rgb(119, 119, 119);
+                width: 150px;
+                padding: 3px 10px;
+                border-radius: 5px;
+                border: 0px;
+            }
+            input::placeholder {
+                color: white;
+                /* font-style: italic; */
+            }
+            .orange{
+                color: rgb(255, 164, 0);
+            }
         </style>
     </head>
     <body>
-        
+    <!-- header -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="top-header">
             <img src="http://placehold.it/100x50" alt="">
@@ -128,13 +204,13 @@
                 <div class="search-signup">
                     <a href="">ID / PW찾기</a>
                     <div class="border"></div>
-                    <a href="">회원가입</a>
+                    <a href="" class="orange">회원가입</a>
                 </div>
                 <div class="login-form">
                     <form action="" method="POST">
-                        <input type="text" placeholder="ID">
-                        <input type="text" placeholder="PW">
-                        <input type="submit" value="로그인">
+                        <input type="text" class="login-id" placeholder="ID">
+                        <input type="text" class="login-pw" placeholder="PW">
+                        <input type="submit" class="login-btn" value="로그인">
                     </form>
                 </div>
             </div>
@@ -148,6 +224,7 @@
                 <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">logo</a>
+                <a href="" class="user"><i class="fas fa-user"></i></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -161,34 +238,19 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
+    <!-- /header -->
+
+    <!-- main-section -->
     <div class="main-cont">
         <div class="side-a">side-a</div>
         <div class="main-article">main-article</div>
         <div class="side-b">side-b</div>
     </div>
-    <footer id="footer">
-        <div class="ext-link">
-            <a href="">심의등급분류변호</a><div class="border"></div>
-            <a href="">이용약관</a><div class="border"></div>
-            <a href="">개인정보취급방침</a><div class="border"></div>
-            <a href="">청소년보호정책</a><div class="border"></div>
-            <a href="">저작권정책</a><div class="border"></div>
-            <a href="">UCP이용자보호</a>
-        </div>
-        <div class="about-us">
-            <img src="http://placehold.it/100x50" alt="">
-            <div class="about-cont">
-                <p>주소:서울시 구로구 디지털로 288 대륭포스트타워1차 1806-1호 | 사업자 등록번호:490-81-00430</p>
-                <p>통신판매업:2019-서울서초-3323 | 개인정보관리책임자:김봉근</p>
-                <p>Copyright 다담은 All rights reserved.</p>
-            </div>
-            
-        </div>
-        <div class="contact-us">
-            <p>고객센터</p>
-            <p>운영시간:평일 09:00~18:00 / 토. 공휴일 휴무 / 점심시간(12:00~13:00)</p>
-        </div>
-    </footer>
+    <!-- /main-section -->
+    
+    <!-- footer -->
+    <script src="./js/footer.js"></script>
+    <!-- /footer -->
 
 
     <!-- Bootstrap core JavaScript
