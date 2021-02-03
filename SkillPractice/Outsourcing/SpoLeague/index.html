@@ -10,7 +10,7 @@
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Starter Template for Bootstrap</title>
+        <title>SpoLeague</title>
 
         <!-- Bootstrap core CSS -->
         <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-        <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+        <script src="./js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -28,13 +28,10 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <style>
-            /* body {
-    padding-top: 50px;
-    } */
-    .starter-template {
-    padding: 40px 15px;
-    text-align: center;
-    }
+            .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+            }
             .top-header{
                 display: flex;
                 justify-content: space-between;
@@ -47,20 +44,59 @@
                 margin: 10px 0;
             }
             .search-signup a:first-child{
-                margin: 0 15px 0 0;
+                /* margin: 0 15px 0 0; */
                 /* border-right: 1px solid white; */
             }
-            .search-signup .border{
+            .border{
                 position: relative;
                 top: 5px;
                 border: 1px solid white;
                 height: 10px;
+                margin: 0 15px;
             }
             .search-signup a:nth-child(3){
-                margin: 0 0 0 15px;
+                /* margin: 0 0 0 15px; */
+            }
+            
+            .main-cont{
+                background: rgb(31, 31, 31);
+                min-height: 80vh;
+            }
+            #footer{
+                display: grid;
+                background: rgb(37, 37, 37);
+                /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+                padding: 15px 10%;
+                /* grid-template-rows: 50px; */
+                grid-template-areas: 
+                'ext contact'
+                'about contact'
+                ;
+                gap: 10px;
+            }
+            #footer .ext-link{
+                grid-area: ext;
+                display: flex;
+                /* margin: 0 0 10px 0; */
+            }
+            #footer .about-us{
+                grid-area: about;
+                display: flex;
+            }
+            #footer .about-us img{
+                margin-right: 10px ;
+            }
+            #footer .contact-us{
+                grid-area: contact;
             }
             @media (max-width: 768px){
                 .top-header{
+                    display: none;
+                }
+                #footer .ext-link{
+                    display: none;
+                }
+                #footer .contact-us{
                     display: none;
                 }
             }
@@ -79,6 +115,7 @@
                     display: flex;
                     width: 100%;
                 }
+                
             }
         </style>
     </head>
@@ -114,7 +151,7 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">스포츠</a></li>
+                    <li><a href="#">스포츠</a></li>
                     <li><a href="#about">게임센터</a></li>
                     <li><a href="#contact">이용안내</a></li>
                     <li><a href="#contact">커뮤니티</a></li>
@@ -124,15 +161,34 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
-    <div class="container">
-
-        <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <div class="main-cont">
+        <div class="side-a">side-a</div>
+        <div class="main-article">main-article</div>
+        <div class="side-b">side-b</div>
+    </div>
+    <footer id="footer">
+        <div class="ext-link">
+            <a href="">심의등급분류변호</a><div class="border"></div>
+            <a href="">이용약관</a><div class="border"></div>
+            <a href="">개인정보취급방침</a><div class="border"></div>
+            <a href="">청소년보호정책</a><div class="border"></div>
+            <a href="">저작권정책</a><div class="border"></div>
+            <a href="">UCP이용자보호</a>
         </div>
-
-    </div><!-- /.container -->
+        <div class="about-us">
+            <img src="http://placehold.it/100x50" alt="">
+            <div class="about-cont">
+                <p>주소:서울시 구로구 디지털로 288 대륭포스트타워1차 1806-1호 | 사업자 등록번호:490-81-00430</p>
+                <p>통신판매업:2019-서울서초-3323 | 개인정보관리책임자:김봉근</p>
+                <p>Copyright 다담은 All rights reserved.</p>
+            </div>
+            
+        </div>
+        <div class="contact-us">
+            <p>고객센터</p>
+            <p>운영시간:평일 09:00~18:00 / 토. 공휴일 휴무 / 점심시간(12:00~13:00)</p>
+        </div>
+    </footer>
 
 
     <!-- Bootstrap core JavaScript
@@ -141,6 +197,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
     </body>
 </html>
