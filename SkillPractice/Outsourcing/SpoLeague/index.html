@@ -265,7 +265,7 @@
             }
             .side-b-user-info-wrap{
                 border: 1px solid black;
-                margin-bottom: 50px;
+                margin-bottom: 30px;
             }
             .side-b-info-item .btn-wrap input{
                 width: 70px;
@@ -323,6 +323,89 @@
                 text-decoration: none;
                 color:  rgb(255, 164, 0);
             }
+            .index-banner{
+                background-image: url(./src/index_banner.PNG);
+                background-size: 100% 100%;
+                height: 300px;
+                background-repeat: no-repeat;
+            }
+            .main-article{
+                padding: 10px;
+            }
+            .chat-tap{
+                display: flex;
+                text-align: center;
+                background: rgb(27, 27, 27);
+            }
+            .chat-tap>a{
+                flex-grow: 1;
+                padding: 10px 0;
+            }
+            .chat-tap>a.active{
+                background: rgb(255, 164, 0);
+                color: black;
+            }
+            .back-black{
+                background: black;
+            }
+            .chat-input{
+                display: flex;
+                
+            }
+            .chat-input .fa-dot-circle{
+                padding: 0 7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .chat-input input[type='text']{
+                background: rgb(59, 59, 59);
+                border: 0;
+                flex-grow: 1;
+            }
+            .chat-input input[type='submit']{
+                background: black;
+                border: 0;
+                padding: 5px 13px;
+            }
+            .chat-wrap{
+                margin-bottom: 20px;
+            }
+            .today-gmae-header{
+                padding: 2px 10px;
+                background: rgb(13, 11, 51);
+            }
+            .today-game-type{
+                /* padding: 5px 10px; */
+                /* display: flex; */
+                background: rgb(46, 46, 46);
+            }
+            .today-game-type div{
+                display: flex;
+                border-top: 1px solid rgb(13, 11, 51);
+                padding: 5px 10px;
+            }
+            .today-game-type div:last-child{
+                border-bottom: 10px solid rgb(4, 1, 32);
+            }
+            .today-game-type div a:first-child{
+                margin-right: auto;
+            }
+            .today-game-type div a:nth-child(2){
+                background: black;
+                border-radius: 5px;
+                padding: 0 10px;
+            }
+            .pd-r-5{
+                /* padding-left: 5px; */
+                padding-right: 5px;
+            }
+            .chat-main{
+                height: 250px;
+            }
+            .chat-main iframe{
+                height: 250px;
+            }
         </style>
     </head>
     <body>
@@ -332,16 +415,17 @@
 
     <!-- main-section -->
     <div class="main-cont">
-        <div class="side-a">
-            <iframe src="side-a.html" frameborder="0"></iframe>
-        </div>
+        <!-- side-a -->
+        <script src="./js/side-a.js"></script>
+        <!-- /side-a -->
         <div class="main-article">
-            <div class="main-header">
+            <!-- <div class="main-header">
                 <a href="" class="orange-border">스포츠게임</a><div class="border"></div>
                 <a href="">라이브게임</a><div class="border"></div>
                 <a href="">게임내역</a><div class="border"></div>
                 <a href="">게임결과</a>
-            </div>
+            </div> -->
+            <div class="index-banner"></div>
         </div>
         <!-- side-b -->
         <script src="js/side-b.js"></script>
@@ -354,6 +438,8 @@
     <script src="./js/footer.js"></script>
     <!-- /footer -->
 
+
+    <script src="./js/date-today.js"></script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
