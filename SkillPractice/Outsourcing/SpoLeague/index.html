@@ -33,6 +33,108 @@
         
         <!-- custom style -->
         <link rel="stylesheet" href="./css/style.css">
+        <!-- /custom style -->
+
+        <!-- style -->
+        <style>
+            /* index.html */
+            .top-info-wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 0.6fr;
+                gap: 10px;
+                margin: 15px 0;
+            }
+            .top-info-item{
+                border: 1px solid black;
+            }
+            .top-info-title{
+                background: linear-gradient(360deg, rgb(0, 0, 0), rgb(53, 53, 53));
+                padding: 0 10px;
+            }
+            .top-info-wrap .top-info-user{
+                background: rgb(35, 35, 35);
+                border-top: 1px solid black;
+                padding: 5px 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .pink{
+                color:rgb(241, 85, 184);
+            }
+            .top-info-wrap .btn-wrap{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 5px;
+            }
+            .top-info-wrap .btn-wrap button{
+                background: rgb(59, 59, 59);
+                border-radius: 5px;
+            }
+            .main-info-wrap{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            .main-sports-wrap .main-title{
+                background: linear-gradient(360deg, rgb(20, 20, 20), rgb(92, 92, 92));
+                border-radius: 5px 5px 0 0;
+                padding: 5px 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .main-sports-wrap .main-game-title{
+                display: flex;
+                justify-content: space-between;
+                padding: 3px 10px 3px 30px;
+                background: linear-gradient(360deg, rgb(0, 0, 0), rgb(43, 43, 43));
+                border-top: 4px groove #575757;
+            }
+            .main-game-info{
+                display: grid;
+                grid-template-columns: 1fr 0.1fr 0.1fr;
+            }
+            .game-info-wrap{
+                display: grid;
+                grid-template-columns: 1fr 0.2fr 1fr;
+                background: rgb(61, 61, 61);
+                border-radius: 5px;
+                
+            }
+            .main-game-info{
+                background: rgb(42, 42, 42);
+                border: 4px groove #575757;
+                padding: 1px;
+            }
+            .main-game-info div{
+                /* border-radius: 5px; */
+            }
+            .main-game-info .flex-between{
+                display: flex;
+                justify-content: space-between;
+            }
+            .border-lr-black{
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+            }
+            @media (max-width: 768px){
+                .top-info-wrap, .main-live-wrap{
+                    display: none;
+                }
+                .main-info-wrap{
+                    display: block;
+                }
+            }
+            .bgc-grey{
+                background: rgb(53, 53, 53);
+            }
+            .flex-align-center{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <!-- /style -->
     </head>
     <body>
     <!-- header -->
@@ -52,6 +154,253 @@
                 <a href="">게임결과</a>
             </div> -->
             <div class="index-banner"></div>
+            <div class="top-info-wrap">
+                <div class="top-info-item">
+                    <div class="top-info-title">
+                        <!-- <i class="fas fa-circle orange"></i> -->
+                        <ul style="padding: 5px 15px; margin: 0;" class="orange">
+                            <li>
+                                <span style="color: white;">적중률 TOP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                </div>
+                <div class="top-info-item">
+                    <div class="top-info-title">
+                        <ul style="padding: 5px 15px; margin: 0;" class="orange">
+                            <li>
+                                <span style="color: white;">수익률 TOP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="orange">81.25%</span>
+                    </div>
+                </div>
+                <div class="top-info-item">
+                    <div class="top-info-title">
+                        <ul style="padding: 5px 15px; margin: 0;" class="orange">
+                            <li>
+                                <span style="color: white;">홀덤 토너먼트 TOP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="pink">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="pink">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="pink">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="pink">81.25%</span>
+                    </div>
+                    <div class="top-info-user">
+                        <span>클라나드</span>
+                        <span class="pink">81.25%</span>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button>캐쉬 구매</button>
+                    <button>스포리그 티켓</button>
+                    <button>루비 무료 충전</button>
+                    <button>스포리그 쿠폰</button>
+                </div>
+            </div>
+            <div class="main-info-wrap">
+                <div class="main-left-wrap">
+                    <div class="main-sports-wrap">
+                        <div class="main-title">
+                            <span>스포리그 SPORTS</span>
+                            <span><a href="">+</a></span>
+                        </div>
+                        <div class="main-game-title">
+                            <span>국제클럽 CONCACAF 챔피언스 리그</span>
+                            <span>12-23 12:00</span>
+                        </div>
+                        <div class="main-game-info">
+                            <div class="game-info-wrap">
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>티그레 UANL</span>
+                                    <span>2.22</span>
+                                </div>
+                                <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>2.97</span>
+                                    <span>로스 엔젤레스 FC</span>
+                                </div>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">
+                                    <i class="fas fa-signal"></i>
+                                </button>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">+1</button>
+                            </div>
+                        </div>
+                        <div class="main-game-info">
+                            <div class="game-info-wrap">
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>티그레 UANL</span>
+                                    <span>2.22</span>
+                                </div>
+                                <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>2.97</span>
+                                    <span>로스 엔젤레스 FC</span>
+                                </div>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">
+                                    <i class="fas fa-signal"></i>
+                                </button>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">+1</button>
+                            </div>
+                        </div>
+                        <div class="main-game-info">
+                            <div class="game-info-wrap">
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>티그레 UANL</span>
+                                    <span>2.22</span>
+                                </div>
+                                <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>2.97</span>
+                                    <span>로스 엔젤레스 FC</span>
+                                </div>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">
+                                    <i class="fas fa-signal"></i>
+                                </button>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">+1</button>
+                            </div>
+                        </div>
+                        <div class="main-game-info">
+                            <div class="game-info-wrap">
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>티그레 UANL</span>
+                                    <span>2.22</span>
+                                </div>
+                                <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>2.97</span>
+                                    <span>로스 엔젤레스 FC</span>
+                                </div>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">
+                                    <i class="fas fa-signal"></i>
+                                </button>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">+1</button>
+                            </div>
+                        </div>
+                        <div class="main-game-info">
+                            <div class="game-info-wrap">
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>티그레 UANL</span>
+                                    <span>2.22</span>
+                                </div>
+                                <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>2.97</span>
+                                    <span>로스 엔젤레스 FC</span>
+                                </div>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">
+                                    <i class="fas fa-signal"></i>
+                                </button>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">+1</button>
+                            </div>
+                        </div>
+                        <div class="main-game-info">
+                            <div class="game-info-wrap">
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>티그레 UANL</span>
+                                    <span>2.22</span>
+                                </div>
+                                <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                <div class="flex-between" style="padding: 5px 10px;">
+                                    <span>2.97</span>
+                                    <span>로스 엔젤레스 FC</span>
+                                </div>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">
+                                    <i class="fas fa-signal"></i>
+                                </button>
+                            </div>
+                            <div class="flex-align-center">
+                                <button class="bgc-grey">+1</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-wrap">
+                        <img src="http://placehold.it/100x100" alt="">
+                    </div>
+                </div>
+                <div class="main-live-wrap">
+                    <div class="main-title">
+                        <span>스포리그 LIVE</span>
+                    </div>
+                    <div class="main-video">
+                        <video src=""></video>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- side-b -->
         <script src="./section/side-b.js"></script>
