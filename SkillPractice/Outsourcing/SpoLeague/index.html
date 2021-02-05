@@ -76,7 +76,7 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;
             }
-            .main-sports-wrap .main-title{
+            .main-sports-wrap .main-title, .main-live-wrap .main-title{
                 background: linear-gradient(360deg, rgb(20, 20, 20), rgb(92, 92, 92));
                 border-radius: 5px 5px 0 0;
                 padding: 5px 10px;
@@ -117,12 +117,40 @@
                 border-left: 1px solid black;
                 border-right: 1px solid black;
             }
+            .main-rep-link{
+                display: none;
+            }
             @media (max-width: 768px){
-                .top-info-wrap, .main-live-wrap{
+                .top-info-wrap, .main-live-wrap, .main-left-wrap .img-wrap{
                     display: none;
                 }
                 .main-info-wrap{
                     display: block;
+                }
+                .main-rep-link{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, minmax(200px, 1fr));
+                    gap: 5px;
+                    
+                }
+                .main-rep-link a:first-child{
+                    background-image: url(./src/index_banner.PNG);
+                    background-position: center;
+                    font-weight: bolder;
+                    font-size: 1.5em;
+                }
+                .main-rep-link a::before{
+                    background-image: url(./src/index_banner.PNG);
+                    /* background-color: rgba(0,0,0,0.1); */
+                    background-position: center;
+                    opacity: 0.5;
+                    filter: brightness(50%);
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
                 }
             }
             .bgc-grey{
@@ -132,6 +160,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+            .main-sports-wrap{
+                margin-bottom: 15px;
             }
         </style>
         <!-- /style -->
@@ -389,15 +420,48 @@
                         </div>
                     </div>
                     <div class="img-wrap">
-                        <img src="http://placehold.it/100x100" alt="">
+                        <img src="./src/index_sports.PNG" alt="" width="100%">
+                    </div>
+                    <div class="main-rep-link">
+                        <a href="" class="flex-align-center">
+                            <div class="rep-link-item ">
+                                <span>스포츠</span>
+                            </div>
+                        </a>
+                        <a href="" class="flex-align-center">
+                            <div class="rep-link-item ">
+                                <span>게임센터</span>
+                            </div>
+                        </a>
+                        <a href="" class="flex-align-center">
+                            <div class="rep-link-item ">
+                                <span>이용안내</span>
+                            </div>
+                        </a>
+                        <a href="" class="flex-align-center">
+                            <div class="rep-link-item ">
+                                <span>커뮤니티</span>
+                            </div>
+                        </a>
+                        <a href="" class="flex-align-center">
+                            <div class="rep-link-item ">
+                                <span>마켓</span>
+                            </div>
+                        </a>
+                        <a href="" class="flex-align-center">
+                            <div class="rep-link-item ">
+                                <span>고객센터</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="main-live-wrap">
                     <div class="main-title">
                         <span>스포리그 LIVE</span>
+                        <span><a href="">+</a></span>
                     </div>
                     <div class="main-video">
-                        <video src=""></video>
+                        <img src="./src/index_live.PNG" width="100%"></img>
                     </div>
                 </div>
             </div>
