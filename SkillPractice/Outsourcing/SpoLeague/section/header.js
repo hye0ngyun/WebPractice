@@ -1,7 +1,7 @@
 let header = `
 <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="top-header">
-            <img src="http://placehold.it/100x50" alt="">
+            <img src="../src/pc-header-logo.png" alt="">
             <div class="login-cont">
                 <div class="search-signup">
                     <a href="">ID / PW찾기</a>
@@ -25,7 +25,7 @@ let header = `
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">logo</a>
+                <a class="navbar-brand" href="#"><img src="../src/mobile-logo.png"></a>
                 <a href="" class="user"><i class="fas fa-user"></i></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">

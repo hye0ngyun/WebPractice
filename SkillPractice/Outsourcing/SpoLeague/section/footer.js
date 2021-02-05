@@ -8,7 +8,7 @@ let footer = `<footer id="footer">
             <a href="">UCP이용자보호</a>
         </div>
         <div class="about-us">
-            <img src="http://placehold.it/100x50" alt="">
+            <img src="../src/footer-logo.png" alt="">
             <div class="about-cont">
                 <p>주소:서울시 구로구 디지털로 288 대륭포스트타워1차 1806-1호 | 사업자 등록번호:490-81-00430</p>
                 <p>통신판매업:2019-서울서초-3323 | 개인정보관리책임자:김봉근</p>

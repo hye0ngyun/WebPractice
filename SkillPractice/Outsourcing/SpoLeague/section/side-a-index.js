@@ -7,7 +7,7 @@ let side_a = `
                 </div>
                 <div class="chat-main">
                     <!-- <textarea name="" id="" cols="40" rows="11" style="resize: none;"></textarea> -->
-                    <iframe src="../pages/side-a.html" frameborder="0"></iframe>
+                    <iframe src="./pages/side-a.html" frameborder="0"></iframe>
                 </div>
                 <div class="chat-input">
                     <i class="fas fa-dot-circle orange back-black"></i>
