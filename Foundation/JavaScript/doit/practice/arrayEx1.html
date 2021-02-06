@@ -21,23 +21,68 @@
             grid-column: 2 / 3;
             grid-row: 3 ;
         }
+        #item-wrap>ul>li{
+            display: flex;
+            justify-content: space-between;
+        }
+        .close{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="layout-wrap">
         <h1 id="title">여행 준비물 점검 목록</h1>
-        <div id="add-wrap">
-            <input type="text">
-            <button>추가</button>
+        <div id="add-wrap" name="formname">
+                <input type="text" id="item" autofocus>
+                <button type="button" id="add">추가</button>
         </div>
         <div id="item-wrap">
-            aa
         </div>
     </div>
     <script>
-        function add(){
-            
+        let itemList = [];
+        let addElem = document.querySelector('#add');
+        let itemElem = document.querySelector('#item');
+        addElem.addEventListener('click', addList)
+        function addList(){
+            let item = (itemElem.value);
+            if(item != null){
+                itemList.push(item);
+                itemElem.value = "";
+                itemElem.focus();
+            }
+            showList();
         }
+        function showList(){
+            list = '<ul>';
+            for(let i = 0; i < itemList.length; i++){
+                list += '<li>' + itemList[i] + '<span class="close" id="' + i + '">X<span>' + '</li>';
+            }
+            list += '</ul>';
+            document.querySelector('#item-wrap').innerHTML = list;
+            let remove = document.querySelectorAll('.close');
+            // 삭제 버튼을 변수로 저장. 배열 형태가 됨
+
+            for(let i = 0; i < remove.length; i++){
+                remove[i].addEventListener('click', removeList);
+            }
+        }
+        function removeList(){
+            // console.log(this);
+            let id = this.getAttribute('id');
+            itemList.splice(id, 1);
+            showList();
+        }
+
+        
+        var x = document.getElementById("item");
+        x.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+            event.preventDefault();
+                document.getElementById("add").click();
+            }
+        });
     </script>
 </body>
 </html>
