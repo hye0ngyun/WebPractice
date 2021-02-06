@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>SpoLeague</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="../js/ie-emulation-modes-warning.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- custom style -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- /custom style -->
+
+        <!-- style -->
+        <style>
+            .bold{
+                font-weight: bolder;
+            }
+            .font-size-12em{
+                font-size: 1.2em;
+            }
+            .phone-cert-wrap{
+                border: 1px solid white;
+                border-radius: 5px;
+                background: rgb(68, 68, 68);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 300px;
+                margin: 40px auto;
+            }
+            .signu-userinfo-wrap{
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                background: white;
+                gap: 1px;
+                border-top: 2px solid white;
+                border-bottom: 2px solid white;
+            }
+            .user-info-item{
+                background: rgb(31, 31, 31);
+                padding: 13px 15px;
+            }
+            .user-info-item .inputbox{
+                border-radius: 5px;
+                border: 0;
+                width: 150px;
+                color: black;
+            }
+            .pad-5{
+                padding: 5px;
+            }
+            .grey-btn{
+                padding: 2px 10px;
+                background: linear-gradient(rgb(196, 196, 196), rgb(71, 71, 71));
+                color: black;
+                font-weight: bold;
+                font-size: 1.1em;
+                border: 1px solid black;
+            }
+            .pad-lr-20{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .font-black{
+                color: black;
+            }
+            .gery-dropdown{
+                background: rgb(66, 66, 66);
+                border: 1px solid white;
+            }
+            @media (max-width: 768px){
+                .user-info-item .inputbox{
+                    margin: 5px 0;
+                }
+
+            }
+        </style>
+        <!-- /style -->
+    </head>
+    <body>
+    <!-- header -->
+    <script src="../section/header.js"></script>
+    <!-- /header -->
+
+    <!-- main-section -->
+    <div class="main-cont">
+        <!-- side-a -->
+        <script src="../section/side-a.js"></script>
+        <!-- /side-a -->
+        <div class="main-article signup-article">
+            <!-- <div class="main-header">
+                <a href="" class="orange-border">스포츠게임</a><div class="border"></div>
+                <a href="">라이브게임</a><div class="border"></div>
+                <a href="">게임내역</a><div class="border"></div>
+                <a href="">게임결과</a>
+            </div> -->
+            <div class="signup-wrap">
+                <div class="signup-header pad-tb-20 border-bottom-white">
+                    <div class="pc-div">
+                        <img src="../src/pc-logo.PNG" alt="">
+                    <span class="text-bold text-middle">회원가입</span>
+                    </div>
+                    <div class="text-big mobile-div text-center">스포리그 회원가입</div>
+                </div>
+                <img src="../src/next-3.PNG" alt="" class="border-bottom-white" width="100%">
+                <div class="mar-tb-20">
+                    <span class="font-size-12em bold">가입정보입력</span>
+                    <span class="orange">회원가입을 위해 필요한 정보를 입력해주세요.</span>
+                </div>
+                <div>
+                    <form action="" class="signu-userinfo-wrap">
+                        <div class="user-info-item">아이디</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">
+                            <input type="button" value="중복확인" class="grey-btn">
+                            <span>영문(소문자),숫자 조합 5~12까지 가능합니다.</span>
+                        </div class="user-info-item">
+                        <div class="user-info-item">닉네임</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">
+                            <input type="button" value="중복확인" class="grey-btn">
+                            <span>한글 2~12자/영문,숫자 조합 2~12자까지 가능합니다.</span>
+                        </div>
+                        <div class="user-info-item">비밀번호</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">
+                            <span>영문,숫자,특수문자 조합 8~16자까지 가능합니다.</span>
+                        </div>
+                        <div class="user-info-item">비밀번호 확인</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">
+                            <span>연속된 숫자나 생일,주민등록번호 등 알기 쉬운 숫자는 피해주십시오.</span>
+                        </div>
+                        <div class="user-info-item">2차 비밀번호</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">
+                        </div>
+                        <div class="user-info-item">2차 비밀번호 확인</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">
+                        </div>
+                        <div class="user-info-item">Email 주소</div>
+                        <div class="user-info-item">
+                            <input class="inputbox" type="text">@
+                            <input class="inputbox" type="email">
+                            <select  class="inputbox gery-dropdown"  id="email" name="email" style="
+                            border: 1px solid white;
+                        ">
+                                <option value="naver.com">naver.com</option>
+                                <option value="google.com">google.com</option>
+                            </select>
+                            <div class="pad-tb-10">
+                                <input type="checkbox" name="" id="" >
+                                <label for="">게임/이벤트 소식 이메일 수신 동의</label>
+                            </div>
+                        </div>
+                        <div class="user-info-item">휴대폰</div>
+                        <div class="user-info-item">
+                            <select  class="inputbox font-black text-center" id="number" name="number">
+                                <option value="----선택----">----선택----</option>
+                                <option value="010">010</option>
+                                <option value="070">070</option>
+                            </select>
+                            <span class="bold">-</span>
+                            <input class="inputbox"  type="text">
+                            <span class="bold">-</span>
+                            <input class="inputbox"  type="text">
+                            <div class="pad-tb-5">
+                                <span class="orange">반드시 본인 휴대폰번호를 입력해 주시기 바랍니다.</span><br>
+                                <span>비밀번호를 찾을 때와 스포리그에 유용한 정보를 휴대폰 문자메세지로 수신하는데 사용합니다.</span>
+                            </div>
+                        </div>
+                        <div class="user-info-item">생년월일</div>
+                        <div class="user-info-item">
+                            <input class="inputbox"  type="text">
+                            <span>000000 형식으로 6자리</span>
+                        </div>
+                        <div class="user-info-item">성별</div>
+                        <div class="user-info-item">
+                            <input type="radio" name="gender" id="">
+                            <label for="">남</label>
+                            <input type="radio" name="gender" id="">
+                            <label for="">여</label>
+                        </div>
+                        <div class="user-info-item">생년월일</div>
+                        <div class="user-info-item">
+                            <input class="inputbox"  type="text">
+                            <input type="button" value="확인" class="grey-btn pad-lr-20">
+                            <span>추천할 아이디를 정확하게 확인 후 입력하시기 바랍니다.</span>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="flex-align-center mar-tb-20">
+                    <input type="submit" value="가입하기" class="orange-btn-small">
+                </div>
+            </div>
+        </div>
+        <!-- side-b -->
+        <script src="../section/side-b.js"></script>
+        <!-- /side-b -->
+
+    </div>
+    <!-- /main-section -->
+    
+    <!-- footer -->
+    <script src="../section/footer.js"></script>
+    <!-- /footer -->
+
+
+    <script src="../js/date-today.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>

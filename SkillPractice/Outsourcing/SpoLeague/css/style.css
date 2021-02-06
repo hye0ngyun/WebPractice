@@ -376,3 +376,236 @@
             display: none;
         }
     }
+
+/* index.html */
+.top-info-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.6fr;
+    gap: 10px;
+    margin: 15px 0;
+}
+.top-info-item{
+    border: 1px solid black;
+}
+.top-info-title{
+    background: linear-gradient(360deg, rgb(0, 0, 0), rgb(53, 53, 53));
+    padding: 0 10px;
+}
+.top-info-wrap .top-info-user{
+    background: rgb(35, 35, 35);
+    border-top: 1px solid black;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.pink{
+    color:rgb(241, 85, 184);
+}
+.top-info-wrap .btn-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+.top-info-wrap .btn-wrap button{
+    background: rgb(59, 59, 59);
+    border-radius: 5px;
+}
+.main-info-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.main-sports-wrap .main-title, .main-live-wrap .main-title{
+    background: linear-gradient(360deg, rgb(20, 20, 20), rgb(92, 92, 92));
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.main-sports-wrap .main-game-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px 3px 30px;
+    background: linear-gradient(360deg, rgb(0, 0, 0), rgb(43, 43, 43));
+    border-top: 4px groove #575757;
+}
+.main-game-info{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 0.1fr;
+}
+.game-info-wrap{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    background: rgb(61, 61, 61);
+    border-radius: 5px;
+    
+}
+.main-game-info{
+    background: rgb(42, 42, 42);
+    border: 4px groove #575757;
+    padding: 1px;
+}
+.main-game-info .flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+.border-lr-black{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.main-rep-link{
+    display: none;
+}
+@media (max-width: 768px){
+    .top-info-wrap, .main-live-wrap, .main-left-wrap .img-wrap{
+        display: none;
+    }
+    .main-info-wrap{
+        display: block;
+    }
+    .main-rep-link{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(200px, 1fr));
+        gap: 5px;
+        
+    }
+    .main-rep-link a{
+        background: url(./src/index_banner.PNG);
+        background-position: center;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+    .rep-link-item{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.bgc-grey{
+    background: rgb(53, 53, 53);
+}
+.flex-align-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-sports-wrap{
+    margin-bottom: 15px;
+}
+
+/* signup.html */
+.signup-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.signup-type-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.signup-type-item{
+    background: rgb(68, 68, 68);
+    padding: 50px 0;
+    border-radius: 5px;
+}
+.signup-cautions{
+    border: 1px solid rgb(255, 141, 4);
+}
+.pad-tb-5{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pad-tb-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pad-tb-20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.mar-tb-5{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.mar-tb-10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mar-tb-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mar-tb-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.mar-t-30{
+    margin-top: 30px;
+}
+.border-bottom-white{
+    border-bottom: 2px solid white;
+}
+
+.text-middle{
+    font-size: 1.3em;
+}
+.text-big{
+    font-size: 1.7em;
+    font-weight: bolder;
+}
+.pad-all-10{
+    padding: 10px;
+}
+.orange-btn{
+    background: rgb(255, 141, 4);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);;
+}
+.orange-btn-small{
+    background: rgb(255, 141, 4);
+    padding: 5px 25px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);;
+}
+.mobile-img{
+    display: none;
+}
+.mobile-div{
+    display: none;
+}
+.text-bold{
+    font-weight: bolder;
+}
+.bold{
+    font-weight: bolder;
+}
+.font-size-12em{
+    font-size: 1.2em;
+}
+@media (max-width:768px){
+    /* .signup-type-wrap{
+        grid-template-columns: repeat(2, 1fr);
+    } */
+    .pc-img{
+        display: none;
+    }
+    .mobile-img{
+        display: initial;
+    }
+    .pc-div{
+        display: none;
+    }
+    .mobile-div{
+        display: block;
+    }
+}
