@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>SpoLeague</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="../js/ie-emulation-modes-warning.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- custom style -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- /custom style -->
+
+        <!-- style -->
+        <style>
+            .grey-grad{
+                background: linear-gradient(rgb(66, 66, 66), rgb(0, 0, 0));
+                /* border-style: ; */
+                border-top: 2px groove #616161;
+            }
+            .text-align-center{
+                display: flex;
+                align-items: center;
+            }
+            .sport-game-info{
+                display: grid;
+                grid-template-columns: 1fr 0.1fr;
+                /* background: rgb(42, 42, 42); */
+                /* border: 4px groove #575757; */
+                /* padding: 1px; */
+            }
+            .grid-5-1fr{
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+            .grid-4-1fr{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .grid-3-1fr{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .grid-2-1fr{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid-1-1fr{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            .sport-game-info-wrap{
+                background: rgb(42, 42, 42);
+                
+            }
+            .mar-bot-10{
+                margin-bottom: 10px;
+            }
+            .bgc-bgrey{
+                background: rgb(23, 23, 23);
+                border: 1px solid black;
+                padding: 5px 10px;
+                border-radius: 3px;
+            }
+            .sport-article{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .mar-l-10{
+                margin-left: 10px;
+            }
+            @media (max-width:768px){
+                .sport-article{
+                display: grid;
+                grid-template-columns: 1fr;
+                }
+            }
+            .white{
+                color: white;
+            }
+            .bgc-rgb-42{
+                background: rgb(42, 42, 42);
+            }
+            .border-l{
+                border-left: 1px solid black;
+            }
+            .pad-lr-30{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        </style>
+        <!-- /style -->
+    </head>
+    <body>
+    <!-- header -->
+    <script src="../section/header.js"></script>
+    <!-- /header -->
+
+    <!-- main-section -->
+    <div class="main-cont">
+        <!-- side-a -->
+        <script src="../section/side-a.js"></script>
+        <!-- /side-a -->
+        
+        <div class="article">
+            <!-- sport-nav -->
+            <script src="../section/sport-nav.js"></script>
+            <!-- /sport-nav -->
+            <div class="main-article sport-article">
+                <div class="sport-game-wrap">
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span class="orange">웨스턴 유니테드 FC <span class="white">vs</span> 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sport-game-item">
+                        <div class="grey-grad flex-between">
+                            <div class="text-align-center">
+                                <i class="fas fa-futbol pad-all-10 text-big"></i>
+                                <span class="">호주 A 리그[AUS D1]</span>
+                            </div>
+                            <div class="text-align-center pad-all-10">
+                                <span>축구</span>
+                            </div>
+                        </div>
+                        <div class="sport-game-info-wrap pad-all-10">
+                            <div class="mar-bot-10 flex-between">
+                                <span>웨스턴 유니테드 FC vs 애틀레이트 유나이티드 FC</span>
+                                <span>12-28 17:05</span>
+                            </div>
+                            <div class="sport-game-info ">
+                                <div class="game-info-wrap">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="border-lr-black" style="text-align: center;padding: 5px 10px;">3.50</div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                                <div class="flex-align-center  mar-l-10">
+                                    <button class="bgc-bgrey orange">+101</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="sport-result-tap grey-grad" style="display: flex;">
+                        <span><a href="">전체</a></span>
+                        <div class="border"></div>
+                    </div>
+                    <div class="sport-game-result">
+                        <div class="item bgc-rgb-42">
+                            <div class="grey-grad">
+                                <div class="flex-align-center pad-all-10">
+                                    <span class="orange bold">승무패 - [연장미포함]</span>
+                                </div>
+                            </div>
+                            <div class="sport-game-info pad-all-10 grid-1-1fr">
+                                <div class="game-info-wrap grid-3-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="flex-between border-lr-black" style="padding: 5px 10px;">
+                                        <span>티그레 UANL</span>
+                                        <span>2.22</span>
+                                    </div>
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>2.97</span>
+                                        <span>로스 엔젤레스 FC</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item bgc-rgb-42">
+                            <div class="grey-grad">
+                                <div class="flex-align-center pad-all-10">
+                                    <span class="orange bold">오버 / 언더 - [연장미포함]</span>
+                                </div>
+                            </div>
+                            <div class="sport-game-info pad-all-10 grid-1-1fr">
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>오버 3</span>
+                                        <span>1.85</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>언더 3</span>
+                                        <span>1.95</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- side-b -->
+        <script src="../section/side-b.js"></script>
+        <!-- /side-b -->
+
+    </div>
+    <!-- /main-section -->
+    
+    <!-- footer -->
+    <script src="../section/footer.js"></script>
+    <!-- /footer -->
+
+
+    <script src="../js/date-today.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>

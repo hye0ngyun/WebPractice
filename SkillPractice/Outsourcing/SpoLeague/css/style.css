@@ -431,22 +431,30 @@
     border-top: 4px groove #575757;
 }
 .main-game-info{
-    display: grid;
-    grid-template-columns: 1fr 0.1fr 0.1fr;
+    
 }
 .game-info-wrap{
     display: grid;
     grid-template-columns: 1fr 0.2fr 1fr;
     background: rgb(61, 61, 61);
     border-radius: 5px;
-    
+    border: 1px groove grey;
 }
 .main-game-info{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 0.1fr;
+    /* background: rgb(42, 42, 42); */
+    /* border: 4px groove #575757; */
+    /* padding: 1px; */
+}
+.index-game-info{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 0.1fr;
     background: rgb(42, 42, 42);
     border: 4px groove #575757;
     padding: 1px;
 }
-.main-game-info .flex-between{
+.flex-between{
     display: flex;
     justify-content: space-between;
 }
