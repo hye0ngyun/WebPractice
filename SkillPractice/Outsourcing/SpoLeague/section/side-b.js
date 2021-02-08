@@ -5,6 +5,9 @@ let side_b = `
         <span class="orange">GAME SLIP</span>
         <div class="switch-wrap">
             <span>이동</span>
+            <span>
+                <input type="checkbox">
+            </span>
         </div>
     </div>
     <div class="side-b-btn-wrap">

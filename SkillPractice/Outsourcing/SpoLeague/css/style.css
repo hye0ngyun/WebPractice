@@ -1,3 +1,6 @@
+.main-article{
+    margin-bottom: 100px;
+}
 .starter-template {
     padding: 40px 15px;
     text-align: center;
@@ -615,5 +618,107 @@
     }
     .mobile-div{
         display: block;
+    }
+}
+
+/* sport-sportgame.html */
+.grey-grad{
+    background: linear-gradient(rgb(66, 66, 66), rgb(0, 0, 0));
+    /* border-style: ; */
+    border-top: 2px groove #616161;
+    height: 45px;
+}
+.text-align-center{
+    display: flex;
+    align-items: center;
+}
+.sport-game-info{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    /* background: rgb(42, 42, 42); */
+    /* border: 4px groove #575757; */
+    /* padding: 1px; */
+}
+.grid-5-1fr{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.grid-4-1fr{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-3-1fr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-2-1fr{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-1-1fr{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.sport-game-info-wrap{
+    background: rgb(42, 42, 42);
+    
+}
+.mar-bot-10{
+    margin-bottom: 10px;
+}
+.bgc-bgrey{
+    background: rgb(23, 23, 23);
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.sport-article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.mar-l-10{
+    margin-left: 10px;
+}
+.white{
+    color: white;
+}
+.bgc-rgb-42{
+    background: rgb(42, 42, 42);
+}
+.border-l{
+    border-left: 1px solid black;
+}
+.pad-lr-30{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.border-b-o{
+    border-bottom: 1px solid rgb(255, 141, 4);
+}
+.border-rc-w{
+    display: flex;
+    align-items: center;
+}
+.border-rc-w::after{
+    content: "";
+    /* display: flex; */
+    /* margin-left: auto; */
+    align-items: center;
+    display: block;
+    height: 10px;
+    padding-top: 5px;
+    border-right: solid 2px white;
+}
+.border-trl-o{
+    border-top: 1px solid rgb(255, 141, 4);
+    border-right: 1px solid rgb(255, 141, 4);
+    border-left: 1px solid rgb(255, 141, 4);
+    background: rgb(31, 31, 31);
+}
+@media (max-width:768px){
+    .sport-article{
+    display: grid;
+    grid-template-columns: 1fr;
     }
 }

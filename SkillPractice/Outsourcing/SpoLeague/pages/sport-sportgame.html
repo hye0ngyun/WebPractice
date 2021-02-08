@@ -37,81 +37,7 @@
 
         <!-- style -->
         <style>
-            .grey-grad{
-                background: linear-gradient(rgb(66, 66, 66), rgb(0, 0, 0));
-                /* border-style: ; */
-                border-top: 2px groove #616161;
-            }
-            .text-align-center{
-                display: flex;
-                align-items: center;
-            }
-            .sport-game-info{
-                display: grid;
-                grid-template-columns: 1fr 0.1fr;
-                /* background: rgb(42, 42, 42); */
-                /* border: 4px groove #575757; */
-                /* padding: 1px; */
-            }
-            .grid-5-1fr{
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-            }
-            .grid-4-1fr{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-            }
-            .grid-3-1fr{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-            .grid-2-1fr{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            .grid-1-1fr{
-                display: grid;
-                grid-template-columns: 1fr;
-            }
-            .sport-game-info-wrap{
-                background: rgb(42, 42, 42);
-                
-            }
-            .mar-bot-10{
-                margin-bottom: 10px;
-            }
-            .bgc-bgrey{
-                background: rgb(23, 23, 23);
-                border: 1px solid black;
-                padding: 5px 10px;
-                border-radius: 3px;
-            }
-            .sport-article{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            .mar-l-10{
-                margin-left: 10px;
-            }
-            @media (max-width:768px){
-                .sport-article{
-                display: grid;
-                grid-template-columns: 1fr;
-                }
-            }
-            .white{
-                color: white;
-            }
-            .bgc-rgb-42{
-                background: rgb(42, 42, 42);
-            }
-            .border-l{
-                border-left: 1px solid black;
-            }
-            .pad-lr-30{
-                padding-left: 30px;
-                padding-right: 30px;
-            }
+
         </style>
         <!-- /style -->
     </head>
@@ -399,9 +325,22 @@
                     
                 </div>
                 <div>
-                    <div class="sport-result-tap grey-grad" style="display: flex;">
-                        <span><a href="">전체</a></span>
-                        <div class="border"></div>
+                    <div class="sport-result-tap grey-grad grid-5-1fr mar-bot-10">
+                        <div class="pad-tb-10 border-trl-o" style="display: flex;">
+                            <span class="center-block"><a href="">전체</a></span>
+                        </div>
+                        <div class="border-rc-w border-b-o pad-tb-10" style="display: flex;">
+                            <span class="center-block"><a href="">승무패</a></span>
+                        </div>
+                        <div class="border-rc-w border-b-o pad-tb-10" style="display: flex;">
+                            <span class="center-block"><a href="">핸디캡</a></span>
+                        </div>
+                        <div class="border-rc-w border-b-o pad-tb-10" style="display: flex;">
+                            <span class="center-block"><a href="">오버/언더</a></span>
+                        </div>
+                        <div class="border-b-o pad-tb-10" style="display: flex;">
+                            <span class="center-block"><a href="">스페셜</a></span>
+                        </div>
                     </div>
                     <div class="sport-game-result">
                         <div class="item bgc-rgb-42">
