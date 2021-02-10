@@ -492,7 +492,7 @@
         
     }
     .main-rep-link a{
-        background: url(./src/index_banner.PNG);
+        background: url(../src/index_banner.PNG);
         background-position: center;
         font-weight: bolder;
         font-size: 1.5em;
@@ -648,6 +648,10 @@
     /* border: 4px groove #575757; */
     /* padding: 1px; */
 }
+.grid-6-1fr{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
 .grid-5-1fr{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -765,4 +769,117 @@
 }
 .gap-10{
     gap: 10px;
+}
+
+/* sport-gamelog.html */
+.fa-search{
+    cursor: pointer;
+}
+.sport-gamelog-header{
+    display: grid;
+    grid-template-columns: 200px repeat(2, 1fr);
+}
+.game-log-header-l{
+    display: flex;
+    align-items: center;
+}
+.game-log-header-c{
+    display: flex;
+}
+.game-log-header-r{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+@media (max-width:768px){
+    .sport-gamelog-header{
+        grid-template-rows: repeat(2, 40px);
+        grid-template-areas: 
+        'l c c'
+        'l r r'
+        ;
+    }
+    .game-log-header-l{
+        grid-area: l;
+    }
+    .game-log-header-c{
+        grid-area: c;
+        justify-self: end;
+    }
+    .game-log-header-r{
+        grid-area: r;
+        justify-self: end;
+    }
+}
+.pad-lr-5{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.sport-gamelog-main{
+    border: 1px solid rgb(151, 151, 151);
+}
+.border-g{
+    position: relative;
+    /* top: 5px; */
+    border-right: 1px solid rgb(37, 37, 37);
+    height: 20px;
+    margin: 0;
+    width: 0;
+}
+.border-g-10{
+    position: relative;
+    /* top: 5px; */
+    border-right: 1px solid rgb(37, 37, 37);
+    height: 20px;
+    margin: 0 10px;
+    width: 0;
+}
+.bgc-rgb-62{
+    background: rgb(62, 62, 62);
+}
+.pad-all-5{
+    padding: 5px;
+}
+.gamelog-main-item{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    text-align: center;
+}
+.log-item{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.gamelog-main-wrap{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.3fr 0.3fr 0.2fr 0.5fr 0.2fr 0.5fr 0.3fr 0.3fr;
+    padding: 10px 0;
+}
+.border-t-grov-b{
+    border-top: 2px groove rgb(92, 92, 92);
+}
+.flex-column{
+    flex-direction: column;
+}
+.gmaelog-main-result{
+    background: rgb(17, 17, 17);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.mar-l-auto{
+    margin-left: auto;
+}
+.btn-39{
+    background: rgb(39, 39, 39);
+    border: 1px outset rgb(65, 65, 65);
+    padding: 3px 30px;
+}
+.select-date{
+    background: rgb(23,23,23);
+    border: 0;
+    border-bottom: 1px solid white;
+    width: 120px;
 }

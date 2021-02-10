@@ -71,6 +71,61 @@
             .gap-10{
                 gap: 10px;
             }
+            .bgc-bo{
+                background: rgb(96, 72, 00);
+                border-radius: 5px;
+                border: 1px groove grey;
+                padding: 5px 10px;
+            }
+            .bgc-61{
+                background: rgb(61, 61, 61);
+                border-radius: 5px;
+                border: 1px groove grey;
+                padding: 5px 10px;
+            }
+            .mar-all-10{
+                margin: 10px;
+            }
+            .gameresult-header a:hover{
+                text-decoration: none;
+                color: rgb(255, 161, 4);
+            }
+            /* .gameresult-right-top{
+                background: url(../src/gameresult-right-top.jpg) center;
+                background-size: cover;
+            } */
+            .t{
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .gameresult-right-top{
+                
+                background: url(../src/gameresult-right-top.jpg);
+                background-position: center;
+                font-weight: bolder;
+                /* font-size: 1.5em; */
+            }
+            .pad-all-20{
+                padding: 20px;
+            }
+            .bgc-b-blur{
+                background: rgba(0, 0, 0, 0.4);
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+            .bgc-o{
+                background: rgb(255, 163, 0);
+                color: black;
+                padding: 2px 15px;
+                border-radius: 3px;
+            }
+            .mar-lr-5{
+                margin: 0 5px;
+            }
         </style>
         <!-- /style -->
     </head>
@@ -92,390 +147,390 @@
                 <a href="./sport-sportgame.html" >스포츠게임</a><div class="border"></div>
                 <a href="#" class="orange-border">라이브게임</a><div class="border"></div>
                 <a href="">게임내역</a><div class="border"></div>
-                <a href="">게임결과</a> -->
-            </div>
+                <a href="">게임결과</a>
+            </div> -->
             <!-- /sport-nav -->
+            <div class="mar-all-10 grid-6-1fr gameresult-header">
+                <div class="grey-grad">
+                    <a href="" class="flex-align-center ">
+                        <i class="fas fa-futbol pad-all-10 text-big orange"></i>
+                        <span class="font-size-12em ">축구</span>
+                    </a>
+                </div>
+                <div class="grey-grad">
+                    <a href="" class="flex-align-center ">
+                        <i class="fas fa-baseball-ball pad-all-10 text-big orange"></i>
+                        <span class="font-size-12em ">야구</span>
+                    </a>
+                </div>
+                <div class="grey-grad">
+                    <a href="" class="flex-align-center ">
+                        <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
+                        <span class="font-size-12em ">농구</span>
+                    </a>
+                </div>
+                <div class="grey-grad">
+                    <a href="" class="flex-align-center ">
+                        <i class="fas fa-hockey-puck pad-all-10 text-big orange"></i>
+                        <span class="font-size-12em ">아이스하키</span>
+                    </a>
+                </div>
+                <div class="grey-grad">
+                    <a href="" class="flex-align-center ">
+                        <i class="fas fa-volleyball-ball pad-all-10 text-big orange"></i>
+                        <span class="font-size-12em ">배구</span>
+                    </a>
+                </div>
+                <div class="grey-grad">
+                    <a href="" class="flex-align-center ">
+                        <i class="fas fa-headset pad-all-10 text-big orange"></i>
+                        <span class="font-size-12em ">기타</span>
+                    </a>
+                </div>
+            </div>
             <div class="main-article sport-article">
+                
                 <div class="sport-game-wrap">
                     <div class="sport-game-item">
                         <div class="grey-grad flex-between">
                             <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
+                                <i class="fas fa-futbol pad-all-10 text-big orange"></i>
+                                <span class="">가나 프리미어 리그</span>
                             </div>
                             <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
+                                <span>01-04</span>
+                                <span class="mar-l-10">00:00</span>
                             </div>
                         </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
+                        <div class="sport-game-info-wrap">
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
                                 </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
                                     </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
                                     </div>
                                 </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
                                 </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
+                            </div>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t-grov-b pad-all-10">
+                                <div class="mar-bot-10 flex-between">
+                                    <div>
+                                        <span>인터 앨라이스 FC</span>
+                                        <span class="mar-lr-10">vs</span>
+                                        <span>일레븐 원더스 FC</span>
+                                    </div>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                                <div class="sport-game-info2">
+                                    <div class="game-info-wrap">
+                                        <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                            <span>인터 앨라이스 FC</span>
+                                            <span>1.65</span>
+                                        </div>
+                                        <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
+                                        <div class="flex-between" style="padding: 5px 10px;">
+                                            <span>5.08</span>
+                                            <span>일레븐 원더스 FC</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-61">
+                                            <i class="fas fa-signal"></i>
+                                        </button>
+                                    </div>
+                                    <div class="flex-align-center">
+                                        <button class="bgc-grey orange bgc-bo">+31</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
-                    <div class="sport-game-item">
-                        <div class="grey-grad flex-between">
-                            <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
-                            </div>
-                            <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
-                            </div>
-                        </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
-                                </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
-                            </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
-                                    </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sport-game-item">
-                        <div class="grey-grad flex-between">
-                            <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
-                            </div>
-                            <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
-                            </div>
-                        </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
-                                </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
-                            </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
-                                    </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sport-game-item">
-                        <div class="grey-grad flex-between">
-                            <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
-                            </div>
-                            <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
-                            </div>
-                        </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
-                                </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
-                            </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
-                                    </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sport-game-item">
-                        <div class="grey-grad flex-between">
-                            <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
-                            </div>
-                            <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
-                            </div>
-                        </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
-                                </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
-                            </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
-                                    </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sport-game-item">
-                        <div class="grey-grad flex-between">
-                            <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
-                            </div>
-                            <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
-                            </div>
-                        </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
-                                </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
-                            </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
-                                    </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sport-game-item">
-                        <div class="grey-grad flex-between">
-                            <div class="text-align-center">
-                                <i class="fas fa-basketball-ball pad-all-10 text-big orange"></i>
-                                <span class="">미국 NBA</span>
-                            </div>
-                            <div class="text-align-center pad-all-10">
-                                <span>12-28 12:00</span>
-                            </div>
-                        </div>
-                        <div class="sport-game-info-wrap pad-all-10">
-                            <div class="flex-align-center bgc-rgb-23 border-t-grov mar-bot-10">
-                                <span>LA레이커스</span>
-                                <span class="mar-lr-10 back-orange">127</span>
-                                <div class="mar-lr-10">
-                                    <div class="flex-align-center orange">00:00</div>
-                                    <div class="flex-align-center">Q4</div>
-                                </div>
-                                <span class="mar-lr-10 back-orange">91</span>
-                                <span>미네소타</span>
-                            </div>
-                            <div class="sport-game-info2">
-                                <div class="game-info-wrap">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>로스엔젤레스 레이커스</span>
-                                        <span>1.01</span>
-                                    </div>
-                                    <div class="border-lr-black" style="text-align: center;padding: 5px 20px;">VS</div>
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>9.00</span>
-                                        <span>미네소타 팀버울브스</span>
-                                    </div>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey">
-                                        <i class="fas fa-signal"></i>
-                                    </button>
-                                </div>
-                                <div class="flex-align-center">
-                                    <button class="bgc-bgrey orange">+0</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
                 <div>
-                    <div>
-                        <div class="grey-grad mar-bot-10">
-                            <div class="pad-all-10">
-                                <span class="bold"><span class="orange mar-lr-10">•</span>실시간 경기영상 보기</span>
-                                <span class="mar-l-10">고정</span>
-                                <span>
-                                    <input type="checkbox" name="" id="">
-                                </span>
+                    <div class="gameresult-right-top">
+                        <div class="flex-align-center pad-all-20 t">
+                            <div class="pad-all-10 bgc-b-blur">
+                                <span>인터 엘라이스 FC</span>
+                                <span class="bgc-o">1.65</span>
                             </div>
-                        </div>
-                        <div>
-                            <video src="" controls width="100%"></video>
-                        </div>
-                    </div>
-                    <div class="sport-result-tap grey-grad grid-5-1fr mar-bot-10">
-                        <div class="pad-tb-10 border-trl-o" style="display: flex;">
-                            <span class="center-block"><a href="">전체</a></span>
-                        </div>
-                        <div class="border-rc-w border-b-o pad-tb-10" style="display: flex;">
-                            <span class="center-block"><a href="">승무패</a></span>
-                        </div>
-                        <div class="border-rc-w border-b-o pad-tb-10" style="display: flex;">
-                            <span class="center-block"><a href="">핸디캡</a></span>
-                        </div>
-                        <div class="border-rc-w border-b-o pad-tb-10" style="display: flex;">
-                            <span class="center-block"><a href="">오버/언더</a></span>
-                        </div>
-                        <div class="border-b-o pad-tb-10" style="display: flex;">
-                            <span class="center-block"><a href="">스페셜</a></span>
+                            <div class="pad-all-10 bgc-b-blur mar-lr-5">
+                                <span class="bgc-o">3.24</span>
+                            </div>
+                            <div class="pad-all-10 bgc-b-blur">
+                                <span class="bgc-o">5.08</span>
+                                <span>일레븐 원더스 FC</span>
+                            </div>
                         </div>
                     </div>
                     <div class="sport-game-result">
                         <div class="item bgc-rgb-42">
                             <div class="grey-grad">
                                 <div class="pad-all-10" style="display: flex;">
-                                    <span>▶</span>
-                                    <span class="flex-align-center orange bold center-block">핸디캡 - [Live 연장포함]</span>
+                                    <span class="font-size-12em">></span>
+                                    <span class="flex-align-center orange bold center-block">승무패</span>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="sport-game-info pad-all-10 grid-1-1fr  gap-10">
-                                <div class="game-info-wrap grid-2-1fr">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
+                                <div class="game-info-wrap grid-3-1fr">
+                                    <div class="flex-between bgc-bo" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC</span>
+                                        <span>1.65</span>
                                     </div>
                                     <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
-                                    </div>
-                                </div>
-                                <div class="game-info-wrap grid-2-1fr">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
+                                        <span>무승부</span>
+                                        <span>3.24</span>
                                     </div>
                                     <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
-                                    </div>
-                                </div>
-                                <div class="game-info-wrap grid-2-1fr">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
-                                    </div>
-                                    <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
+                                        <span>일레븐 원더스 FC</span>
+                                        <span>5.08</span>
                                     </div>
                                 </div>
                             </div>
@@ -483,79 +538,174 @@
                         <div class="item bgc-rgb-42">
                             <div class="grey-grad">
                                 <div class="pad-all-10" style="display: flex;">
-                                    <span>▶</span>
-                                    <span class="flex-align-center orange bold center-block">핸디캡 - [Live 연장포함]</span>
-                                </div>
-                            </div>
-                            <div class="sport-game-info pad-all-10 grid-1-1fr  gap-10">
-                                <div class="game-info-wrap grid-2-1fr">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
-                                    </div>
-                                    <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
-                                    </div>
-                                </div>
-                                <div class="game-info-wrap grid-2-1fr">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
-                                    </div>
-                                    <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
-                                    </div>
-                                </div>
-                                <div class="game-info-wrap grid-2-1fr">
-                                    <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
-                                    </div>
-                                    <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
+                                    <span class="font-size-12em">></span>
+                                    <span class="flex-align-center orange bold center-block">승무패 및 오버/언더-[90분]</span>
+                                    <div class="bgc-bgrey orange" style="padding: 0 10px;">
+                                        <span>1</span>
+                                        <span>:</span>
+                                        <span>0</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item bgc-rgb-42">
-                            <div class="grey-grad">
-                                <div class="pad-all-10" style="display: flex;">
-                                    <span>▶</span>
-                                    <span class="flex-align-center orange bold center-block">핸디캡 - [Live 연장포함]</span>
-                                </div>
-                            </div>
-                            <div class="sport-game-info pad-all-10 grid-1-1fr  gap-10">
+                            <div class="sport-game-info pad-all-10 grid-1-1fr">
                                 <div class="game-info-wrap grid-2-1fr">
                                     <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
                                     </div>
                                     <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
                                     </div>
                                 </div>
                                 <div class="game-info-wrap grid-2-1fr">
                                     <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
                                     </div>
-                                    <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
+                                    <div class="flex-between border-l bgc-bo" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
                                     </div>
                                 </div>
                                 <div class="game-info-wrap grid-2-1fr">
                                     <div class="flex-between" style="padding: 5px 10px;">
-                                        <span>오스트리아 +5.5</span>
-                                        <span class="skyblue">↓ 1.06</span>
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
                                     </div>
                                     <div class="flex-between border-l" style="padding: 5px 10px;">
-                                        <span>스웨덴 -5.5</span>
-                                        <span class="red">↑ 7.5</span>
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l bgc-bo" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l bgc-bo" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l bgc-bo" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
+                                    </div>
+                                </div>
+                                <div class="game-info-wrap grid-2-1fr">
+                                    <div class="flex-between" style="padding: 5px 10px;">
+                                        <span>인터 앨라이스 FC & 오버 4.5</span>
+                                        <span>14.64</span>
+                                    </div>
+                                    <div class="flex-between border-l" style="padding: 5px 10px;">
+                                        <span>무승부 & 오버 4.5</span>
+                                        <span>222.00</span>
                                     </div>
                                 </div>
                             </div>

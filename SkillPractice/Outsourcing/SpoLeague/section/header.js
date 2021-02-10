@@ -1,7 +1,9 @@
 let header = `
 <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="top-header">
-            <img src="../src/pc-header-logo.png" alt="">
+            <a href="../index.html">
+                <img src="../src/pc-header-logo.png" alt="" height="100%" width="100%">
+            </a>
             <div class="login-cont">
                 <div class="search-signup">
                     <a href="">ID / PW찾기</a>
@@ -25,13 +27,13 @@ let header = `
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="../src/mobile-logo.png"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../src/mobile-logo.png"></a>
                 <a href="" class="user"><i class="fas fa-user"></i></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">스포츠</a></li>
-                    <li><a href="#about">게임센터</a></li>
+                    <li><a href="../pages/sport-sportgame.html">스포츠</a></li>
+                    <li><a href="../pages/gamecenter-holdem.html">게임센터</a></li>
                     <li><a href="#contact">이용안내</a></li>
                     <li><a href="#contact">커뮤니티</a></li>
                     <li><a href="#contact">마켓</a></li>

@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>SpoLeague</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <!-- <link href="starter-template.css" rel="stylesheet"> -->
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <script src="../js/ie-emulation-modes-warning.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- custom style -->
+        <link rel="stylesheet" href="../css/style.css">
+        <!-- /custom style -->
+
+        <!-- style -->
+        <style>
+            .holdem-banner{
+                background: url(../src/index_sports.PNG) no-repeat;
+                background-size: cover;
+                height: 250px;
+            }
+            .holdem-banner-text{
+                font-size: 3.5em;
+                font-weight: bolder;
+            }
+            .holdem-start-btn{
+                background: rgb(68, 68, 68);
+                padding: 7px 40px;
+                margin-top: 10px;
+            }
+            .holdem-start-btn-text{
+                display: none;
+            }
+            .holdem-banner-align{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            @media (min-width:1024px){
+                .holdem-start-btn-text{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2em;
+
+                }
+                .holdem-start-btn{
+                    background: rgb(253, 123, 1);
+                    padding: 0;
+                    margin-top: 5px;
+                    font-size: 1.5em;
+                }
+                .holdem-start{
+                    background: rgb(253, 123, 1);
+                    display: block;
+                    padding: 10px 50px;
+                    border: 5px outset rgba(122, 121, 120, 0.555);
+                }
+                .holdem-mobile-text{
+                    display: none;
+                }
+                .holdem-banner-align{
+                    align-items: flex-end;
+                    margin-right: 7%;
+                }
+            }
+            .holdem-news, .holdem-rank{
+                border: 1px solid white;
+            }
+            .holdem-main-wrap{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 10px;
+            }
+            .holdem-news-nav{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px 0 10px;
+                border-bottom: 1px solid white;
+            }
+            .holdem-tap{
+                background: rgb(255, 145, 4);
+                padding: 2px 30px;
+                border: 1px solid white;
+                color: black;
+                border-bottom: 1px  rgb(255, 145, 4);
+            }
+            .holdem-news-main{
+                padding: 20px 10px;
+            }
+            .holdem-main{
+                display: flex;
+                justify-content: space-between;
+                margin: 5px 0;
+            }
+        </style>
+        <!-- /style -->
+    </head>
+    <body>
+    <!-- header -->
+    <script src="../section/header.js"></script>
+    <!-- /header -->
+
+    <!-- main-section -->
+    <div class="main-cont">
+        <!-- side-a -->
+        <script src="../section/side-a.js"></script>
+        <!-- /side-a -->
+        
+        <div class="article">
+            <!-- gamecenter-nav -->
+            <script src="../section/gamecenter-nav.js"></script>
+            <!-- /gamecenter-nav -->
+            <div class="holdem-banner">
+                <div class="holdem-banner-align" style="height: 100%;">
+                    <div class="holdem-mobile-text">
+                        <span class="text-big">홀덤</span>
+                        <div class="holdem-banner-text">Hold 'em</div>
+                    </div>
+                    <div>
+                        <a href="" class="holdem-start">
+                            <div class="holdem-start-btn-text">게임시작</div>
+                            <div class="holdem-start-btn">GAME SRART</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="holdem-main-wrap pad-all-10">
+                <div class="holdem-news">
+                    <div class="holdem-news-nav">
+                        <span>소식</span>
+                        <div>
+                            <span class="holdem-tap">전체</span>
+                            <span>공지사항</span>
+                        </div>
+                        <span>+</span>
+                    </div>
+                    <div class="holdem-news-main">
+                        <div class="holdem-main">
+                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span>2020-12-30</span>
+                        </div>
+                        <div class="holdem-main">
+                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span>2020-12-30</span>
+                        </div>
+                        <div class="holdem-main">
+                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span>2020-12-30</span>
+                        </div>
+                        <div class="holdem-main">
+                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span>2020-12-30</span>
+                        </div>
+                        <div class="holdem-main">
+                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span>2020-12-30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="holdem-rank">
+                    <div class="holdem-rank-nav">
+                        <span>소식</span>
+                        <span>+</span>
+                    </div>
+                    <div class="holdem-rank-main">
+                        <div>
+                            <span>순위</span>
+                            <span>닉네임</span>
+                            <span>상금</span>
+                        </div>
+                        <div>
+                            <span>1</span>
+                            <span>띵권</span>
+                            <span>0000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- side-b -->
+        <script src="../section/side-b.js"></script>
+        <!-- /side-b -->
+
+    </div>
+    <!-- /main-section -->
+    
+    <!-- footer -->
+    <script src="../section/footer.js"></script>
+    <!-- /footer -->
+
+
+    <script src="../js/date-today.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    </body>
+</html>
