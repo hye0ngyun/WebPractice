@@ -75,6 +75,73 @@
                 padding-left: 5px;
                 padding-right: 5px;
             }
+            .sport-gamelog-main{
+                border: 1px solid rgb(151, 151, 151);
+            }
+            .border-g{
+                position: relative;
+                /* top: 5px; */
+                border-right: 1px solid rgb(37, 37, 37);
+                height: 20px;
+                margin: 0;
+                width: 0;
+            }
+            .border-g-10{
+                position: relative;
+                /* top: 5px; */
+                border-right: 1px solid rgb(37, 37, 37);
+                height: 20px;
+                margin: 0 10px;
+                width: 0;
+            }
+            .bgc-rgb-62{
+                background: rgb(62, 62, 62);
+            }
+            .pad-all-5{
+                padding: 5px;
+            }
+            .gamelog-main-item{
+                display: flex;
+                flex-grow: 1;
+                justify-content: space-between;
+                text-align: center;
+            }
+            .log-item{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            .gamelog-main-wrap{
+                display: grid;
+                grid-template-columns: 0.2fr 0.2fr 0.3fr 0.3fr 0.2fr 0.5fr 0.2fr 0.5fr 0.3fr 0.3fr;
+                padding: 10px 0;
+            }
+            .border-t-grov-b{
+                border-top: 2px groove rgb(92, 92, 92);
+            }
+            .flex-column{
+                flex-direction: column;
+            }
+            .gmaelog-main-result{
+                background: rgb(17, 17, 17);
+                display: flex;
+                padding: 10px;
+                align-items: center;
+            }
+            .mar-l-auto{
+                margin-left: auto;
+            }
+            .btn-39{
+                background: rgb(39, 39, 39);
+                border: 1px outset rgb(65, 65, 65);
+                padding: 3px 30px;
+            }
+            .select-date{
+                background: rgb(23,23,23);
+                border: 0;
+                border-bottom: 1px solid white;
+            }
         </style>
         <!-- /style -->
     </head>
@@ -132,12 +199,205 @@
                         </div>
                     </div>
                     <div class="game-log-header-r">
-                        <input type="date" name="" id="">
+                        <input type="date" name="" id="" class="select-date">
                         <span>~</span>
-                        <input type="date" name="" id="">
+                        <input type="date" name="" id="" class="select-date">
                         <span>
                             <i class="fas fa-search"></i>
                         </span>
+                    </div>
+                </div>
+                <div class="mar-bot-10" style="display: flex;justify-content: flex-end;margin-top: 5px;">
+                    <span class="orange">※ 게임 참여 내역은 최대 1달 저장, 삭제한 내역은 보이지 않습니다.</span>
+                </div>
+                <div class="sport-gamelog-main pad-all-10">
+                    <div class="bgc-rgb-62">
+                        <div class="gamelog-main-wrap pad-tb-10">
+                            <div class="gamelog-main-item">
+                                <div class="log-item">종목</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">타입</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">경기시간</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">구분</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">승부타임</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">Home vs Away</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">참여배당</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">선택항목</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">경기결과</div>
+                                <div class="border-g"></div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">게임결과</div>
+                            </div>
+                        </div>
+                        <div class="gamelog-main-wrap border-t-grov-b">
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <i class="fas fa-basketball-ball orange text-big"></i>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    스포츠
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item flex-column bgc-bgrey">
+                                    <div>2020-12-11</div>
+                                    <div>19:00:00</div>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span class="orange">승패</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span>연장포함</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span>안양 KGC vs 울산 모비스</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span>1.53</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span class="orange">안양 KGC</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span class="orange">적중</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gamelog-main-wrap border-t-grov-b">
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <i class="fas fa-basketball-ball orange text-big"></i>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    스포츠
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item flex-column bgc-bgrey">
+                                    <div>2020-12-11</div>
+                                    <div>19:00:00</div>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span class="orange">승패</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span>연장포함</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span>안양 KGC vs 울산 모비스</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span>1.53</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span class="orange">안양 KGC</span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="gamelog-main-item">
+                                <div class="log-item">
+                                    <span class="orange">적중</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="gmaelog-main-result">
+                            <div class="mar-lr-10">
+                                <input type="checkbox" name="" id="">
+                                <span>참여시간</span>
+                                <span>2020-12-11</span>
+                                <span>15:41:11</span>
+                            </div>
+                            <div class="mar-lr-10">
+                                <span>참여배당</span>
+                                <span class="orange">2.25</span>
+                                <span>참여루비</span>
+                                <span class="orange">10,000</span>
+                                <span>예상적중루비</span>
+                                <span class="orange">22,500</span>
+                                <span>획득루비</span>
+                                <span class="orange">22,500</span>
+                            </div>
+                            <div class="orange text-big mar-l-auto mar-lr-10">
+                                적중
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="orange flex-align-center text-big mar-tb-10">
+                    <span><a href="" class="orange">1</a></span>
+                </div>
+                <div class="flex-between mar-t-30">
+                    <div>
+                        <div>
+                            <button class="btn-39">전체선택</button>
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="mar-lr-10">
+                            <button class="btn-39">전체삭제</button>
+                        </div>
+                        <div>
+                            <button class="btn-39">선택삭제</button>
+                        </div>
                     </div>
                 </div>
             </div>
