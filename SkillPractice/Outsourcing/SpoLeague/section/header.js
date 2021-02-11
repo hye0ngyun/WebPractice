@@ -34,8 +34,8 @@ let header = `
                 <ul class="nav navbar-nav">
                     <li><a href="../pages/sport-sportgame.html">스포츠</a></li>
                     <li><a href="../pages/gamecenter-holdem.html">게임센터</a></li>
-                    <li><a href="#contact">이용안내</a></li>
-                    <li><a href="#contact">커뮤니티</a></li>
+                    <li><a href="../pages/useguide-basicguide.html">이용안내</a></li>
+                    <li><a href="../pages/community-humor.html">커뮤니티</a></li>
                     <li><a href="#contact">마켓</a></li>
                     <li><a href="#contact">고객센터</a></li>
                 </ul>
