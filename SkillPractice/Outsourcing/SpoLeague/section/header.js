@@ -8,7 +8,7 @@ let header = `
                 <div class="search-signup">
                     <a href="">ID / PW찾기</a>
                     <div class="border"></div>
-                    <a href="" class="orange">회원가입</a>
+                    <a href="../pages/sign-up.html" class="orange">회원가입</a>
                 </div>
                 <div class="login-form">
                     <form action="" method="POST">
@@ -36,8 +36,8 @@ let header = `
                     <li><a href="../pages/gamecenter-holdem.html">게임센터</a></li>
                     <li><a href="../pages/useguide-basicguide.html">이용안내</a></li>
                     <li><a href="../pages/community-humor.html">커뮤니티</a></li>
-                    <li><a href="#contact">마켓</a></li>
-                    <li><a href="#contact">고객센터</a></li>
+                    <li><a href="../pages/market-item.html">마켓</a></li>
+                    <li><a href="../pages/customercenter-notice.html">고객센터</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>

@@ -1059,3 +1059,44 @@
     color: rgb(255, 166, 0);
     text-decoration: none;
 }
+
+/* marhet-item.html */
+.gap-20{
+    gap: 20px;
+}
+.market-item-wrap{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.market-item{
+    border: 1px solid black;
+}
+.bgc-black{
+    background: black;
+}
+.item-img{
+    height: 200px;
+}
+
+/* customercenter-inquiry.html */
+.bulletin-board-grid-4{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 100px;
+}
+.mar-tb-5{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.mar-r-5{
+    margin-right: 5px;
+}
+.mar-bot-20{
+    margin-bottom: 20px;
+}
+.inquiry-btn{
+    background: linear-gradient(rgb(75, 75, 75), rgb(44, 44, 44));
+    border: 0;
+    padding: 5px 30px;
+}
