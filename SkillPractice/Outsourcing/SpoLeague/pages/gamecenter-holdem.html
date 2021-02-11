@@ -60,6 +60,71 @@
                 align-items: center;
                 flex-direction: column;
             }
+            
+            .holdem-news, .holdem-rank{
+                border: 1px solid white;
+            }
+            .holdem-main-wrap{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 10px;
+            }
+            .holdem-news-nav{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px 0 10px;
+                border-bottom: 1px solid white;
+            }
+            .holdem-tap{
+                background: rgb(255, 145, 4);
+                padding: 2px 30px;
+                border: 1px solid white;
+                color: black;
+                border-bottom: 1px  rgb(255, 145, 4);
+            }
+            .holdem-tap-white{
+                border: 1px solid white;
+                padding: 2px 30px;
+            }
+            .holdem-news-main{
+                padding: 20px 10px;
+            }
+            .holdem-main{
+                display: flex;
+                justify-content: space-between;
+                margin: 5px 0;
+            }
+            .holdem-main-rank-header{
+                background: rgb(109, 109, 109);
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+                padding: 5px 10px;
+            }
+            .holdem-main-rank-info{
+                display: grid;
+                grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+                padding: 5px 10px;
+            }
+            .border-r-w{
+                border-right: 1px solid white;
+                height: 10px;
+                position: relative;
+                top: 5px;
+            }
+            .rank-header-item{
+                display: flex;
+                align-content: center;
+            }
+            .header-item-text{
+                margin: 0 auto;
+            }
+            .ellipsis{
+                display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            }
+            .news-date{
+                flex-basis: 75px;
+                flex-shrink: 0;
+            }
             @media (min-width:1024px){
                 .holdem-start-btn-text{
                     display: flex;
@@ -88,34 +153,18 @@
                     margin-right: 7%;
                 }
             }
-            .holdem-news, .holdem-rank{
-                border: 1px solid white;
-            }
-            .holdem-main-wrap{
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-                gap: 10px;
-            }
-            .holdem-news-nav{
-                display: flex;
-                justify-content: space-between;
-                padding: 10px 10px 0 10px;
-                border-bottom: 1px solid white;
-            }
-            .holdem-tap{
-                background: rgb(255, 145, 4);
-                padding: 2px 30px;
-                border: 1px solid white;
-                color: black;
-                border-bottom: 1px  rgb(255, 145, 4);
-            }
-            .holdem-news-main{
-                padding: 20px 10px;
-            }
-            .holdem-main{
-                display: flex;
-                justify-content: space-between;
-                margin: 5px 0;
+            @media (max-width:768px){
+                .holdem-tap{
+                    background: rgb(255, 145, 4);
+                    padding: 2px 15px;
+                    border: 1px solid white;
+                    color: black;
+                    border-bottom: 1px  rgb(255, 145, 4);
+                }
+                .holdem-tap-white{
+                    border: 1px solid white;
+                    padding: 2px 15px;
+                }
             }
         </style>
         <!-- /style -->
@@ -154,49 +203,103 @@
                     <div class="holdem-news-nav">
                         <span>소식</span>
                         <div>
-                            <span class="holdem-tap">전체</span>
-                            <span>공지사항</span>
+                            <a href=""><span class="holdem-tap">전체</span></a>
+                            <a href=""><span class="holdem-tap-white">공지</span></a>
+                            <a href=""><span class="holdem-tap-white">업데이트</span></a>
+                            <a href=""><span class="holdem-tap-white">이벤트</span></a>
                         </div>
-                        <span>+</span>
+                        <a href=""><span>+</span></a>
                     </div>
                     <div class="holdem-news-main">
                         <div class="holdem-main">
-                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
-                            <span>2020-12-30</span>
+                            <span class="ellipsis">[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span class="news-date">2020-12-30</span>
                         </div>
                         <div class="holdem-main">
-                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
-                            <span>2020-12-30</span>
+                            <span class="ellipsis">[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span class="news-date">2020-12-30</span>
                         </div>
                         <div class="holdem-main">
-                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
-                            <span>2020-12-30</span>
+                            <span class="ellipsis">[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span class="news-date">2020-12-30</span>
                         </div>
                         <div class="holdem-main">
-                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
-                            <span>2020-12-30</span>
+                            <span class="ellipsis">[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span class="news-date">2020-12-30</span>
                         </div>
                         <div class="holdem-main">
-                            <span>[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
-                            <span>2020-12-30</span>
+                            <span class="ellipsis">[공지] 12월 30일 정기점검을 마치고 서버를 오픈하였습니다.</span>
+                            <span class="news-date">2020-12-30</span>
                         </div>
                     </div>
                 </div>
-                <div class="holdem-rank">
-                    <div class="holdem-rank-nav">
-                        <span>소식</span>
-                        <span>+</span>
-                    </div>
-                    <div class="holdem-rank-main">
+                <div class="holdem-news">
+                    <div class="holdem-news-nav">
+                        <span>랭킹</span>
                         <div>
-                            <span>순위</span>
-                            <span>닉네임</span>
-                            <span>상금</span>
+                            <a href=""><span class="holdem-tap">담화린</span></a>
+                            <a href=""><span class="holdem-tap-white">한비광</span></a>
+                            <a href=""><span class="holdem-tap-white">미고</span></a>
                         </div>
-                        <div>
-                            <span>1</span>
-                            <span>띵권</span>
-                            <span>0000</span>
+                        <a href=""><span>+</span></a>
+                    </div>
+                    <div class="holdem-news-main">
+                        <div class="holdem-main-rank-header">
+                            <div class="rank-header-item">
+                                <div class="header-item-text">순위</div>
+                                <span class="border-r-w"></span>
+                            </div>
+                            <div class="rank-header-item">
+                                <div class="header-item-text">캐릭터명</div>
+                                <span class="border-r-w"></span>
+                            </div>
+                            <div class="rank-header-item">
+                                <div class="header-item-text">계열</div>
+                                <span class="border-r-w"></span>
+                            </div>
+                            <div class="rank-header-item">
+                                <div class="header-item-text">등급</div>
+                                <span class="border-r-w"></span>
+                            </div>
+                            <div class="rank-header-item">
+                                <div class="header-item-text">문파</div>
+                                <span class="border-r-w"></span>
+                            </div>
+                        </div>
+                        <div class="holdem-main-rank-info">
+                            <div class="header-item-text">1</div>
+                            <div class="header-item-text">띵권</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                        </div>
+                        <div class="holdem-main-rank-info">
+                            <div class="header-item-text">1</div>
+                            <div class="header-item-text">띵권</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                        </div>
+                        <div class="holdem-main-rank-info">
+                            <div class="header-item-text">1</div>
+                            <div class="header-item-text">띵권</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                        </div>
+                        <div class="holdem-main-rank-info">
+                            <div class="header-item-text">1</div>
+                            <div class="header-item-text">띵권</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                        </div>
+                        <div class="holdem-main-rank-info">
+                            <div class="header-item-text">1</div>
+                            <div class="header-item-text">띵권</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
+                            <div class="header-item-text">0000</div>
                         </div>
                     </div>
                 </div>
