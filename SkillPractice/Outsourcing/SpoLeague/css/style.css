@@ -1100,3 +1100,57 @@
     border: 0;
     padding: 5px 30px;
 }
+
+/* customercenter-proposer-1.html */
+.grad-1{
+    background: linear-gradient(rgb(63, 63, 63), rgb(14, 14, 14));
+}
+.proposer-header{
+    display: flex;
+    max-width: fit-content;
+}
+.proposer-header-item{
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+.proposer-fa-main-h{
+    background: rgb(255, 141, 4);
+    grid-template-columns: 1.5fr 1fr 2fr 1fr 1fr 2fr;
+    display: grid;
+    gap: 2px;
+}
+.proposer-fa-main{
+    border: 1px solid rgb(255, 141, 4);
+    background: rgb(255, 141, 4);
+    display: grid;
+
+}
+.proposer-fa-main-h-item{
+    /* padding: 5px 10px; */
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+.border-bw{
+    /* position: relative; */
+    /* display: block; */
+    /* top: 5px; */
+    border-right: 2px solid white;
+    height: 10px;
+    /* margin: 0 15px; */
+    margin-left: auto;
+    width: 0;
+}
+.black{
+    color: black;
+}
+.pad-0{
+    padding: 0;
+}
+.pad-5-20{
+    padding: 5px 10px;
+}
+.text-small{
+    font-size: 0.6em;
+}
