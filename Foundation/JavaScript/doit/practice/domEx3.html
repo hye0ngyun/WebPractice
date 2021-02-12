@@ -29,6 +29,7 @@
             newP.innerHTML += '<span class="del">X</span>';
             let nameList = document.querySelector('#nameList');
             nameList.appendChild(newP);
+            nameList.insertBefore(nameList[nameList.children.length], nameList[0])
             userName.value = '';
         }
     </script>
