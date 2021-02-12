@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>참가 신청</h1>
+    <div>
+        <form action="">
+            <input type="text" name="userName" id="userName" placeholder="이름">
+            <button onclick="newRegister();return false;">신청</button>
+        </form>
+    </div>
+    <div>
+        <h2>참석자 명단</h2>
+    </div>
+    <div id="nameList">
+    </div>
+
+    <script>
+        function newRegister() {
+            let newP = document.createElement('p');
+            let userName = document.querySelector('#userName'); // 텍스트 필드의 내용에 접근하기 위해
+            let newText = document.createTextNode(userName.value);
+            newP.appendChild(newText);
+            newP.innerHTML += '<span class="del">X</span>';
+            let nameList = document.querySelector('#nameList');
+            nameList.appendChild(newP);
+            userName.value = '';
+        }
+    </script>
+</body>
+</html>
