@@ -28,7 +28,7 @@ let header = `
                 <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="../index.html"><img src="../src/mobile-logo.png"></a>
-                <a href="" class="user"><i class="fas fa-user"></i></a>
+                <a href="../pages/customercenter-myinfo-1.html" class="user"><i class="fas fa-user"></i></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
