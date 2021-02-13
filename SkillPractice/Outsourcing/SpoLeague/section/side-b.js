@@ -5,9 +5,10 @@ let side_b = `
         <span class="orange">GAME SLIP</span>
         <div class="switch-wrap">
             <span>이동</span>
-            <span>
+            <label class="switch">
                 <input type="checkbox">
-            </span>
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
     <div class="side-b-btn-wrap">

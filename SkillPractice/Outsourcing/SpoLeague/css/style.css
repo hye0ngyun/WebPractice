@@ -1233,7 +1233,7 @@
 }
 .proposer-fa-date{
     color: black;
-    line-height: 10px !important;
+    line-height: 15px !important;
 }
 .proposer-fa-btn{
     background: rgb(175, 175, 175);
@@ -1270,4 +1270,127 @@
 }
 .mar-l-30{
     margin-left: 30px;
+}
+
+/* customercenter-inquiry-write.html */
+.bulletin-board-write-grid{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+.write-grey{
+    background: rgb(44, 44, 44);
+    padding: 20px;
+}
+.write-black{
+    background: rgb(29, 29, 29);
+    padding: 20px;
+}
+.deconone:hover{
+    text-decoration: none;
+    color: white;
+}
+/* toggle button */
+.switch {
+position: relative;
+display: inline-block;
+width: 40px;
+height: 14px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 14px;
+width: 14px;
+background-color: black;
+border: 3px solid white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: rgb(255, 166, 0);
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px rgb(255, 166, 0)3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+/* file box */
+.filebox label {
+display: inline-block;
+padding: .5em .75em;
+color: #fff;
+font-size: inherit;
+line-height: normal;
+vertical-align: middle;
+/* background-color: #5cb85c; */
+cursor: pointer;
+border: 1px solid black;
+/* border-radius: .25em; */
+-webkit-transition: background-color 0.2s;
+transition: background-color 0.2s;
+}
+
+.filebox input[type="file"] {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+border: 0;
+}
+.filebox-wrap{
+    display: flex;
+}
+.grad-2{
+    background: linear-gradient(rgb(97, 97, 97), rgb(14, 14, 14));
+}
+.file-item{
+    font-weight: normal;
+}
+.border-black{
+    border: 1px solid black;
+}
+
+.border-white{
+    border: 1px solid white;
+}
+.radius{
+    border-radius: 5px;
 }

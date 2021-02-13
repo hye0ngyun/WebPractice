@@ -69,83 +69,69 @@
                     <div class="mar-tb-5"><span class="orange mar-r-5">▷</span>문의하시기 전에 게임 가이드 및 자주묻는 질문을 확인하시고 해결되지 않는 부분은 문의 접수 시 신속한 처리 도와드리도록 하겠습니다.</div>
                 </div>
                 <div class="mar-bot-20">
-                    <div class="bulletin-board-grid-4 bgc-grey pad-all-10" style=" padding: 10px 20px;">
-                        <div style="display: flex;">
-                            <div class="header-item-text">날짜</div>
-                            <span class="border-g"></span>
+                    <form action="">
+                        <div class="bulletin-board-write-grid bgc-grey pad-all-10 border-black" style=" padding: 10px 20px;">
+                            <div style="display: flex;">
+                                <div class="">제목</div>
+                            </div>
+                            <div style="display: flex;">
+                                <div style="width: 100%;">
+                                    <input type="text" name="" id="" style="width: 100%;">
+                                </div>
+                            </div>
                         </div>
-                        <div style="display: flex;">
-                            <div class="header-item-text">제목</div>
-                            <span class="border-g"></span>
+                        <div class="bulletin-board-write-grid border-t-grov-b write-black border-black">
+                            <div>
+                                <span>참여내역</span>
+                            </div>
+                            <div>
+                                <div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <label for="">on 선택 시 참여내역 첨부가 가능합니다.</label>
+                                </div>
+                                <div class="filebox-wrap">
+                                    <div class="filebox">
+                                        <label class="grad-2 file-item" for="ex_file">스포츠 내역</label>
+                                        <input type="file" id="ex_file">
+                                    </div>
+                                    <div class="filebox">
+                                        <label class="grad-2 file-item" for="ex_file">라이브 내역</label>
+                                        <input type="file" id="ex_file">
+                                    </div>
+                                    <div class="filebox">
+                                        <label class="grad-2 file-item" for="ex_file">가상게임 내역</label>
+                                        <input type="file" id="ex_file">
+                                    </div>
+                                    <div class="filebox">
+                                        <label class="grad-2 file-item" for="ex_file">승부찾기 내역</label>
+                                        <input type="file" id="ex_file">
+                                    </div>
+                                    <div class="filebox">
+                                        <label class="grad-2 file-item" for="ex_file">9회말 2아웃 내역</label>
+                                        <input type="file" id="ex_file">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div style="display: flex;">
-                            <div class="header-item-text">이름</div>
-                            <span class="border-g"></span>
+                        <div class="write-grey bulletin-board-write-grid border-t-grov-b border-black">
+                            <div>
+                                <span>내용</span>
+                            </div>
+                            <div>
+                                <textarea name="" id="" cols="" rows="20" style="resize: none; width: 100%;"></textarea>
+                            </div>
                         </div>
-                        <div style="display: flex;">
-                            <div class="header-item-text">답변상태</div>
+                        <div class="mar-t-30" style="display: flex;justify-content: flex-end;">
+                            <a href="../pages/customercenter-inquiry.html" class="inquiry-btn deconone" style="margin-right: 20px;">취소</a>
+                            <input type="submit" class="inquiry-btn" style="margin-right: 20px;" value="저장"></input>
+                            
                         </div>
-                    </div>
-                    <div class="community-item bulletin-board-grid-4 border-t-grov-b">
-                        <div>
-                            <span class="bgc-bgrey">2020-01-4</span>
-                        </div>
-                        <div class="ellipsis">
-                            <a href="../pages/customercenter-inquiry-list.html"><span>문의하기문의하기</span></a>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>관리자</span>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>답변완료</span>
-                        </div>
-                    </div>
-                    <div class="community-item bulletin-board-grid-4 border-t-grov-b">
-                        <div>
-                            <span class="bgc-bgrey">2020-01-4</span>
-                        </div>
-                        <div class="ellipsis">
-                            <a href="../pages/customercenter-inquiry-list.html"><span>문의하기문의하기</span></a>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>관리자</span>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>답변완료</span>
-                        </div>
-                    </div>
-                    <div class="community-item bulletin-board-grid-4 border-t-grov-b">
-                        <div>
-                            <span class="bgc-bgrey">2020-01-4</span>
-                        </div>
-                        <div class="ellipsis">
-                            <a href="../pages/customercenter-inquiry-list.html"><span>문의하기문의하기</span></a>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>관리자</span>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>답변완료</span>
-                        </div>
-                    </div>
-                    <div class="community-item bulletin-board-grid-4 border-t-grov-b">
-                        <div>
-                            <span class="bgc-bgrey">2020-01-4</span>
-                        </div>
-                        <div class="ellipsis">
-                            <a href="../pages/customercenter-inquiry-list.html"><span>문의하기문의하기</span></a>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>관리자</span>
-                        </div>
-                        <div class="flex-align-center">
-                            <span>답변완료</span>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="" style="display: flex;justify-content: flex-end;">
-                    <a href="../pages/customercenter-inquiry-write.html" class="inquiry-btn" style="margin-right: 20px;">글쓰기</a>
-                </div>
+
             </div>
         </div>
         <!-- side-b -->
