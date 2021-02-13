@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope4</title>
+</head>
+<body>
+    
+    <script>
+        // 자바스크립트에서는 함수블록 function(){}안에서 선언된 변수만 지역변수로 적용된다.
+        // 위의 내용을 증명하는 코드로 아래의 코드는 for문{}블록 안에서 var name이 선언됐지만 블록 밖에서 alert(name)으로 지역변수일 것이라 생각한 name변수를 호출해도 정상적으로 호출된다.
+        for(var i = 0; i < 1; i++){
+            var name = 'coding everybody';
+        }
+        alert(name);
+        
+
+        // 그러나 함수 안에서 선언된 변수의 경우 지역변수가 되기 때문에 아래의 블록 안쪽{alert(alocal)} 코드는 실행되나 함수 바깥쪽의 alert(alocal)코드는 실행되지 않고
+        // Uncaught ReferenceError: alocal is not defined 
+        // alocal이 정의되지 않았다고 에러메시지를 표현한다.
+
+        function a() {
+            var alocal = 'a';
+            alert(alocal);
+        }
+        a();
+        alert(alocal);
+    </script>
+</body>
+</html>

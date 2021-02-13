@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope5</title>
+</head>
+<body>
+    
+    <script>
+        // 정적 스코핑(static scoping)
+        var i = 5; // 전역변수
+
+        function a(){
+            var i = 10; // a함수의 지역변수
+            b();
+        }
+
+        function b(){
+            // 먼저 b()함수가 호출될 경우 b()함수 안의 i변수를 찾는다.
+            // 1. 호출 되는 순간 a()함수의 지역변수 i를 먼저 찾는가?
+            // 2. 정의 되는 순간 전역변수 i를 먼저 찾는가?
+            // 정답은 2. 정의(선언)되는 시점의 전역변수 i가 사용된다.
+            document.write(i); // i는? 정적 유효범위를 갖는다.
+
+            // 따라서 전역변수 var i = 5;가 없는경우 함수 b()가 호출되면 document.write(i);는 
+
+            // Uncaught ReferenceError: i is not defined
+            // scopeEx5.html:25 Uncaught ReferenceError: i is not defined
+            // at b (scopeEx5.html:25)
+            // at a (scopeEx5.html:17)
+            // at scopeEx5.html:38
+
+            // 위와같은 에러 메시지를 출력한다. i가 정의되지 않았다는 내용의 메시지다.
+        }
+        
+        a();
+    </script>
+</body>
+</html>
