@@ -26,11 +26,44 @@
             let userName = document.querySelector('#userName'); // 텍스트 필드의 내용에 접근하기 위해
             let newText = document.createTextNode(userName.value);
             newP.appendChild(newText);
-            newP.innerHTML += '<span class="del">X</span>';
+
+            // 내가 생각한 코드
+            // newP.innerHTML += '<span class="del" onclick="deleteNode()">X</span>';
+
+            // 책에서 제시한 코드
+            var delBtn = document.createElement('span');
+            var delText = document.createTextNode('X');
+            delBtn.setAttribute('class', 'del');
+            delBtn.appendChild(delText);
+            newP.appendChild(delBtn);
+            // delBtn.addEventListener('click', deleteNode());
+
+
+
             let nameList = document.querySelector('#nameList');
             nameList.appendChild(newP);
-            nameList.insertBefore(nameList[nameList.children.length], nameList[0])
+            // let pList = document.querySelectorAll('p');
+            
+            // 요소.insertBefore(추가하는 노드, 추가할 위치) 
+            // 내가 생각한 코드
+            // nameList.insertBefore(nameList.children[nameList.children.length-1], nameList.children[0])
+            // 책에서 제시한 코드
+            nameList.insertBefore(newP, nameList.children[0]);
             userName.value = '';
+
+            // 책에서 제시한 삭제하는 코드
+            var removeBtns = document.querySelectorAll('.del');
+            for(var i = 0; i < removeBtns.length; i++){
+                removeBtns[i].addEventListener('click', function(){
+                    if(this.parentNode.parentNode){
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+                    }
+                });
+            }
+        }
+        // 내가 생각한 삭제하는 코드
+        function deleteNode(){
+            document.querySelectorAll('.del')[0].parentNode.remove();
         }
     </script>
 </body>
