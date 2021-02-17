@@ -25,7 +25,7 @@
         top: 5px;
         border-right: 2px solid white;
         height: 10px;
-        margin: 0 15px;
+        margin: 0 1%;
         width: 0;
     }
     .border-10{
@@ -1094,7 +1094,8 @@
 /* commnunity-humor.html */
 .bulletin-board-grid{
     display: grid;
-    grid-template-columns: 100px 6fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 100px 6fr 70px 70px 50px;
+    padding: 10px 20px;
 }
 .community-item:nth-child(n+1){
     background: rgb(44, 44, 44);
@@ -1483,4 +1484,45 @@ border: 0;
 }
 .mar-lr-5{
     margin: 0 5px;
+}
+.h-logo{
+    object-fit: contain;
+}
+@media (max-width:768px){
+    .article{
+        font-size: 0.8em;
+    }
+    .border{
+        margin: 0 2%;
+    }
+    .bulletin-board-grid{
+        display: grid;
+        grid-template-columns: 80px 6fr 50px 50px 40px;
+    }
+    .community-item{
+        padding: 10px !important;
+    }
+    .select-date{
+        width: 100px;
+        height: 20px;
+    }
+    .game-log-header-r{
+        display: flex;
+        margin-left: 0;
+        align-items: center;
+    }
+    .btn-39{
+        padding: 3px 10px;
+    }
+    .sport-game-info2 game-info-wrap div{
+        padding: 0;
+    }
+}
+@media (max-width:400px){
+    .article{
+        font-size: em;
+    }
+    .game-info-wrap div{
+        padding: 0 !important;
+    }
 }

@@ -2,7 +2,7 @@ let header = `
 <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="top-header">
             <a href="../index.html">
-                <img src="../src/pc-header-logo.png" alt="" height="100%" width="100%">
+                <img src="../src/pc-header-logo.png" alt="" height="100%" width="100%" class="h-logo">
             </a>
             <div class="login-cont">
                 <div class="search-signup">
@@ -27,7 +27,7 @@ let header = `
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../index.html"><img src="../src/mobile-logo.png"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../src/mobile-logo.png" class="h-logo"></a>
                 <a href="../pages/customercenter-myinfo-1.html" class="user"><i class="fas fa-user"></i></a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
