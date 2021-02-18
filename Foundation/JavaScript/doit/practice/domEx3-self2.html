@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>참가신청</h1>
+    <form action="">
+        <input type="text" name="" id="userName" placeholder="이름">
+        <button onclick="register(); return false;">참가</button>
+    </form>
+    <h2>참가자 내역</h2>
+    <div id="userList"></div>
+    <script>
+        function register(){
+            let userName = document.querySelector('#userName');
+            let userList = document.querySelector('#userList');
+            userList.innerHTML += `<p>${userName.value}<span class="del">X</span></p>`;
+            let delBtn = document.querySelectorAll('.del');
+
+            userList.insertBefore(userList.children[userList.children.length-1], userList.children[0])
+            for(let i = 0; i < delBtn.length; i++){
+                delBtn[i].addEventListener('click',function(){
+                    if(this.parentNode.parentNode){
+                        this.parentNode.parentNode.removeChild(this.parentNode);
+                    }
+                });
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function register(){
+        //     var userName = document.querySelector('#userName');
+        //     console.log(userName);
+        //     var newP = document.createElement('p');
+        //     var newText = document.createTextNode(userName.value);
+            
+        //     newP.appendChild(newText);
+        //     newP.innerHTML += '<span class="del">X</span>';
+        //     // newP.innerHTML += '<span class="del" onclick="deleteNode()">X</span>'
+        //     // console.log(newP);
+            
+            
+        //     var userList = document.querySelector('#userList');
+        //     userList.appendChild(newP);
+
+        //     userList.insertBefore(newP, userList.children[0]);
+        //     userName.value = '';
+
+        //     var removeBtn = document.querySelectorAll('.del');
+        //     console.log(removeBtn);
+        //     for(var i = 0; i < removeBtn.length; i++){
+        //         removeBtn[i].addEventListener('click', function(){
+        //             if(this.parentNode.parentNode){
+        //                 this.parentNode.parentNode.removeChild(this.parentNode);
+        //             }
+        //         });
+        //     }
+        // }
+    </script>
+</body>
+</html>
