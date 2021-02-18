@@ -20,9 +20,48 @@ let side_b = `
             <span>아이템 사용</span>
             <button>적용하기</button>
         </div>
+        <div class="side-b-info-item" style="background: rgb(44, 44, 44); display:block; font-size:0.9em;">
+            <div>
+                <input type="checkbox" class="side-b-cbox">
+                <label style="
+                font-weight: normal;
+            ">아이템 사용 안함</label>
+            </div>
+            <div>
+                <input type="checkbox">
+                <label style="
+                font-weight: normal;
+            ">
+                    <span class="orange">+1.01배당 추가</span>
+                    <span>&nbsp;아이템 사용하기</span>
+                </label>
+            </div>
+        </div>
         <div class="side-b-info-item">
-            <span>적용하기</span>
+            <span>보유루비</span>
             <span class="orange">0 루비</span>
+        </div>
+        <div class="side-b-info-item" style="background: rgb(44, 44, 44);">
+            <div class="border-black " style="width:100%; background: rgb(84, 84, 84);">
+                <div class="pad-all-10">
+                    <div class="flex-between ">
+                        <span>워싱턴 캐피탈즈 vs 보스턴 브루인스</span>
+                        <span style="cursor:pointer; font-weight:bold;">X</span>
+                    </div>
+                    <div>
+                        <span>승무패</span>
+                    </div>
+                </div>
+                <div class="flex-between pad-all-10" style="background: rgb(130, 130, 130);font-size:1.2em; font-weight:bold;">
+                    <span class="" style="">워싱턴 캐피탈즈</span>
+                    <span class="orange">1.18</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="side-b-btn-wrap">
+            <button>전체삭제</button>
+            <button>MAX 최대참여</button>
         </div>
         <div class="side-b-info-item">
             <span>합산 배당률</span>
