@@ -5,23 +5,185 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .sector{
+            margin: 0 auto;
+            height: 100vh;
+        }
+        .sector:nth-child(2n+2){
+            background: #00bcd4;
+        }
+        .sector:nth-child(2n+1){
+            background: #4caf50;
+        }
+        #main-nav{
+            display: flex;
+            flex-direction: column;
+            /* float: left; */
+            position: fixed;
+            top: 0;
+            width: 100px;
+            height: 100vh;
+            background: rgb(36, 36, 36);
+        }
+        #main-nav a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            padding: 0 16px;
+            color: white;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        #main-nav a:not(a:first-child){
+            border-top: 1px solid white;
+        }
+        .test{
+            width: 80%;
+            margin: 0 auto;
+        }
+        @media (max-width:1024px){
+            #main-nav{
+
+                display: grid;
+                position: fixed;
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                grid-template-columns: repeat(3, 1fr);
+                height: 100px;
+            }
+            #main-nav a{
+                font-size: 1em;
+                height: 50px;
+            }
+        }
+        .active{
+            background: linear-gradient(140deg, rgb(168, 168, 168), rgb(75, 75, 75));
+        }
+    </style>
 </head>
 <body>
     <div id="main-nav">
-        <a href="#A">메인 페이지</a>
-        <a href="#B">갤러리 공간 소개</a>
-        <a href="#C">갤러리 디자인 스토리</a>
-        <a href="#D">360 하이라이트</a>
-        <a href="#E">특별전 관람하기</a>
-        <a href="#F">이벤트</a>
+        <a href="#A" id="nav-A" class="active">메인 페이지</a>
+        <a href="#B" id="nav-B">갤러리 공간 소개</a>
+        <a href="#C" id="nav-C">갤러리 디자인 스토리</a>
+        <a href="#D" id="nav-D">360 하이라이트</a>
+        <a href="#E" id="nav-E">특별전 관람하기</a>
+        <a href="#F" id="nav-F">이벤트</a>
     </div>
     <div class="main-article">
-        <div id="A"></div>
-        <div id="B"></div>
-        <div id="C"></div>
-        <div id="D"></div>
-        <div id="E"></div>
-        <div id="F"></div>
+        <div id="A" class="sector">
+            <div class="test">A: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        </div>
+        <div id="B" class="sector">
+            <div class="test">B: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        </div>
+        <div id="C" class="sector">
+            <div class="test">C: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        </div>
+        <div id="D" class="sector">
+            <div class="test">D: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        </div>
+        <div id="E" class="sector">
+            <div class="test">E: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        </div>
+        <div id="F" class="sector">
+            <div class="test">F: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('scroll', function(){
+            let curScroll = document.documentElement.scrollTop;
+            console.log(curScroll);
+
+            let curS1 = window.scrollY;
+            //현재 스크롤된값
+            let curVp = window.innerHeight;
+            //현재보여지는 viewport 높이
+            let a = document.body.clientHeight;
+            //현재문서의 전체높이
+            // 그럼 현재스크롤바의 퍼센테이지를 구해내는 함수는 다음과같이 정의할수있다 .
+            function getCurrentScrollPercentage(){
+            return (window.scrollY + window.innerHeight) / document.body.clientHeight * 100
+            }
+            console.log(getCurrentScrollPercentage());
+            
+
+                
+
+            let nav_a = document.querySelector('#nav-A');
+            let nav_b = document.querySelector('#nav-B');
+            let nav_c = document.querySelector('#nav-C');
+            let nav_d = document.querySelector('#nav-D');
+            let nav_e = document.querySelector('#nav-E');
+            let nav_f = document.querySelector('#nav-F');
+
+            let all_nav = document.querySelectorAll('#main-nav a');
+            // console.log(all_nav);
+
+
+        
+// 
+            if(getCurrentScrollPercentage() <= 32){
+                for(let i = 0; i < all_nav.length; i++){
+                    all_nav[i].setAttribute('class', '');
+                }
+                if(nav_a.getAttribute('class') !== 'active'){
+                    nav_a.setAttribute('class', 'active');
+                }
+            }
+            else if(getCurrentScrollPercentage() >= 33 && getCurrentScrollPercentage() <= 49){
+                for(let i = 0; i < all_nav.length; i++){
+                    all_nav[i].setAttribute('class', '');
+                }
+                if(nav_b.getAttribute('class') !== 'active'){
+                    nav_b.setAttribute('class', 'active');
+                }
+            }
+            else if(getCurrentScrollPercentage() >= 50 && getCurrentScrollPercentage() <= 65){
+                for(let i = 0; i < all_nav.length; i++){
+                    all_nav[i].setAttribute('class', '');
+                }
+                if(nav_c.getAttribute('class') !== 'active'){
+                    nav_c.setAttribute('class', 'active');
+                }
+            }
+            else if(getCurrentScrollPercentage() >= 66 && getCurrentScrollPercentage() <= 82){
+                for(let i = 0; i < all_nav.length; i++){
+                    all_nav[i].setAttribute('class', '');
+                }
+                if(nav_d.getAttribute('class') !== 'active'){
+                    nav_d.setAttribute('class', 'active');
+                }
+            }
+            else if(getCurrentScrollPercentage() >= 83 && getCurrentScrollPercentage() <= 99){
+                for(let i = 0; i < all_nav.length; i++){
+                    all_nav[i].setAttribute('class', '');
+                }
+                if(nav_e.getAttribute('class') !== 'active'){
+                    nav_e.setAttribute('class', 'active');
+                }
+            }
+            else if(getCurrentScrollPercentage() >= 100){
+                for(let i = 0; i < all_nav.length; i++){
+                    all_nav[i].setAttribute('class', '');
+                }
+                if(nav_f.getAttribute('class') !== 'active'){
+                    nav_f.setAttribute('class', 'active');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
