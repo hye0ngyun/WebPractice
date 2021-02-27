@@ -13,7 +13,8 @@
         }
         .sector{
             margin: 0 auto;
-            height: 100vh;
+            min-height: 500px;
+            max-height: fit-content;
         }
         .sector:nth-child(2n+2){
             background: #00bcd4;
@@ -50,6 +51,140 @@
         .test{
             width: 80%;
             margin: 0 auto;
+            padding: 50px 0;
+        }
+        
+        .active{
+            background: linear-gradient(140deg, rgb(168, 168, 168), rgb(75, 75, 75));
+        }
+        /* .t1{
+            animation-delay: -0.5s;
+        }
+        .t{
+            position: absolute;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 2.6s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    border: 1px solid #fff;
+        } */
+        .s-f{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .border-w{
+            margin: 0 30px;
+            display: block;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 30px 70px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .border-w:hover{
+            border: 2px solid #baa45b;
+            background: #baa45b;
+            color: black;
+        }
+        .flex-center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gold{
+            color: #baa45b;
+            font-weight: 700;
+            letter-spacing: 5px;
+            display: inline-block;
+            position: relative;
+        }
+        .gold::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 14px;
+            background: #baa45b;
+            left: -15px;
+            top: 52%;
+            transform: translateY(-50%);
+        }
+        .gold::after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 14px;
+            background: #baa45b;
+            right: -12px;
+            top: 52%;
+            transform: translateY(-50%);
+        }
+        #E{
+            background: black;
+        }
+        #F{
+            background: #675D3D;
+        }
+        .s-e-m{
+            display: flex;
+            flex-direction: column;
+            margin: 0 50px;
+        }
+        .white{
+            color: white;
+        }
+        .s-e-c{
+            display: flex;
+            border: 1px solid white;
+            max-width: fit-content;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            margin: 0 auto;
+            padding: 0 150px;
+            
+        }
+        .white-bg{
+            background: white;
+            padding: 3px 20px;
+            color: black;
+            text-align: center;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .mar-tb-10{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .s-e{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .border-gold{
+            margin: 0 30px;
+            display: block;
+            text-decoration: none;
+            padding: 30px 70px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #baa45b;
+            background: black;
+            color: #baa45b;
+        }
+        .border-gold:hover{
+            border: 2px solid #baa45b;
+            background: #baa45b;
+            color: black;
+        }
+        .mar-tb-50{
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
         @media (max-width:1024px){
             #main-nav{
@@ -66,9 +201,17 @@
                 font-size: 1em;
                 height: 50px;
             }
-        }
-        .active{
-            background: linear-gradient(140deg, rgb(168, 168, 168), rgb(75, 75, 75));
+            .test{
+            width: 100%;
+            margin: 0 auto;
+            }
+            .s-e-c{
+                padding: 0 50px;
+            }
+            .s-e-m{
+                margin: 0 10px;
+            }
+        
         }
     </style>
 </head>
@@ -83,22 +226,90 @@
     </div>
     <div class="main-article">
         <div id="A" class="sector">
-            <div class="test">A: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+            
+            <div class="test">
+                <div>
+                    <div class="t1 t"></div>
+                    <div class="t"></div>
+                </div>
+                
+                A: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
         </div>
         <div id="B" class="sector">
             <div class="test">B: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
         </div>
         <div id="C" class="sector">
-            <div class="test">C: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+            <div class="test">
+                C: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!
+            </div>
         </div>
         <div id="D" class="sector">
             <div class="test">D: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
         </div>
         <div id="E" class="sector">
-            <div class="test">E: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+            <div class="test s-e">
+                <div class=" mar-tb-10">
+                    <span></span><span class="gold">오픈이벤트</span><span></span>
+                </div>
+                <div class=" mar-tb-10">
+                    <img src="https://placekitten.com/100/100" alt="">
+                </div>
+                <div class=" mar-tb-50">
+                    <p class="white">예술과 만난 초 프리미엄 공간 CAT SIGNATURE ART GALLERY 공간 속 가장 기억에 남는 고양이를 공유해 개럴리 방문을 인증해주세요.</p>
+                </div>
+                <div class="s-e-c">
+                    <div class="s-e-m white">
+                        <img src="https://placekitten.com/100/101" alt="" width="100px" height="100px">
+                        <div class="text-center mar-tb-10">
+                            <p>귀여운 고양이</p>
+                            <p>(Cute cat)</p>
+                        </div>
+                        <div class="white-bg">
+                            1명
+                        </div>
+                    </div>
+                    <div class="s-e-m white">
+                        <img src="https://placekitten.com/100/102" alt="" width="100px" height="100px">
+                        <div class="text-center mar-tb-10">
+                            <p>화분 고양이</p>
+                            <p>(Pot cat)</p>
+                        </div>
+                        <div class="white-bg">
+                            5명
+                        </div>
+                    </div>
+                    <div class="s-e-m white">
+                        <img src="https://placekitten.com/100/104" alt="" width="100px" height="100px">
+                        <div class="text-center mar-tb-10">
+                            <p>슬픈 고양이</p>
+                            <p>(Sad cat)</p>
+                        </div>
+                        <div class="white-bg">
+                            10명
+                        </div>
+                    </div>
+                </div>
+                <div class="white text-center mar-tb-50">
+                    <p>
+                        *이벤트 기간: 2020.12.21(월) ~ 2021.01.17(일)
+                    </p>
+                    <p>
+                        *당첨자 발표: 2021.01.25(월)
+                    </p>
+                    <p>
+                        *참여 방법은 이벤트 페이지로 이동하셔서 확인해보세요
+                    </p>
+                </div>
+                <div class="mar-tb-10">
+                    <a href="" class="border-gold">이벤트 상세 보기</a>
+                </div>
+            </div>
         </div>
-        <div id="F" class="sector">
-            <div class="test">F: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, facilis!</div>
+        <div id="F" class="sector flex-center">
+            <div class="test s-f">
+                <div><a href="" class="border-w">제품 보러가기</a></div>
+                <div><a href="" class="border-w">매장 상담 신청</a></div>
+            </div>
         </div>
     </div>
 
