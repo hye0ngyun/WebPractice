@@ -62,13 +62,14 @@
       background: black;
       position: absolute;
       top: 50%;
-      /* 컴파스 */
+      /* transform-origin은 transform이 일어날 위치를 정할 수 있다. */
       transform-origin: 100%;
+      /* transform: rotate(xdeg)는 x만큼 각도를 회전시킨다. */
       transform: rotate(90deg);
+      /* transition은 transform이 일어날 때 변하는 속도를 설정할 수 있다. */
       transition: all 0.3s;
-
-      /* 움직임 */
-      /* transition-timing-function: ease-in; */
+      /* transform이 일어날 때 어떻게 움직임을 정하는 속성 */
+      transition-timing-function: ease-in;
     }
 
   </style>
@@ -79,18 +80,17 @@
     const hourHand = document.querySelector('.hour-hand');
 
     function setDate(){
-      // Date 객체를 now상수에 인스턴스화
+      // 시간 값을 가져올 수 있는 Date 객체를 now상수에 인스턴스화
       const now = new Date();
+
       // Date 객체의 getSeconds() 메서드로 현재 시간 초를 가져옴
       const seconds = now.getSeconds();
       // 현재 시간 초에 대한 각도를 360도로 나눠 아날로그 시계의 각도 degree값을 구하기
       const secondsDegrees = ((seconds / 60) * 360) + 90;
+      // secondHand 앨리먼트의 style의 tranform속성을 변경
       secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-      console.log(secondsDegrees);
 
-      // 현재 분을 가져옴
       const mins = now.getMinutes();
-      // 
       const minsDegrees = ((mins / 60) * 360) + 90;
       minHand.style.transform = `rotate(${minsDegrees}deg)`;
 
