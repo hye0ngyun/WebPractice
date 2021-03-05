@@ -22,6 +22,25 @@
 
   <style>
 
+    /* :root 의사 클래스에 선언한 지정 속성은 HTML문서 전역에서 접근 가능하다. */
+    :root{
+      /* --지정속성명: 값; */
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img{
+      /* css속성명: var(--지정속성명) */
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl{
+      color: var(--base);
+    }
+
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -45,6 +64,18 @@
   </style>
 
   <script>
+    // controls클래스의 자식input앨리먼트를 선택해 리스트형식으로 가져옴
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate(){
+      // 마우스가 움직이거나 값이 변경된 앨리먼트의 데이터 속성값이 sizing인 값이 존재한다면 가져오고 없다면 빈 문자열 ''을 가져온다.
+      const suffix = this.dataset.sizing || '';
+      // 사용자 지정 속성의 값을 이벤트가 일어난 앨리먼트의 이름 속성에 값을 설정한다.
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+    // 리스트에 있는 앨리먼트를 forEach메서드를 이용해 각 앨리먼트에 이벤트 적용
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
   </script>
 
 </body>
