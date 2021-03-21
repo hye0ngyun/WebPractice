@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cal(mode){
+            var funcs = {
+            'plus': function(left, right) {return left + right},
+            'minus': function(left, right) {return left - right}
+            }
+            return funcs(mode);
+        }
+        alert(cal('plus'), 2, 1)
+    </script>
+</body>
+</html>
