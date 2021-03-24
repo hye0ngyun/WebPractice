@@ -7,15 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        function cal(mode){
-            var funcs = {
-                'plus': function(left, right) {return left + right},
-                'minus': function(left, right) {return left - right}
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hi'
             }
-            return funcs(mode);
-        }
-        alert(cal('plus'), 2, 1)
+        });
     </script>
 </body>
 </html>
