@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color: #323232 ; }
+
+        /* 전체 셀렉터 */
+        /* css */
+        * { color: orange; }
+
+        /* 기본 셀렉터 - 타입 */
+        /* css */
+        p { color: red; }
+
+        /* 클래스 셀렉터 */
+        /* css */
+        .color-yellow { color: yellow; }
+        
+        /* ID 셀렉터 */
+        /* css */
+        #color-green { color: green; }
+        #color-blue { color: blue; }
+        #color-indigo { color: indigo; }
+
+        /* 속성 선택자 */
+        /* css */
+        a[href="https://developer.mozilla.org/"] { color: violet; }
+        a[href="https://naver.com/"] { color: black; }
+
+        /* 그룹 선택자 */
+        /* css */
+        .a, .b, .c { background-color: red; color: white}
+
+        /* 리스트 타입 */
+        ol[type="a"] {
+            list-style-type: lower-alpha;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 전체 셀렉터 -->
+    <!-- html -->
+    <p>전체 셀렉터 * { color: color: orange; }</p>
+    <span>전체 셀렉터 * { color: color: orange; }</span>
+    <div>전체 셀렉터 * { color: color: orange; }</div>
+
+    <!-- 기본 셀렉터 - 타입 -->
+    <!-- html -->
+    <p>기본 셀렉터 p { color: red; }</p>
+
+    <!-- 클래스 셀렉터 -->
+    <!-- html -->
+    <p class="color-yellow">클래스 셀렉터 .color-yellow { color: yellow; }</p>
+    <span class="color-yellow">클래스 셀렉터 .color-yellow { color: yellow; }</span>
+    <div class="color-yellow">클래스 셀렉터 .color-yellow { color: yellow; }</div>
+
+    <!-- ID 셀렉터 -->
+    <!-- html -->
+    <p id="color-green">ID 셀렉터 #color-green { color: green; }</p>
+    <p id="color-blue">ID 셀렉터 #color-blue { color: blue; }</p>
+    <p id="color-indigo">ID 셀렉터 #color-indigo { color: indigo; }</p>
+
+    <!-- 속성 선택자 -->
+    <!-- html -->
+    <a href="https://developer.mozilla.org/">MDN Web Docs - Mozilla</a>
+    <a href="https://naver.com/">Naver</a>
+
+    <!-- 그룹 선택자 -->
+    <!-- html -->
+    <p class="a">.a, .b, .c { background-color: red; } - p tag</p>
+    <div class="a">.a, .b, .c { background-color: red; } - div tag</div>
+    <span class="a">.a, .b, .c { background-color: red; } - span tag</span>
+
+    <ol type="A">
+        <li>Example list</li>
+    </ol>
+</body>
+</html>
