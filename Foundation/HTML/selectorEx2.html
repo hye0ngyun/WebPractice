@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { background-color: #323232 ; color: white; }
+
+        /* 자손 결합자 */
+        /* css */
+        /* .first-div span{ color: red; } */
+        
+        /* 자식 결합자 */
+        /* css */
+        /* .first-div > span{ color: red; } */
+
+        /* 일반 형제 결합자 */
+        /* css */
+        /* .first-span ~ span{ color: red; } */
+
+        /* 일반 형제 결합자 */
+        /* css */
+        /* .first-span + span{ color: red; } */
+    </style>
+</head>
+<body>
+    <!-- 자손, 자식 결합자 -->
+    <!-- html -->
+    <div class="first-div">
+        <span class="first-span">first-span</span>
+        <div class="second-div">
+            <span class="second-span">second-span</span>
+            <div class="third-div">
+                <span class="third-span">third-span</span>
+            </div>
+        </div>
+    </div>
+    <!-- 일반, 인접 형제 결합자 -->
+    <!-- html -->
+    <div class="first-div">
+        <span class="first-span">first-span</span>
+        <span class="second-span">second-span</span>
+        <span class="third-span">third-span</span>
+    </div>
+</body>
+</html>
