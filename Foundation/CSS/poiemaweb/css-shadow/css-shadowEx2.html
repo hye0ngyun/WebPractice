@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            margin: 20px;
+            background-color: yellow;
+        }
+        /* box-shadow: Inset Horizontal-offset Vertical-offset Blur-Radius Spread Shadow-Color */
+        div:nth-of-type(1) {
+            box-shadow: 10px 10px;
+        }
+        div:nth-of-type(2) {
+            box-shadow: 10px 10px blue;
+        }
+        div:nth-of-type(3) {
+            box-shadow: 10px 10px 5px blue;
+        }
+        div:nth-of-type(4) {
+            box-shadow: -10px -10px 5px blue;
+        }
+        div:nth-of-type(5) {
+            box-shadow: 10px 10px 5px 5px blue;
+        }
+        div:nth-of-type(6) {
+            box-shadow: inset 10px 10px 5px 5px blue;
+        }
+        div:nth-of-type(7) {
+            background-color: white;
+            box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2), -5px -5px 20px 0px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div>This is a div element with a box-shadow</div>
+    <div>This is a div element with a box-shadow</div>
+    <div>This is a div element with a box-shadow</div>
+    <div>This is a div element with a box-shadow</div>
+    <div>This is a div element with a box-shadow</div>
+    <div>This is a div element with a box-shadow</div>
+    <div>This is a div element with a box-shadow</div>
+</body>
+</html>
