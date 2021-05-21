@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #60B99A;
+            overflow: auto;
+            height: 400px;
+
+            display: flex;
+            justify-content: space-around;
+            /* flex-wrap: wrap;
+            flex-direction: row; */
+            /* flex-wrap, flex-direction shorthand */
+            flex-flow: row wrap;
+            align-items: flex-start;
+            /* align-content: space-between; */
+
+        }
+        .flex-item{
+            /* display: inline-block; */
+            margin: 10px;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #4584b1;
+            width: 100px;
+        }
+        .order1{
+            order: -1;
+        }
+        .grow1{
+            flex-grow: 1;
+        }
+        .shrink1{
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item grow1">2</div>
+        <div class="flex-item shrink1">3</div>
+        <div class="flex-item order1">4</div>
+        <div class="flex-item">5</div>
+    </div>
+</body>
+</html>
