@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #3d84b8;
+        }
+        .parent{
+            border: 1px solid white;
+            height: 700px;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: nowrap(default) */
+            flex-wrap: wrap;
+            
+            /* justify-content: flex-start(default) */
+            /* 메인 축 아이템들 정렬 */
+            justify-content: center;
+
+            /* align-items: stretch(default) */
+            /* 교차 축 아이템들 정렬*/
+
+            /* align-items: flex-start; */
+
+            /* align-content: stretch */
+            /* 여러 행 정렬 */
+            /* align-content: center; */
+            align-items: center;
+        }
+        .parent div{
+            background-color: #e1e5ea;
+        }
+        div{
+            /* display: block; default */
+            display: block;
+            border: 1px solid yellow;
+            padding: 20px;
+            margin: 30px;
+        }
+        span{
+            display: inline;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div>div box</div>
+    <span>span box</span>
+    <div></div>
+</body>
+</html>
