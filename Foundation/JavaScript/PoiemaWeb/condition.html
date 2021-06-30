@@ -168,6 +168,191 @@
             console.log(monthName); // November로 출력됨
         }
         
+        // switch문을 이용한 윤년 계산
+        {
+            let year = 2300;
+            let month = 2;
+            let days = 0;
+
+            switch (month) {
+                case 1, 3, 5, 7, 8, 10, 12:
+                    days = 31;
+                    break;
+                case 4, 6, 9, 11:
+                    days = 30;
+                    break;
+                case 2:
+                    days = ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) ? 29 : 30;
+                    break;
+                default:
+                    days = 0;
+                    break;
+            }
+            console.log(days);
+        }
+
+        // #3. 반복문
+        // #3.1 for문
+        `
+        for (초기식; 조건식; 증감식) {
+            조건식이 참인 경우 반복 실행할 문;
+        }
+        `
+        {
+            let sum = 0;
+            for (let i = 0; i <= 10; i++) {
+                sum += i
+            }
+            console.log(sum);
+        }
+        {
+            for (let i = 1; i >= 0; i--) {
+                console.log(i);
+            }
+            // 무한루프
+            // for (;;){}
+            console.log('asd');
+        }
+        {
+            for (let i = 2; i <= 9; i++) {
+                for (let j = 2; j <= 9; j++) {
+                    console.log(`${j} * ${i} = ${j * i}`);
+                }
+            }
+            for (let i = 2; i <= 9; i++){
+                console.log(i + '단');
+                for (let j = 2; j <= 9; j++){
+                    console.log(i + '*' + j + '=' + (i * j) );
+                }
+            }
+        }
+
+        // #3.2 while문
+        {
+            let count = 0;
+
+            while (count < 3) {
+                console.log(count);
+                count++;
+            }
+            console.log(count);
+
+            // 무한루프
+            // while (true) {}
+        }
+        {
+            let count = 0;
+
+            // 무한루프
+            while(true) {
+                console.log(`count: ${count}`);
+                count++;
+                if (count === 10) {
+                    break;
+                }
+            }
+        }
+
+        // #3.3 do while문
+        {
+            let count = 0;
+            do {
+                console.log(count);
+                count++;
+            } while (count < 0);
+        }
+
+        // #4. break문
+        {
+            // Uncaught SyntaxError: Illegal break statement
+            // if (true) {
+            //         break;
+            // }
+
+            while (true){
+                if (true) {
+                    break;
+                }
+            }
+
+            // foo라는 레이블 식별자가 붙은 레이블 문
+            foo: console.log('foo');
+
+            foo: {
+                console.log(1);
+                break foo;
+                console.log(2);
+            }
+            console.log('Done!');
+
+            // 중첩된 for문에서 외부for문을 탈출할 때 사용
+            outer: for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    console.log(`i: ${i}, j: ${j}`);
+                    console.log(`i + j: ${i + j}`);
+                    if (i + j === 3) break outer;
+                }
+            }
+
+            let string = 'Hello World.'
+            let index;
+
+            // 문자열은 유사배열이르모 for문으로 순회할 수 있다.
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === 'l') {
+                    index = i;
+                    break; // 반복문을 탈출한다.
+                }
+            }
+            console.log(index);
+
+            console.log(string.indexOf('l'));
+        }
+        
+        // #5. continue문
+        {
+            let string = 'Hello World.';
+            let count = 0;
+
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] !== 'l') continue;
+                count++;
+            }
+            console.log(`l count: ${count}`);
+            console.log(`l count: ${string.match(/l/g).length}`);
+            // arr = ['a','b']
+            // arr.forEach(element => {
+            //     console.log(element);
+            // });
+
+            count = 0;
+            for (let i = 0; i < string.length; i ++) {
+                if (string[i] === 'l') count++
+            }
+            console.log(`l count: ${count}`);
+
+            count = 0;
+            // continue문을 사용하지 않으면 if문 내에 코드를 작성해야 한다.
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === 'l') {
+                    count++;
+                    // code
+                    // code
+                }
+            }
+            console.log(`l count: ${count}`);
+
+            count = 0;
+            // continue문을 사용하면 if문 밖에 코드를 작성할 수 있다.
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] !== 'l') continue;
+                count++;
+                // code
+                // code
+            }
+            console.log(`l count: ${count}`);
+        }
+
     </script>
 </body>
 </html>
