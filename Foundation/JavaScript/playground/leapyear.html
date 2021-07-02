@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ==, ===, !=, !==
+        console.log('---------------------');
+        console.log(10 === '10');
+        // 4의 배수 이면서 100의 배수가아니거나 400의 배수이다.
+        // ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)
+
+        let year = parseInt(prompt('연도를 입력하세요'));
+        console.log(`${year}: ${typeof year}`);
+        console.log(year % 4);
+        if (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)) {
+            console.log(`${year}년은 윤년입니다.`);
+        }
+        else {
+            console.log(`${year}년은 윤년이 아닙니다.`);
+        }
+        // console.log('------------------------');
+        // console.log(`'2020' % 4의 타입은: ${typeof ('2020' % 4)}`);
+
+        console.log(parseInt('123412'));
+    </script>
+</body>
+</html>
