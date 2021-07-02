@@ -14,6 +14,10 @@
 
         // #2. 객체 생성 방법
         // #2.1 객체 리터럴
+        // 가장 일반적인 자바스크립트 객체 생성 방식이다.
+        // 클래스 기반 객체지향 언어와 비교할 때 매우 간편하게 객체를 생성할 수 있다.
+        // 중괄호 ({})를 사용해서 객체를 생성하는데 {}내에 1개 이상의 프로퍼티를 기술하면 해당 프로퍼티가 추가된 객체를 생성할 수 있다.
+        // {}내에 아무것도 기술하지 않으면 빈 객체가 생성된다.
         {
             let emptyObject = {};
             console.log(typeof emptyObject); // object
@@ -31,25 +35,107 @@
             person.sayHello()
         }
 
-        // ==, ===, !=, !==
-        console.log('---------------------');
-        console.log(10 === '10');
-        // 4의 배수 이면서 100의 배수가아니거나 400의 배수이다.
-        // ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)
-
-        let year = parseInt(prompt('연도를 입력하세요'));
-        console.log(`${year}: ${typeof year}`);
-        console.log(year % 4);
-        if (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)) {
-            console.log(`${year}년은 윤년입니다.`);
+        // #2.2 Object 생성자 함수
+        // new 연산자와 Oobject 생성자 함수를 호출하여 빈 객체를 생성할 수 있다. 빈객체 생성 이후 프로퍼티 또는 메서드를 추가하여 객체를 완성하는 방법이다.
+        {
+            // 빈 객체의 생성
+            let person = new Object();
+            // 프로퍼티 추가
+            person.name = 'Shin';
+            person.gender = 'male';
+            person.sayHello = function() {
+                console.log('Hi! My name is: ' + person.name);
+                // console.log('Hi! My name is: ' + this.name);
+                // person객체에서 호출했기 때문에 this를 사용해도 person의 name을 가져온다.
+            }
+            console.log(typeof person);
+            console.log(person);
+            person.sayHello()
         }
-        else {
-            console.log(`${year}년은 윤년이 아닙니다.`);
-        }
-        // console.log('------------------------');
-        // console.log(`'2020' % 4의 타입은: ${typeof ('2020' % 4)}`);
+        // 사실 객체 리터럴 방식으로 생성된 객체는 결국 빌트인(built-in)함수인 Object 생성자 함수로 객체를 생성하는 것을 단순화시킨 축약 표현(short-hand)이다.
+        // 즉, 개발자가 일부러 Object 생성자를 이용해 객체를 생성해야 할 일은 거의 없다.
 
-        console.log(parseInt('123412'));
+
+        // #2.3. 생성자 함수
+        // 객체 리터럴 방식과 Object 생성자 함수 방식으로 객체를 생성하는 것은 프로퍼티 값만 다른 여러 개의 객체를 생성할 때 불편하다.
+        // 동일한 프로퍼티를 갖는 객체임에도 불구하고 매번 같은 프로퍼티를 기술해야 한다.
+        {
+            let person1 = {
+                name: 'Shin', 
+                gender: 'male', 
+                sayHello: function() {
+                    console.log('Hi! My name is ' + this.name);
+                    // console.log('Hi! My name is ' + person1.name);
+                    // this 대신 person1.name으로 해도 동일한 결과 나옴
+                    // 신기한 점으로 person2.name을 하면 Kim이 들어간다.
+                    // 객체에서 다른 객체의 멤버변수를 호출할 수 있다.
+                }
+            };
+
+            let person2 = {
+                name: 'Kim', 
+                gender: 'female',
+                sayHello: function() {
+                    console.log('Hi! My name is ' + this.name);
+                }
+            };
+
+            person1.sayHello()
+            person2.sayHello()
+        }
+
+        // 생성자 함수 사용
+        {
+            // 생성자 함수
+            function Person(name, gender) {
+                this.name = name;
+                this.gende = gender;
+                this.sayHello = function() {
+                    console.log('Hi! My name is ' + this.name);
+                };
+            };
+
+            // 인스턴스의 생성
+            let person1 = new Person('Shin', 'male');
+            let person2 = new Person('Kim', 'female');
+            
+            person1.sayHello();
+            person2.sayHello();
+
+            // 객체의 멤버변수, 메서드의 범위
+            function Person(name, gender) {
+                let married = true; // private
+                this.name = name; // public
+                this.gender = gender; // public
+                this.sayHello = function() { // public
+                    console.log('Hi! My name is ' + this.name);
+                }
+            }
+
+            let person = new Person('BMO', 'None');
+            console.log(typeof person);
+            console.log(person);
+            console.log(person.married); // undifined
+            console.log(person.name);
+            console.log(person.gender);
+            person.sayHello()
+
+        }
+        {
+            var person = {
+                'first-name': 'Ung-mo',
+                'last-name': 'Lee',
+                gender: 'male',
+                1: 10,
+                function: 1 // OK. 하지만 예약어는 사용하지 말아야 한다.
+            };
+
+            console.log(person);
+            console.log(person.gender);
+            console.log(person['first-name']);
+        }
+        
+
     </script>
 </body>
 </html>
