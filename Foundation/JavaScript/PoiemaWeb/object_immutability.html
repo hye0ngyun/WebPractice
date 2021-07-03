@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // #1. immutable value vs mutable value
+
+        {
+            // 원시 타입 primirive data type
+            let _bool = true; // Boolean
+            let _null = null; // null
+            let _und = undefined; // undefined
+            let _num = 12345; // Number
+            let _string = 'string'; // string
+            let _symbol = Symbol('symbol') // symbol
+            console.log('--- immutable value ---');
+            console.log(_bool, _null, _und, _num, _string, _symbol);
+            console.log(typeof _bool, typeof _null, typeof _und, typeof _num, typeof _string, typeof _symbol);
+
+            // 위와 같은 원시 타입 이외의 모든 값은 객체(object) 타입이며 변경 가능한(mutable)값이다.
+        }
+        {
+            // str은 'Hello'라는 문자열 원시 타입의 메모리를 가리킨다.
+            let str = 'Hello';
+            // str은 더 이상 'Hello'라는 문자열 원시 타입의 메모리를 가리키지 않고 'world'라는 문자열 원시 타입의 메모리를 가리킨다.
+            str = 'world';
+        }
+
+        {
+            let statement = 'I am an immutable value'; // string은 immutable value
+
+            // string 객체의 slice()메소드는 statement 변수에 저장된 문자열을 변경하는 것이 아니라 사실은 새로운 문자열을 생성하여 반환하고 있다.
+            let otherStr = statement.slice(8, 17);
+            // let otherStr = statement.slice(8, -6);
+            console.log(statement);
+            console.log(otherStr);
+
+            let arr = [];
+            console.log(arr.length); // 0
+
+            let v2 = arr.push(2); // arr.push()는 메소드 실행 후 arr의 length를 반환
+            console.log(arr.length); // 1
+            console.log(arr, v2, arr.push(3)); // [2, 3], 1, 2
+        }
+        
+        {
+            let user = {
+                name: 'Lee', 
+                address: {
+                    city: 'Seoul'
+                }
+            };
+
+            let myName = user.name;
+
+            user.name = 'Kim';
+            console.log(myName); // Lee
+
+            myName = user.name; // 재할당
+            console.log(myName); // Kim
+        }
+
+        {
+            let user1 = {
+                name: 'Lee', 
+                address: {
+                    city: 'Seoul'
+                }
+            };
+
+            let user2 = user1; // 변수 user2는 객체 타입니다.
+
+            user2.name = 'Kim';
+
+            console.log(user1.name); // Kim
+            console.log(user2.name); // Kim
+        }
+        
+        // #2.1 Object.assgin
+        {
+            // Copy
+            let obj = { a: 1 };
+            let copy = Object.assign({}, obj);
+            console.log(copy);
+            console.log(obj === copy);
+
+            // Merge
+            let o1 = { a: 1 };
+            let o2 = { b: 2 };
+            let o3 = { c: 3 };
+
+            let merge1 = Object.assign(o1, o2, o3);
+            console.log(merge1);
+            console.log(o1);
+            console.log(merge1 === o1);
+
+            // Merge
+            let o4 = { a: 1 };
+            let o5 = { b: 2 };
+            let o6 = { c: 3 };
+
+            let merge2 = Object.assign({}, o4, o5, o6);
+            console.log(merge2);
+            console.log(o4);
+            console.log(merge2 === o4);
+        }
+        {
+            const user1 = {
+                name: 'Lee', 
+                address: {
+                    city: 'Seoul'
+                }
+            };
+
+            // 새로운 빈 객체에 user1을 copy한다.
+            const user2 = Object.assign({}, user1);
+            console.log(user1 === user2);
+
+            user2.name = 'Kim'
+            console.log(user1.name);
+            console.log(user2.name);
+
+            // 객체 내부의 객체(Nested Object)는 Shallow copy 된다.
+            console.log(user1.address === user2.address); // true
+
+            user1.address.city = 'Busan';
+            console.log(user1.address.city, user2.address.city);
+            console.log(user1.address.city === user2.address.city);
+        }
+
+        // #2.2 Object.freeze
+        {
+            const user1 = {
+                name: 'Lee', 
+                address: {
+                    city: 'Seoul'
+                }
+            };
+
+            // Object.assign은 완전한 deep copy를 지원하지 않는다.
+            const user2 = Object.assign({}, user1, {name: 'Kim'});
+            console.log(user1.name);
+            console.log(user2.name);
+
+            Object.freeze(user1);
+
+            user1.name = 'Kim'; // 무시된다.
+
+            console.log(user1, user2);
+            console.log(Object.isFrozen(user1), Object.isFrozen(user2)); // true false
+
+        }
+        {
+            // freeze는 내부 객체(Nested Object)는 변경 가능하다.
+            const user = {
+                name: 'Lee', 
+                address: {
+                    city: 'Seoul'
+                }
+            };
+
+            Object.freeze(user);
+
+            user.address.city = 'Busan'
+
+            console.log(user.address.city);
+        }
+
+        // 위와 같은 문제를 해결
+        // 내부 객체까지 변경 불가능하게 만들려면 Deep freeze를 하여야 한다.
+        {
+            function deepFreeze(obj) {
+                const props = Object.getOwnPropertyNames(obj);
+
+                props.forEach((name) => {
+                    const prop = obj[name];
+                    if(typeof prop === 'object' && prop !== null) {
+                        deepFreeze(prop);
+                    }
+                });
+                return Object.freeze(obj);
+            }
+
+            const user = {
+                name: 'Lee', 
+                address: {
+                    city: 'Seoul'
+                }
+            };
+
+            deepFreeze(user);
+
+            user.kim = 'Kim'; // 무시된다.
+            user.address.city = 'Busan'; // 무시된다.
+            console.log(user);
+        }
+
+        // #2.3 Immutable.js
+        {
+            // $ npm install immutable
+            
+            const { Map } = require('immutable');
+            const map1 = Map({ a: 1, b: 2, c: 3 });
+            const map2 = map1.set('b', 50);
+            map1.get('b'); // 2
+            map2.get('b'); // 50
+        }
+    </script>
+    <!-- serverside -->
+    <!-- clientside -->
+</body>
+</html>
