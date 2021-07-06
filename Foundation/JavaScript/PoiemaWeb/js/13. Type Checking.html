@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Checking</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis veniam libero nam necessitatibus! Quas hic ab distinctio velit ex, commodi beatae earum, voluptas dolor deserunt sed, a reprehenderit iste.</p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quod sequi, exercitationem cupiditate, odit culpa placeat vitae nam eligendi esse officiis illo. Quaerat mollitia sunt cumque! Excepturi delectus nisi atque.</div>
+    <script>
+        // 자바스크립트는 동적 타입(dynamic typed)언어이르모 변수에 어떤 값이 할당될 지 예측하기 어렵다.
+        {
+            // sum함수의 매개변수인 a, b에는 어떤 타입의 값(int, float, string 등)이 들어갈지 예상할 수 없다.
+            function sum(a, b) {
+                // a와 b가 어떤 타입인지 체크 필요
+                return a + b;
+            }
+            // 사용자 정의 함수 sum을 숫자를 더할 것으로 예상하고 만들었으나 아래와 같이
+            console.log(sum('x', 'y')); // 'xy'를 반환하게 된다.
+        }
+        
+        // #1. typeof
+        // 타입 연산자(Type Operator) typeof는 피연산자의 데이터 타입을 문자열로 반환한다.
+        {
+            console.log(typeof ''); // string
+            console.log(typeof 1); // number
+            console.log(typeof NaN); // number
+            console.log(typeof true); // boolean
+            console.log(typeof []); // object
+            console.log(typeof {}); // object
+            console.log(typeof new String()); // object
+            console.log(typeof new Date()); // object
+            console.log(typeof /test/gi); // object
+            console.log(typeof function() {}); // function
+            console.log(typeof undefined); // undefined
+            console.log(typeof null); // object(설계적 결함)
+            console.log(typeof undeclared); // undefined(설계적 결함)
+
+            /*
+            그런데 typeof 연산자는 null과 배열의 경우 object, 함수의 경우 function를 반환하고, Date, RegExp, 사용자 정의 객체 등 거의 모든 객체의 경우, object를 반환한다. 따라서 typeof는 null을 제외한 원시 타입을 체크하는 데는 문제가 없지만 객체의 종류까지 구분하여 체크하려할 때는 사용하기는 곤란하다. 여러 종류의 객체(일반 객체, 배열, Date, RegExp, Function, DOM 요소 등)를 구분할 수 있는 타입 체크 기능을 만들어보자.
+            */
+        }
+
+        // #2. Object.prototype.toString
+        // Object.prototype.toString 메소드는 객체를 나타내는 문자열을 반환한다.
+        {
+            let obj = new Object();
+            console.log(obj.toString());
+            console.log(Object.prototype.toString.call(''));
+            console.log(Object.prototype.toString.call(new String()));
+            console.log(Object.prototype.toString.call(1));
+            console.log(Object.prototype.toString.call(function(){}));
+            console.log(Object.prototype.toString.call({}));
+        }
+        {
+            function getType(target) {
+                return Object.prototype.toString.call(target).slice(8, -1);
+            }
+            console.log(getType('string'));
+            console.log(getType(123));
+            console.log(getType({}));
+            console.log(getType(()=>{}));
+        }
+        {
+            function sum(a, b) {
+                // a와 b가 number 타입인지 체크
+                if(getType(a) !== 'Number' || getType(b) !== 'Number') {
+                    throw new TypeError('파라미터에 number값이 아닌 값이 할당되었습니다.');
+                }
+                return a + b;
+            }
+            console.log(sum(10, 20));
+            // console.log(sum('10', 20));
+        }
+        // 타입별로 체크하는 기능함수 만들기
+        {
+            function getType(target) {
+                return Object.prototype.toString.call(target).slice(8, -1);
+            }
+            function isString(target) {
+                return getType(target) === 'String';
+            }
+
+            function isNumber(target) {
+                return getType(target) === 'Number';
+            }
+
+            function isBoolean(target) {
+                return getType(target) === 'Boolean';
+            }
+
+            function isNull(target) {
+                return getType(target) === 'Null';
+            }
+
+            function isUndefined(target) {
+                return getType(target) === 'Undefined';
+            }
+
+            function isObject(target) {
+                return getType(target) === 'Object';
+            }
+
+            function isArray(target) {
+                return getType(target) === 'Array';
+            }
+
+            function isDate(target) {
+                return getType(target) === 'Date';
+            }
+
+            function isRegExp(target) {
+                return getType(target) === 'RegExp';
+            }
+
+            function isFunction(target) {
+                return getType(target) === 'Function';
+            }
+        }
+
+        // #3. instanaceof
+        {
+            // HTMLElement를 상속받은 모든 DOM 요소에 css 프로퍼티를 추가하고 값을 할당한다.
+            function css(elem, prop, val) {
+                // type checking ..
+                elem.style[prop] = val;
+            }
+            elem = document.querySelectorAll('body');
+            document.write('1234asdf')
+            css(elem[0], 'color', 'red');
+            // css({}, 'color', 'red'); // Uncaught TypeError
+            // css함수의 첫 번째 매개변수에는 반드시 HTMLElement를 상속받는 모든 DOM 요소를 전달하여야 한다. 다시말해, css 함수의 첫 번째 매개변수에는 HTMLDivElement, HTMLUListElement, HTMLLIElement, HTMLParagraphElement등 모든 DOM 요소가 전달될 수 있다. 이를 일일이 체크할 수는 없기 때문에 HTMLElement를 상속받은 객체, 즉 DOM 요소인지 확인하여야 한다.
+            document.write("<img src='https://poiemaweb.com/img/HTMLElement.png'>")
+        }
+        // instanceof 연산자는 피연산자인 객체가 우항에 명시한 타입의 인스턴스인지 여부를 알려준다. 이떄 타입이란 constructor를 말하며 프로토타입 체인에 존재하는 모든 constructor를 검색하여 일치하는 constructor가 있다면 true를 반환한다.
+        {
+            function Person() {}
+            const person = new Person();
+
+            console.log(person instanceof Person);
+            console.log(person instanceof Object);
+            console.log(person instanceof function(){});
+        }
+        // instanceof를 활용해 css함수에 타입 체크 기능을 추가해보자.
+        {
+            // function css(elem, prop, style) {
+            //     if elem instanceof 
+            // }
+            function getType(target) {
+                return Object.prototype.toString.call(target).slice(8, -1);
+            }
+
+            function isString(target) {
+                return getType(target) === 'String';
+            }
+
+            function isElement(target) {
+                // !!은 not not 즉, 불리언 타입으로 변환한다.
+                // target이 null 타입이 아니면서
+                // target이 HTMLElement 즉, DOM 요소중 하나인 경우
+                return !!(target && target instanceof HTMLElement);
+                // 또는 'nodeType'을 사용할 수도 있다.
+                // return !!(target && target.nodeType === 1);
+            }
+
+            function css(elem, prop, val) {
+                if(!(isElement(elem) && isString(prop) && isString(val))) {
+                    throw new TypeError('매개변수의 타입이 맞지 않습니다.');
+                }
+                elem.style[prop] = val;
+            }
+            css(document.querySelector('p'), 'color', 'blue')
+            css(document.querySelector('div'), 'color', 'orange')
+            let elem = document.querySelector('p');
+
+            // !!(target && target instanceof HTMLElement);
+            console.log(!!(null && elem instanceof HTMLElement));
+            console.log(!!(' ' && elem instanceof HTMLElement));
+            console.log(!!(elem && elem instanceof HTMLElement));
+        }
+
+        // #4. 유사 배열 객체
+        // 배열인지 체크하기 위해서는 Array.isArray 메소드를 사용한다.
+        {
+            console.log(Array.isArray([]));
+            console.log(Array.isArray({}));
+            console.log(Array.isArray('123'));
+        }
+    </script>
+</body>
+</html>
