@@ -1,68 +1,68 @@
+<h2 data-ke-size="size26"><span style="font-family: 'Nanum Gothic';">1. <strong>자바스크립트 변수 할당</strong></span></h2>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">자바스크립트에서 변수가 할당될 때는 아래와 같은 3단계를 거친다.</span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">1) <strong>선언 단계</strong>(Declaration phase)변수를 실행 콘텍스트의 변수 객체(Variable Object)에 등록한다. 이 변수 객체는 스코프가 참조하는 대상이 된다.</span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">2) <strong>초기화 단계</strong>(Initialization phase)변수 객체(Variable Object)에 등록된 변수를 위한 공간을 메모리에 확보한다. 이 단계에서 변수는 undefined로 초기화된다.</span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">3) <strong>할당 단계</strong>(Assignment phase)undefined로 초기화된 변수에 실제 값을 할당한다.</span></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size23"><span style="font-family: 'Nanum Gothic';">1.1 <strong>var</strong></span></h3>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';"><strong>var 키워드로 선언된 변수는 선언과 초기화 단계가 한 번에 일어난다.</strong></span></p>
+<p>[##_Image|kage@kTztj/btq81ZrgdBU/vNomg7HYyT7H4rgegW2Lo0/img.png|alignCenter|data-origin-width="1016" data-origin-height="229" data-ke-mobilestyle="widthOrigin"|[그림 1] - var의 변수 할당||_##]</p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">자바스크립트 ES6문법 이전에는 var 키워드를 사용했는데 이 var키워드는 자바스크립트에서 변수 호이스팅(Hoisting)이라는 것을 발생시킨다.(let과 const도 변수 호이스팅을 발생시키나 약간 다르게 작동한다.) 호이스팅은 끌어올린다 라는 의미를 가지고 있으며 말 그대로 변수를 끌어올린다는 말이다. 그럼 여기서 끌어올린다는 게 정확이 어떤 의미인지, 어떻게 작동하는지 코드와 함께 호이스팅에 대해 알아보자</span></p>
+<pre id="code_1625496250338" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>// 변수 호이스팅(Variable hoisting) 발생
+// 스코프의 선두에서 선언 단계와 초기화 단계가 실행
+console.log(foo); // 1) undefined
 
+var foo = 123; // 2) 변수 선언
 
-<!DOCTYPE html>
+console.log(foo); // 3) 123</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">위 코드를 해석해보면</span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">1) 2)에서 var 키워드로 foo를 선언함에 의해 <strong>foo라는 변수가 스코프의 선두에서 선언 및 초기화(undefined)</strong> 단계 실행후 log로 출력하기 때문에 <strong>undefined 출력</strong></span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">2) var키워드로 foo변수에 <strong>123이라는 값을 할당</strong></span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">3) foo변수에 123 값을 할당한 후 log로 출력하기 때문에 <strong>123 출력</strong></span></p>
+<p data-ke-size="size16">&nbsp;</p>
+<h3 data-ke-size="size23"><span style="font-family: 'Nanum Gothic';">1.2 <strong>let</strong></span></h3>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';"><strong>let 키워드로 선언된 변수는 선언과 초기화 단계가 분리돼있다.</strong></span></p>
+<p>[##_Image|kage@9LfMS/btq8ZP3XPnc/l9mVHmbbGq1k3xOwU7LsB1/img.png|alignCenter|data-origin-width="931" data-origin-height="337" data-ke-mobilestyle="widthOrigin"|[그림 2] - let의 변수 할당||_##]</p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">자바스크립트 ES6문법부터는 let 키워드를 사용하는데 이 let 키워드 또한 변수 호이스팅을 발생시킨다.</span></p>
+<pre id="code_1625583199601" class="javascript" style="display: block; overflow: auto; padding: 20px; color: #383a42; background: #f8f8f8; font-size: 14px; font-family: 'SF Mono', Menlo, Consolas, Monaco, monospace; border: 1px solid #ebebeb; line-height: 1.71; margin: 20px auto 0px; cursor: default; z-index: 1; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-ke-language="javascript" data-ke-type="codeblock"><code>// 스코프의 선두에서 선언 단계가 실행된다.
+// 아직 변수가 초기화(메모리 공간 확보와 undefined로 초기화)되지 않았다.
+// 따라서 변수 선언문 이전에 변수를 참조할 수 없다.
+console.log(foo1);
+// Uncaught ReferenceError: Cannot access 'foo1' before initialization
 
-<html>
+let foo1; // 변수 선언문에서 초기화 단계가 실행된다.
+console.log(foo1); // undefined
 
-<head>
-    <meta charset="utf-8"> 
- 	<title>나의 타이틀</title>
-</head>
-
-<body bgcolor=green  text=white>
-
-  <h1>짱구네 집</h1>
-  <p>단락. paragraph</p>
-
-  <div>
-  	<a href='http://func.kr'>우리카페</a>
-  </div>
-
-  <div>
-    <a href='http://www.naver.com'>네이버</a>
-  </div>
-
- <div>
-    <a href='http://w3schools.com'>공부하러가자</a>
-</div>
-
-<table style='width:50%' border=1 align=center>
-  <thead align=center>
-    <tr>
-        <th>이름</th>
-        <th>소속</th> 
-        <th>연봉</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr align=center>
-        <td>류현진</td>
-        <td>토론토</td>
-        <td>1500</td>
-    </tr>
-    
-    <tr align=center>
-        <td>김하성</td>
-        <td>센디에이고</td>
-        <td>700</td>
-    </tr>
-    
-    <tr align=center>
-        <td>양현종</td>
-        <td>텍사스</td>
-        <td>800</td>
-    </tr>
-</tbody>
-  
-</table>
-    
-  
-  <div id='id1'>
-  	   여기는 서울 
-       <p> 단락 </p>
-  </div>
-  
-</body>
-
-</html>
-
+foo1 = 1; // 할당문에서 할당 단계가 실행된다.
+console.log(foo1); // 1</code></pre>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">아래는 let으로 변수 선언 시 블록 레벨 스코프 특성과 let 호이스팅을 함께 보여주고있다.</span></p>
+<pre id="code_1625583157298" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>{ // block - 1
+  // 결국 ES6에서는 호이스팅이 발생하지 않는 것과 차이가 없어 보인다.
+  // 하지만 그렇지 않다. 아래 예제를 살펴보자.
+  // block - 1의 foo2변수 선언
+  let foo2 = 1; // block - 1의 foo2변수 초기화 및 할당
+  { // block - 2
+    // block - 2의 foo2변수 선언
+    console.log(foo2); // TDZ, ReferenceError 발생
+    let foo2 = 2; // block - 2의 foo2변수 초기화 및 할당
+  }
+  console.log(foo2); // 1
+}</code></pre>
+<h3 data-ke-size="size23"><span style="font-family: 'Nanum Gothic';">1.3 <strong>const</strong></span></h3>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';"><strong>const 키워드로 선언된 변수는 let과 동일하게 선언과 초기화 단계가 분리돼있다.</strong></span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">let과 다른 점은 const로 선언된 변수는 <strong>재할당이 불가능하다는 것이다.</strong></span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">이와 같은 특성을 이용해 const는 상수(변하지 않는 값)을 위해 사용한다. 하지만 꼭 상수 선언만을 위해 사용하는 것이 아닌 변경이 발생할 필요가 없는 원시 값이나 객체에는 const 키워드를 사용한다. 따라서 보통 const로 변수 선언을 하고 재할당이 필요한 경우 const 키워드를 let으로 변경하는 방법도 있다.</span></p>
+<pre id="code_1625583709614" class="javascript" data-ke-language="javascript" data-ke-type="codeblock"><code>{
+  // const 선언과 초기화
+  // let은 재할당이 자유로우나 const는 재할당이 금지된다.
+  const FOO = 123;
+  FOO = 456;
+  // Uncaught TypeError: Assignment to constant variable.
+}</code></pre>
+<p data-ke-size="size16">&nbsp;</p>
+<h2 data-ke-size="size26"><span style="font-family: 'Nanum Gothic';">Summary</span></h2>
+<p data-ke-size="size16"><strong><span style="font-family: 'Nanum Gothic';">var vs let vs const</span></strong></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">세가지 변수 선언 키워드를 정리하자면</span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- <strong>ES6</strong>를 사용한다면 <strong>var 키워드를 사용하지 않는다. </strong></span><br /><span style="font-family: 'Nanum Gothic';">- <strong>재할당이 필요한 경우</strong>에 한정해 <strong>let 키워드</strong>를 사용한다. 이때 변수의 스코프(블록)는 최대한 좁게 만든다.</span></p>
+<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- <strong>변경이 발생하지 않는(재할당이 필요 없는 상수) 원시 값과 객체</strong>에는 <strong>const 키워드</strong>를 사용한다. const 키워드는 재할당을 금지하므로 var, let보다 안전하다.</span></p>
