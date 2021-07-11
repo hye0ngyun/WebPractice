@@ -56,3 +56,4 @@ console.log(`your month: ${month}, your season: ${season}`);
 a = parseInt(prompt());
 
 console.log(typeof a);
+
