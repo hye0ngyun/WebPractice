@@ -74,8 +74,30 @@
             // foo 객체를 생성한 객체는 Person() 생성자 함수이다.
             console.log(foo.constructor === Person);
 
-            // 
+            // Person() 생성자 함수를 생성한 객체는 Function() 생성자 함수이다.
             console.log(Person.constructor === Function);
+        }
+
+        // #4. Prototype chain
+        {
+            let student = {
+                name: 'Shin', 
+                score: 90
+            };
+
+            // Object.prototype.hasOwnProperty()
+            console.log(student.hasOwnProperty('name')); // true
+        }
+        {
+            let student = {
+                name: 'Shin', 
+                score: 90
+            };
+
+            console.dir(student);
+            console.log(student.hasOwnProperty('name')); // true
+            console.log(student.__proto__ === Object.prototype); // true
+            console.log(Object.prototype.hasOwnProperty('hasOwnProperty')); // true
         }
     </script>
 </body>
