@@ -122,6 +122,28 @@
 
             document.write('<img src="https://poiemaweb.com/img/object_literal_prototype_chaining.png" width=500px');
         }
+
+        // #4.2 생성자 함수로 생성된 객체의 프로토타입 체인 
+        // 함수 정의하는 3가지 방법
+        // 1) 함수 선언식
+        // 2) 함수 표현식
+        // 3) Function() 생성자 함수
+        {
+            // 함수 표현식
+            let square = function(number) {
+                return number * number;
+            };
+        }
+        {
+            // 함수 선언식
+            let square = function square(number) {
+                return number * number;
+            };
+        }
+        // 결국 함수 선언식, 함수 표현삭 모두 함수 리터럴 방식을 사용한다. 함수 리터럴 방식을 Function() 생성자 함수로 생성하는 것을 단순화 시킨 것이다.
+        /*
+        즉, 3가지 함수 정의 방식은 결국 Function() 생성자 함수를 통해 함수 객체를 생성한다, 따라서 어떠한 방식으로 함수 객체를 생성하여도 모든 함수 객체의 prototype 객체는 Function.prototype이다. 생성자 함수도 함수 객체이므로 생성자 함수의 prototype 객체는 Function.prototype이다.
+        */
     </script>
 </body>
 </html>
