@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        // 외부함수 outter
+        function outter() {
+          let title = "coding everybody";
+          // 내부함수
+          return function () {
+            alert(title);
+          };
+        }
+        // inner안에 outter의 return인 alert(title)을 수행하는 함수 할당
+        let inner = outter();
+        inner();
+
+        // return은 함수의 생을 마감했다는 의미이다.
+        // 즉, outter()함수는 생을 마감했음에도 불구하고 inner()함수를 호출하면 outter()함수의 변수인 title변수가 alert으로 출력된다.
+        // 이것이 클로저(closure)이다.
+      }
+    </script>
+  </body>
+</html>

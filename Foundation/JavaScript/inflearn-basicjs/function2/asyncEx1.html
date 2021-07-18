@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  </head>
+  <body>
+    <script>
+      $.get(
+        // 아래 주소의 정보를 가져온다.
+        "datasource.json",
+        // 아래 함수를 호출한다.
+        function (result) {
+          // json파일에서 가져온 값을 result에 넣는다.
+          console.log(result);
+        },
+        "json"
+      );
+    </script>
+  </body>
+</html>

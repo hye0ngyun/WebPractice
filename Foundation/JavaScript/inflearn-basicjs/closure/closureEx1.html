@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // closure는 외부 함수에 있는 변수를 내부 함수에서 호출할 수 있는 특성을 말한다.
+      {
+        // 외부 함수 outter
+        function outter() {
+          let title = "coding everybody";
+          // 내부 함수 inner
+          function inner() {
+            alert(title);
+          }
+          inner();
+        }
+        outter();
+      }
+    </script>
+  </body>
+</html>

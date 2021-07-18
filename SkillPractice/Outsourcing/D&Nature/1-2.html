@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="form.css" />
     <style>
-        .agree-body {
-            padding: 30px 20px;
-        }
-        .self-auth {
-            background-color: #F4F4F4;
-            padding: 20px 0;
-            margin: 10px 0;
-        }
-        .self-auth div > p {
-            max-width: 250px;
-            margin: 10px auto;
-        }
-        .self-auth > div > a {
-            display: inline-block;
-            padding: 15px 70px;
-            border-radius: 5px;
-            background-color: #444444;
-            text-decoration: none;
-            color: white;
-        }
-        .agree-content {
-            margin: 30px 0;
-        }
-        .form-agree-wrap {
-            margin: 30px 40px;
-            /* padding: 10px 0; */
-            border: 2px solid #EBEBEB;
-        }
-        .form-agree-wrap > div {
-            padding: 15px;
-        }
-        .all-agree {
-            border-bottom: 2px solid #EBEBEB;
-        }
-        .right-align {
-            display: flex;
-
-        }
+      .agree-body {
+        padding: 30px 20px;
+      }
+      .self-auth {
+        background-color: #f4f4f4;
+        padding: 20px 0;
+        margin: 10px 0;
+      }
+      .self-auth div > p {
+        max-width: 250px;
+        margin: 10px auto;
+      }
+      .self-auth > div > a {
+        display: inline-block;
+        padding: 15px 70px;
+        border-radius: 5px;
+        background-color: #444444;
+        text-decoration: none;
+        color: white;
+      }
+      .agree-content {
+        margin: 30px 0;
+      }
+      .form-agree-wrap {
+        margin: 30px 40px;
+        /* padding: 10px 0; */
+        border: 2px solid #ebebeb;
+      }
+      .form-agree-wrap > div {
+        padding: 15px;
+      }
+      .all-agree {
+        border-bottom: 2px solid #ebebeb;
+      }
+      .right-align {
+        display: flex;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 회원가입 헤더 -->
     <div class="text-center">
-        <h2 class="form-head">회원가입</h2>
-        <p>디앤네이쳐 회원가입을 시작하겠습니다.</p>
+      <h2 class="form-head">회원가입</h2>
+      <p>디앤네이쳐 회원가입을 시작하겠습니다.</p>
     </div>
 
     <!-- 아이디 / 비밀번호 바디 -->
     <form action="/index.html" method="post">
-        <div class="form-body">
-            <div class="form-item">
-                <span>아이디(이메일)</span>
-                <input type="email">
-            </div>
-            <div class="form-item">
-                <span>비밀번호</span>
-                <input type="password">
-            </div>
-            <div class="form-item">
-                <span>비밀번호 확인</span>
-                <input type="password">
-            </div>
-            <p class="text-center gray pad-lr-20">숫자와 문자 포함 형태의 6~12자리 이내의 암호 정규식 영문, 숫자 조합으로 비밀번호를 설정해주세요.</p>
+      <div class="form-body">
+        <div class="form-item">
+          <span>아이디(이메일)</span>
+          <input type="email" />
+        </div>
+        <div class="form-item">
+          <span>비밀번호</span>
+          <input type="password" />
+        </div>
+        <div class="form-item">
+          <span>비밀번호 확인</span>
+          <input type="password" />
+        </div>
+        <p class="text-center gray pad-lr-20">
+          숫자와 문자 포함 형태의 6~12자리 이내의 암호 정규식 영문, 숫자
+          조합으로 비밀번호를 설정해주세요.
+        </p>
+      </div>
+
+      <!-- 본인인증 -->
+      <div class="agree-body form-btn-above">
+        <div class="self-auth text-center">
+          <div><p>※ 본인인증시 성함, 전화번호를 저장합니다.</p></div>
+          <div><a href="#">본인인증</a></div>
         </div>
 
-        <!-- 본인인증 -->
-        <div class="agree-body form-btn-above">
-            <div class="self-auth text-center">
-                <div><p>※ 본인인증시 성함, 전화번호를 저장합니다.</p></div>
-                <div><a href="#">본인인증</a></div>
+        <!-- 개인정보 이용 약관 동의 -->
+        <div class="agree-content">
+          <div class="text-center text-bold">개인정보 이용 약관 동의</div>
+          <div class="pad-lr-20">
+            <p class="text-center gray pad-lr-20">
+              &nbsp디앤네이쳐는 수집된 개인정보의 취급 및 관리를 스스로 수행함을
+              원칙으로하나, 원활한 업무 처리를 위하여 필요한 경우 개인정보 취급
+              업무의 일부 또는 전부를 수탁사에 위탁합니다. 법령에 따른
+              개인정보의 수집 · 이용, 계약의 이행, 편의 증진을 위한 개인정보
+              처리 위탁 및 개인정보 처리와 관련된 일반 사항은 개인정보처리방침에
+              따릅니다.
+            </p>
+          </div>
+          <div class="form-agree-wrap">
+            <div class="all-agree">
+              <input type="radio" />
+              <label class="text-bold">전체 동의</label>
             </div>
-        
-            <!-- 개인정보 이용 약관 동의 -->
-            <div class="agree-content">
-                <div class="text-center text-bold">개인정보 이용 약관 동의</div>
-                <div class="pad-lr-20">
-                    <p class="text-center gray pad-lr-20">&nbsp디앤네이쳐는 수집된 개인정보의 취급 및 관리를 스스로 수행함을 원칙으로하나, 원활한 업무 처리를 위하여 필요한 경우 개인정보 취급 업무의 일부 또는 전부를 수탁사에 위탁합니다. 법령에 따른 개인정보의 수집 · 이용, 계약의 이행, 편의 증진을 위한 개인정보 처리 위탁 및 개인정보 처리와 관련된 일반 사항은 개인정보처리방침에 따릅니다.</p>
-                </div>
-                <div class="form-agree-wrap">
-                    <div class="all-agree">
-                        <input type="radio">
-                        <label class="text-bold">전체 동의</label>
-                    </div>
-                    <div>
-                        <div class="right-align">
-                            <input type="checkbox">
-                            <label class="text-bold">개인정보 수집 동의(필수)</label>
-                            <span style="
-                            margin-left: auto;
-                        ">></span>
-                        </div>
-                        <div class="right-align">
-                            <input type="checkbox">
-                            <label class="text-bold">제 3자 정보 제공 동의(필수)</label>
-                            <span style="
-                            margin-left: auto;
-                        ">></span>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <div class="right-align">
+                <input type="checkbox" />
+                <label class="text-bold">개인정보 수집 동의(필수)</label>
+                <span style="margin-left: auto">></span>
+              </div>
+              <div class="right-align">
+                <input type="checkbox" />
+                <label class="text-bold">제 3자 정보 제공 동의(필수)</label>
+                <span style="margin-left: auto">></span>
+              </div>
             </div>
+          </div>
         </div>
-        
-        <!-- 가입하기 버튼 -->
-        <div class="form-btn-bottom">
-            <button type="submit">
-                <span>가입하기</span>
-            </button>
-        </div>
+      </div>
+
+      <!-- 가입하기 버튼 -->
+      <div class="form-btn-bottom">
+        <button type="submit">
+          <span>가입하기</span>
+        </button>
+      </div>
     </form>
-</body>
+  </body>
 </html>
