@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      .popup {
+        display: none;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #aaaaaaaa;
+      }
+      .popup > div:first-child {
+        justify-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="popup-btn">popup</button>
+    <div class="popup">
+      <div class="x">x</div>
+      <div>popup</div>
+    </div>
+    <script>
+      {
+        let popup_btn = document.querySelector(".popup-btn");
+        let popup = document.querySelector(".popup");
+        let x = document.querySelector(".x");
+        popup_btn.addEventListener("click", () => {
+          popup.style.display = "flex";
+        });
+        x.addEventListener("click", () => {
+          popup.style.display = "none";
+        });
+      }
+    </script>
+  </body>
+</html>
