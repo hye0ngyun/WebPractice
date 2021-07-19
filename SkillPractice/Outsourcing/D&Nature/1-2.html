@@ -4,47 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signup</title>
+    <title>Signup01</title>
     <link rel="stylesheet" href="form.css" />
-    <style>
-      .agree-body {
-        padding: 30px 20px;
-      }
-      .self-auth {
-        background-color: #f4f4f4;
-        padding: 20px 0;
-        margin: 10px 0;
-      }
-      .self-auth div > p {
-        max-width: 250px;
-        margin: 10px auto;
-      }
-      .self-auth > div > a {
-        display: inline-block;
-        padding: 15px 70px;
-        border-radius: 5px;
-        background-color: #444444;
-        text-decoration: none;
-        color: white;
-      }
-      .agree-content {
-        margin: 30px 0;
-      }
-      .form-agree-wrap {
-        margin: 30px 40px;
-        /* padding: 10px 0; */
-        border: 2px solid #ebebeb;
-      }
-      .form-agree-wrap > div {
-        padding: 15px;
-      }
-      .all-agree {
-        border-bottom: 2px solid #ebebeb;
-      }
-      .right-align {
-        display: flex;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
   </head>
   <body>
     <!-- 회원가입 헤더 -->
@@ -96,17 +61,23 @@
           </div>
           <div class="form-agree-wrap">
             <div class="all-agree">
-              <input type="radio" />
-              <label class="text-bold">전체 동의</label>
+              <input type="checkbox" name="agree-1" /><i
+                class="far fa-check-circle check-a"
+              ></i>
+              <label class="text-bold" for="agree-1">전체 동의</label>
             </div>
             <div>
               <div class="right-align">
-                <input type="checkbox" />
+                <input type="checkbox" /><i
+                  class="far fa-check-circle check-1"
+                ></i>
                 <label class="text-bold">개인정보 수집 동의(필수)</label>
                 <span style="margin-left: auto">></span>
               </div>
               <div class="right-align">
-                <input type="checkbox" />
+                <input type="checkbox" /><i
+                  class="far fa-check-circle check-2"
+                ></i>
                 <label class="text-bold">제 3자 정보 제공 동의(필수)</label>
                 <span style="margin-left: auto">></span>
               </div>
@@ -122,5 +93,101 @@
         </button>
       </div>
     </form>
+    <script>
+      // {
+      //   let elem1 = document.querySelector(".check-a");
+      //   let elem2 = document.querySelector(".check-1");
+      //   let elem3 = document.querySelector(".check-2");
+      //   elem1.previousSibling.style.display = "none";
+      //   elem2.previousSibling.style.display = "none";
+      //   elem3.previousSibling.style.display = "none";
+
+      //   elem1.style.cursor = "pointer";
+      //   elem2.style.cursor = "pointer";
+      //   elem3.style.cursor = "pointer";
+      //   console.log(elem1);
+      //   elem1.addEventListener("click", () => {
+      //     // check라는 클래스 토글
+      //     // if(elem1.classList)
+      //     if (elem1.classList.contains("far")) {
+      //       elem1.classList.replace("far", "fas");
+      //       elem2.classList.replace("far", "fas");
+      //       elem3.classList.replace("far", "fas");
+      //       elem1.previousSibling.checked = true;
+      //       elem2.previousSibling.checked = true;
+      //       elem3.previousSibling.checked = true;
+      //     } else {
+      //       elem1.classList.replace("fas", "far");
+      //       elem2.classList.replace("fas", "far");
+      //       elem3.classList.replace("fas", "far");
+      //       elem1.previousSibling.checked = false;
+      //       elem2.previousSibling.checked = false;
+      //       elem3.previousSibling.checked = false;
+      //     }
+      //   });
+      //   elem2.addEventListener("click", () => {
+      //     if (elem2.classList.contains("far")) {
+      //       elem2.classList.replace("far", "fas");
+      //       elem2.previousSibling.checked = true;
+      //     } else {
+      //       elem2.classList.replace("fas", "far");
+      //       elem2.previousSibling.checked = false;
+      //     }
+      //   });
+      //   elem3.addEventListener("click", () => {
+      //     if (elem3.classList.contains("far")) {
+      //       elem3.classList.replace("far", "fas");
+      //       elem3.previousSibling.checked = true;
+      //     } else {
+      //       elem3.classList.replace("fas", "far");
+      //       elem3.previousSibling.checked = false;
+      //     }
+      //   });
+      // }
+      {
+        let elem1 = document.querySelector(".check-a");
+        let elem2 = document.querySelector(".check-1");
+        let elem3 = document.querySelector(".check-2");
+        let elem_arr = [elem1, elem2, elem3];
+        for (let i in elem_arr) {
+          elem_arr[i].previousSibling.style.display = "none";
+          elem_arr[i].style.cursor = "pointer";
+        }
+        console.log(elem1);
+        elem1.addEventListener("click", () => {
+          // check라는 클래스 토글
+          // if(elem1.classList)
+          if (elem1.classList.contains("far")) {
+            for (let i in elem_arr) {
+              elem_arr[i].classList.replace("far", "fas");
+              elem_arr[i].previousSibling.checked = true;
+            }
+          } else {
+            for (let i in elem_arr) {
+              elem_arr[i].classList.replace("fas", "far");
+              elem_arr[i].previousSibling.checked = false;
+            }
+          }
+        });
+        elem2.addEventListener("click", () => {
+          if (elem2.classList.contains("far")) {
+            elem2.classList.replace("far", "fas");
+            elem2.previousSibling.checked = true;
+          } else {
+            elem2.classList.replace("fas", "far");
+            elem2.previousSibling.checked = false;
+          }
+        });
+        elem3.addEventListener("click", () => {
+          if (elem3.classList.contains("far")) {
+            elem3.classList.replace("far", "fas");
+            elem3.previousSibling.checked = true;
+          } else {
+            elem3.classList.replace("fas", "far");
+            elem3.previousSibling.checked = false;
+          }
+        });
+      }
+    </script>
   </body>
 </html>
