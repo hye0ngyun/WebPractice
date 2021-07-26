@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        // var nunu = {
+        //   q: 'consume',
+        //   w: 'snowball'
+        // }
+        // var garen = {
+        //   q: 'strike',
+        //   w: 'courage'
+        // }
+        // class => object 뽑는 기계
+        function 기계(q, w) {
+          // 기계로부터 생성되는 object (다른말로 instance)
+          this.q = q;
+          this.w = w;
+        }
+
+        var nunu = new 기계("consume", "snowball");
+        console.log(nunu);
+
+        var garen = new 기계("strike", "courage");
+        console.log(garen);
+      }
+      {
+        // ES6문법
+        class Hero {
+          constructor(q, w) {
+            this.q = q;
+            this.w = w;
+          }
+        }
+        let nunu = new Hero("consume", "snowbala");
+        console.log(nunu);
+      }
+    </script>
+  </body>
+</html>

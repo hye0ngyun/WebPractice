@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        function 기계() {
+          this.q = "strike";
+          this.w = "snowball";
+        }
+
+        // prototype은 유전자다.
+        // prototype에 뭔가 추가하면 자식들이 사용가는
+        기계.prototype.name = "kim";
+
+        var nunu = new 기계();
+        // nunu.prototype.name = "shin";
+
+        var array = [4, 2, 1, 1000];
+        // array.sort();
+        var array = new Array(4, 2, 1); // 컴퓨터의 방식
+
+        // 모든 array 자료에서 쓸 수 있는 함수 추가
+        Array.prototype.함수 = function a() {};
+      }
+    </script>
+  </body>
+</html>
