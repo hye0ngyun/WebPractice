@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- jquery load -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- id="test" ==> #test, class="test1" ==> .test1 -->
+    <h4 id="test" class="test1">안녕하세요</h4>
+    <h4 id="test2"></h4>
+    <a href="" id="test3">link</a>
+    <script>
+      {
+        // // #test를 찾고 innerHTML을 '???'로 바꿔라
+        // document.getElementById("test").innerHTML = "???";
+
+        // // 하나만 찾는다.
+        // document.querySelector("#test");
+        // // 모든것을 찾는다. => index를 사용해야한다.
+        // document.querySelectorAll(".test1")[0];
+
+        // #test를 찾아줘라
+        $("#test");
+        // .test1를 찾아줘라
+        $(".test1");
+
+        // document.querySelector("#test").innerHTML = "안녕";
+        // .html의 경우 #test안의 모든 html을 함수의 파라미터 값으로 바꾼다.
+        $("#test").html("안녕<p>a</p>");
+        // //
+        $("#test2").text("안녕^^<p>a</p>");
+        // jqueryEx.html:39 안녕<p>a</p>
+        console.log($("#test").html());
+
+        // style속성 바꾸기
+        // document.getElementById("test").style.color = "red";
+        // $('css셀렉터').css('이걸', '이렇게');
+        $("#test").css("color", "red");
+
+        // attribute 바꾸기 ex) src, href
+        // $('css셀렉터').attr('이걸', '이렇게');
+        $("#test3").attr("href", "https://naver.com");
+      }
+    </script>
+  </body>
+</html>

@@ -18,19 +18,44 @@
       // console.log(Number('123$'));
 
       // switch case
+      // {
+      //   // let a = 1;
+      //   const date = new Date();
+      //   console.log(date);
+
+      //   const hour = date.getHours();
+      //   console.log(hour);
+
+      //   switch (true) {
+      //     case hour < 11:
+      //       console.log("아침 먹을 시간입니다.");
+      //       break;
+      //   }
+      // }
+
       {
-        // let a = 1;
-        const date = new Date();
-        console.log(date);
-
-        const hour = date.getHours();
-        console.log(hour);
-
-        switch (true) {
-          case hour < 11:
-            console.log("아침 먹을 시간입니다.");
-            break;
+        // 최솟값을 구하는 함수 min()은 array라는 이름의 매개변수를 전달받는다.
+        function min(array) {
+          // 전달받은 매개변수 array의 0번째 인덱스를 output으로 지정
+          // 0번을 지정하는 이유는 0~마지막인덱스를 순회하며 비교할 것이기 때문
+          let output = array[0];
+          // for item of array는 array의 인덱스별로 값(value)을 가져온다.
+          for (const item of array) {
+            //
+            if (output > item) {
+              console.log(`${output} > ${item} ==> ${output > item}`);
+              console.log(`output ${item}로 갱신`);
+              output = item;
+            } else {
+              console.log(`${output} > ${item} ==> ${output > item}`);
+            }
+          }
+          // 최솟값 반환(return)
+          return output;
         }
+        const testArray = [52, 1, 32, 103, 275, 24, 57];
+        console.log(`${testArray}중에서`);
+        console.log(`최솟값 = ${min(testArray)}`);
       }
     </script>
   </body>

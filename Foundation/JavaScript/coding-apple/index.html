@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <!-- 방법1 div tag 두개 만들기 -->
+    <!-- <div class="alert-box">
+      아이디를 입력안하셨어요
+      <button onclick="setAlert('none', 0)">닫기</button>
+    </div>
+    <div class="alert-box">
+      비번을 입력안하셨어요
+      <button onclick="setAlert('none', 1)">닫기</button>
+    </div> -->
+    <!-- 방법2 div tag 하나로 내부 text바꾸기 -->
+    <div class="alert-box" id="alert">
+      <span>아이디를 입력안하셨어요</span>
+      <button id="close">닫기</button>
+    </div>
+
+    <button onclick="setAlert('block', 0)">버튼1</button>
+    <button onclick="setAlert('block', 1)">버튼2</button>
+    <script>
+      {
+        // close라는 id를 찾아서 click이라는 event를 입력받을 때 마다 function()을 실행해라
+        document.getElementById("close").addEventListener("click", function () {
+          console.log(this.parentElement);
+          this.parentElement.style.display = "none";
+          // 위 코드와 동일
+          // document.getElementById('alert').style.display = "none";
+        });
+      }
+      {
+        // function openAlert() {
+        //   document.querySelector(".alert-box").style.display = "block";
+        // }
+        // function closeAlert() {
+        //   document.querySelector(".alert-box").style.display = "none";
+        // }
+        // 방법1
+        // function setAlert(display, idx) {
+        //   document.querySelectorAll(".alert-box")[idx].style.display = display;
+        // }
+        // 방법2
+        function setAlert(display, idx) {
+          document.querySelector(".alert-box").style.display = display;
+          if (idx === 0) {
+            document.querySelector(".alert-box > span").innerHTML = "a";
+          } else if (idx === 1) {
+            document.querySelector(".alert-box > span").innerHTML = "b";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
