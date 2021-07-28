@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // #1. 실행 컨텍스트
+      // stack으로 쌓인다.
+      {
+        var x = "xxx";
+
+        function foo() {
+          var y = "yyy";
+
+          function bar() {
+            var z = "zzz";
+            console.log(x + y + z);
+          }
+          bar();
+        }
+        foo();
+      }
+
+      // #3. 실행 컨텍스트의 생성 과정
+    </script>
+  </body>
+</html>

@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .test {
+        width: 50px;
+        height: 50px;
+        background-color: cadetblue;
+        margin: 50px;
+      }
+      .yellow {
+        align-self: flex-end;
+        background-color: chartreuse;
+      }
+      .flex-wrap {
+        display: flex;
+        align-items: flex-start;
+        height: 500px;
+      }
+    </style>
   </head>
   <body>
+    <div class="flex-wrap">
+      <div class="test"></div>
+      <div class="test"></div>
+      <div class="yellow">
+        <div class="test"></div>
+      </div>
+      <div class="test"></div>
+    </div>
     <script>
       // const input = prompt('message');
       // alert(input)
