@@ -134,14 +134,86 @@
         console.log(elems);
         elems.forEach((elem) => (elem.className = "red"));
       }
+      // {
+      //   // HTMLCollection을 반환한다.
+      //   const elems = document.getElementsByTagName("li");
+      //   [...elems].forEach((elem) => (elem.className = "yellow"));
+      // }
+      // {
+      //   const elems = document.querySelectorAll("li");
+      //   elems.forEach((elem) => (elem.className = "red"));
+      // }
+
+      // #3.3 DOM Traversing(탐색)
       {
-        // HTMLCollection을 반환한다.
-        const elems = document.getElementsByTagName("li");
-        [...elems].forEach((elem) => (elem.className = "yellow"));
+        // parentNode
+        // 부모 노드를 탐색한다.
+        // return HTMLElement를 상속받은 객체
+        // 모든 브라우저에 동작
+        const elem = document.querySelector("#two");
+        console.log(elem.parentNode);
+        elem.parentNode.className = "blue";
       }
       {
-        const elems = document.querySelectorAll("li");
-        elems.forEach((elem) => (elem.className = "red"));
+        // firstChild, lastChild
+        // 자식 노드를 탐색한다.
+        // return HTMLElement를 상속받은 객체
+        // IE9 이상의 브라우저에서 동작
+
+        const elem = document.querySelector("ul");
+
+        console.log(elem.firstElementChild);
+        elem.firstElementChild.className = "yellow";
+
+        console.log(elem.lastElementChild);
+        elem.lastElementChild.className = "yellow";
+      }
+      {
+        /*
+        hasChildNodes()
+        자식 노드가 있는지 확인하고 Boolean 값을 반환한다.
+        Return: Boolean 값
+        모든 브라우저에서 동작
+
+        childNodes
+        자식 노드의 컬렉션을 반환한다. 텍스트 요소를 포함한 모든 자식 요소를 반환한다.
+        Return: NodeList (non-live)
+        모든 브라우저에서 동작
+
+        children
+        자식 노드의 컬렉션을 반환한다. 자식 요소 중에서 Element type 요소만을 반환한다.
+        Return: HTMLCollection (live)
+        IE9 이상의 브라우저에서 동작
+        */
+        const elem = document.querySelector("ul");
+
+        if (elem.hasChildNodes()) {
+          console.log(elem.childNodes);
+          // 텍스트 요소를 포함한 모든 자식 요소를 반환한다.
+          // NodeList(9) [text, li#one.red, text, li#two.red, text, li#three.red, text, li#four, text]
+
+          console.log(elem.children);
+          // 자식 요소 중에서 Element type 요소만을 반환한다.
+          // HTMLCollection(4) [li#one.red, li#two.red, li#three.red, li#four, one: li#one.red, two: li#two.red, three: li#three.red, four: li#four]
+          [...elem.children].forEach((el) => console.log(el.nodeType)); // 1 (=> Element node)
+        }
+      }
+      {
+        /*
+        previousSibling, nextSibling
+        형제 노드를 탐색한다. text node를 포함한 모든 형제 노드를 탐색한다.
+        Return: HTMLElement를 상속받은 객체
+        모든 브라우저에서 동작
+        previousElementSibling, nextElementSibling
+        형제 노드를 탐색한다. 형제 노드 중에서 Element type 요소만을 탐색한다.
+        Return: HTMLElement를 상속받은 객체
+        IE9 이상의 브라우저에서 동작
+        */
+        const elem = document.querySelector("ul");
+
+        elem.firstElementChild.nextElementSibling.className = "yellow";
+        elem.firstElementChild.nextElementSibling.previousElementSibling.className =
+          "blue";
       }
     </script>
   </body>
