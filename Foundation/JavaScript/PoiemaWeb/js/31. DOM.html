@@ -215,6 +215,354 @@
         elem.firstElementChild.nextElementSibling.previousElementSibling.className =
           "blue";
       }
+      // #4. DOM Manipulation
+      // #4.1 텍스트 노드에의 접근/수정
+      {
+        // nodeValue
+        // 해당 텍스트 노드의 부모 요소 노드를 선택한다.
+        const one = document.getElementById('one');
+        console.dir(one);
+
+        // nodeName, nodeType을 통해 노드의 정보를 취득할 수 있다.
+        console.log(one.nodeName); // LI
+        console.log(one.nodeType); // 1: Element node
+
+        // firstChild 프로퍼티를 사용하여 텍스트 노드를 탐색한다.
+        const textNode = one.firstChild;
+        console.log(textNode.nodeName); // #text
+        console.log(textNode.nodeType); // 3: Text node
+
+        // nodeValue 프로퍼티를 사용하여 노드의 값을 취득한다.
+        console.log(textNode.nodeValue); // Seoul
+
+        // node/value 프로퍼티를 이용하여 텍스트를 수정한다.
+        textNode.nodeValue = 'Pusan';
+      }
+      // #4.2 어트리뷰트 노드에의 접근/수정
+      {
+        /*
+        className
+class 어트리뷰트의 값을 취득 또는 변경한다. className 프로퍼티에 값을 할당하는 경우, class 어트리뷰트가 존재하지 않으면 class 어트리뷰트를 생성하고 지정된 값을 설정한다. class 어트리뷰트의 값이 여러 개일 경우, 공백으로 구분된 문자열이 반환되므로 String 메소드 split(' ')를 사용하여 배열로 변경하여 사용한다.
+모든 브라우저에서 동작한다.
+classList
+add, remove, item, toggle, contains, replace 메소드를 제공한다.
+IE10 이상의 브라우저에서 동작한다.
+        */
+        
+        const elems = document.querySelectorAll('li');
+
+        // className
+        [...elems].forEach(elem => {
+          // class 어트리뷰트 값을 취득하여 확인
+          if (elem.className === 'red') {
+            // class 어트리뷰트 값을 변경한다.
+            elem.className = 'blue';
+          }
+        });
+
+        // classList
+        [...elems].forEach(elem => {
+          // class 어트리뷰트 값 확인
+          if (elem.classList.contains('blue')) {
+            // class 어트리뷰트 값 변경한다.
+            elem.classList.replace('blue', 'green');
+          }
+        });
+        
+      }
+      {
+        // id
+        const heading = document.querySelector('h1');
+
+        console.dir(heading); // h1
+        console.log(heading.firstChild.nodeValue); // Cities
+
+        // id 어트리뷰의 값을 변경.
+        // id 어트리뷰트가 존재하지 않으면 id 어트리뷰트를 생성하고 지정된 값을 설정
+        heading.id = 'heading';
+        console.log(heading.id); // heading
+      }
+    </script>
+    <input  class="test1" type="text" name=""d>
+    <script>
+      {
+        // hasAttribute(attribute)
+        // 지정한 어트리뷰트를 가지고 있는지 검사한다.
+        // return: Boolean
+
+        // getAttribute(attribute)
+        // 어트리뷰트의 값을 취득한다.
+        // return: 문자열
+
+        // setAttribute(attribute, value)
+        // 어트리뷰트와 어트리뷰트 값을 설정한다.
+        // return: undefined
+
+        // removeAttribute(attribute)
+        // 지정한 어트리뷰트를 제거한다.
+        // return: undefined
+      }
+      {
+        const input = document.querySelector('input[type="text"].test1');
+        console.dir(input);
+        console.log(input);
+
+        // value 어트리뷰트가 존재하지 않으면
+        if (!input.hasAttribute('value')) {
+          // value 어트리뷰트를 추가하고 값으로 'hello!'를 설정
+          input.setAttribute('value', 'hello!')
+        }
+
+        // value 어트리뷰트 값을 취득
+        console.log(input.getAttribute('value')); // hello!
+
+        // value 어트리뷰트를 제거
+        input.removeAttribute('value');
+
+        // value 어트리뷰트의 존재를 확인
+        console.log(input.hasAttribute('value')); // false
+      }
+    </script>
+    <input class="password" type="password" name="" id="">
+    <button class="show">show</button>
+    <script>
+      {
+      //   const pw = document.querySelector('input.password');
+      //   pw.setAttribute('value', '123');
+      //   const btn = document.querySelector('button.show');
+      //   btn.addEventListener('click', () => {
+      //     if (pw.hasAttribute('type')) {
+      //       if (pw.getAttribute('type') === 'password') {
+      //         pw.setAttribute('type', 'text');
+      //         btn.innerHTML = 'hide';
+      //       }
+      //       else {
+      //         pw.setAttribute('type', 'password');
+      //         btn.innerHTML = 'show';
+      //       }
+      //     }
+      //   });
+      }
+      {
+        const $password = document.querySelector('.password');
+        $password.setAttribute('value', '123');
+        const $show = document.querySelector('.show');
+
+        function makeClickHandler() {
+          let isShow = false;
+          return function() {
+            $password.setAttribute('type', isShow ? 'password' : 'text');
+            isShow = !isShow;
+            $show.innerHTML = isShow ? 'hide' : 'show';
+          };
+        }
+
+        $show.onclick = makeClickHandler();
+      }
+      // #4.3 HTML 콘텐츠 조작(Manipulation)
+      {
+        // textContent
+        const ul = document.querySelector('ul');
+
+        // 요소의 텍스트 취득
+        console.log(ul.textContent);
+        /*
+        
+        Pusan
+        London
+        Newyork
+        Tokyo
+        beising
+        paris
+      
+        */
+        const one = document.getElementById('one');
+
+        // 요소의 텍스트 취득
+        console.log(one.textContent); // Pusan
+        
+        // 요소의 텍스트 변경
+        one.textContent += ', Korea';
+
+        console.log(one.textContent); // Seoul, Pusan
+
+        // 요소의 마크업이 포함된 콘텐츠 변경
+        one.textContent = '<h1>Heading</h1>';
+
+        // 마크업이 문자열로 표시된다.
+        console.log(one.textContent); // <h1>Heading</h1>
+      }
+
+      {
+        // innerText
+        // innerText 프로퍼티를 사용하여도 요소의 콘텐츠에만 접근할 수 있다.
+        
+        // innerHTML
+        // 해당 요소의 모든 자식 요소를 포함하는 모든 콘텐츠를 하나의 문자열로 취득할 수 있다. 이 문자열은 마크업을 포함한다.
+
+        const ul = document.querySelector('ul');
+
+        console.log(ul.innerText);
+        /*
+        <h1>Heading</h1>
+        London
+        Newyork
+        Tokyo
+        beising
+        paris
+        */
+        console.log(ul.innerHTML);
+        /*
+        <li id="one" class="green">&lt;h1&gt;Heading&lt;/h1&gt;</li>
+        <li id="two" class="yellow">London</li>
+        <li id="three" class="green">Newyork</li>
+        <li id="four" class="green">Tokyo</li>
+        <li id="five" class="green">beising</li>
+        <li id="six" class="yellow">paris</li>
+        */
+      }
+      {
+        // innerHTML 프로퍼티를 사용하여 마크업이 포함된 새로운 콘텐츠를 지정하면 새로운 요소를 DOM에 추가할 수 있다.
+
+        const one = document.getElementById('one');
+        one.innerHTML = 'Seoul';
+        // 마크업이 포함된 콘텐츠 취득
+        console.log(one.innerHTML); // Seoul
+
+        // 마크업이 포함된 콘텐츠 변경
+        one.innerHTML += '<em class="blue">, Korea</em>';
+
+        console.log(one.innerHTML);
+      }
+      // 위와 같이 마크업이 포함된 콘텐츠를 추가하는 것은 크로스 스크립팅 공격(XSS: Cross-Site Scripting Attack)에 취약하다
+      {
+        // 크로스 스크립팅 공격 사례
+        const elem = document.querySelector('#one');
+        console.log(elem);
+
+        // 스크립트 태그를 추가하여 자바스크립트가 실행되도록 한다.
+        // HTML5에서 innerHTML로 삽입된 <script> 코드는 실행되지 않는다.
+        // 크롬, 파이어폭스 등의 브라우저나 최신 브라우저 환경에서는 작동하지 않을 수도 있다.
+        /*
+        
+        */
+
+        // 에러 이벤트를 발생시켜 스크립트가 실행되도록 한다.
+        // 크롬에서도 실행된다.
+        // elem.innerHTML = '<img src="#" onerror="alert(\'XSS\')">';
+      }
+      
+      // #4.4 DOM 조작 방식
+      {
+        // innerHTML 프로퍼티를 사용하지 않고 새로운 콘텐츠를 추가할 수 있는 방법은 DOM을 직접 조작하는 것이다.
+        // 한 개의 요소를 추가하는 경우 사용된다.
+        // 1. 요소 노드 생성 createElement() 메소드를 사용하여 새로운 요소 노드를 생성한다. createElement()메소드의 인자로 태그 이름을 전달한다.
+        // 2. 텍스트 노드 생성 createTextNode() 메소드를 사용하여 새로운 텍스트 노드를 생성한다. 경우에 따라 생략될 수 있지만 생략하는 경우, 콘텐츠가 비어 있는 요소가 된다.
+        // 3. 생성된 요소를 DOM에 추가 appendChild() 메소드를 사용하여 생성된 노드를 DOM tree에 추가한다. 또는 removeChild()메소드를 사용하여 DOM tree에서 노드를 삭제할 수도 있다.
+
+        // createElement(tagName)
+        // 태그이름을 인자로 전달하여 요소를 생성한다.
+        // return: HTMLElement를 상속받은 객체
+
+        // createTextNode(text)
+        // 텍스트를 인자로 전달하여 텍스트 노드를 생성한다.
+        // return: Text 객체
+
+        // appendChild(Node)
+        // 인자로 전달한 노드를 마지막 자식 요소로 DOM 트리에 추가한다.
+        // return: 추가한 노드
+
+        // removeChild(Node)
+        // 인자로 전달한 노드를 DOM 트리에 제거한다.
+        // return: 삭제한 노드
+
+        // 태그이름을 인자로 전달하여 요소를 진행
+        const newElem = document.createElement('li');
+
+        // 텍스트 노드를 생성
+        const newText = document.createTextNode('Beijing');
+        console.log(newText);
+
+        // 텍스트 노드를 newElem 자식으로 DOM 트리에 추가
+        newElem.appendChild(newText);
+        
+        const container = document.querySelector('ul');
+
+        // newElem을 container의 자식으로 DOM 트리에 추가. 마지막 요소로 추가된다.
+        container.appendChild(newElem);
+
+        const removeElem = document.getElementById('one');
+
+        // container의 자식인 removeElem 요소를 DOM 트리에 제거한다.
+        container.removeChild(removeElem);
+      }
+    
+      // #4.5 insertAdjacentHTML()
+      {
+        // inertAdjacentHTML(position, string)
+        // 인자로 전달한 텍스트를 HTML로 파싱하고 그 결과로 생성된 노드를 DOM 트리의 지정된 위치에 삽입한다. 첫 번째 인자는 삽입 위치, 두 번째 인자는 삽입할 요소를 표현한 문자열이다. 첫 번째 인자로 올 수 있는 값은 아래와 같다.
+        /*
+        - 'beforebegin'
+        - 'afterbegin'
+        - 'beforeend'
+        - 'afterend'
+        */
+        document.write('<img src="https://poiemaweb.com/img/insertAdjacentHTML-position.png" width="500px">');
+
+        const two = document.querySelector('#two');
+        console.log(two);
+        // 마크업이 포함된 요소 추가
+        two.insertAdjacentHTML('beforeend', '<em class="blue">, Korea</em>');
+      }
+      /*
+      innerHTML과 insertAdjacentHTML()은 크로스 스크립팅 공격(XSS: Cross-Site Scripting Attacks)에 취약하다. 따라서 untrusted data의 경우, 주의하여야 한다. 텍스트를 추가 또는 변경시에는 textContent, 새로운 요소의 추가 또는 삭제시에는 DOM 조작 방식을 사용하도록 한다.
+      */
+
+      // #5. style
+      {
+        // style 프로퍼티를 사용하면 inline 스타일 선언을 생성한다. 특정 요소에 inline 스타일을 지정하는 경우 사용한다.
+        const four = document.getElementById('four');
+
+        // inline 스타일 선언을 생성
+        four.style.color = 'tomato';
+
+        // font-size와 같이 '-'으로 구부되는 프로퍼티는 카멜케이스로 변환하여 사용한다.
+        four.style.fontSize = '2em';
+      }
+    </script>
+    <style>
+      .box {
+        width: 100px;
+        height: 50px;
+        background-color: red;
+        border: 1px solid black;
+      }
+    </style>
+    <div class="box"></div>
+    <script>
+      {
+        const box = document.querySelector('.box');
+        
+        const width = getStyle(box, 'width');
+        const height = getStyle(box, 'height');
+        const backgroundColor = getStyle(box, 'background-color');
+        const border = getStyle(box, 'border');
+
+        console.log('width: ' + width);
+        console.log('height: ' + height);
+        console.log('backgroundColor: ' + backgroundColor);
+        console.log('border: ' + border);
+
+        /**
+     * 요소에 적용된 CSS 프로퍼티를 반환한다.
+     * @param {HTTPElement} elem - 대상 요소 노드.
+     * @param {string} prop - 대상 CSS 프로퍼티.
+     * @returns {string} CSS 프로퍼티의 값.
+     */
+    function getStyle(elem, prop) {
+      return window.getComputedStyle(elem, null).getPropertyValue(prop);
+    }
+      }
     </script>
   </body>
 </html>
