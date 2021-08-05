@@ -503,6 +503,129 @@
       3 | 버블링 단계
      -->
 
-    <!-- #8. -->
+    <!-- #8. Event Delegation(이벤트 위임)-->
+    <div>
+      <ul id="post-list">
+        <li id="post-1">Item 1</li>
+        <li id="post-2">Item 2</li>
+        <li id="post-3">Item 3</li>
+        <li id="post-4">Item 4</li>
+        <li id="post-5">Item 5</li>
+        <li id="post-6">Item 6</li>
+      </ul>
+      <em class="message-list"></em>
+    </div>
+    <!-- 모든 li요소가 클릭 이벤트에 반응하는 처리를 구현하고 싶은 경우, li요소에 이벤트 핸들러를 바인딩하면 총 6개의 이벤트 핸들러를 바인딩 해야 한다. -->
+
+    <script>
+      // {
+      //   function printId() {
+      //     console.log(this.id);
+      //   }
+      //   document.querySelector("#post-1").addEventListener("click", printId);
+      //   document.querySelector("#post-2").addEventListener("click", printId);
+      //   document.querySelector("#post-3").addEventListener("click", printId);
+      //   document.querySelector("#post-4").addEventListener("click", printId);
+      //   document.querySelector("#post-5").addEventListener("click", printId);
+      //   document.querySelector("#post-6").addEventListener("click", printId);
+      // }
+    </script>
+    <!-- 동적으로 li 요소가 추가되는 경우, 아직 추가되지 않은 요소는 DOM에 존재하지 않으므로 이벤트 핸들러를 바인딩할 수 없다. 이러한 경우 이벤트 위임을 사용한다. -->
+    <!-- 이벤트 위임(Event Delegation)은 다수의 자식 요소에 각각 이벤트 핸들러를 바인딩하는 대신 하나의 부모 요소에 이벤트 핸들러를 바인딩하는 방법이다. 위의 경우 6개의 자식 요소에 각각 이벤트 핸들러를 바인딩하는 것 대신 부모 요소(ul#post-list)에 이벤트 핸들러를 바인딩하는 것이다. -->
+    <script>
+      {
+        const ul = document.querySelector("#post-list");
+        const em = document.querySelector(".message-list");
+        function cliked(e) {
+          em.innerHTML = e.target.id;
+        }
+
+        ul.addEventListener("click", cliked);
+      }
+    </script>
+
+    <!-- #9. 기본 동작의 변경 -->
+    <!-- 이벤트 객체는 요소의 기본 동작과 요소의 부모 요소들이 이벤트에 대응하는 방법을 변경하기 위한 메소드는 가지고 있다.
+     -->
+
+    <!-- #9.1 Event.preventDefault() -->
+    <!-- 폼을 submit하거나 링크를 클릭하면 다른 페이지로 이동하게 된다. 이와 같이 요소가 가지고 있는 기본 동작을 중단시키기 위한 메소드가 preventDefault()이다. -->
+    <a href="http://google.com" class="a-9">google go</a>
+    <script>
+      document.querySelector(".a-9").addEventListener("click", (e) => {
+        console.log(e.target, e.target.nodeName);
+
+        // a 요소의 기본 동작을 중단한다.
+        e.preventDefault();
+      });
+    </script>
+
+    <!-- #9.2 Event.stopPropagation -->
+    <div id="div9-2">
+      <p>버튼을 클릭하면 이벤트 전파를 중단한다. <button>버튼</button></p>
+    </div>
+    <script>
+      {
+        const body = document.querySelector("#div9-2");
+        const para = document.querySelector("#div9-2 p");
+        const button = document.querySelector("#div9-2 button");
+
+        // 버블링
+        body.addEventListener("click", function () {
+          console.log("Handler for div.");
+        });
+
+        // 버블링
+        para.addEventListener("click", function () {
+          console.log("Handler for paragraph.");
+        });
+
+        // 버블링
+        button.addEventListener("click", function (event) {
+          console.log("Handler for button.");
+
+          // 이벤트 전파를 중단한다.
+          event.stopPropagation();
+        });
+      }
+    </script>
+    <!-- #9.3 preventDefault & stopPropagation -->
+    <!-- 기본 동작의 중단과 버블링 또는 캡처링의 중단을 동시에 실시하는 방법은 아래와 같다. -->
+    <script>
+      {
+        return false;
+      }
+    </script>
+    <!-- 단 이 방법은 jQuery를 사용할 때와 아래와 같이 사용할 떄만 적용된다. -->
+    <a href="http://google.com" onclick="return handlerEvent()">go</a>
+    <script>
+      {
+        function handlerEvent() {
+          return false;
+        }
+      }
+    </script>
+
+    <div>
+      <a href="http://www.google.com">go</a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script>
+      // within jQuery
+      $("a").click(function (e) {
+        e.preventDefault(); // OK
+      });
+
+      $("a").click(function () {
+        return false; // OK --> e.preventDefault() & e.stopPropagation().
+      });
+
+      // pure js
+      document.querySelector("a").addEventListener("click", function (e) {
+        // e.preventDefault(); // OK
+        return false; // NG!!!!!
+      });
+    </script>
+    <!-- 이 방법은 기본 동작의 중단과 이벤트 흐름의 중단 모두 적용되므로 이 두가지 중 하나만 중단하기 원하는 경우는 preventDefault() 또는 stopPropagation() 메소드를 개별적으로 사용한다. -->
   </body>
 </html>
