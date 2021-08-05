@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WEB1 - HTML</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
+  </head>
+  <body>
+    <h1><a href="#!welcome">WEB</a></h1>
+    <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="
+    nightDayHandler(this);
+  "
+    />
+    <ol class="nav"></ol>
+    <div id="main"></div>
+    <script>
+      {
+        function fetchPage(name) {
+          fetch(name).then(function (response) {
+            response.text().then(function (text) {
+              div.innerHTML = text;
+            });
+          });
+        }
+        // ajax 구현
+        const ol = document.querySelector(".nav");
+        const div = document.querySelector("#main");
+
+        fetch("list").then((response) => {
+          response.text().then((text) => {
+            const list = text.split(",").map((x) => x.trim());
+            console.log(list); // (3) ["HTML", "CSS", "JavaScript"]
+            for (li of list) {
+              // <li><a href="#!JavaScript">JavaScript</a></li>
+              console.log(`<li><a herf="#!${li}">${li}</a></li>`);
+              ol.innerHTML += `<li><a herf="#!${li}">${li}</a></li>`;
+            }
+          });
+        });
+
+        // 최초 로드 시 HTML 내용 보여주기
+        fetch("HTML").then((response) => {
+          response.text().then((text) => {
+            div.innerHTML = text;
+          });
+        });
+
+        // ol에 이벤트 리스너를 추가해 자식인 li 요소 모두에 이벤트 위임
+        ol.addEventListener("click", (e) => {
+          fetchPage(e.target.innerText);
+        });
+        console.log(document.querySelector('a[href="#!welcome"]'));
+        document
+          .querySelector('a[href="#!welcome"]')
+          .addEventListener("click", (e) => {
+            fetchPage("welcome");
+          });
+        if (location.hash) {
+          console.log(location.hash.substr(2));
+          fetchPage(location.hash.substr(2));
+        } else {
+          fetchPage("welcome");
+        }
+      }
+    </script>
+  </body>
+</html>
