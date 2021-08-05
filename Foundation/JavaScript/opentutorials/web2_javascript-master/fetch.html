@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article></article>
+    <input type="button" value="fetch" onclick="fetchFunc();" />
+    <script>
+      {
+        /*
+        function fetchFunc() {
+          fetch("html").then(function (response) {
+            response.text().then(function (text) {
+              alert(text);
+              document.querySelector("article").innerHTML = text;
+            });
+          });
+        }
+        */
+        // function callbackme() {
+        //   console.log("response end");
+        // }
+        // Asynchronous
+        function fetchFunc() {
+          // fetch('???') => ???의 파일을 가져와
+          // .then(???) => 파일 가져오는게 완료되면 ???를 실행해
+          // then의 콜백함수가 실행될 때 첫번쨰 인자의 값으로 response 객체를 받는다.
+          fetch("html").then((response) => {
+            console.log("response end");
+            console.log(response.status);
+            if (response.status === 404) {
+              alert("not found");
+            }
+          });
+          console.log(1);
+          console.log(2);
+          console.log(3);
+        }
+        // 버튼 클릭 시 1 2 3 response end 순차적으로 출력됨
+      }
+    </script>
+  </body>
+</html>
