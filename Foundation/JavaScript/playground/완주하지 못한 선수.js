@@ -6,3 +6,14 @@ function solution(participant, completion) {
   answer = participant.toString();
   return answer;
 }
+
+//
+function solution(participant, completion) {
+  let answer = "";
+  participant.map((x) => {
+    if (!completion.includes(x)) {
+      answer = x;
+    }
+  });
+  return answer;
+}
