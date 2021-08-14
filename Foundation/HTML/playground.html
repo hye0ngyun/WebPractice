@@ -1,320 +1,984 @@
-<h2 data-ke-size="size26"><span style="font-family: 'Nanum Gothic';">1. <strong>모듈</strong></span></h2>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- 모듈은 시스템의 각 기능으로 소프트웨어의 성능을 향상시키거나 수정 및 재사용을 용이하게 하기 위해 기능 단위로 분해한 것을 말한다.</span></p>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- 모듈의 독립성은 <span style="background-color: #9feec3;"><strong>결합도</strong>(<strong>Coupling</strong>)를 약하게</span>, <span style="background-color: #9feec3;"><strong>응집도</strong>(<strong>Cohesion</strong>)를 강하게</span>, 모듈의 크기가 작을 때 <span style="background-color: #9feec3;">독립성이 높아진다</span>.</span></p>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- 독립성이 높은 모듈일수록 모듈을 수정하더라도 다른 모듈들에게는 거의 영향을 미치지 않고, 오류가 발생하더라도 쉽게 발견하고 수정할 수 있다.</span></p>
+<h2 data-ke-size="size26">
+  <span style="font-family: 'Nanum Gothic'">1. <strong>모듈</strong></span>
+</h2>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >- 모듈은 시스템의 각 기능으로 소프트웨어의 성능을 향상시키거나 수정 및
+    재사용을 용이하게 하기 위해 기능 단위로 분해한 것을 말한다.</span
+  >
+</p>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >- 모듈의 독립성은
+    <span style="background-color: #9feec3"
+      ><strong>결합도</strong>(<strong>Coupling</strong>)를 약하게</span
+    >,
+    <span style="background-color: #9feec3"
+      ><strong>응집도</strong>(<strong>Cohesion</strong>)를 강하게</span
+    >, 모듈의 크기가 작을 때
+    <span style="background-color: #9feec3">독립성이 높아진다</span>.</span
+  >
+</p>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >- 독립성이 높은 모듈일수록 모듈을 수정하더라도 다른 모듈들에게는 거의
+    영향을 미치지 않고, 오류가 발생하더라도 쉽게 발견하고 수정할 수 있다.</span
+  >
+</p>
 <p data-ke-size="size16">&nbsp;</p>
-<h2 data-ke-size="size26"><span style="font-family: 'Nanum Gothic';">2. <strong>결합도</strong>(<strong>Coupling</strong>)</span></h2>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- 결합도는 모듈 간에 상호 의존하는 정도 또는 두 모듈 사이의 연관 관계를 의미한다. 결합도가 약할수록 독립적인 모듈</span></p>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- <span style="background-color: #9feec3;">결합도는 약할수록 좋다</span>.</span></p>
-<table style="border-collapse: collapse; width: 725px; height: 419px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 21px;">
-<td style="text-align: center; background: #ffd384; height: 21px;"><span style="font-family: 'Nanum Gothic';"><strong>결합도</strong></span></td>
-<td style=" text-align: center; background: #ffd384; height: 21px;"><span style="font-family: 'Nanum Gothic';"><strong>종류</strong></span></td>
-<td style="text-align: center; background: #ffd384; height: 21px;"><span style="font-family: 'Nanum Gothic';"><strong>내용</strong></span></td>
-</tr>
-<tr style="height: 20px;">
-<td style="text-align: center; height: 20px;"><span style="font-family: 'Nanum Gothic';">결합도 <span style="background-color: #99cefa;">약함</span></span></td>
-<td style=" height: 20px;"><span style="font-family: 'Nanum Gothic';"><strong>자료 결합도<br /></strong>(<strong>Data Couplign</strong>)</span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">모듈 간의 인터페이스가 <span style="background-color: #9feec3;">자료 요소</span>로만 구성될 때의 결합도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="font-family: 'Nanum Gothic';">&uarr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>스탬프 결합도<br /></strong>(<strong>Stamp Coupling</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';">모듈 간의 <span style="background-color: #9feec3;">인터페이스</span>로 배열이나 레코드 등의 <span style="background-color: #9feec3;">자료 구조가 전달</span>될 때의 결합도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&uarr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>제어 결합도<br /></strong>(<strong>Control Coupling</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';">어떤 모듈이 다른 모듈 내부의 논리적인 <span style="background-color: #9feec3;">흐름을 제어</span>하기 위해 제어 신로를 통신하거나 <span style="background-color: #9feec3;">제어 요소(Flag)를 전달</span>하는 결합도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&darr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>외부 결합도<br /></strong>(<strong>External Coupling</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';">어떤 모듈에서 선언한 데이터(변수)를 <span style="background-color: #9feec3;">외부의 다른 모듈에서 참조</span>할 때의 결합도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&darr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>공유 결합도<br /></strong>(<strong>Common Coupling</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';"><span style="background-color: #9feec3;">공유되는 공통 데이터 영역</span>(전역변수)을 여러 모듈이 사용할 때의 결합도</span></td>
-</tr>
-<tr style="height: 42px;">
-<td style="text-align: center; height: 42px;"><span style="font-family: 'Nanum Gothic';">결합도 <span style="background-color: #ffc1c8;">강함</span></span></td>
-<td style=" height: 42px;"><span style="font-family: 'Nanum Gothic';"><strong>내용 결합도<br /></strong>(<strong>Content Coupling</strong>)</span></td>
-<td style="height: 42px;"><span style="font-family: 'Nanum Gothic';">한 모듈이 다른 모듈의 내부 기능 및 그 내부 자료를 <span style="background-color: #9feec3;">직접 참조</span>하거나 <span style="background-color: #9feec3;">수정</span>(public 속성)할 때의 결합도</span></td>
-</tr>
-</tbody>
+<h2 data-ke-size="size26">
+  <span style="font-family: 'Nanum Gothic'"
+    >2. <strong>결합도</strong>(<strong>Coupling</strong>)</span
+  >
+</h2>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >- 결합도는 모듈 간에 상호 의존하는 정도 또는 두 모듈 사이의 연관 관계를
+    의미한다. 결합도가 약할수록 독립적인 모듈</span
+  >
+</p>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >-
+    <span style="background-color: #9feec3">결합도는 약할수록 좋다</span>.</span
+  >
+</p>
+<table
+  style="border-collapse: collapse; width: 100%; height: 419px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 21px">
+      <td style="text-align: center; background: #ffd384; height: 21px">
+        <span style="font-family: 'Nanum Gothic'"><strong>결합도</strong></span>
+      </td>
+      <td style="text-align: center; background: #ffd384; height: 21px">
+        <span style="font-family: 'Nanum Gothic'"><strong>종류</strong></span>
+      </td>
+      <td style="text-align: center; background: #ffd384; height: 21px">
+        <span style="font-family: 'Nanum Gothic'"><strong>내용</strong></span>
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td style="text-align: center; height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >결합도 <span style="background-color: #99cefa">약함</span></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>자료 결합도<br /></strong>(<strong>Data Couplign</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >모듈 간의 인터페이스가
+          <span style="background-color: #9feec3">자료 요소</span>로만 구성될
+          때의 결합도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="font-family: 'Nanum Gothic'">&uarr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>스탬프 결합도<br /></strong>(<strong>Stamp Coupling</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          >모듈 간의 <span style="background-color: #9feec3">인터페이스</span>로
+          배열이나 레코드 등의
+          <span style="background-color: #9feec3">자료 구조가 전달</span>될 때의
+          결합도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&uarr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>제어 결합도<br /></strong>(<strong>Control Coupling</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          >어떤 모듈이 다른 모듈 내부의 논리적인
+          <span style="background-color: #9feec3">흐름을 제어</span>하기 위해
+          제어 신로를 통신하거나
+          <span style="background-color: #9feec3">제어 요소(Flag)를 전달</span
+          >하는 결합도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&darr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>외부 결합도<br /></strong>(<strong>External Coupling</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          >어떤 모듈에서 선언한 데이터(변수)를
+          <span style="background-color: #9feec3"
+            >외부의 다른 모듈에서 참조</span
+          >할 때의 결합도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&darr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>공유 결합도<br /></strong>(<strong>Common Coupling</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #9feec3"
+            >공유되는 공통 데이터 영역</span
+          >(전역변수)을 여러 모듈이 사용할 때의 결합도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 42px">
+      <td style="text-align: center; height: 42px">
+        <span style="font-family: 'Nanum Gothic'"
+          >결합도 <span style="background-color: #ffc1c8">강함</span></span
+        >
+      </td>
+      <td style="height: 42px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>내용 결합도<br /></strong>(<strong>Content Coupling</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 42px">
+        <span style="font-family: 'Nanum Gothic'"
+          >한 모듈이 다른 모듈의 내부 기능 및 그 내부 자료를
+          <span style="background-color: #9feec3">직접 참조</span>하거나
+          <span style="background-color: #9feec3">수정</span>(public 속성)할
+          때의 결합도</span
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<h2 data-ke-size="size26"><span style="font-family: 'Nanum Gothic';">3. <strong>응집도</strong>(<strong>Cohesion</strong>)</span></h2>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- 응집도는 명령어나 호출문 등의 모듈의 내부 요소들의 서로 관련있는 정도, 즉 모듈이 독립적인 기능으로 구성됐는지 정도를 의미한다. 응집도가 강할수록 독립적인 모듈</span></p>
-<p data-ke-size="size16"><span style="font-family: 'Nanum Gothic';">- <span style="background-color: #9feec3;">응집도는 강할수록 좋다</span>.</span></p>
-<table style="border-collapse: collapse; width: 704px; height: 263px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 25px;">
-<td style="text-align: center; background: #ffd384; height: 25px;"><span style="font-family: 'Nanum Gothic';"><strong>응집도</strong></span></td>
-<td style=" text-align: center; background: #ffd384; height: 25px;"><span style="font-family: 'Nanum Gothic';"><strong>종류</strong></span></td>
-<td style="text-align: center; background: #ffd384; height: 25px;"><span style="font-family: 'Nanum Gothic';"><strong>내용</strong></span></td>
-</tr>
-<tr style="height: 20px;">
-<td style="text-align: center; height: 20px;"><span style="font-family: 'Nanum Gothic';">응집도 <span style="background-color: #99cefa;">강함</span></span></td>
-<td style=" height: 20px;"><span style="font-family: 'Nanum Gothic';"><strong>기능적 응집도<br /></strong>(<strong>Functional Cohesion</strong>)</span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">모듈 내부의 모든 <span style="background-color: #9feec3;">기능 요소</span>들이 <span style="background-color: #9feec3;">단일 문제</span>와 연관되어 수행될 경우의 응집도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="font-family: 'Nanum Gothic';">&uarr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>순차적 응집도<br /></strong>(<strong>Sequential Cohesion</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';">모듈 내 하나의 활동으로부터 나온 <span style="background-color: #9feec3;">출력 데이터를 그 다음 활동의 입력 데이터</span>로 사용할 경우의 응집도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&uarr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>교환적 응집도</strong></span><br /><span style="font-family: 'Nanum Gothic';">(<strong>Communication Cohesion</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';"><span style="background-color: #9feec3;">동일한 입력과 출력</span>을 사용해 <span style="background-color: #9feec3;">서로 다른 기능</span>을 수행하는 구성 요소들이 모였을 경우의 응집도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&darr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>절차적 응집도</strong></span><br /><span style="font-family: 'Nanum Gothic';">(<strong>Procedural Cohesion</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';">모듈의 다수의 관련 기능을 가질 때 모듈 안의 구성 요소들이 그 <span style="background-color: #9feec3;">기능을 순차적으로 수행</span>할 경우의 응집도</span></td>
-</tr>
-<tr style="height: 40px;">
-<td style="text-align: center; height: 40px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&darr;</span></td>
-<td style=" height: 40px;"><span style="font-family: 'Nanum Gothic';"><strong>시간적 응집도</strong></span><br /><span style="font-family: 'Nanum Gothic';">(<strong>Temporal Cohesion</strong>)</span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';"><span style="background-color: #9feec3;">특정 시간에 처리</span>되는 몇 개의 기능을 모아 하느이 모듈로 작성할 경우의 응집도</span></td>
-</tr>
-<tr style="height: 28px;">
-<td style="text-align: center; height: 28px;"><span style="color: #333333; font-family: 'Nanum Gothic';">&darr;</span></td>
-<td style=" height: 28px;"><span style="font-family: 'Nanum Gothic';"><strong>논리적 응집도</strong></span><br /><span style="font-family: 'Nanum Gothic';">(<strong>Logical Cohesion</strong>)</span></td>
-<td style="height: 28px;"><span style="font-family: 'Nanum Gothic';"><span style="background-color: #9feec3;">유사한 성격</span>을 갖거나 <span style="background-color: #9feec3;">특정 형태로 분류되는 처리 요소</span>들로 하나의 모듈이 형성되는 경우의 응집도</span></td>
-</tr>
-<tr style="height: 30px;">
-<td style="text-align: center; height: 30px;">응집도 약함</td>
-<td style=" height: 30px;"><span><strong>우연적 응집도</strong></span><br /><span>(<strong>Coincidental Cohesion</strong>)</span></td>
-<td style="height: 30px;"><span>모듈 내부의 각 구성 요소들이<span>&nbsp;</span><span style="background-color: #9feec3;">서로 관련 없는 요소</span>로만 구성된 경우의 응집도</span></td>
-</tr>
-</tbody>
+<h2 data-ke-size="size26">
+  <span style="font-family: 'Nanum Gothic'"
+    >3. <strong>응집도</strong>(<strong>Cohesion</strong>)</span
+  >
+</h2>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >- 응집도는 명령어나 호출문 등의 모듈의 내부 요소들의 서로 관련있는 정도, 즉
+    모듈이 독립적인 기능으로 구성됐는지 정도를 의미한다. 응집도가 강할수록
+    독립적인 모듈</span
+  >
+</p>
+<p data-ke-size="size16">
+  <span style="font-family: 'Nanum Gothic'"
+    >-
+    <span style="background-color: #9feec3">응집도는 강할수록 좋다</span>.</span
+  >
+</p>
+<table
+  style="border-collapse: collapse; height: 263px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 25px">
+      <td style="text-align: center; background: #ffd384; height: 25px">
+        <span style="font-family: 'Nanum Gothic'"><strong>응집도</strong></span>
+      </td>
+      <td style="text-align: center; background: #ffd384; height: 25px">
+        <span style="font-family: 'Nanum Gothic'"><strong>종류</strong></span>
+      </td>
+      <td style="text-align: center; background: #ffd384; height: 25px">
+        <span style="font-family: 'Nanum Gothic'"><strong>내용</strong></span>
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td style="text-align: center; height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >응집도 <span style="background-color: #99cefa">강함</span></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>기능적 응집도<br /></strong>(<strong
+            >Functional Cohesion</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >모듈 내부의 모든
+          <span style="background-color: #9feec3">기능 요소</span>들이
+          <span style="background-color: #9feec3">단일 문제</span>와 연관되어
+          수행될 경우의 응집도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="font-family: 'Nanum Gothic'">&uarr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>순차적 응집도<br /></strong>(<strong
+            >Sequential Cohesion</strong
+          >)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          >모듈 내 하나의 활동으로부터 나온
+          <span style="background-color: #9feec3"
+            >출력 데이터를 그 다음 활동의 입력 데이터</span
+          >로 사용할 경우의 응집도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&uarr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>교환적 응집도</strong></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >(<strong>Communication Cohesion</strong>)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #9feec3">동일한 입력과 출력</span>을
+          사용해 <span style="background-color: #9feec3">서로 다른 기능</span>을
+          수행하는 구성 요소들이 모였을 경우의 응집도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&darr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>절차적 응집도</strong></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >(<strong>Procedural Cohesion</strong>)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          >모듈의 다수의 관련 기능을 가질 때 모듈 안의 구성 요소들이 그
+          <span style="background-color: #9feec3">기능을 순차적으로 수행</span
+          >할 경우의 응집도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td style="text-align: center; height: 40px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&darr;</span>
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>시간적 응집도</strong></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >(<strong>Temporal Cohesion</strong>)</span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #9feec3">특정 시간에 처리</span>되는
+          몇 개의 기능을 모아 하느이 모듈로 작성할 경우의 응집도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 28px">
+      <td style="text-align: center; height: 28px">
+        <span style="color: #333333; font-family: 'Nanum Gothic'">&darr;</span>
+      </td>
+      <td style="height: 28px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><strong>논리적 응집도</strong></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >(<strong>Logical Cohesion</strong>)</span
+        >
+      </td>
+      <td style="height: 28px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #9feec3">유사한 성격</span>을 갖거나
+          <span style="background-color: #9feec3"
+            >특정 형태로 분류되는 처리 요소</span
+          >들로 하나의 모듈이 형성되는 경우의 응집도</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 30px">
+      <td style="text-align: center; height: 30px">응집도 약함</td>
+      <td style="height: 30px">
+        <span><strong>우연적 응집도</strong></span
+        ><br /><span>(<strong>Coincidental Cohesion</strong>)</span>
+      </td>
+      <td style="height: 30px">
+        <span
+          >모듈 내부의 각 구성 요소들이<span>&nbsp;</span
+          ><span style="background-color: #9feec3">서로 관련 없는 요소</span
+          >로만 구성된 경우의 응집도</span
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
 <p data-ke-size="size16">&nbsp;</p>
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style7" />
+<hr
+  contenteditable="false"
+  data-ke-type="horizontalRule"
+  data-ke-style="style7"
+/>
 <p data-ke-size="size16">&nbsp;</p>
-<h2 style="text-align: center;" data-ke-size="size26"><span style="font-family: 'Nanum Gothic';"><strong>정보처리기사 필기 기출문제</strong></span></h2>
+<h2 style="text-align: center" data-ke-size="size26">
+  <span style="font-family: 'Nanum Gothic'"
+    ><strong>정보처리기사 필기 기출문제</strong></span
+  >
+</h2>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 160px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 60px;">
-<td style="height: 60px;" colspan="2"><span style="font-family: 'Nanum Gothic';">64.</span><br /><span style="font-family: 'Nanum Gothic';">시스템에서 모듈 사이의 <span style="background-color: #f6e199;">결합도(Coupling)</span>에 대한 설명으로 <span style="background-color: #f6e199;">옳은</span> 것은? <span style="background-color: #f6e199;"><a style="background-color: #f6e199;">③</a></span></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 21%] 정보처리기사(2020년 이후) 필기 (2020년 1회&middot;2회 통합 기출문제)</span></td>
-</tr>
-<tr style="height: 40px;">
-<td id="quesitem641" style="height: 40px;"><span style="font-family: 'Nanum Gothic';"><a>① 한 모듈 내에 있는 처리요소들 사이의 기능적인 연관 정도를 나타낸다.</a></span></td>
-<td style="height: 40px;"><span style="font-family: 'Nanum Gothic';">응집도에 대한 설명이다.</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem642" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>② 결합도가 높으면 시스템 구현 및 유지보수 작업이 쉽다.</a></span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">결합도가 높으면 유지보수가 어렵다.</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem643" style="height: 20px;"><span style="background-color: #f6e199; font-family: 'Nanum Gothic';"><a style="background-color: #f6e199;">③ 모듈 간의 결합도를 약하게 하면 모듈 독립성이 향상된다.</a></span></td>
-<td style="height: 20px;"><span style="background-color: #99cefa; font-family: 'Nanum Gothic';">결합도 낮게, 응집도 높게 -&gt; 독립성 향상</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem644" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>④ 자료결합도는 내용결합도보다 결합도가 높다.</a></span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">자료 결합도는 결합도가 가장 낮다.</span></td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 160px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 60px">
+      <td style="height: 60px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">64.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          >시스템에서 모듈 사이의
+          <span style="background-color: #f6e199">결합도(Coupling)</span>에 대한
+          설명으로 <span style="background-color: #f6e199">옳은</span> 것은?
+          <span style="background-color: #f6e199"
+            ><a style="background-color: #f6e199">③</a></span
+          ></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 21%] 정보처리기사(2020년 이후) 필기 (2020년 1회&middot;2회
+          통합 기출문제)</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 40px">
+      <td id="quesitem641" style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a
+            >① 한 모듈 내에 있는 처리요소들 사이의 기능적인 연관 정도를
+            나타낸다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'">응집도에 대한 설명이다.</span>
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem642" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>② 결합도가 높으면 시스템 구현 및 유지보수 작업이 쉽다.</a></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >결합도가 높으면 유지보수가 어렵다.</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem643" style="height: 20px">
+        <span style="background-color: #f6e199; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #f6e199"
+            >③ 모듈 간의 결합도를 약하게 하면 모듈 독립성이 향상된다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="background-color: #99cefa; font-family: 'Nanum Gothic'"
+          >결합도 낮게, 응집도 높게 -&gt; 독립성 향상</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem644" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>④ 자료결합도는 내용결합도보다 결합도가 높다.</a></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >자료 결합도는 결합도가 가장 낮다.</span
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 140px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 60px;">
-<td style="height: 60px;" colspan="2"><span style="font-family: 'Nanum Gothic';">77.</span><br /><span style="font-family: 'Nanum Gothic';"><span style="background-color: #f6e199;">응집도</span>가 가장 <span style="background-color: #f6e199;">낮은</span> 것은? <span style="background-color: #f6e199;"><a style="background-color: #f6e199;">④</a></span></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 75%]<span style="color: #333333;">&nbsp;</span><span style="color: #333333;">정보처리기사(2020년 이후) 필기 (2020년 1회&middot;2회 통합 기출문제)</span></span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem771" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>① 기능적 응집도</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem772" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>② 시간적 응집도</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem773" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>③ 절차적 응집도</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem774" style="height: 20px;"><span style="background-color: #f6e199; font-family: 'Nanum Gothic';"><a style="background-color: #f6e199;">④ 우연적 응집도</a></span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><span style="background-color: #99cefa;">우연적 응집도(Coincidental Cohesion)</span>이 <span style="background-color: #99cefa;">가장 낮은 응집도</span>를 갖는다.</span></td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 140px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 60px">
+      <td style="height: 60px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">77.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #f6e199">응집도</span>가 가장
+          <span style="background-color: #f6e199">낮은</span> 것은?
+          <span style="background-color: #f6e199"
+            ><a style="background-color: #f6e199">④</a></span
+          ></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 75%]<span style="color: #333333">&nbsp;</span
+          ><span style="color: #333333"
+            >정보처리기사(2020년 이후) 필기 (2020년 1회&middot;2회 통합
+            기출문제)</span
+          ></span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem771" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>① 기능적 응집도</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem772" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>② 시간적 응집도</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem773" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>③ 절차적 응집도</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem774" style="height: 20px">
+        <span style="background-color: #f6e199; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #f6e199">④ 우연적 응집도</a></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #99cefa"
+            >우연적 응집도(Coincidental Cohesion)</span
+          >이 <span style="background-color: #99cefa">가장 낮은 응집도</span>를
+          갖는다.</span
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 160px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 60px;">
-<td style="height: 60px;" colspan="2"><span style="font-family: 'Nanum Gothic';">65.</span><br /><span style="font-family: 'Nanum Gothic';"><span style="background-color: #ffc1c8;">효과적인 모듈 설계</span>를 위한 <span style="background-color: #ffc1c8;">유의사항으로 거리가 먼</span> 것은? <a style="background-color: #ffc1c8;">③</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 31%] 정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem651" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>① 모듈간의 결합도를 약하게 하면 모듈 독립성이 향상된다.</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem652" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>② 복잡도와 중복성을 줄이고 일관성을 유지시킨다.</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 40px;">
-<td id="quesitem653" style="height: 40px;"><span style="background-color: #ffc1c8; font-family: 'Nanum Gothic';"><a style="background-color: #ffc1c8;">③ 모듈의 기능은 예측이 가능해야 하며 지나치게 제한적 이여야 한다.</a></span></td>
-<td style="height: 40px;"><span style="background-color: #99cefa; font-family: 'Nanum Gothic';">지나치게 제한적일 필요는 없다.</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem654" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>④ 유지보수가 용이해야 한다.</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 160px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 60px">
+      <td style="height: 60px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">65.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #ffc1c8">효과적인 모듈 설계</span>를
+          위한
+          <span style="background-color: #ffc1c8">유의사항으로 거리가 먼</span>
+          것은? <a style="background-color: #ffc1c8">③</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 31%] 정보처리기사(2020년 이후) 필기 (2020년 3회
+          기출문제)</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem651" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>① 모듈간의 결합도를 약하게 하면 모듈 독립성이 향상된다.</a></span
+        >
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem652" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>② 복잡도와 중복성을 줄이고 일관성을 유지시킨다.</a></span
+        >
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 40px">
+      <td id="quesitem653" style="height: 40px">
+        <span style="background-color: #ffc1c8; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #ffc1c8"
+            >③ 모듈의 기능은 예측이 가능해야 하며 지나치게 제한적 이여야
+            한다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 40px">
+        <span style="background-color: #99cefa; font-family: 'Nanum Gothic'"
+          >지나치게 제한적일 필요는 없다.</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem654" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>④ 유지보수가 용이해야 한다.</a></span
+        >
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 160px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 60px;">
-<td style="height: 60px;" colspan="2"><span style="font-family: 'Nanum Gothic';">70.</span><br /><span style="font-family: 'Nanum Gothic';">다음이 설명하는 <span style="background-color: #f6e199;">응집도의 유형</span>은? <a style="background-color: #f6e199;">④</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 24%]<span style="color: #333333;">&nbsp;</span><span style="color: #333333;">정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span></span></td>
-</tr>
-<tr style="height: 20px;">
-<td style="height: 20px; text-align: center;" colspan="2">[##_Image|kage@nleik/btqZehiQR5p/EkibUqngKIb81tJKV4bI00/img.png|alignCenter|data-origin-width="197" data-origin-height="109" data-ke-mobilestyle="widthContent"|||_##]</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem701" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>① 기능적 응집도</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem702" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>② 우연적 응집도</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem703" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>③ 논리적 응집도</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem704" style="height: 20px;"><span style="background-color: #f6e199; font-family: 'Nanum Gothic';"><a style="background-color: #f6e199;">④ 절차적 응집도</a></span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">설명에 <span style="background-color: #99cefa;">순차적으로 수행</span>한다 -&gt; <span style="background-color: #99cefa;">절차적 응집도</span></span><br /><span style="font-family: 'Nanum Gothic';"><span style="background-color: #99cefa;">출력 데이터</span>가 다음 활동의 <span style="background-color: #99cefa;">입력 데이터</span>로 활용 -&gt; <span style="background-color: #99cefa;">순차적 응집도</span></span></td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 160px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 60px">
+      <td style="height: 60px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">70.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          >다음이 설명하는
+          <span style="background-color: #f6e199">응집도의 유형</span>은?
+          <a style="background-color: #f6e199">④</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 24%]<span style="color: #333333">&nbsp;</span
+          ><span style="color: #333333"
+            >정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span
+          ></span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td style="height: 20px; text-align: center" colspan="2">
+        [##_Image|kage@nleik/btqZehiQR5p/EkibUqngKIb81tJKV4bI00/img.png|alignCenter|data-origin-width="197"
+        data-origin-height="109" data-ke-mobilestyle="widthContent"|||_##]
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem701" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>① 기능적 응집도</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem702" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>② 우연적 응집도</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem703" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>③ 논리적 응집도</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem704" style="height: 20px">
+        <span style="background-color: #f6e199; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #f6e199">④ 절차적 응집도</a></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >설명에
+          <span style="background-color: #99cefa">순차적으로 수행</span>한다
+          -&gt;
+          <span style="background-color: #99cefa">절차적 응집도</span></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #99cefa">출력 데이터</span>가 다음
+          활동의 <span style="background-color: #99cefa">입력 데이터</span>로
+          활용 -&gt;
+          <span style="background-color: #99cefa">순차적 응집도</span></span
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 140px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 60px;">
-<td style="height: 60px;" colspan="2"><span style="font-family: 'Nanum Gothic';">72.</span><br /><span style="font-family: 'Nanum Gothic';">다음 중 가장 <span style="background-color: #f6e199;">결합도가 강한</span> 것은? <a style="background-color: #f6e199;">③</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 23%]<span style="color: #333333;">&nbsp;</span><span style="color: #333333;">정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span></span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem721" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>① date coupling</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem722" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>② stamp coupling</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem723" style="height: 20px;"><span style="background-color: #f6e199; font-family: 'Nanum Gothic';"><a style="background-color: #f6e199;">③ common coupling</a></span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">보기 중에서 <span style="background-color: #99cefa;">공유 결합도</span>(Common Coupling)이 가장 강한 결합도를 갖는다.</span><br /><span style="font-family: 'Nanum Gothic';">결합도가 <span style="background-color: #99cefa;">가장 강한건 내용 결합도</span>(Content Coupling)이다.</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem724" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>④ control coupling</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 140px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 60px">
+      <td style="height: 60px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">72.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          >다음 중 가장
+          <span style="background-color: #f6e199">결합도가 강한</span> 것은?
+          <a style="background-color: #f6e199">③</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 23%]<span style="color: #333333">&nbsp;</span
+          ><span style="color: #333333"
+            >정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span
+          ></span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem721" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>① date coupling</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem722" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>② stamp coupling</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem723" style="height: 20px">
+        <span style="background-color: #f6e199; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #f6e199">③ common coupling</a></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >보기 중에서
+          <span style="background-color: #99cefa">공유 결합도</span>(Common
+          Coupling)이 가장 강한 결합도를 갖는다.</span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >결합도가
+          <span style="background-color: #99cefa">가장 강한건 내용 결합도</span
+          >(Content Coupling)이다.</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem724" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>④ control coupling</a></span
+        >
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 160px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 80px;">
-<td style="height: 80px;" colspan="2"><span style="font-family: 'Nanum Gothic';">77.</span><br /><span style="font-family: 'Nanum Gothic';">어떤 모듈이 다른 모듈의 <span style="background-color: #f6e199;">내부 논리 조직을 제어</span>하기 위한 목적으로 <span style="background-color: #f6e199;">제어신호</span>를 이용하여 통신하는 경우이며, 하위 모듈에서 상위 모듈로 제어신호가 이동하여 상위 모듈에게 처리 명령을 부여하는 <span style="background-color: #f6e199;">권리 전도현상</span>이 발생하게 되는 <span style="background-color: #f6e199;">결합도</span>는? <a style="background-color: #f6e199;">③</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 26%]<span style="color: #333333;">&nbsp;</span><span style="color: #333333;">정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span></span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem771" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>① data coupling</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem772" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>② stamp coupling</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem773" style="height: 20px;"><span style="background-color: #f6e199; font-family: 'Nanum Gothic';"><a style="background-color: #f6e199;">③ control coupling</a></span></td>
-<td style="height: 20px;"><span style="font-family: 'Nanum Gothic';">설명에 <span style="background-color: #99cefa;">논리 제어, 제어신호, 권리 전도</span> 등이 나오면 <span style="background-color: #99cefa;">제어 결합도</span>(Control Coupling)이다.</span></td>
-</tr>
-<tr style="height: 20px;">
-<td id="quesitem774" style="height: 20px;"><span style="font-family: 'Nanum Gothic';"><a>④ common coupling</a></span></td>
-<td style="height: 20px;">&nbsp;</td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 160px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 80px">
+      <td style="height: 80px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">77.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          >어떤 모듈이 다른 모듈의
+          <span style="background-color: #f6e199">내부 논리 조직을 제어</span
+          >하기 위한 목적으로
+          <span style="background-color: #f6e199">제어신호</span>를 이용하여
+          통신하는 경우이며, 하위 모듈에서 상위 모듈로 제어신호가 이동하여 상위
+          모듈에게 처리 명령을 부여하는
+          <span style="background-color: #f6e199">권리 전도현상</span>이
+          발생하게 되는 <span style="background-color: #f6e199">결합도</span>는?
+          <a style="background-color: #f6e199">③</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 26%]<span style="color: #333333">&nbsp;</span
+          ><span style="color: #333333"
+            >정보처리기사(2020년 이후) 필기 (2020년 3회 기출문제)</span
+          ></span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem771" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>① data coupling</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem772" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"><a>② stamp coupling</a></span>
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem773" style="height: 20px">
+        <span style="background-color: #f6e199; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #f6e199">③ control coupling</a></span
+        >
+      </td>
+      <td style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          >설명에
+          <span style="background-color: #99cefa"
+            >논리 제어, 제어신호, 권리 전도</span
+          >
+          등이 나오면
+          <span style="background-color: #99cefa">제어 결합도</span>(Control
+          Coupling)이다.</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 20px">
+      <td id="quesitem774" style="height: 20px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>④ common coupling</a></span
+        >
+      </td>
+      <td style="height: 20px">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr>
-<td colspan="2"><span style="font-family: 'Nanum Gothic';">20.</span><br /><span style="font-family: 'Nanum Gothic';">바람직한 <span style="background-color: #ffc1c8;">소프트웨어 설계 지침이 아닌</span> 것은? <a style="background-color: #ffc1c8;">③</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 90%] 정보처리기사(2020년 이후) 필기 (2020년 4회 기출문제)</span></td>
-</tr>
-<tr>
-<td id="quesitem201"><span style="font-family: 'Nanum Gothic';"><a>① 적당한 모듈의 크기를 유지한다.</a></span></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td id="quesitem202"><span style="font-family: 'Nanum Gothic';"><a>② 모듈 간의 접속 관계를 분석하여 복잡도와 중복을 줄인다.</a></span></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td id="quesitem203"><span style="background-color: #ffc1c8; font-family: 'Nanum Gothic';"><a style="background-color: #ffc1c8;">③ 모듈 간의 결합도는 강할수록 바람직하다.</a></span></td>
-<td><span style="font-family: 'Nanum Gothic';">모듈 간의 <span style="background-color: #99cefa;">결합도는 낮을수록 바람직</span>하다.</span></td>
-</tr>
-<tr>
-<td id="quesitem204"><span style="font-family: 'Nanum Gothic';"><a>④ 모듈 간의 효과적인 제어를 위해 설계에서 계층적 자료 조직이 제시되어야 한다.</a></span></td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <span style="font-family: 'Nanum Gothic'">20.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          >바람직한
+          <span style="background-color: #ffc1c8"
+            >소프트웨어 설계 지침이 아닌</span
+          >
+          것은? <a style="background-color: #ffc1c8">③</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 90%] 정보처리기사(2020년 이후) 필기 (2020년 4회
+          기출문제)</span
+        >
+      </td>
+    </tr>
+    <tr>
+      <td id="quesitem201">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>① 적당한 모듈의 크기를 유지한다.</a></span
+        >
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="quesitem202">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>② 모듈 간의 접속 관계를 분석하여 복잡도와 중복을 줄인다.</a></span
+        >
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="quesitem203">
+        <span style="background-color: #ffc1c8; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #ffc1c8"
+            >③ 모듈 간의 결합도는 강할수록 바람직하다.</a
+          ></span
+        >
+      </td>
+      <td>
+        <span style="font-family: 'Nanum Gothic'"
+          >모듈 간의
+          <span style="background-color: #99cefa">결합도는 낮을수록 바람직</span
+          >하다.</span
+        >
+      </td>
+    </tr>
+    <tr>
+      <td id="quesitem204">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a
+            >④ 모듈 간의 효과적인 제어를 위해 설계에서 계층적 자료 조직이
+            제시되어야 한다.</a
+          ></span
+        >
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%; height: 260px;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr style="height: 60px;">
-<td style="height: 60px;" colspan="2"><span style="font-family: 'Nanum Gothic';">73.</span><br /><span style="font-family: 'Nanum Gothic';"><span style="background-color: #ffc1c8;">결합도(Coupling)</span>에 대한 설명으로 <span style="background-color: #ffc1c8;">틀린</span> 것은? <a style="background-color: #ffc1c8;">①</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 48%]<span style="color: #333333;">&nbsp;</span><span style="color: #333333;">정보처리기사(2020년 이후) 필기 (2020년 4회 기출문제)</span></span></td>
-</tr>
-<tr style="height: 60px;">
-<td id="quesitem731" style="height: 60px;"><span style="background-color: #ffc1c8; font-family: 'Nanum Gothic';"><a style="background-color: #ffc1c8;">① 데이터 결합도(Data Coupling)는 두 모듈이 매개변수로 자료를 전달할 때, 자료구조 형태로 전달되어 이용 될 때 데이터가 결합되어 있다고 한다.</a></span></td>
-<td style="height: 60px;"><span style="font-family: 'Nanum Gothic';"><span style="background-color: #99cefa;">자료구조 형태로 전달</span> -&gt; <span style="background-color: #99cefa;">스탬프 결합도</span>(Stamp Coupling)</span><br /><span style="font-family: 'Nanum Gothic';"><span style="background-color: #99cefa;">자료 요소로만 구성</span> -&gt; <span style="background-color: #99cefa;">데이터 결합도</span>(Data Coupling)</span></td>
-</tr>
-<tr style="height: 60px;">
-<td id="quesitem732" style="height: 60px;"><span style="font-family: 'Nanum Gothic';"><a>② 내용 결합도(Content Coupling)는 하나의 모듈이 직접적으로 다른 모듈의 내용을 참조할 때 두 모듈은 내용적으로 결합되어 있다고 한다.</a></span></td>
-<td style="height: 60px;">&nbsp;</td>
-</tr>
-<tr style="height: 40px;">
-<td id="quesitem733" style="height: 40px;"><span style="font-family: 'Nanum Gothic';"><a>③ 공통 결합도(Common Coupling)는 두 모듈아 동일한 전역 데이터를 접근한다면 공통결합 되어 있다고 한다.</a></span></td>
-<td style="height: 40px;">&nbsp;</td>
-</tr>
-<tr style="height: 40px;">
-<td id="quesitem734" style="height: 40px;"><span style="font-family: 'Nanum Gothic';"><a>④ 결합도(Coupling)는 두 모듈간의 상호작용, 또는 의존도 장도를 나타내는 것이다.</a></span></td>
-<td style="height: 40px;">&nbsp;</td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%; height: 260px"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr style="height: 60px">
+      <td style="height: 60px" colspan="2">
+        <span style="font-family: 'Nanum Gothic'">73.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #ffc1c8">결합도(Coupling)</span>에
+          대한 설명으로
+          <span style="background-color: #ffc1c8">틀린</span> 것은?
+          <a style="background-color: #ffc1c8">①</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 48%]<span style="color: #333333">&nbsp;</span
+          ><span style="color: #333333"
+            >정보처리기사(2020년 이후) 필기 (2020년 4회 기출문제)</span
+          ></span
+        >
+      </td>
+    </tr>
+    <tr style="height: 60px">
+      <td id="quesitem731" style="height: 60px">
+        <span style="background-color: #ffc1c8; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #ffc1c8"
+            >① 데이터 결합도(Data Coupling)는 두 모듈이 매개변수로 자료를 전달할
+            때, 자료구조 형태로 전달되어 이용 될 때 데이터가 결합되어 있다고
+            한다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 60px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #99cefa">자료구조 형태로 전달</span>
+          -&gt;
+          <span style="background-color: #99cefa">스탬프 결합도</span>(Stamp
+          Coupling)</span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #99cefa">자료 요소로만 구성</span>
+          -&gt;
+          <span style="background-color: #99cefa">데이터 결합도</span>(Data
+          Coupling)</span
+        >
+      </td>
+    </tr>
+    <tr style="height: 60px">
+      <td id="quesitem732" style="height: 60px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a
+            >② 내용 결합도(Content Coupling)는 하나의 모듈이 직접적으로 다른
+            모듈의 내용을 참조할 때 두 모듈은 내용적으로 결합되어 있다고
+            한다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 60px">&nbsp;</td>
+    </tr>
+    <tr style="height: 40px">
+      <td id="quesitem733" style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a
+            >③ 공통 결합도(Common Coupling)는 두 모듈아 동일한 전역 데이터를
+            접근한다면 공통결합 되어 있다고 한다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 40px">&nbsp;</td>
+    </tr>
+    <tr style="height: 40px">
+      <td id="quesitem734" style="height: 40px">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a
+            >④ 결합도(Coupling)는 두 모듈간의 상호작용, 또는 의존도 장도를
+            나타내는 것이다.</a
+          ></span
+        >
+      </td>
+      <td style="height: 40px">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
-<table style="border-collapse: collapse; width: 100%;" border="1" data-ke-align="alignLeft">
-<tbody>
-<tr>
-<td colspan="2"><span style="font-family: 'Nanum Gothic';">74.</span><br /><span style="font-family: 'Nanum Gothic';">응집도의 종류 중 서로 간에 <span style="background-color: #f6e199;">어떠한 의미 있는 연관관계도 지니지 않은</span> 기능 요소로 구성되는 경우이며, 서로 다른 상위 모듈에 의해 호출되어 처리상의 <span style="background-color: #f6e199;">연관성이 없는 서로 다른 기능을 수행하는 경우의 응집도</span>는? <a style="background-color: #f6e199;">④</a></span><br /><span style="font-family: 'Nanum Gothic';">[정답률: 36%]<span style="color: #333333;">&nbsp;</span><span style="color: #333333;">정보처리기사(2020년 이후) 필기 (2020년 4회 기출문제)</span></span></td>
-</tr>
-<tr>
-<td id="quesitem741"><span style="font-family: 'Nanum Gothic';"><a>① Functional Cohesion</a></span></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td id="quesitem742"><span style="font-family: 'Nanum Gothic';"><a>② Sequential Cohesion</a></span></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td id="quesitem743"><span style="font-family: 'Nanum Gothic';"><a>③ Logical Cohesion</a></span></td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td id="quesitem744"><span style="background-color: #f6e199; font-family: 'Nanum Gothic';"><a style="background-color: #f6e199;">④ Coincidental Cohesion</a></span></td>
-<td><span style="font-family: 'Nanum Gothic';"><span style="background-color: #99cefa;">연관성이 없는 기능들로 구성</span> -&gt; <span style="background-color: #99cefa;">우연적 응집도</span>(Coincidental Cohesion)</span></td>
-</tr>
-</tbody>
+<table
+  style="border-collapse: collapse; width: 100%"
+  border="1"
+  data-ke-align="alignLeft"
+>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        <span style="font-family: 'Nanum Gothic'">74.</span><br /><span
+          style="font-family: 'Nanum Gothic'"
+          >응집도의 종류 중 서로 간에
+          <span style="background-color: #f6e199"
+            >어떠한 의미 있는 연관관계도 지니지 않은</span
+          >
+          기능 요소로 구성되는 경우이며, 서로 다른 상위 모듈에 의해 호출되어
+          처리상의
+          <span style="background-color: #f6e199"
+            >연관성이 없는 서로 다른 기능을 수행하는 경우의 응집도</span
+          >는? <a style="background-color: #f6e199">④</a></span
+        ><br /><span style="font-family: 'Nanum Gothic'"
+          >[정답률: 36%]<span style="color: #333333">&nbsp;</span
+          ><span style="color: #333333"
+            >정보처리기사(2020년 이후) 필기 (2020년 4회 기출문제)</span
+          ></span
+        >
+      </td>
+    </tr>
+    <tr>
+      <td id="quesitem741">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>① Functional Cohesion</a></span
+        >
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="quesitem742">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>② Sequential Cohesion</a></span
+        >
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="quesitem743">
+        <span style="font-family: 'Nanum Gothic'"
+          ><a>③ Logical Cohesion</a></span
+        >
+      </td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td id="quesitem744">
+        <span style="background-color: #f6e199; font-family: 'Nanum Gothic'"
+          ><a style="background-color: #f6e199"
+            >④ Coincidental Cohesion</a
+          ></span
+        >
+      </td>
+      <td>
+        <span style="font-family: 'Nanum Gothic'"
+          ><span style="background-color: #99cefa"
+            >연관성이 없는 기능들로 구성</span
+          >
+          -&gt;
+          <span style="background-color: #99cefa">우연적 응집도</span
+          >(Coincidental Cohesion)</span
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 <p data-ke-size="size16">&nbsp;</p>
