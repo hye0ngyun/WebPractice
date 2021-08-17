@@ -84,16 +84,14 @@
       }
     </script>
     <!-- <div><video src="http://media.w3.org/2010/05/sintel/trailer.mp4"></video></div> -->
-    <input type="range" name="" id="">
+    <input type="range" name="" id="" />
     <span class="shadow-host">
-      <a href="https://twitter.com/ireaderinokun">
-          Follow @ireaderinokun
-      </a>
+      <a href="https://twitter.com/ireaderinokun"> Follow @ireaderinokun </a>
     </span>
     <script>
       {
         const shadowEl = document.querySelector(".shadow-host");
-        const shadow = shadowEl.attachShadow({mode: 'open'});
+        const shadow = shadowEl.attachShadow({ mode: "open" });
         const link = document.createElement("a");
         link.href = shadowEl.querySelector("a").href;
         link.innerHTML = `
@@ -140,6 +138,15 @@
         // HTML tag중 shadow DOM의 예로 video, canvas, iframe 등이 존재한다.
 
         // 이름에서 알 수 있듯이 shadow DOM은 항상 일반 DOM 내의 요소에 부착된다. DOM이 없으면 shadow DOM도 존재하지 않는다.
+      }
+      {
+        const obj1 = {
+          name: "Shin",
+          sayHi: function () {
+            console.log("Hello " + this.name);
+          },
+        };
+        obj1.sayHi();
       }
     </script>
   </body>
