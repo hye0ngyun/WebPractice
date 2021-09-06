@@ -1,121 +1,143 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시험_회원가입 폼</title>
     <style>
-      h1 {
-        color: green;
-        text-decoration: underline yellow wavy;
+      * {
+        padding: 0;
+      }
+      body {
+        font: 15px "굴림", Gulim;
+      }
+      #wrapper {
+        width: 550px;
+      }
+      p {
+        text-align: justify;
+      }
+
+      .skate {
+        width: 250px;
+        padding: 15px;
+        background-color: #ccc;
+        float: left;
+      }
+      .football {
+        width: 210px;
+        padding: 15px;
+        background: #222;
+        float: right;
+      }
+      .olympic {
+        padding: 10px;
+        background: #8cc;
+      }
+
+      .box01,
+      .box02,
+      .box03,
+      .box04 {
+        margin-top: 5px;
+      }
+      .box01 > div {
+        width: 50%;
+        height: 100px;
         text-align: center;
+        font: 18px "고딕";
+        line-height: 100px;
+        background: yellow;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        clear: right;
       }
-      table {
-        width: 100%;
-        border-top: 2px dashed #333;
-        border-bottom: 2px solid #333;
+      .box02 > div {
+        width: 33.33333%;
+        height: 100px;
+        text-align: center;
+        font: 18px "고딕";
+        line-height: 100px;
+        background: yellowgreen;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid #333;
       }
-      th {
-        width: 200px;
-        height: 60px;
-        text-align: left;
-        text-indent: 30px;
-        background-color: turquoise;
+      .box03 > div {
+        width: 25%;
+        height: 100px;
+        text-align: center;
+        font: 18px "고딕";
+        line-height: 100px;
+        background: skyblue;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid #333;
       }
-      .req {
-        color: tomato;
-        background: turquoise url("images/icon.png") no-repeat 15px 25px;
-      }
-      .but_s {
-        width: 100px;
-        height: 30px;
-        text-align: right;
-      }
-      input {
-        margin-left: 5px;
-      }
-      .marL_0 {
-        margin-left: 0px;
+      .box04 > div {
+        width: 20%;
+        height: 100px;
+        text-align: center;
+        font: 18px "고딕";
+        line-height: 100px;
+        background: pink;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid #333;
       }
     </style>
   </head>
   <body>
-    <h1>세잔컴퓨터디자인학원 회원가입</h1>
-    <form action="">
-      <fieldset>
-        <legend>회원가입폼</legend>
-        <table>
-          <tr>
-            <th class="req"><label for="ID">이름</label></th>
-            <td><input type="text" autofocus required /></td>
-          </tr>
-          <tr>
-            <th class="req">아이디</th>
-            <td><input type="text" id="ID" autofocus /></td>
-          </tr>
-          <tr>
-            <th><label for="PW">비밀번호</label></th>
-            <td><input type="password" id="PW" /></td>
-          </tr>
-          <tr>
-            <th><label for="c_N">핸드폰번호</label></th>
-            <td>
-              <input type="text" id="c_N" placeholder="123-456-7890" /><input
-                type="submit"
-                value="인증요청"
-              /><input type="submit" value="인증확인" disabled />
-            </td>
-          </tr>
-          <tr>
-            <th><label for="e_m">이메일</label></th>
-            <td>
-              <input type="text" id="e_m" placeholder="12345@naver.com" />
-            </td>
-          </tr>
-          <tr>
-            <th><label for="">메일수신여부</label></th>
-            <td>
-              <input type="radio" value="y" name="receive" />예
-              <input type="radio" value="n" name="receive" />아니요
-            </td>
-          </tr>
-          <tr>
-            <th><label for="ch_sub">수강과목</label></th>
-            <td>
-              <input type="checkbox" value="HTML" name="ch_sub01" /> HTML
-              <input type="checkbox" value="CSS" name="ch_sub02" /> CSS
-              <input type="checkbox" value="JavaScript" name="ch_sub03" />
-              JavaScript
-            </td>
-          </tr>
-          <tr>
-            <th><label for="add">요청사항</label></th>
-            <td><textarea name="" id="" cols="50" rows="5"></textarea></td>
-          </tr>
-          <tr>
-            <th><label for="subject">선택과목</label></th>
-            <td>
-              <select name="subject" id="">
-                <option value="html">html5</option>
-                <option value="css">css</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <th><label for="">사진올리기</label></th>
-            <td><input type="file" /></td>
-          </tr>
-          <tr>
-            <th>회원약관</th>
-            <td><a href="#" target="_blank">회원약관 확인</a></td>
-          </tr>
-        </table>
+    <div id="wrapper">
+      <div class="skate">
         <p>
-          <input class="but_s" type="submit" value="전송" />
-          <input class="but_s marL_0" type="reset" value="취소" />
+          우리의 자랑 스포츠의 꽃 김은호 선수의 요즘 행보에 대해 일부의 사람들이
+          불만을 토로하고 있다. 그녀의 주류광고가 문제 된 것인데 그렇다면
+          김은호는 미성년자도 아닌데 왜 주류광고에 나오면 안 되고 다른 스타들은
+          되는... 이런 우스운 경우가 있을 수 있을까? 다른 스타들도 김은호처럼
+          소중한 우리의 스타고 김은호도 다른 사람들처럼 인형이 아닌 성인의 한
+          사람인데 말이다.
         </p>
-      </fieldset>
-    </form>
+      </div>
+      <div class="football">
+        <p>
+          스포츠스타 박지수는 스타라는 말이 좀 퇴폐적으로 여겨지던 시절 그 말을
+          완전히 깨끗이 세척해서 원래 뜻 그대로 만들어 놓은 사람이다. 사람이
+          어쩌면 저렇게 참될 수 있을까 라고 생각하게 한 장본인. 그의 과거와
+          현재의 행동거지를 보며 노력과 지성의 결정체라고 감탄해 마지않던 행복한
+          기억을 되살린다. 어떤 약보다도 강하고 부작용 없는 정신강장제가 되어준
+          진정한 스타인 그를 존경하지 않을 사람이 있을까, 과연!!!
+        </p>
+      </div>
+      <div class="olympic">
+        <p>
+          이번 올림픽은 기록에 남을 '판정번복 올림픽'이 될 것 같다. 김지훈
+          선수의 어이없는 실격을 바로잡기 위한 이의 제기가 이렇게 많은 말도 안
+          되는 판정번복의 길을 열어주다니 이래서 올림픽의 판정번복은 거의 없었나
+          보다. 이 일을 기뻐해야 할까 슬퍼해야 할까.. 아무도 억울하지 않은
+          진정한 판정이 올림픽에서만이라도 보여지기를...
+        </p>
+      </div>
+
+      <div class="box01">
+        <div>box01-1</div>
+        <div>box01-2</div>
+      </div>
+      <div class="box02">
+        <div>box02-1</div>
+        <div>box02-2</div>
+        <div>box02-3</div>
+      </div>
+      <div class="box03">
+        <div>box03-1</div>
+        <div>box03-2</div>
+        <div>box03-3</div>
+        <div>box03-4</div>
+      </div>
+      <div class="box04">
+        <div>box04-1</div>
+        <div>box04-2</div>
+        <div>box04-3</div>
+        <div>box04-4</div>
+        <div>box04-5</div>
+      </div>
+    </div>
   </body>
 </html>
