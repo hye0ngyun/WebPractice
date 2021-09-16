@@ -32,6 +32,15 @@
         height: 10000px;
         background-color: tomato;
       }
+      #me::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: hotpink;
+        left: 10px;
+        border: 10px solid hotpink;
+        position: relative;
+      }
     </style>
   </head>
   <body>
@@ -41,7 +50,20 @@
       <div id="parent" class="test">parent</div>
     </div>
     <div id="me">me</div>
-    <!-- <div id="large"></div> -->
+    <div id="large"></div>
     <ornage>orange</ornage>
+
+    <!-- 방법1 -->
+    <span>이미지</span>
+    <span>글</span><br />
+    <span></span>
+    <span></span><br />
+    <span></span>
+    <span></span><br />
+
+    <!-- before after를 쓰는 방법2 -->
+    <span></span><br />
+    <span></span><br />
+    <span></span><br />
   </body>
 </html>

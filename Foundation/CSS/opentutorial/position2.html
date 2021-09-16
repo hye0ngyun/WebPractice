@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      html {
+      body {
         border: 1px solid grey;
+        margin: 0;
+        padding: 0;
       }
       #other,
       #parent,
@@ -18,6 +20,9 @@
       }
       #grand {
         position: absolute;
+
+        /* top: 0;
+        left: 0; */
         top: 100px;
       }
       #me {
@@ -27,7 +32,7 @@
         /* 그리고 이후 top과 left등 offset의 기준이 html태그를 기준으로 삼게 된다. */
 
         position: absolute;
-        left: 0px;
+        /* left: 110px; */
         top: 0px;
 
         /* absolute는 더이상 부모(parent)의 자식이 아닌것 처럼 사이즈가 자기 자신의 컨텐츠만큼만 지정된다. */
@@ -39,10 +44,12 @@
   </head>
   <body>
     <div id="other">other</div>
+    <!-- grand의 부모는 body -->
     <div id="grand">
       grand
-      <div id="parent" class="test">
+      <div id="parent">
         parent
+        <!-- me의 부모는 parent, parent의 display는 static -->
         <div id="me">me</div>
       </div>
     </div>
