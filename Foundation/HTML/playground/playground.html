@@ -6,62 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .wrap {
-        width: 550px;
-        background-color: #aaaaaa;
-        height: 400px;
-      }
-      .hidden {
-        visibility: hidden;
-        height: 0vh;
-        transition: 0.5s;
-        color: white;
-      }
-      .preview {
-        /* height: 200px; */
-        margin-top: auto;
-        background-color: white;
-      }
-      .wrap:hover {
+      body {
+        height: 2000px;
       }
     </style>
   </head>
   <body>
-    <div class="wrap">
-      <div>aa</div>
-      <div class="preview">
-        <h1>제목</h1>
-        <span>2021. 09. 25.</span>
-        <div class="hidden">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            exercitationem ad enim, veniam non alias corporis assumenda incidunt
-            magnam totam eaque minus nulla, reiciendis molestias libero
-            necessitatibus delectus itaque tempore.
-          </p>
-          <span>작성자: 신현균</span>
-          <span>조회수: 2400</span>
+    <section>
+      <div class="models">
+        <h1 class="main">&#35;2021 New Models</h1>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="banner01"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner02"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner03"></div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div>#태그1 #태그2 #태그3</div>
+        <p class="txtTop" id="txtTop">Model Agencies</p>
+        <p class="txtBottom">DuguenDoguen</p>
       </div>
-    </div>
+    </section>
+    <section>
+      <h1 class="main">&#35;Models Info</h1>
+      <p class="middle point-color_main">
+        모델들의 정보와 SNS를 빠르게 확인하세요!
+      </p>
+      <ul class="info-nav">
+        <li><a href="#">전체보기</a></li>
+        <li><a href="#">강아지</a></li>
+        <li><a href="#">고양이</a></li>
+        <li><a href="#">기타</a></li>
+      </ul>
+      <div class="models_list">
+        <div>
+          <div class="models-bg_01">
+            <div class="sns">
+              <a href="#">BLOG</a>
+              <a href="#">INSTARTGRAM</a>
+            </div>
+          </div>
+          <ul class="point-color_main">
+            <li>방굴탱</li>
+            <li>출생<span class="bold10">2020. 10.03</span></li>
+            <li>종<span class="bold10">골든햄스터</span></li>
+            <li>데뷔<span class="bold10">2020 - 보그코리아</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="parallax">
+      <div class="parallax-txt">
+        <h1 class="outline">&nbsp;&#35;Notice&nbsp;</h1>
+        <p>
+          <span class="sub01"
+            >&nbsp;혹시,,,우리 아이도 세계 슈퍼모델의 끼를 가진건
+            아닐까?&nbsp;</span
+          >
+          <span class="sub02">&nbsp;모집기간이라면 모델지원 해볼까?&nbsp;</span>
+        </p>
+        <a href="#"
+          >&nbsp;기간확인<span class="sub03">&nbsp;&#8227;&nbsp;</span></a
+        >
+      </div>
+    </section>
+    <footer class="footer">
+      <span class="font-color_white"
+        >Copyright. seznan student. All Right Reserved.</span
+      >
+    </footer>
+    <!--js 라이브러리에서 확인후 html에서 찾아서 사용해야하므로 마지막에 넣어줄 것!-->
+    <!-- <script src="js/main_style.js"></script> -->
     <script>
-      {
-        let elem1 = document.querySelector(".wrap");
-        let elem2 = document.querySelector(".hidden");
-        elem1.addEventListener("mouseover", () => {
-          elem2.style.visibility = "visible";
-          elem2.style.height = "200px";
-          elem2.style.color = "black";
-          console.log(111);
-        });
-        elem1.addEventListener("mouseout", () => {
-          elem2.style.visibility = "hidden";
-          elem2.style.height = "0px";
-          elem2.style.color = "white";
-          console.log(111);
-        });
-      }
+      let txtTop = document.getElementById("txtTop");
+      console.log(1);
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        txtTop.style.marginLeft = value * 4 + "px";
+        console.log(11);
+      });
     </script>
   </body>
 </html>

@@ -5,6 +5,11 @@
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="colors.js"></script>
+    <style>
+      body {
+        height: 1500px;
+      }
+    </style>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
@@ -18,7 +23,7 @@
     />
     <ol class="nav">
       <li><a href="#!HTML">HTML</a></li>
-      <li><a href="#!CSS">CSS</a></li>
+      <li><a href="#!CSS">CSSa</a></li>
       <li><a href="#!JavaScript">JavaScript</a></li>
     </ol>
     <div id="main"></div>
@@ -35,9 +40,26 @@
         });
 
         // ol에 이벤트 리스너를 추가해 자식인 li 요소 모두에 이벤트 위임
+        // ol.addEventListener("click", (e) => {
+        //   console.log(e.target.innerText);
+        //   fetch(e.target.innerText).then((response) => {
+        //     response.text().then((text) => {
+        //       div.innerHTML = text;
+        //     });
+        //   });
+        // });
+
+        // HTML에 표시된 innerText를 내가 원하는 파일 이름으로 바꿔서 보여주기
         ol.addEventListener("click", (e) => {
           console.log(e.target.innerText);
-          fetch(e.target.innerText).then((response) => {
+          if (e.target.innerText == "CSSa") {
+            var fetchName = "CSS";
+          } else if (e.target.innerText == "HTML") {
+            var fetchName = "HTML";
+          } else if (e.target.innerText == "JavaScript") {
+            var fetchName = "JavaScript";
+          }
+          fetch(fetchName).then((response) => {
             response.text().then((text) => {
               div.innerHTML = text;
             });
