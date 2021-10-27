@@ -9,10 +9,36 @@
       body {
         height: 2000px;
       }
+
+      .shapedividers_com-3219 {
+        overflow: hidden;
+        position: relative;
+      }
+      .shapedividers_com-3219::before {
+        content: "";
+        font-family: "shape divider from ShapeDividers.com";
+        position: absolute;
+        z-index: 3;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        bottom: -0.1vw;
+        left: -0.1vw;
+        right: -0.1vw;
+        top: -0.1vw;
+        background-size: 100% 90px;
+        background-position: 50% 0%;
+        background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 1" preserveAspectRatio="none"><path d="M0 0h10L5 1z" fill="%23fbd8c2"/></svg>');
+      }
+
+      @media (min-width: 2100px) {
+        .shapedividers_com-3219::before {
+          background-size: 100% calc(2vw + 90px);
+        }
+      }
     </style>
   </head>
   <body>
-    <section>
+    <section class="shapedividers_com-3219">
       <div class="models">
         <h1 class="main">&#35;2021 New Models</h1>
         <div class="swiper">
