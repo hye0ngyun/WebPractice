@@ -9,8 +9,7 @@
   <body>
     <div id="app">
       <div>
-        <router-link to="/login">Login</router-link>
-        <router-link to="/main">Main</router-link>
+        <router-link to="/main">main</router-link>
       </div>
       <router-view></router-view>
     </div>
@@ -18,20 +17,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script>
-      let LoginComponent = {
-        template: `<div>login</div>`,
-      };
       let MainComponent = {
         template: `<div>main</div>`,
       };
-
       let router = new VueRouter({
-        mode: "history",
         routes: [
-          {
-            path: "/login",
-            component: LoginComponent,
-          },
           {
             path: "/main",
             component: MainComponent,
