@@ -42,3 +42,17 @@
   foo();
   console.log(x);
 }
+{
+  // 렉시컬 스코프
+  // 함수가 정의된 시점에 함수의 상위 스코프를 결정한다.
+  var x = 1;
+  function foo() {
+    var x = 10;
+    bar();
+  }
+  function bar() {
+    console.log(x);
+  }
+  foo(); // 1
+  bar(); // 1
+}
