@@ -1,0 +1,8 @@
+$primary: #401f7c;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+$s-main-color: #adf;
+.test-color {
+  color: $s-main-color;
+}
