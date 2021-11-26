@@ -1,0 +1,20 @@
+@use "./abstracts/colors" as c;
+@use "./abstracts/fonts" as *;
+@use "./components/cards";
+.card {
+  color: c.$primary-color;
+  font-size: $font-size;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.img {
+  $w: 50px;
+  $h: 50px;
+  background-color: c.$warning-color;
+  width: $w;
+  height: $h;
+  display: block;
+  margin: 0 auto;
+}

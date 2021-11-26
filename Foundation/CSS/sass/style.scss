@@ -1,0 +1,5 @@
+@use "abstracts/fonts";
+
+body {
+  font-size: fonts.$font-size;
+}

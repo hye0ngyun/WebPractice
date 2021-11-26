@@ -1,4 +1,4 @@
-.warning, .error, .success, .message {
+.message, .success, .error, .warning {
   border: 1px solid #ccc;
   padding: 10px;
   color: #333;
@@ -15,5 +15,4 @@
 .warning {
   border-color: yellow;
 }
-
 /*# sourceMappingURL=extend.css.map */
