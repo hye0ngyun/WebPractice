@@ -1,0 +1,19 @@
+$myColor: red;
+
+h1 {
+  $myColor: green;
+  color: $myColor;
+}
+
+p {
+  color: $myColor;
+}
+
+span {
+  $myColor: yellow !global;
+  color: $myColor;
+}
+
+h2 {
+  color: $myColor;
+}
