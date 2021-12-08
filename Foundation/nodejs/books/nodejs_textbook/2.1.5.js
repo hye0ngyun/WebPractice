@@ -118,3 +118,36 @@
   boundFn();
   console.log(obj); // { val: 13, arr: [ 2, 8 ] }
 }
+{
+  // 클래스 기반 코드
+  class Human {
+    constructor(type = 'human') {
+      this.type = type;
+    }
+
+    static isHuman(human) {
+      return human instanceof Human;
+    }
+
+    breath() {
+      console.log('h-a-a-a-m');
+    }
+  }
+
+  class Zero extends Human {
+    constructor(type, firstName, lastName) {
+      super(type);
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    sayName() {
+      super.breath();
+      console.log(`${this.firstName} ${this.lastName}`);
+    }
+  }
+
+  const newZero = new Zero('human', 'Zero', 'Cho');
+  Human.isHuman(newZero);
+  newZero.sayName();
+}
