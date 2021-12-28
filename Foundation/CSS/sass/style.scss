@@ -3,3 +3,11 @@
 body {
   font-size: fonts.$font-size;
 }
+
+.main {
+  color: black;
+  line-height: 1.2rem;
+  .section {
+    color: gray;
+  }
+}
