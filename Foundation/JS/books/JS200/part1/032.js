@@ -20,9 +20,9 @@ console.log(`newF: ${newF}`); // 5
 // 2. 배열 비구조화 할당
 var arr = [1, 2, 30, 44, 5];
 var [b, c, ...rest] = arr;
-console.log(`0) b: ${b}`);
-console.log(`0) c: ${c}`);
-console.log(`0) rest: ${rest}`);
+console.log(`0) b: ${b}`); // 1
+console.log(`0) c: ${c}`); // 2
+console.log(`0) rest: ${rest}`); // 30, 44, 5
 
 var [a = 10, f = 9, e] = [1];
 console.log(`1) a: ${a}`); // 1
