@@ -32,12 +32,21 @@ for (let key in user3) {
 let user4 = {};
 Object.defineProperty(user4, "name", {
   value: 'jeado',
-  configurable: false
+  configurable: true, // true인 경우 delete가 가능하다.
+  enumerable: false,
+  writable: false
 });
-console.log(user4);
-delete user4.name; // {}
-console.log(user4);
+console.log(user4.name); // jeado
+delete user4.name;
+console.log(user4.name); // undefined
 Object.defineProperty(user4, "name", {
+  value: 'new jeado',
   writable: true
 })
-console.log(user4);
+console.log(user4.name); // new jeado
+
+// Object.defineProperty()함수 속성들의 기본 값은
+// configuable: false
+// enumerable: flase
+// writable: false
+// value: undefined
