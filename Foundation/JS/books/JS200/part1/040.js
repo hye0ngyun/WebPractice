@@ -6,7 +6,7 @@ function hello() {
 }
 
 console.log(hello2); // undefined
-hello2(); // hello2 is not function
+hello2(); // TypeError: hello2 is not function
 var hello2 = function () {
   console.log('안녕하세요2');
 }
