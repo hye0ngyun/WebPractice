@@ -6,137 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
-        height: 2000px;
-      }
-
-      .shapedividers_com-3219 {
-        overflow: hidden;
-        position: relative;
-      }
-      .shapedividers_com-3219::before {
-        content: "";
-        font-family: "shape divider from ShapeDividers.com";
-        position: absolute;
-        z-index: 3;
-        pointer-events: none;
-        background-repeat: no-repeat;
-        bottom: -0.1vw;
-        left: -0.1vw;
-        right: -0.1vw;
-        top: -0.1vw;
-        background-size: 100% 90px;
-        background-position: 50% 0%;
-        background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 1" preserveAspectRatio="none"><path d="M0 0h10L5 1z" fill="%23fbd8c2"/></svg>');
-      }
-
-      @media (min-width: 2100px) {
-        .shapedividers_com-3219::before {
-          background-size: 100% calc(2vw + 90px);
-        }
+      p {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <progress></progress>
-    <input
-      type="text"
-      list="suggestions"
-      size="50px"
-      placeholder="search cars.../"
-    />
-    <datalist id="suggestions">
-      <option>mercedes</option>
-      <option>Volkwwager</option>
-      <option>adfae</option>
-      <option>42f223</option>
-      <option>hag234</option>
-    </datalist>
-    <section class="shapedividers_com-3219">
-      <div class="models">
-        <h1 class="main">&#35;2021 New Models</h1>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="banner01"></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner02"></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner03"></div>
-            </div>
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-        <p class="txtTop" id="txtTop">Model Agencies</p>
-        <p class="txtBottom">DuguenDoguen</p>
-      </div>
-    </section>
-    <section>
-      <h1 class="main">&#35;Models Info</h1>
-      <p class="middle point-color_main">
-        모델들의 정보와 SNS를 빠르게 확인하세요!
-      </p>
-      <ul class="info-nav">
-        <li><a href="#">전체보기</a></li>
-        <li><a href="#">강아지</a></li>
-        <li><a href="#">고양이</a></li>
-        <li><a href="#">기타</a></li>
-      </ul>
-      <div class="models_list">
-        <div>
-          <div class="models-bg_01">
-            <div class="sns">
-              <a href="#">BLOG</a>
-              <a href="#">INSTARTGRAM</a>
-            </div>
-          </div>
-          <ul class="point-color_main">
-            <li>방굴탱</li>
-            <li>출생<span class="bold10">2020. 10.03</span></li>
-            <li>종<span class="bold10">골든햄스터</span></li>
-            <li>데뷔<span class="bold10">2020 - 보그코리아</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="parallax">
-      <div class="parallax-txt">
-        <h1 class="outline">&nbsp;&#35;Notice&nbsp;</h1>
-        <p>
-          <span class="sub01"
-            >&nbsp;혹시,,,우리 아이도 세계 슈퍼모델의 끼를 가진건
-            아닐까?&nbsp;</span
-          >
-          <span class="sub02">&nbsp;모집기간이라면 모델지원 해볼까?&nbsp;</span>
-        </p>
-        <a href="#"
-          >&nbsp;기간확인<span class="sub03">&nbsp;&#8227;&nbsp;</span></a
-        >
-      </div>
-    </section>
-    <footer class="footer">
-      <span class="font-color_white"
-        >Copyright. seznan student. All Right Reserved.</span
-      >
-    </footer>
-    <!--js 라이브러리에서 확인후 html에서 찾아서 사용해야하므로 마지막에 넣어줄 것!-->
-    <!-- <script src="js/main_style.js"></script> -->
+    <h1>숙제</h1>
+    <button onclick="bopen('block')">버튼1</button>
+    <button onclick="copen('')">버튼2</button>
+    <p id="sen01">다른문장1</p>
+    <p id="sen02">다른문장2</p>
     <script>
-      let txtTop = document.getElementById("txtTop");
-      console.log(1);
-      window.addEventListener("scroll", function () {
-        let value = window.scrollY;
-        txtTop.style.marginLeft = value * 4 + "px";
-        console.log(11);
-      });
+      function bopen(block) {
+        document.getElementById("sen01").style.display = block;
+      }
+      function copen(block) {
+        document.getElementById("sen02").style.display = block;
+      }
     </script>
   </body>
 </html>
