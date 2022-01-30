@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <style>
       #parent {
         width: 100px;
@@ -15,7 +15,9 @@
     </style>
   </head>
   <body>
-    <div id="parent"></div>
+    <div id="parent">
+      <div id="child"></div>
+    </div>
 
     <script>
       // {
@@ -41,6 +43,7 @@
         document.querySelector("#child").addEventListener("click", function () {
           alert("child clicked!");
         });
+        console.log($("#parent"));
       }
     </script>
   </body>
