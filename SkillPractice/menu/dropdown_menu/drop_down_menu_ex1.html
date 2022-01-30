@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            font-family:serif;
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: serif;
+      }
 
-        #main-menu,
-        #sub-menu{
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-        #main-menu > li{
-            float: left;
-            background: #577ec3;
-        }
-        #main-menu > li > a{
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-            letter-spacing: 0.05em;
-            display: block;
-            padding: 12px 36px;
-            border-right: 1px solid rgba(0, 0, 0, 0.15);
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        
-        #main-menu > li:nth-child(1) > a{
-            border-left: 1px solid rgba(0, 0, 0, 0).15;
-        }
-        #sub-menu{
-            display: flex;
-            position:absolute;
-            /*background: #314d7e;*/
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.15s ease-in;
-        }
-        #sub-menu > .sub-menues > li > a{
-            color: rgba(0, 0, 0, 0.6);
-            text-decoration: none;
-        }
+      #main-menu,
+      #sub-menu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      #main-menu > li {
+        float: left;
+        background: #577ec3;
+      }
+      #main-menu > li > a {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        display: block;
+        padding: 12px 36px;
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
 
-        #main-menu > li:hover
-        #sub-menu{
-            opacity: 1;
-            visibility: visible;
-        }
-        #sub-menu > .sub-menues > li > a:hover{
-            text-decoration: underline;
-        }
-        .sub-text{
-            width: 70px;
-            background-image: url("https://fakeimg.pl/350x200/960a96/000?text=11111");
-        }
+      #main-menu > li:nth-child(1) > a {
+        border-left: 1px solid rgba(0, 0, 0, 0) 0.15;
+      }
+      #sub-menu {
+        display: flex;
+        position: absolute;
+        /*background: #314d7e;*/
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.15s ease-in;
+      }
+      #sub-menu > .sub-menues > li > a {
+        color: rgba(0, 0, 0, 0.6);
+        text-decoration: none;
+      }
+
+      #main-menu > li:hover #sub-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+      #sub-menu > .sub-menues > li > a:hover {
+        text-decoration: underline;
+      }
+      .sub-text {
+        width: 70px;
+        background-image: url("https://fakeimg.pl/350x200/960a96/000?text=11111");
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h3>Pure css drop down menu</h3>
     <ul id="main-menu">
-        <li><a href="#">MENU1</a></li>
-        <li><a href="#">MENU2</a>
-            <ul id = "sub-menu">
-                <div class="sub-text">Our Solutions and upcoming products</div>
-                <div class="sub-menues">
-                    <li><a href="#">submenu</a></li>
-                    <li><a href="#">submenu</a></li>
-                    <li><a href="#">submenu</a></li>
-                    <li><a href="#">submenu</a></li>
-                </div>
-            </ul>
-        </li>
-        <li><a href="#">MENU3</a></li>
-        <li><a href="#">MENU4</a></li>
+      <li><a href="#">MENU1</a></li>
+      <li>
+        <a href="#">MENU2</a>
+        <ul id="sub-menu">
+          <div class="sub-text">Our Solutions and upcoming products</div>
+          <div class="sub-menues">
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <a href="#">MENU3</a>
+        <ul id="sub-menu">
+          <div class="sub-text">Our Solutions and upcoming products</div>
+          <div class="sub-menues">
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+            <li><a href="#">submenu</a></li>
+          </div>
+        </ul>
+      </li>
+      <li><a href="#">MENU4</a></li>
     </ul>
-</body>
+  </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        border: 1px solid grey;
+      }
+      div {
+        border: 5px solid red;
+        margin: 10px;
+      }
+      #me {
+        /* offset */
+
+        /* left와 right가 동시에 있는 경우 left를 적용시킨다. */
+        /* left: 100px;
+        right: 100px; */
+
+        /* top과 bottom이 동시에 있는 경우 top을 적용시킨다. */
+        top: 100px;
+        bottom: 100px;
+
+        /* offset을 적용시킬 수 있는 position */
+        /* position은 기본적으로 static으로 적용돼있다. */
+        /* static은 정적으로 자기 위치를 고수한다. */
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="parent">
+      parent
+      <div id="me">me</div>
+    </div>
+  </body>
+</html>

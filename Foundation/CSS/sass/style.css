@@ -1,0 +1,13 @@
+body {
+  font-size: 20px;
+}
+
+.main {
+  color: black;
+  line-height: 1.2rem;
+}
+.main .section {
+  color: gray;
+}
+
+/*# sourceMappingURL=style.css.map */

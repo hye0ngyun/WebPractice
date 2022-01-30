@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        function func() {
+          // 함수 안에서 this는 전역 객체 window를 의미한다.
+          if (window === this) {
+            document.write("window === this");
+          }
+        }
+        func(); // window === this
+        // window.func();
+        // window가 생략돼있다. 따라서 func의 this는 window이다.
+      }
+    </script>
+  </body>
+</html>

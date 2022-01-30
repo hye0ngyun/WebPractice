@@ -1,0 +1,96 @@
+// Sass Nested Properties 중첩 속성
+// ex) font-xxx, text-xxx
+/* 
+sass, scss에서 해당 주석은 css로 트랜스파일링 될 때도 전달이 된다.
+ */
+// 이 주석은 sass, scss에서만 보인다.
+@import "reset";
+h1 {
+  font: {
+    family: Helvetica, sans-serif;
+    size: 18px;
+    weight: bold;
+  }
+  text: {
+    align: center;
+    transform: lowercase;
+    overflow: hideen;
+  }
+}
+
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+h2 {
+  @include important-text();
+}
+
+// mixin override
+@mixin important-text {
+  color: teal;
+}
+
+h3 {
+  @include important-text();
+}
+
+// Define mixin with arguments
+@mixin important-text($color, $size, $weight) {
+  color: $color;
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+
+h4 {
+  @include important-text(yellow, 25px, bold);
+}
+
+// Define mixin with default arguments
+@mixin important-text($color: blue, $size: 16px, $weight: normal) {
+  color: $color;
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+}
+
+h5 {
+  @include important-text();
+}
+
+// Using a Mixin For Vendor Prefixes
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.myBox {
+  @include transform(rotate(20deg));
+}
+
+/* @extend */
+.button-basic {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}

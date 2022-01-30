@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        font-size: 3rem;
+        /* transform은 block이나 inline-block에서 작동한다. */
+        /* a태그는 기본적으로 inline이기 때문에 바꿔준다. */
+        display: inline-block;
+        /* display: flex; 된다.*/
+        /* display: grid; 된다.*/
+
+        /* a태그에 대해서 모든 효과에 대해 변화가 일어났을 때 전환이 일어난다. */
+        transition-property: all;
+        /* transform에 대해서만 전환이 일어난다. */
+        /* transition-property: transform; */
+        /* transition 변환이 1초 동안 일어난다. */
+        transition-duration: 1s;
+
+        /* 각각 지정 */
+        transition: font-size 1s, transform 0.1s;
+
+        /* 모든 효과에 대해 1초로 지정 */
+        transition: 1s;
+
+        /* 1초 뒤에 전환 */
+        transition-delay: 1s;
+
+        /* transition-timing-function: ease; */
+      }
+      /* 클릭했을 때 */
+      a:active {
+        /* x 20px, y 20px 이동 */
+        transform: translate(20px, 20px);
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Click</a>
+  </body>
+</html>

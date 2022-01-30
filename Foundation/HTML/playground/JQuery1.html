@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #parent {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent"></div>
+
+    <script>
+      // {
+      //   $("#parent").click(function () {
+      //     $("#parent").append('<button id="child" value="1234">버튼</button>');
+      //   });
+
+      //   $("#child").click(function () {
+      //     alert($(this).attr("value"));
+      //   });
+
+      //   $(document).on("click", "#child", function () {
+      //     alert($(this).attr("value"));
+      //     return false;
+      //   });
+      // }
+      {
+        document
+          .querySelector("#parent")
+          .addEventListener("click", function () {
+            this.innerHTML = '<button id="child" value="1234">버튼</button>';
+          });
+        document.querySelector("#child").addEventListener("click", function () {
+          alert("child clicked!");
+        });
+      }
+    </script>
+  </body>
+</html>

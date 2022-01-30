@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        border: 1px solid grey;
+      }
+      #other,
+      #parent,
+      #grand {
+        border: 5px solid red;
+        /* margin: 10px; */
+        /* position: static; */
+      }
+      #grand {
+        /* position: absolute; */
+        top: 100px;
+      }
+      #me {
+        display: inline-block;
+        position: sticky;
+        top: 30px;
+        width: 80px;
+        height: 80px;
+        background: blue;
+      }
+      #large {
+        height: 10000px;
+        background-color: tomato;
+      }
+      #me::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: hotpink;
+        left: 10px;
+        border: 10px solid hotpink;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="other">other</div>
+    <div id="grand">
+      grand
+      <div id="parent" class="test">parent</div>
+    </div>
+    <div id="me">me</div>
+    <div id="large"></div>
+    <ornage>orange</ornage>
+
+    <!-- 방법1 -->
+    <span>이미지</span>
+    <span>글</span><br />
+    <span></span>
+    <span></span><br />
+    <span></span>
+    <span></span><br />
+
+    <!-- before after를 쓰는 방법2 -->
+    <span></span><br />
+    <span></span><br />
+    <span></span><br />
+  </body>
+</html>

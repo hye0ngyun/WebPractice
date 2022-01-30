@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        var o = {};
+        var p = {};
+        function func() {
+          switch (this) {
+            case o:
+              document.write("o<br/>");
+              break;
+            case p:
+              document.write("p<br/>");
+              break;
+            case window:
+              document.write("window<br/>");
+              break;
+          }
+        }
+        // apply는 함수 호출 컨텍스트를 지정한다.
+        func(); // window
+        func.apply(); // window
+        func.apply(null); // window
+        func.apply(o); // o
+        func.apply(p); // p
+
+        // 객체 - 주인 (master)
+        // 메소드 - 노예 (slave)
+        // 메소드를 호출한 객체가 주인이고 this이다.
+      }
+    </script>
+  </body>
+</html>

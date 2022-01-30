@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>초록복지재단</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./green_style.css" />
+    <link rel="shortcut icon" href="fav.ico" />
+    <script
+      rel="text/javascript"
+      src="http://code.jquery.com/jquery-latest.js"
+    ></script>
+  </head>
+  <body>
+    <div class="popup">
+      <div class="pwrap">
+        <h2>팝업내용입니다.</h2>
+        <a href="#" class="close">닫기 X</a>
+      </div>
+    </div>
+
+    <header>
+      <h1>
+        <a href="#">
+          <img src="images/header_logo.png" alt="헤더 로고" />
+        </a>
+      </h1>
+      <nav>
+        <ul class="gnb">
+          <li>
+            <a href="#">재단소개</a>
+            <ul class="submenu">
+              <li><a href="#">설립취지</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">후원하기</a>
+            <ul class="submenu">
+              <li><a href="#">국내후원</a></li>
+              <li><a href="#">국외후원</a></li>
+              <li><a href="#">맞춤후원</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">자료실</a>
+            <ul class="submenu">
+              <li><a href="#">서식자료실</a></li>
+              <li><a href="#">사진자료실</a></li>
+              <li><a href="#">후원양식</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">스토리</a>
+            <ul class="submenu">
+              <li><a href="#">웹진</a></li>
+              <li><a href="#">보고서</a></li>
+              <li><a href="#">나의 후원</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="gnbBg"></div>
+    </header>
+    <section>
+      <div class="main">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="images/main01.png" alt="메인이미지1" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/main02.png" alt="메인이미지2" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/main03.png" alt="메인이미지3" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="notice">
+        <h3>공지사항</h3>
+        <ul>
+          <li>
+            <a href="#">-미얀마 성장발달보고서 및 사업장 소식 발송</a>
+            <span class="date">2021.09.14</span>
+          </li>
+          <li>
+            <a href="#">- 발달장애인 사회적자립 봉사자 지원</a>
+            <span class="date">2021.09.14</span>
+          </li>
+          <li>
+            <a href="#">-네팔 성장발달 보고서 및 사업장 소식 발송</a>
+            <span class="date">2021.09.14</span>
+          </li>
+          <li>
+            <a href="#">-법인사무처 2019년 3월 주요일정</a>
+            <span class="date">2021.09.14</span>
+          </li>
+          <li>
+            <a href="#">-초록복지재단 개인정보처리방침 개정안내</a>
+            <span class="date">2021.09.14</span>
+          </li>
+        </ul>
+      </div>
+      <div class="gallery">
+        <h3>갤러리</h3>
+        <ul>
+          <li>
+            <a href="#"><img src="images/gall01.png" alt="갤러리이미지1" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/gall02.png" alt="갤러리이미지1" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/gall03.png" alt="갤러리이미지1" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="banner">
+        <a href="#"><img src="images/banner.png" alt="카드배너" /></a>
+      </div>
+    </section>
+    <footer>
+      <h1><img src="images/footer_logo.png" alt="로고" /></h1>
+      <p>copyright &copy; 초록복지재단. All rights reserved</p>
+      <nav class="snsNav">
+        <ul>
+          <li><a href="#">FACEBOOK</a></li>
+          <li><a href="#">INSTAGRAM</a></li>
+          <li><a href="#">TWITTER</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script>
+      $(function () {
+        $(".gnb").hover(
+          function () {
+            $(".submenu,.gnbBg").slideDown("fast");
+          },
+          function () {
+            $(".submenu,.gnbBg").slideUp("fast");
+          }
+        );
+      });
+      document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".popup").style.display = "none";
+        console.log(111);
+      });
+      function close() {}
+    </script>
+  </body>
+</html>

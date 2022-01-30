@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #parent {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" id="btnAdd" value="추가">추가</button>
+    <table id="list" border="1"></table>
+    <script>
+      {
+        $(document).ready(function () {
+          $("#btnAdd").click(function () {
+            var row = '<tr><td><input type="text" name="id" size="10"></td>';
+            row += '<td><input type="text" name="irum" size="10"></td>';
+            row +=
+              '<td><input type="button" class="btnDel" value="Del"></td></tr>';
+
+            $("#list").append(row);
+          });
+        });
+
+        $("#list").on("click", ".btnDel", function () {
+          $(this).parent().parent().remove();
+        });
+      }
+    </script>
+  </body>
+</html>

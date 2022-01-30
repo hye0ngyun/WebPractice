@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // addEventListener라는 함수 안의 파라미터로 들어가는 function이 콜백함수이다.
+      // document
+      //   .querySelector(".button")
+      //   .addEventListener("click", function () {});
+      // document.querySelector(".button").addEventListener("click", 함수명);
+
+      // 1초 경과 후에 안에 있는 함수를 실행시킨다.
+      setTimeout(() => {}, 1000);
+
+      function first(파라미터) {
+        console.log("first function");
+        파라미터();
+      }
+      function second() {
+        console.log("second function");
+      }
+      first(function () {
+        console.log("callback function");
+      });
+      first(second);
+    </script>
+  </body>
+</html>

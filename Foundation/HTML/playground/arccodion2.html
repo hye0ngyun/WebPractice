@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        cursor: pointer;
+      }
+      input {
+        display: none;
+      }
+      input ~ ul {
+        display: none;
+      }
+      input:checked ~ ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Shine</div>
+      <div id="menu_ham">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div id="menu_can">
+        <i class="fas fa-times"></i>
+      </div>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#">story</a></li>
+          <li><a href="#">info</a></li>
+          <li>
+            work
+            <ul>
+              <li>
+                <input type="checkbox" id="web" />
+                <label for="web">Web <em></em></label>
+                <ul>
+                  <li><a href="#">Naked Bibi</a></li>
+                  <li><a href="#">DuguenDoguen</a></li>
+                  <li><a href="#">한터울</a></li>
+                  <li><a href="#">삼국유사화본마을</a></li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="graphic" />
+                <label for="graphic">graphic <em></em></label>
+                <ul>
+                  <li><a href="#">상세페이지</a></li>
+                  <li><a href="#">이벤트페이지</a></li>
+                  <li><a href="#">로고</a></li>
+                  <li><a href="#">스타벅스이벤트배너</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">pick</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
