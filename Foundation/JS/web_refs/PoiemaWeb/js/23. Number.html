@@ -16,6 +16,92 @@
         console.log(num.toFixed()); // 2
       }
       // 위에서 원시 타입을 담고 있는 변수 num이 Number.prototype.toFixed() 메소드를 호출할 수 있는 것은 변수 num의 값이 일시적으로 wrapper 객체로 변환되었기 때문이다.
+
+      // #1. Number Constructor
+      {
+        var x = new Number(123);
+        var y = new Number("123");
+        var z = new Number("str");
+
+        console.log(x, y, z); // 123 123 NaN
+        console.log(typeof x, x); // object Number {123}
+
+        // Number() 생성자 함수를 new 연산자를 붙이지 않아 생성자로 사용하지 않으면 Number 객체를 반환하지 않고 원시 타입 숫자를 반환한다. 이때 형 변환이 발생할 수 있다.
+        var x = Number("123");
+        console.log(typeof x, x); // number 123
+        var y = Number("str");
+        console.log(typeof y, y); // number NaN
+
+        var x = 123;
+        var y = new Number(123);
+        console.log(x == y); // true
+        console.log(x === y); // false
+
+        console.log(typeof x, typeof y); // number object
+      }
+
+      // #2. Number Property
+
+      // #2.1 Number.EPSILON
+      // 부동 소수점 비교 시 사용
+      {
+        console.log(0.1 + 0.2); // 0.30000000000000004
+        console.log(0.1 + 0.2 == 0.3); // false
+
+        function isEqual(a, b) {
+          // Math.abs는 절댓값을 반환한다.
+          // 즉 a와 b의 차이가 JavaScript에서 표현할 수 있는 가장 작은 수인 Number.EPSILON보다 작으면 같은 수로 인정할 수 있다.
+          return Math.abs(a - b) < Number.EPSILON;
+        }
+        console.log(Number.EPSILON); // 2.220446049250313e-16
+
+        console.log(isEqual(0.1 + 0.2, 0.3)); // true
+      }
+
+      // #2.2 Number.MAX_VALUE
+      // 자바스크립트에서 사용 가능한 가장 큰 수
+      {
+        var num = 10;
+        console.log(num.MAX_VALUE); // undefined
+        console.log(Number.MAX_VALUE); // 1.7976931348623157e+308
+
+        console.log(Infinity > Number.MAX_VALUE); // true
+      }
+
+      // #2.3 Number.Min_VALUE
+      // 자바스크립트에서 사용 가능한 가장 작은 수
+      {
+        var num = 10;
+        console.log(num.MIN_VALUE); // undefined
+        console.log(Number.MIN_VALUE); // 5e-324+308
+
+        console.log(Number.MIN_VALUE > 0); // true
+        console.log(Number.MIN_VALUE > 0.1); // false
+      }
+
+      // #2.4 Number.POSITIVE_INFINITY
+      // 양의 무한대 `Infinity`
+      {
+        var num = 10;
+        console.log(num.POSITIVE_INFINITY); // undefined
+        console.log(Number.POSITIVE_INFINITY); // Infinity
+      }
+
+      // #2.5 Number.NEGATIVE_INFINITY
+      // 음의 무한대 `-Infinity`
+      {
+        var num = 10;
+        console.log(num.NEGATIVE_INFINITY); // undefined
+        console.log(Number.NEGATIVE_INFINITY); // -Infinity
+      }
+
+      // #2.6 Number.NaN
+      // 숫자가 아님(Not-a-Number)을 나타내는 숫자값이다. Number.NaN 프로퍼티는 window.NaN 프로퍼티와 같다.
+      {
+        console.log(Number("xyz")); // NaN
+        console.log(1 * "string"); // NaN
+        console.log(typeof NaN); // number
+      }
     </script>
   </body>
 </html>
