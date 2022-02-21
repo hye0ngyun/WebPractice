@@ -1,60 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
     <style>
-      .a {
-        width: 50px;
-        height: 50px;
-        background-color: aqua;
-        border-radius: 100px;
-        /* border: 1px solid black; */
-        position: relative;
+      html,
+      body {
+        /* position: relative; */
+        /* height: 100%; */
       }
-      .a::after {
-        content: "";
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        border: 1px solid red;
-        border-radius: 100px;
-      }
-      #content {
-        width: 100px;
-        min-height: 100px;
-        margin: 20px auto;
-        border-style: ridge;
-        border-color: #567498;
-        border-spacing: 10px;
-        position: relative;
+
+      body {
         background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
       }
-      #content:after {
-        content: "";
-        position: absolute;
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-        border: red 2px solid;
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     </style>
   </head>
+
   <body>
-    <div class="a">
-      <img
-        src="https://via.placeholder.com/300.png"
-        alt=""
-        width="50px"
-        style="border-radius: 100px"
-      />
+    <!-- Swiper -->
+    <div class="swiper mySwiper2">
+      <!-- mySwiper2가 컨테이너니까 height값을 여기다 줘야한다. -->
+      <div class="swiper-wrapper">
+        <!-- 실질적인 내부 슬라이드들 -->
+        <div class="swiper-slide">Slide 1</div>
+        <!-- slide1에다가 원래 작업물을 넣으면 슬라이드상에서 그대로 작동 -->
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <img src="https://via.placeholder.com/300.png" alt="" class="a" />
-    <div id="content"></div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      // 선택자, 세팅값을 객체로
+      var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 2, // 한 화면에 보여질 슬라이드의 총 개수
+        spaceBetween: 10, // 슬라이드 사이의 갭(px)
+        freeMode: true, // 슬라이드 넘길때마다 딱딱 맞출지 안맞출지
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: false, // 페이지네이션 클릭 기능
+        },
+      });
+    </script>
   </body>
 </html>
