@@ -1,0 +1,25 @@
+// 반복 가능한 객체와 반복자 이해하기
+{
+  console.log("javascript".split(""));
+  const items = ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"];
+  const seq = {
+    [Symbol.iterator]() {
+      let i = 0;
+      return {
+        next() {
+          const value = items[i];
+          i++;
+          const done = i > items.lenght;
+          return { value, done };
+        },
+      };
+    },
+  };
+  console.log(seq);
+  // for (let s of seq) console.log(s);
+  const [a, b, c, ...arr] = seq;
+  console.log(`a >>> ${a}`);
+  console.log(`b >>> ${b}`);
+  console.log(`c >>> ${c}`);
+  console.log(`arr >>> ${arr}`);
+}
