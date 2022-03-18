@@ -32,5 +32,41 @@
       <div class="item"></div>
       <div class="item"></div>
     </div>
+    <input
+      type="checkbox"
+      v-model="toggle"
+      true-value="yes"
+      false-value="no"
+      class="chkbox"
+    />
+    <div id="app">
+      <h1>{{message}}</h1>
+    </div>
+    <script>
+      document.querySelector(".chkbox").addEventListener("click", (e) => {
+        console.log(e.target);
+      });
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+
+    <!-- <div id="app">{{ message }}</div> -->
+
+    <script type="module">
+      import { createApp } from "vue";
+
+      createApp({
+        data() {
+          return {
+            message: "Hello Vue!",
+          };
+        },
+      }).mount("#app");
+    </script>
   </body>
 </html>
