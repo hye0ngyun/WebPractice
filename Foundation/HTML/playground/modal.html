@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: blanchedalmond;
+      }
+      .modal {
+        background-color: #aaaa;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+      }
+      .modal.js_active {
+        display: flex;
+      }
+      .modal_cont {
+        background-color: #fff;
+        width: 500px;
+        height: 500px;
+        /* position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal_cont">
+        <div>modal 제목</div>
+        <button class="closeBtn">모달창 끄기</button>
+      </div>
+    </div>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <button class="openBtn">모달창 켜기</button>
+    <div>
+      <ul>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+        <li>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          dolorem repudiandae dignissimos sapiente corrupti asperiores ex alias,
+          quos, neque praesentium optio excepturi doloremque expedita nemo nam
+          maiores earum sunt officiis!
+        </li>
+      </ul>
+    </div>
+    <script>
+      const openBtn = document.querySelector(".openBtn");
+      // console.log(openBtn);
+      // console.log(document.querySelector("body"));
+      // addEventListener(이벤트명, 콜백)
+      openBtn.addEventListener("click", function () {
+        document.querySelector(".modal").classList.add("js_active");
+        console.log("add Event click!");
+      });
+      const closeBtn = document.querySelector(".closeBtn");
+      closeBtn.addEventListener("click", () => {
+        document.querySelector(".modal").classList.remove("js_active");
+      });
+      // function test1() {
+      //   console.log("clicked!");
+      // }
+    </script>
+  </body>
+</html>

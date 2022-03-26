@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .slide-container{
+    ?
+    margin-left보다 유용함
+    transform: translateX(-100vw);
+    transition: all 1s;
+    } */
+      .slide-box {
+        width: 100vw;
+        float: left;
+      }
+      .slide-box img {
+        width: 100%;
+      }
+      .middle {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="overflow: hidden">
+      <div class="slide-container">
+        <div class="slide-box">
+          a
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="slide-container">
+        <div class="slide-box">
+          b
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="slide-container">
+        <div class="slide-box">
+          c
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="slide-container">
+        <div class="slide-box">
+          d
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="slide-container">
+        <div class="slide-box">
+          e
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="middle">
+      <button class="slide-1 buttons">1</button>
+      <button class="slide-2 buttons">2</button>
+      <button class="slide-3 buttons">3</button>
+      <button class="slide-4 buttons">4</button>
+      <button class="slide-5 buttons">5</button>
+    </div>
+    <script>
+      const slides = document.querySelectorAll(".slide-container");
+
+      slides.forEach(function (item) {
+        item.style.width = `${slides.length * 100}vw`;
+      });
+      let index = 0;
+      document.querySelectorAll(".buttons").forEach(function (item) {
+        console.log(index);
+        const offset = index * 100;
+        item.addEventListener("click", function () {
+          slides.forEach(function (item2) {
+            console.log(index);
+
+            item2.style.transform = `translateX(-${offset}vw)`;
+          });
+        });
+        index++;
+      });
+    </script>
+  </body>
+</html>

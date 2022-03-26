@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">{{ message }}</div>
+    <ul v-for="todo in todos" :key="todos.id">
+      <li>{{todo}}</li>
+    </ul>
+
+    <script>
+      Vue.createApp({
+        data() {
+          return {
+            message: "Hello Vue!",
+            todos: [
+              { id: id++, cont: 1 },
+              { id: id++, cont: 2 },
+              { id: id++, cont: 3 },
+              { id: id++, cont: 4 },
+              { id: id++, cont: 5 },
+            ],
+            itemRefs: [],
+            id: 0,
+          };
+        },
+        methods: {
+          setItemRef(el) {
+            this.itemRefs.push(el);
+          },
+        },
+        beforeUpdate() {
+          this.itemRefs = [];
+        },
+        update() {
+          console.log(this.itemRefs);
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
