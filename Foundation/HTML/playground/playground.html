@@ -6,67 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .container {
-        max-width: 300px;
-        /* width: 100%; */
-        display: flex;
-        background-color: #333a;
-        padding: 5px;
+      * {
+        margin: 0;
       }
-      .item {
-        width: 50px;
-        height: 50px;
-        background-color: aquamarine;
-        padding: 5px;
-        border: 1px solid red;
+      .a {
+        background-color: antiquewhite;
+        height: 101vh;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-    </div>
-    <input
-      type="checkbox"
-      v-model="toggle"
-      true-value="yes"
-      false-value="no"
-      class="chkbox"
-    />
-    <div id="app">
-      <h1>{{message}}</h1>
-    </div>
+    <div class="a"></div>
     <script>
-      document.querySelector(".chkbox").addEventListener("click", (e) => {
-        console.log(e.target);
+      window.addEventListener("scroll", (e) => {
+        console.log(
+          document.body.scrollTop || document.documentElement.scrollTop
+        );
+        console.log(
+          document.body.scrollTop, // body의 위치?
+          document.documentElement.scrollTop // 현재 스크롤 위치
+        );
+        console.log(
+          document.documentElement.scrollHeight, // 전체 스크롤 길이
+          document.documentElement.clientHeight // 브라우저 화면 크기
+        );
       });
-    </script>
-    <script type="importmap">
-      {
-        "imports": {
-          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-        }
-      }
-    </script>
-
-    <!-- <div id="app">{{ message }}</div> -->
-
-    <script type="module">
-      import { createApp } from "vue";
-
-      createApp({
-        data() {
-          return {
-            message: "Hello Vue!",
-          };
-        },
-      }).mount("#app");
     </script>
   </body>
 </html>

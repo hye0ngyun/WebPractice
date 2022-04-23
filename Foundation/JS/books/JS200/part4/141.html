@@ -1,0 +1,43 @@
+<!-- 문서 객체 모델(DOM) 이해하기 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">hello DOM</div>
+    <ul>
+      <li>list item1</li>
+      <li>list item2</li>
+    </ul>
+    <script>
+      const div1El = document.getElementById("div1");
+      console.log(div1El);
+      console.log(div1El.innerHTML);
+
+      console.log(div1El.nodeType); // 1
+      console.log(div1El.nodeType === Node.ELEMENT_NODE); // true
+
+      console.log(div1El.constructor);
+      console.log(div1El instanceof HTMLDivElement); // true
+      console.log(div1El instanceof HTMLElement); // true
+      console.log(div1El instanceof Element); // true
+      console.log(div1El instanceof Node); // true
+      console.log(Element.prototype);
+      console.log(div1El.tagName); // DIV
+
+      const div1El2 = document.querySelector("#div1"); // querySelector는 선택할 수 없다면 null, All은 lenght가 0
+      console.log(div1El2.innerHTML); // hello DOM
+
+      const liEls = document.querySelectorAll("ul li");
+      console.log(liEls);
+      console.log(liEls.item(0).innerHTML);
+      console.log(liEls[0].innerHTML);
+      console.log(liEls.item(1).textContent);
+      console.log(liEls[1].textContent);
+    </script>
+  </body>
+</html>
