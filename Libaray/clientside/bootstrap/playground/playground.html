@@ -121,6 +121,83 @@
         <div class="col-6">.col-6</div>
         <div class="col-6">.col-6</div>
       </div>
+
+      <div style="color: red; font-weight: bold">
+        항상 2열 - 한 행에 열의 개수가 2가 넘는다면 다음 줄로 넘어간다
+      </div>
+      <div class="row row-cols-2">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+      </div>
+
+      <div style="color: red; font-weight: bold">
+        항상 3열 - 한 행에 열의 개수가 3이 넘는다면 다음 줄로 넘어간다
+      </div>
+      <div class="row row-cols-3">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+      </div>
+
+      <div style="color: red; font-weight: bold">
+        한 행에 들어가는 열의 개수를 각 열 크기에 비례해서 크기가 한 줄을
+        넘는다면 넘겨버린다.
+      </div>
+      <div class="row row-cols-auto">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">colllllllllllllllllllllllllllllllllllll</div>
+      </div>
+
+      <div style="color: red; font-weight: bold">
+        한 행에 들어가는 열의 개수를 각 열 크기에 비례해서 크기가 한 줄을
+        넘는다면 넘겨버린다. - 3/3/6 12
+      </div>
+      <div class="row row-cols-4">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col-6">col</div>
+        <div class="col">col</div>
+      </div>
+
+      <div style="color: red; font-weight: bold">
+        md 768px 이상인 경우 4열, sm 576px 이상인 경우 2열, xs 500 이하인 경우
+        1열
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+      </div>
+
+      <div style="color: red; font-weight: bold">
+        sm 576px 이상인 경우 1행에 중첩구조 3/9(6/6), 
+        575px 이하인 경우 2행으로 바뀌며 12 - 12(8/4)
+      </div>
+      <div class="row">
+        <div class="col-sm-3">Level 1: .col-sm-3</div>
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">Level 2: .col-8 .col-sm-6</div>
+            <div class="col-4 col-sm-6">Level 2: .col-4 .col-sm-6</div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
