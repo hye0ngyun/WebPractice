@@ -24,9 +24,7 @@ for (let i = 0; i < maxSlide; i++) {
 
 const paginationItems = document.querySelectorAll(".slide_pagination > li");
 
-// 버튼 엘리먼트에 클릭 이벤트 추가하기
-nextBtn.addEventListener("click", () => {
-  // 이후 버튼 누를 경우 현재 슬라이드를 변경
+function nextMove() {
   currSlide++;
   // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위해서
   if (currSlide <= maxSlide) {
@@ -42,10 +40,8 @@ nextBtn.addEventListener("click", () => {
   } else {
     currSlide--;
   }
-});
-// 버튼 엘리먼트에 클릭 이벤트 추가하기
-prevBtn.addEventListener("click", () => {
-  // 이전 버튼 누를 경우 현재 슬라이드를 변경
+}
+function prevMove() {
   currSlide--;
   // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
   if (currSlide > 0) {
@@ -61,6 +57,17 @@ prevBtn.addEventListener("click", () => {
   } else {
     currSlide++;
   }
+}
+
+// 버튼 엘리먼트에 클릭 이벤트 추가하기
+nextBtn.addEventListener("click", () => {
+  // 이후 버튼 누를 경우 현재 슬라이드를 변경
+  nextMove();
+});
+// 버튼 엘리먼트에 클릭 이벤트 추가하기
+prevBtn.addEventListener("click", () => {
+  // 이전 버튼 누를 경우 현재 슬라이드를 변경
+  prevMove();
 });
 
 // 브라우저 화면이 조정될 때 마다 slideWidth를 변경하기 위해
@@ -85,3 +92,57 @@ for (let i = 0; i < maxSlide; i++) {
     paginationItems[currSlide - 1].classList.add("active");
   });
 }
+
+// 드래그(스와이프) 이벤트를 위한 변수 초기화
+let startPoint = 0;
+let endPoint = 0;
+
+// PC 클릭 이벤트 (드래그)
+slide.addEventListener("mousedown", (e) => {
+  console.log("mousedown", e.pageX);
+  startPoint = e.pageX; // 마우스 드래그 시작 위치 저장
+});
+
+slide.addEventListener("mouseup", (e) => {
+  console.log("mouseup", e.pageX);
+  endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
+  if (startPoint < endPoint) {
+    // 마우스가 오른쪽으로 드래그 된 경우
+    console.log("prev move");
+    prevMove();
+  } else if (startPoint > endPoint) {
+    // 마우스가 왼쪽으로 드래그 된 경우
+    console.log("next move");
+    nextMove();
+  }
+});
+
+// 모바일 터치 이벤트 (스와이프)
+slide.addEventListener("touchstart", (e) => {
+  console.log("touchstart", e.touches[0].pageX);
+  startPoint = e.touches[0].pageX; // 터치가 시작되는 위치 저장
+});
+slide.addEventListener("touchend", (e) => {
+  console.log("touchend", e.changedTouches[0].pageX);
+  endPoint = e.changedTouches[0].pageX; // 터치가 끝나는 위치 저장
+  if (startPoint < endPoint) {
+    // 오른쪽으로 스와이프 된 경우
+    console.log("prev move");
+    prevMove();
+  } else if (startPoint > endPoint) {
+    // 왼쪽으로 스와이프 된 경우
+    console.log("next move");
+    nextMove();
+  }
+});
+
+// let tempPoint = 0;
+// slide.addEventListener("mousemove", (e) => {
+//   tempPoint = e.pageX;
+//   if (startPoint < tempPoint) {
+//     console.log("left move");
+//   } else {
+//     console.log("right move");
+//   }
+//   console.log("move");
+// });
