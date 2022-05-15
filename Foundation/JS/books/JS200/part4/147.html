@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 플로우 예제</title>
+    <style>
+      .box {
+        padding: 30px;
+        border: 1px solid black;
+        background-color: aquamarine;
+        display: inline-block;
+      }
+      .box2 {
+        padding: 30px;
+        border: 1px solid black;
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM 이벤트 플로우</h1>
+    <div id="element1" class="box">
+      <div id="element2" class="box2">버블링</div>
+    </div>
+
+    <div id="element3" class="box">
+      <div id="element4" class="box2">캡처링</div>
+    </div>
+    <script>
+      element1.addEventListener("click", (e) => console.log("요소 1 클릭"));
+      element2.addEventListener("click", (e) => console.log("요소 2 클릭"));
+      element3.addEventListener(
+        "click",
+        (e) => console.log("요소 3 클릭"),
+        true
+      );
+      element4.addEventListener("click", (e) => console.log("요소 4 클릭"));
+    </script>
+  </body>
+</html>
