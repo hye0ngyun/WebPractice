@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 전파 제어하기 예제</title>
+    <style></style>
+  </head>
+  <body>
+    <p>
+      일반적인 글
+      <span id="prevent">이벤트를 막은 글</span>
+      <br />
+      일반적인 글 2
+    </p>
+    <script>
+      const normalPEl = document.querySelector("p");
+      const eventPreventedEl = document.querySelector("#prevent");
+      // contextmenu event는 pc에선 우클릭, mobile에선 꾹 누르기 이벤트다
+      normalPEl.addEventListener("contextmenu", () => {
+        console.log("contextmenu 호출");
+      });
+
+      eventPreventedEl.addEventListener("contextmenu", (event) => {
+        console.log("이벤트 막은 글 클릭");
+
+        event.stopPropagation(); // 상위 이벤트 발생을 막는다.
+        event.preventDefault(); // 우클릭시 콘텍스트 메뉴가 나오는것을 막는다.
+      });
+
+      // normalPEl.addEventListener("click", (e) => console.log(e));
+    </script>
+  </body>
+</html>
