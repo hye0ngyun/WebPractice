@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로컬스토리지 예제</title>
+  </head>
+  <body>
+    <script>
+      class Cart {
+        constructor() {
+          this._key = "app-cart";
+          const itemString = localStorage.getItem(this._key);
+          console.log(itemString); // string
+          console.log(JSON.parse(itemString)); // Array
+          if (itemString) {
+            // 로컬스토리지에 key값이 존재하지 않는다면 null을 반환한다.
+            // 키값이 존재하는 경우 items에 값 파싱
+            this.items = JSON.parse(itemString);
+          } else {
+            this.items = [];
+          }
+        }
+        addItem(item) {
+          this.items.push(item);
+          console.log(this.items); // Array
+          console.log(JSON.stringify(this.items)); // string
+          const itemString = JSON.stringify(this.items);
+          localStorage.setItem(this._key, itemString); // setItem(저장할 키값, 저장할 값을 문자열로)
+          this.items = item;
+        }
+      }
+      console.log(localStorage.getItem("asd")); // null
+      const cart = new Cart();
+      console.table(cart.items);
+      // cart.addItem({name: 'A노트북', price: 20000})
+    </script>
+  </body>
+</html>
