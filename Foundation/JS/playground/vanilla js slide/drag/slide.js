@@ -99,50 +99,31 @@ let endPoint = 0;
 
 // PC 클릭 이벤트 (드래그)
 slide.addEventListener("mousedown", (e) => {
-  console.log("mousedown", e.pageX);
   startPoint = e.pageX; // 마우스 드래그 시작 위치 저장
 });
 
 slide.addEventListener("mouseup", (e) => {
-  console.log("mouseup", e.pageX);
   endPoint = e.pageX; // 마우스 드래그 끝 위치 저장
   if (startPoint < endPoint) {
     // 마우스가 오른쪽으로 드래그 된 경우
-    console.log("prev move");
     prevMove();
   } else if (startPoint > endPoint) {
     // 마우스가 왼쪽으로 드래그 된 경우
-    console.log("next move");
     nextMove();
   }
 });
 
 // 모바일 터치 이벤트 (스와이프)
 slide.addEventListener("touchstart", (e) => {
-  console.log("touchstart", e.touches[0].pageX);
   startPoint = e.touches[0].pageX; // 터치가 시작되는 위치 저장
 });
 slide.addEventListener("touchend", (e) => {
-  console.log("touchend", e.changedTouches[0].pageX);
   endPoint = e.changedTouches[0].pageX; // 터치가 끝나는 위치 저장
   if (startPoint < endPoint) {
     // 오른쪽으로 스와이프 된 경우
-    console.log("prev move");
     prevMove();
   } else if (startPoint > endPoint) {
     // 왼쪽으로 스와이프 된 경우
-    console.log("next move");
     nextMove();
   }
 });
-
-// let tempPoint = 0;
-// slide.addEventListener("mousemove", (e) => {
-//   tempPoint = e.pageX;
-//   if (startPoint < tempPoint) {
-//     console.log("left move");
-//   } else {
-//     console.log("right move");
-//   }
-//   console.log("move");
-// });

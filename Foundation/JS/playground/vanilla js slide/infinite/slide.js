@@ -33,7 +33,7 @@ const endElem = document.createElement("div");
 endSlide.classList.forEach((c) => endElem.classList.add(c));
 endElem.innerHTML = endSlide.innerHTML;
 
-startSlide.classList.forEach(c => startElem.classList.add(c));
+startSlide.classList.forEach((c) => startElem.classList.add(c));
 startElem.innerHTML = startSlide.innerHTML;
 
 // 각 복제한 엘리먼트 추가하기
@@ -50,7 +50,6 @@ slideItems.forEach((i) => {
 
 function nextMove() {
   currSlide++;
-  console.log(currSlide);
   // 마지막 슬라이드 이상으로 넘어가지 않게 하기 위해서
   if (currSlide <= maxSlide) {
     // 슬라이드를 이동시키기 위한 offset 계산
@@ -63,6 +62,7 @@ function nextMove() {
     paginationItems.forEach((i) => i.classList.remove("active"));
     paginationItems[currSlide - 1].classList.add("active");
   } else {
+    // 무한 슬라이드 기능 - currSlide 값만 변경해줘도 되지만 시각적으로 자연스럽게 하기 위해 아래 코드 작성
     currSlide = 0;
     let offset = slideWidth * currSlide;
     slideItems.forEach((i) => {
@@ -85,7 +85,6 @@ function nextMove() {
 }
 function prevMove() {
   currSlide--;
-  console.log(currSlide);
   // 1번째 슬라이드 이하로 넘어가지 않게 하기 위해서
   if (currSlide > 0) {
     // 슬라이드를 이동시키기 위한 offset 계산
@@ -98,6 +97,7 @@ function prevMove() {
     paginationItems.forEach((i) => i.classList.remove("active"));
     paginationItems[currSlide - 1].classList.add("active");
   } else {
+    // 무한 슬라이드 기능 - currSlide 값만 변경해줘도 되지만 시각적으로 자연스럽게 하기 위해 아래 코드 작성
     currSlide = maxSlide + 1;
     let offset = slideWidth * currSlide;
     // 각 슬라이드 아이템의 left에 offset 적용
@@ -189,18 +189,3 @@ slide.addEventListener("touchend", (e) => {
     nextMove();
   }
 });
-
-// let tempPoint = 0;
-// slide.addEventListener("mousemove", (e) => {
-//   tempPoint = e.pageX;
-//   if (startPoint < tempPoint) {
-
-//   } else {
-
-//   }
-
-// });
-
-// setInterval(() => {
-//   nextMove();
-// }, 3000);
