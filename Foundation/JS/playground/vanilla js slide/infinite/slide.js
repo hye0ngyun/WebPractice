@@ -27,23 +27,24 @@ const paginationItems = document.querySelectorAll(".slide_pagination > li");
 // 무한 슬라이드를 위해 start, end 슬라이드 복사하기
 const startSlide = slideItems[0];
 const endSlide = slideItems[slideItems.length - 1];
-const startElem = document.createElement("div");
-const endElem = document.createElement("div");
 
+// 엘리먼트 생성
+const startElem = document.createElement(startSlide.tagName);
+const endElem = document.createElement(endSlide.tagName);
+
+// 엘리먼트에 클래스 적용 동일하게 하기
 endSlide.classList.forEach((c) => endElem.classList.add(c));
 endElem.innerHTML = endSlide.innerHTML;
-
 startSlide.classList.forEach((c) => startElem.classList.add(c));
 startElem.innerHTML = startSlide.innerHTML;
 
-// 각 복제한 엘리먼트 추가하기
+// 각 복제한 엘리먼트를 각 위치에 추가하기
 slideItems[0].before(endElem);
 slideItems[slideItems.length - 1].after(startElem);
 
 // 슬라이드 전체를 선택해 값을 변경해주기 위해 슬라이드 전체 선택하기
 slideItems = document.querySelectorAll(".slide_item");
-//
-let offset = slideWidth + currSlide;
+let offset = slideWidth * currSlide;
 slideItems.forEach((i) => {
   i.setAttribute("style", `left: ${-offset}px`);
 });
@@ -71,10 +72,10 @@ function nextMove() {
     currSlide++;
     offset = slideWidth * currSlide;
     // 각 슬라이드 아이템의 left에 offset 적용
+    // setTimeout을 사용하는 이유는 비동기 처리를 이용해 transition이 제대로 적용되게 하기 위함
     setTimeout(() => {
       // 각 슬라이드 아이템의 left에 offset 적용
       slideItems.forEach((i) => {
-        // i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
         i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
       });
     }, 0);
