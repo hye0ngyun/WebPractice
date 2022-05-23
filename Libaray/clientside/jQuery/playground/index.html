@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>p태그입니다.</p>
+    <span>span태그입니다.</span>
+    <p>두 번째 p태그입니다.</p>
+    <span>두 번째 span태그입니다.</span>
+    <div>1 div</div>
+    <div>2 div</div>
+    <ul>
+      <li>
+        <span>li > span</span>
+      </li>
+      <li><p>li > p</p></li>
+    </ul>
+    <script>
+      document.querySelector("p").style.fontSize = "28px";
+      $(() => {
+        // 제이쿼리의 선택은 기본적으로 querySelectorAll()함수처럼 모든 요소를 가져온다.
+        // $('css선택자').css('속성명', '속성값'), 자바스크립트나 제이쿼리에서의 속성명은 케밥케이스(font-size)가 아닌 케멀케이스(fontSize)로 작성해야 한다.
+        $("span").css("fontSize", "28px");
+
+        $("li:has(span)").text("<span>요소를 가지고 있는 아이템입니다.");
+      });
+      // querySelectorAll()함수는 forEach를 이용해서 각 요소의 style을 제어할 수 있으나, $()함수는 css함수를 이용해서 선택된 모든 요소를 일괄적으로 제어할 수 있다.
+      document
+        .querySelectorAll("div")
+        .forEach((i) => (i.style.fontSize = "28px"));
+      // console.log(document.querySelector("li:has(p)")); // 'querySelector' on 'Document': 'li:has(p)' is not a valid selector.
+    </script>
+  </body>
+</html>

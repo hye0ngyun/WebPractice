@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <button>버튼</button>
+    <h1>h1의 텍스트입니다.</h1>
+    <p id="text"></p>
+    <span class="a"></span>
+    <span class="a"></span>
+    <span class="a"></span>
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+    <div class="box"></div>
+    <img class="imgTest" src="https://via.placeholder.com/150" alt="" />
+    <script>
+      // 메서드 체이닝(method chaining)
+      // getter 메소드는 선택된 요소의 값을 읽어서 그 값을 반환합니다.
+
+      // 만약 선택된 요소가 여러 개 존재하면, getter 메소드는 가장 '첫 번째 요소'의 값만을 반환할 것입니다.
+
+      // 하지만 setter 메소드는 선택된 '모든 요소'에 인수로 전달된 값을 설정합니다.
+
+      // 그리고 선택된 모든 요소에 접근할 수 있는 또 다른 제이쿼리 객체를 반환합니다.
+      $("button").on("click", function () {
+        var newText = $("h1").html(); // h1 요소의 텍스트를 읽어오는 getter 메소드
+        $("#text").html(`${newText}를 복제했습니다.`); // id가 'text'인 요소에 새로운 텍스트를 설정하는 setter 메소드
+        console.log(newText);
+        var a = $(".a").html(`${newText}를 복제했습니다.`);
+        console.log(a);
+        $("#list")
+          .find("li")
+          .eq(1)
+          .text("두 번째 아이템을 선택했어요!")
+          .end() // 다시 id가 list인 요소의 자손 중 li 요소를 모두 선택한다.
+          .eq(2)
+          .text("세 번째 아이템도 선택했습니다.")
+          .end()
+          .eq(3)
+          .text("네 번째 !!!!!!!!!!!");
+      });
+      // width(), height() 메소드 - 선택한 요소의 width값과 heigth값을 반환하거나(파라미터 없이 호출) 변경한다.(파라미터에 값전달하며 호출)
+      $(() => {
+        console.log($(".box").width(), $(".box").height());
+        $(".box").width("100").height(100).css("backgroundColor", "blue");
+        console.log($(".box").width(), $(".box").height());
+
+        const w = $(".box").width();
+        const h = $(".box").height();
+
+        $(".box")
+          .width(w / 2)
+          .height(h / 2);
+        console.log($(".box").width(), $(".box").height());
+      });
+      // attr() 메소드 - 선택한 요소의 속성값을 변경하거나 설정한다.
+      $(() => {
+        console.log($(".imgTest").attr("src")); // https://via.placeholder.com/150
+        $(".imgTest").on("click", function (e) {
+          console.log(e.target, this);
+          console.log($(e.target));
+          // $()의 선택자로 DOM 요소(e.target, this)를 넣어도 선택이 된다. - 중복코드를 작성할 필요 없으므로 작업 효율 상승
+          $(this).attr("src", "https://via.placeholder.com/200"); // 선택된 요소의 src속성값을 변경
+        });
+      });
+      // position() 메소드 - 선택된 요소 중 첫 번쨰 요소에 대한 특정 위치(top, left offset)값을 객체로 반환한다.
+      $(() => {
+        console.log($("#list").find("li").position());
+      });
+    </script>
+  </body>
+</html>
