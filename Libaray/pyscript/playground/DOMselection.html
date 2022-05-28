@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+  <p>This example shows how to process a button event</p>
+  <br />
+  <div id="msg">Loading page, please wait ...</div>
+
+  <br />
+  <button class="button" type="button" id="button">Click Me</button>
+  <br />
+  <br />
+  <py-script>
+    # js DOM Selector를 py-script안에서 사용 가능하다. https://www.jhanley.com/pyscript-javascript-callbacks/
+    from js import document
+    from pyodide import create_proxy
+    
+    count = 0
+    
+    def button_click(event):
+      global count
+    
+      count += 1
+    
+      document.getElementById("msg").innerHTML = 'Button Clicked ' + str(count)
+    
+    def setup():
+      # The page is ready, clear the "page loading"
+      document.getElementById("msg").innerHTML = ''
+    
+      # Create a JsProxy for the callback function
+      click_proxy = create_proxy(button_click)
+    
+      # Set the listener to the callback
+      e = document.getElementById("button")
+      e.addEventListener("click", click_proxy)
+    
+    setup()
+  </py-script>
+</body>
+</html>
