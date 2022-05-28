@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <p>first elem</p>
+    <p class="mystyle">my style</p>
+    
+    <p>second elem</p>
+    <p class="mystyle">my style</p>
+    <script>
+      d3.selectAll("p").style("color", "green");
+      d3.select("p").style("color", "red");
+      d3.select("body").append("p");
+      d3.selectAll('.mystyle').style('color', 'orange')
+    </script>
+  </body>
+</html>

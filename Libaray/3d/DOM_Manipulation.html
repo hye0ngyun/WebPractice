@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>First paragraph</p>
+    </div>
+    <p></p>
+
+    <p>
+      <label for="">D3</label>
+      <input type="checkbox" />
+    </p>
+    <p>
+      <label for="">jQuery</label>
+      <input type="checkbox" />
+    </p>
+    <p class="test">test</p>
+    <p class="test2 error">test</p>
+    <script>
+      d3.select("p").text("this is paragraph");
+      d3.select("body").append("p").text("Third paragraph");
+      d3.select("div").insert("p").text("Second paragraph");
+      d3.select("p").remove();
+      d3.select("p").html("<span>This is new inner html<span>");
+      d3.select("p").attr("class", "error");
+
+      d3.select("input").property("checked", true);
+      // .classed('클래스명', '추가 및 삭제') - true인 경우 추가, false인 경우 삭제
+      d3.select(".test").classed("error", true);
+      d3.select(".test2").classed("error", false);
+    </script>
+  </body>
+</html>
