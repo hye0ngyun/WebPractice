@@ -20,6 +20,8 @@
       </li>
       <li><p>li > p</p></li>
     </ul>
+    <button class="button">엘리먼트 추가</button>
+    <div class="divWrap"></div>
     <script>
       document.querySelector("p").style.fontSize = "28px";
       $(() => {
@@ -34,6 +36,19 @@
         .querySelectorAll("div")
         .forEach((i) => (i.style.fontSize = "28px"));
       // console.log(document.querySelector("li:has(p)")); // 'querySelector' on 'Document': 'li:has(p)' is not a valid selector.
+
+      $(() => {
+        let id = 0;
+        $(".button").on("click", () => {
+          $(".divWrap").append(
+            `<div>div ${id++}<span class='close'>X</span></div>`
+          );
+          $(".close").on("click", (e) => {
+            e.target.parentElement.remove();
+            console.log($(e.target));
+          });
+        });
+      });
     </script>
   </body>
 </html>
