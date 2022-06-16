@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* Nesting (중첩) */
+.section {
+  width: 100%;
+}
+.section .list {
+  padding: 20px;
+}
+.section .list li {
+  float: left;
+}
+
+/* Ampersand (상위 선택자 참조) */
+.btn {
+  position: absolute;
+}
+.btn.active {
+  color: red;
+}
+
+.list li:last-child {
+  margin-right: 0;
+}
+
+.fs-small {
+  font-size: 12px;
+}
+.fs-medium {
+  font-size: 14px;
+}
+.fs-large {
+  font-size: 16px;
+}
+
+/* #at-root (중첩 벗어나기) */
+.list li {
+  width: 100px;
+  height: 50px;
+}
+.box {
+  /* 안쪽 스코프의 변수를 사용하면서 선택자는 중첩을 벗어나야 하는 경우 */
+  width: 100px;
+  height: 50px;
+}
+
+/* 중첩된 속성 */
+.box {
+  font-weight: bold;
+  font-size: 10px;
+  font-family: sans-serif;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+}
