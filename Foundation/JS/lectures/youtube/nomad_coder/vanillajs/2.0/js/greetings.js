@@ -14,16 +14,30 @@ function onLoginSubmit(e) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY, loginInput.value);
   paintGreetings();
+  document.querySelector("#todoWrap").classList.remove(HIDDEN_CLASSNAME);
 }
 
 function paintGreetings() {
   const userName = localStorage.getItem(USERNAME_KEY);
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello ${userName}`;
+  const hours = new Date().getHours();
+  let greetingWord = "";
+  if (hours <= 12) {
+    // 오전
+    greetingWord = "Good morining";
+  } else if (hours <= 18) {
+    // 오후
+    greetingWord = "Good afternoon";
+  } else {
+    // 저녁
+    greetingWord = "Good evening";
+  }
+  greeting.innerText = `${greetingWord} ${userName}`;
 }
 if (svaedUserName === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   paintGreetings();
+  document.querySelector("#todoWrap").classList.remove(HIDDEN_CLASSNAME);
 }
