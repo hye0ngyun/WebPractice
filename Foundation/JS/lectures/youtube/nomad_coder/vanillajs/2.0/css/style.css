@@ -18,7 +18,8 @@ body {
 #todo-list,
 #wheather-info > span:last-child,
 #login-form > input,
-#login-form > button {
+#login-form > button,
+#initial-btn {
   font-size: 1.2rem;
 }
 #clock {
@@ -156,6 +157,16 @@ body {
 } */
 #wheather-info > span:last-child {
   font-weight: bold;
+}
+#initial-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: unset;
+  border: unset;
+  background-color: #ddda;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

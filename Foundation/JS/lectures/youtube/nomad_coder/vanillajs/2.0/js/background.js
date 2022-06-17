@@ -17,4 +17,4 @@ const todaysImageIndex = Math.floor(Math.random() * images.length);
 const elemImage = document.createElement("img");
 elemImage.setAttribute("id", "bg-img");
 elemImage.src = `./img/${images[todaysImageIndex]}`;
-document.body.append(elemImage);
+document.querySelector("#main-wrap").append(elemImage);

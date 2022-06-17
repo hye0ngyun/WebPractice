@@ -52,4 +52,4 @@ const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 const todaysQuoteIndex = Math.floor(Math.random() * quotes.length);
 quote.innerText = quotes[todaysQuoteIndex].quote;
-author.innerText = quotes[todaysQuoteIndex].author;
+author.innerText = `- ${quotes[todaysQuoteIndex].author} -`;
