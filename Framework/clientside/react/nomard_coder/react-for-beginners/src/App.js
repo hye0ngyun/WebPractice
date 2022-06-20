@@ -1,22 +1,43 @@
 import Button from "./Button";
-import styles from "./App.module.css";
 import { useState, useEffect } from "react";
 
-function Hello() {
-  useEffect(() => {
-    console.log("Created :)");
-    return () => console.log("Destroyed :(");
-  }, []);
-  return <h1>Hello</h1>;
-}
-
 function App() {
-  const [showing, setShowing] = useState(false);
-  const onClick = () => setShowing((prev) => !prev);
+  const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
+  const onChange = (e) => setTodo(e.target.value);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (todo === "") {
+      return;
+    }
+    setTodo("");
+    setTodos((currentArray) => [todo, ...currentArray]);
+  };
+  const onClick = (index) => {
+    setTodos((currentArray) =>
+      currentArray.filter((i, curIndex) => index !== curIndex)
+    );
+  };
+
+  console.log(todos);
   return (
     <div>
-      {showing ? <Hello /> : null}
-      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
+      <h1>My To Dos ({todos.length})</h1>
+      <form onSubmit={onSubmit}>
+        <input
+          value={todo}
+          type={"text"}
+          placeholder={"Please write your to do"}
+          onChange={onChange}
+        />
+        <button>Add To Do</button>
+      </form>
+      <hr />
+      {todos.map((i, index) => (
+        <li key={index.toString()} id={index}>
+          {i} <span onClick={() => onClick(index)}>X</span>
+        </li>
+      ))}
     </div>
   );
 }
