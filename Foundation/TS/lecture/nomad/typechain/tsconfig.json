@@ -4,8 +4,9 @@
   "compilerOptions": {
     "outDir": "build", // 컴파일된 js파일이 위치할 폴더
     "target": "ES6",
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES6"],
     "strict": true,
-    "allowJs": true
+    "esModuleInterop": true,
+    "module": "CommonJS"
   }
 }
