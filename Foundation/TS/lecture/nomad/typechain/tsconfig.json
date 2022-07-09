@@ -1,0 +1,11 @@
+{
+  // 자바스크립트로 컴파일하고싶은 파일들
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "build", // 컴파일된 js파일이 위치할 폴더
+    "target": "ES6",
+    "lib": ["ES6", "DOM"],
+    "strict": true,
+    "allowJs": true
+  }
+}
