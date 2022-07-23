@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css" />
+    <style>
+      .grid-container {
+        display: grid;
+        /* @column */
+        /* 고정값 컬럼 */
+        /* grid-template-columns: 100px 300px 200px; */
+        /* 반응형값 컬럼 - fr: fraction 비율 */
+        /* grid-template-columns: 1fr 2fr 1fr; */
+
+        /* 고정값과 반응형을 섞은 컬럼 */
+        /* grid-template-columns: 1fr 500px 1fr; */
+
+        /* 컬럼수 반복 - repeat(반복횟수, 적용할 값)*/
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr 2fr 1fr); */
+
+        /* @row */
+        /* 고정값 로우 */
+        /* grid-template-rows: 200px 200px auto; */
+        /* 그리드 로우는 기본적으로 컨테이너 높이에 맞춰서 꽉 채운다. 즉, 모든 row가 1fr이 기본 */
+        /* grid-template-rows: repeat(3, 1fr); */
+        height: 80vh;
+      }
+      .grid-item {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div>
+      <div class="grid-item">J</div>
+      <div class="grid-item">K</div>
+    </div>
+  </body>
+</html>
