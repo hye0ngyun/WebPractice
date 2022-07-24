@@ -1,12 +1,12 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function Seo() {
+export default function Seo({ title }) {
   const router = useRouter();
-  const titles = { "/": "Home", "/about": "About" };
+
   return (
     <Head>
-      <title>{titles[router.pathname]} | Next Movies</title>
+      <title>{title} | Next Movies</title>
     </Head>
   );
 }
