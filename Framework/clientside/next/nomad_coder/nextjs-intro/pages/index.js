@@ -3,21 +3,21 @@ import Seo from "../components/Seo";
 import Head from "next/head";
 import { useState, useEffect } from "react";
 
-export default function Home() {
+export default function Home({ results }) {
   const [movies, setMovies] = useState(); // useState의 초기값을 비우게되면 TypeError: Cannot read properties of undefined (reading 'map')라는 에러가 발생한다.
   useEffect(() => {
     (async () => {
-      const { results } = await (await fetch(`/api/movies`)).json();
-      setMovies(results);
+      // const { results } = await (await fetch(`/api/movies`)).json();
+      // setMovies(results);
     })();
   }, []);
 
   return (
     <div className="container">
       <Seo />
-      {!movies && <h4>Loading...</h4>}
+      {/* {!movies && <h4>Loading...</h4>} */}
       {/* movies?.map()은 movies가 존재하지 않으면 map을 실행하지 않는다. */}
-      {movies?.map((movie) => (
+      {results?.map((movie) => (
         <div className="movie" key={movie.id}>
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
           <h4>{movie.original_title}</h4>
@@ -51,4 +51,15 @@ export default function Home() {
       `}</style>
     </div>
   );
+}
+
+export async function getServerSideProps() {
+  const { results } = await (
+    await fetch(`http://localhost:3000/api/movies`)
+  ).json();
+  return {
+    props: {
+      results,
+    },
+  };
 }
