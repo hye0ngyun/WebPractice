@@ -2,15 +2,23 @@ import NavBar from "../components/NavBar";
 import Seo from "../components/Seo";
 import Head from "next/head";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home({ results }) {
-  const [movies, setMovies] = useState(); // useState의 초기값을 비우게되면 TypeError: Cannot read properties of undefined (reading 'map')라는 에러가 발생한다.
-  useEffect(() => {
-    (async () => {
-      // const { results } = await (await fetch(`/api/movies`)).json();
-      // setMovies(results);
-    })();
-  }, []);
+  const router = useRouter();
+  const onClick = (id, title) => {
+    router.push(
+      {
+        pathname: `/movies/${id}`,
+        query: {
+          id,
+          title,
+        },
+      },
+      `/movies/${id}`
+    );
+  };
 
   return (
     <div className="container">
@@ -18,9 +26,17 @@ export default function Home({ results }) {
       {/* {!movies && <h4>Loading...</h4>} */}
       {/* movies?.map()은 movies가 존재하지 않으면 map을 실행하지 않는다. */}
       {results?.map((movie) => (
-        <div className="movie" key={movie.id}>
+        <div
+          onClick={() => onClick(movie.id, movie.original_title)}
+          className="movie"
+          key={movie.id}
+        >
           <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
-          <h4>{movie.original_title}</h4>
+          <Link href={`/movies/${movie.id}`}>
+            <a>
+              <h4>{movie.original_title}</h4>
+            </a>
+          </Link>
         </div>
       ))}
       <style jsx>{`
@@ -34,6 +50,7 @@ export default function Home({ results }) {
           display: flex;
           flex-direction: column;
           align-items: center;
+          cursor: pointer;
         }
         .movie img {
           max-width: 100%;
