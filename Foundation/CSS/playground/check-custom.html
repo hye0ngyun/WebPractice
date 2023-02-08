@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <style>
+      .example-ttl {
+        font-size: 18px;
+      }
+      .example-box {
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+      }
+
+      /* 기존 체크박스를 숨기기 위한 코드 */
+      .custom-input {
+        display: none;
+      }
+      /* 커스텀 체크박스를 위한 코드 */
+      .custom-label .custom-label-checked {
+        display: none;
+      }
+      .a + .b {
+        color: aliceblue;
+      }
+      .custom-input:checked + .custom-label .custom-label-checked {
+        display: inline-block;
+      }
+      .custom-input:checked + .custom-label .custom-label-unchecked {
+        display: none;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 class="example-ttl">기존 체크박스</h2>
+    <div class="example-box">
+      <input type="checkbox" id="basic-check-1" checked />
+      <input type="checkbox" id="basic-check-2" />
+    </div>
+
+    <h2 class="example-ttl">커스텀 체크박스</h2>
+    <div class="example-box">
+      <div class="checkbox-wrap">
+        <input
+          class="custom-input"
+          type="checkbox"
+          id="custom-check-1"
+          checked
+        />
+        <label class="custom-label" for="custom-check-1">
+          <span class="material-symbols-outlined custom-label-checked">
+            check_box
+          </span>
+          <span class="material-symbols-outlined custom-label-unchecked">
+            check_box_outline_blank
+          </span>
+        </label>
+      </div>
+      <div class="checkbox-wrap">
+        <input class="custom-input" type="checkbox" id="custom-check-2" />
+        <label class="custom-label" for="custom-check-2">
+          <span class="material-symbols-outlined custom-label-checked">
+            check_box
+          </span>
+          <span class="material-symbols-outlined custom-label-unchecked">
+            check_box_outline_blank
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <h2 class="example-ttl">기존 라디오버튼</h2>
+    <div class="example-box">
+      <input type="radio" name="basic-radio-group" id="basic-radio-1" checked />
+      <input type="radio" name="basic-radio-group" id="basic-radio-2" />
+    </div>
+
+    <h2 class="example-ttl">커스텀 라디오버튼</h2>
+    <div class="example-box">
+      <div class="checkbox-wrap">
+        <input
+          class="custom-input"
+          type="radio"
+          name="custom-radio-group"
+          id="custom-radio-1"
+          checked
+        />
+        <label class="custom-label" for="custom-radio-1">
+          <span class="material-symbols-outlined custom-label-checked">
+            radio_button_checked
+          </span>
+          <span class="material-symbols-outlined custom-label-unchecked">
+            radio_button_unchecked
+          </span>
+        </label>
+      </div>
+      <div class="checkbox-wrap">
+        <input
+          class="custom-input"
+          type="radio"
+          name="custom-radio-group"
+          id="custom-radio-2"
+        />
+        <label class="custom-label" for="custom-radio-2">
+          <span class="material-symbols-outlined custom-label-checked">
+            radio_button_checked
+          </span>
+          <span class="material-symbols-outlined custom-label-unchecked">
+            radio_button_unchecked
+          </span>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
