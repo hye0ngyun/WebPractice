@@ -1,0 +1,15 @@
+@mixin border($color: #aaa) {
+  border: 1px solid $color;
+  border-radius: 5px;
+  padding: 10px;
+}
+// .box {
+//   // border: 1px solid red;
+//   @include border();
+// }
+// .box2 {
+//   @include border(#000);
+// }
+// .box3 {
+//   @include border(red);
+// }

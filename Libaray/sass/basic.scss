@@ -1,3 +1,4 @@
+@use "mixin";
 /* Nesting (중첩) */
 .section {
   width: 100%;
@@ -67,4 +68,12 @@
     bottom: 40px;
     right: 30px;
   }
+  @include mixin.border();
+}
+
+.box2 {
+  @include mixin.border(red);
+}
+.box3 {
+  @include mixin.border(blue);
 }
